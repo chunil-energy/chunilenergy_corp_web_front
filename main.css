@@ -4,6 +4,7 @@
   width: 100%;
   overflow: hidden;
 }
+/* main_wrap === 메인 롤링배너 (mainSwiper) */
 #main .main_wrap {
   position: relative;
   width: 100%;
@@ -16,11 +17,6 @@
   padding: 0;
   border: 0;
   vertical-align: baseline;
-
-  text-align: center;
-  /* display: flex;
-    justify-content: center;
-    align-items: center; */
 }
 #main .main_wrap .img_wrap img {
   object-fit: cover;
@@ -28,6 +24,7 @@
   height: 100%;
   z-index: -1;
 }
+/* 메인롤링배너 검정 그림자 배경 */
 #main .main_wrap .black_shadow {
   width: 100%;
   height: 100%;
@@ -37,23 +34,26 @@
   background: #040a1380;
   z-index: 1;
 }
-#main .swiper-button-next:after, #main .swiper-button-prev:after {
-    font-size: 0px;
+/* 메인롤링배너 버튼 및 페이지네이션 */
+#main .swiper-button-next:after,
+#main .swiper-button-prev:after {
+  font-size: 0px;
 }
-#main .swiper-button-next img, #main .swiper-button-prev img {
-    width: 50px;
-    height: 50px;
+#main .swiper-button-next img,
+#main .swiper-button-prev img {
+  width: 50px;
+  height: 50px;
 }
 #main .swiper-button-next {
-    top: unset;
-    bottom: 116px;
-    right: 60px;
+  top: unset;
+  bottom: 116px;
+  right: 60px;
 }
 #main .swiper-button-prev {
-    top: unset;
-    left: unset;
-    bottom: 116px;
-    right: 130px;
+  top: unset;
+  left: unset;
+  bottom: 116px;
+  right: 130px;
 }
 
 /* section1 */

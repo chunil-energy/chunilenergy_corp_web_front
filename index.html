@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pc_main</title>
     <!-- 공통 css -->
-    <link rel="stylesheet" href="../common/common.css">
-    <link rel="stylesheet" href="../common/animation.css">
-    <link rel="stylesheet" href="../common/footer.css">
-    <link rel="stylesheet" href="../common/header.css">
-    <link rel="stylesheet" href="../common/sitemap.css">
+    <link rel="stylesheet" href="./common/common.css">
+    <link rel="stylesheet" href="./common/animation.css">
+    <link rel="stylesheet" href="./common/footer.css">
+    <link rel="stylesheet" href="./common/header.css">
+    <link rel="stylesheet" href="./common/sitemap.css">
     <!-- 메인 css -->
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="main.css">
 
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Link aos CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Link Jquery -->
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 </head>
@@ -119,8 +121,8 @@
         <!-- 상단 헤더 -->
         <nav>
             <div class="logo">
-                <img id="active_logo" src="../assets/logo.svg" alt="천일에너지 로고" />
-                <img src="../assets/logo_white.svg" alt="천일에너지 로고" />
+                <img id="active_logo" src="./assets/logo.svg" alt="천일에너지 로고" />
+                <img src="./assets/logo_white.svg" alt="천일에너지 로고" />
             </div>
 
             <ul class="flex justify_center align_center">
@@ -136,7 +138,7 @@
                     제휴제안
                 </button>
                 <button type="button" id="sitemap_open" class="hover center justify_center align_center">
-                    <img src="../assets/menu.png" alt="메뉴 아이콘" />
+                    <img src="./assets/menu.png" alt="메뉴 아이콘" />
                 </button>
             </div>
         </nav>
@@ -146,14 +148,14 @@
     <div id="sitemap">
         <div class="sitemap_header">
             <div class="logo">
-                <img src="../assets/logo_white.svg" alt="천일에너지 로고" />
+                <img src="./assets/logo_white.svg" alt="천일에너지 로고" />
             </div>
             <div class="menu_wrap flex justify_end align_center">
                 <button type="button" id="partner_offer" class="hover center white text_14 justify_center align_center">
                     제휴제안
                 </button>
                 <button type="button" id="sitemap_close" class="hover center justify_center align_center">
-                    <img src="../assets/close.png" alt="닫기 아이콘" />
+                    <img src="./assets/close.png" alt="닫기 아이콘" />
                 </button>
             </div>
         </div>
@@ -237,23 +239,27 @@
             <div class="main_wrap mainSwiper">
                 <div class="swiper-wrapper">
                     <div class="img_wrap swiper-slide">
-                        <img src="../assets/main/main_slide_1.jpeg" />
+                        <img src="./assets/main/main_slide_1.jpeg" />
                         <div class="black_shadow"></div>
+                        <div class="img_desc">
+                            
+                        </div>
+                        <!-- data-aos="fade-up" -->
                     </div>
                     <div class="img_wrap swiper-slide">
-                        <img src="../assets/main/main_slide_2.jpg" />
+                        <img src="./assets/main/main_slide_2.jpg" />
                         <!-- <div class="black_shadow"></div> -->
                     </div>
                     <div class="img_wrap swiper-slide">
-                        <img src="../assets/main/main_slide_3.png" />
+                        <img src="./assets/main/main_slide_3.png" />
                         <!-- <div class="black_shadow"></div> -->
                     </div>
                 </div>
                 <div class="swiper-button-next">
-                    <img src="../assets/main/slide_right.png" />
+                    <img src="./assets/main/slide_right.png" />
                 </div>
                 <div class="swiper-button-prev">
-                    <img src="../assets/main/slide_left.png" />
+                    <img src="./assets/main/slide_left.png" />
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
@@ -292,7 +298,7 @@
                 </div>
             </div> -->
         </section>
-    
+
         <!-- section1 -->
         <section id="section1">
 
@@ -442,12 +448,17 @@
 
 
     <!-- 애니메이션 코드 -->
-    <script src="../common/animation.js"></script>
-    <script src="../common/header.js"></script>
+    <script src="./common/animation.js"></script>
+    <script src="./common/header.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper(".mainSwiper", {
