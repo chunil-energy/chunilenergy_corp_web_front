@@ -1,0 +1,66 @@
+/* animation */
+.fade {
+  opacity: 0;
+  transition: 0.8s opacity cubic-bezier(0.52, 0.01, 0, 1),
+    0.8s transform cubic-bezier(0.52, 0.01, 0, 1);
+}
+.fadeLeft {
+  transform: translate3D(15%, 0px, 0);
+  opacity: 0;
+  transition: 0.8s opacity cubic-bezier(0.52, 0.01, 0, 1),
+    0.8s transform cubic-bezier(0.52, 0.01, 0, 1);
+}
+.fadeRight {
+  transform: translate3D(-15%, 0px, 0);
+  opacity: 0;
+  transition: 0.8s opacity cubic-bezier(0.52, 0.01, 0, 1),
+    0.8s transform cubic-bezier(0.52, 0.01, 0, 1);
+}
+.fadeUp {
+  transform: translate3D(0px, 30%, 0);
+  opacity: 0;
+  transition: 0.8s opacity cubic-bezier(0.52, 0.01, 0, 1),
+    0.8s transform cubic-bezier(0.52, 0.01, 0, 1);
+}
+.fadeDown {
+  transform: translate3D(0px, -30%, 0);
+  opacity: 0;
+  transition: 0.8s opacity cubic-bezier(0.52, 0.01, 0, 1),
+    0.8s transform cubic-bezier(0.52, 0.01, 0, 1);
+}
+.zoomIn {
+  transform: scale(1.2);
+  opacity: 0;
+  transition: 0.8s transform cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation-duration: 2s;
+}
+.Loaded {
+  transform: translate3D(0, 0, 0);
+  transform: scale(1);
+  opacity: 1;
+}
+.fadeLeftRV {
+  transform: translate3D(-15%, 0px, 0);
+  opacity: 0;
+  transition: 0.8s opacity cubic-bezier(0.52, 0.01, 0, 1),
+    0.8s transform cubic-bezier(0.52, 0.01, 0, 1);
+}
+.fadeRightRV {
+  transform: translate3D(15%, 0px, 0);
+  opacity: 0;
+  transition: 0.8s opacity cubic-bezier(0.52, 0.01, 0, 1),
+    0.8s transform cubic-bezier(0.52, 0.01, 0, 1);
+}
+
+.delay_1 {
+  transition-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+.delay_2 {
+  transition-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+.delay_3 {
+  transition-delay: 0.5s;
+  animation-delay: 0.5s;
+}

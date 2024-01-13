@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pc_main</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../common/common.css">
+    <link rel="stylesheet" href="../common/animation.css">
+    <link rel="stylesheet" href="../common/footer.css">
+    <link rel="stylesheet" href="../common/header.css">
+    <link rel="stylesheet" href="../common/sitemap.css">
+    <!-- 메인 css -->
+    <link rel="stylesheet" href="./main.css">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Link Jquery -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <header id="header">
+        <!-- 서브메뉴 -->
+        <div class="sub_nav_wrap">
+            <!-- 회사소개 서브메뉴 -->
+            <div class="sub_nav_body flex justify_center align_start">
+                <div class="sub_nav_col empty_col"></div>
+                <div class="sub_nav_col">
+                    <p class="text_16 black2 semi_bold hover">인사말</p>
+                </div>
+                <div class="sub_nav_col text_16 black2 semi_bold">
+                    <p class="text_16 black2 semi_bold hover">VISION <br />& MISSION</p>
+                </div>
+                <div class="sub_nav_col">
+                    <p class="text_16 black2 semi_bold mb_16">주요 계열사</p>
+                    <div class="sub_nav_list flex flex_col align_start justify_center">
+                        <div class="sub_nav gray semi_bold left hover">천일에너지 팩토리</div>
+                        <div class="sub_nav gray semi_bold left hover">천일에너지 허브</div>
+                        <div class="sub_nav gray semi_bold left hover">천일 서비스</div>
+                        <div class="sub_nav gray semi_bold left hover">수거봇</div>
+                        <div class="sub_nav gray semi_bold left hover">천일 패스파인더</div>
+                        <div class="sub_nav gray semi_bold left hover">천일C&D</div>
+                        <div class="sub_nav gray semi_bold left hover">천일</div>
+                        <div class="sub_nav gray semi_bold left hover">천일 솔라파크</div>
+                    </div>
+                </div>
+                <div class="sub_nav_col">
+                    <p class="text_16 black2 semi_bold hover">주요 연혁</p>
+                </div>
+                <div class="sub_nav_col">
+                    <p class="text_16 black2 semi_bold hover">CI소개</p>
+                </div>
+            </div>
+            <!-- 사업영역 서브메뉴 -->
+            <div class="sub_nav_body flex justify_center align_start">
+                <div class="sub_nav_col empty_col"></div>
+                <div class="sub_nav_col">
+                    <p class="text_16 black2 semi_bold mb_16">폐기물 처리<br />원스탑 솔루션</p>
+                    <div class="sub_nav_list flex flex_col align_start justify_center">
+                        <div class="sub_nav gray semi_bold left hover">PROCESS</div>
+                        <div class="sub_nav gray semi_bold left hover">EFFECT</div>
+                        <div class="sub_nav gray semi_bold left hover">인허가</div>
+                    </div>
+                </div>
+                <div class="sub_nav_col">
+                    <p class="text_16 black2 semi_bold mb_16">폐기물 처리<br />플랫폼 지구하다</p>
+                    <div class="sub_nav_list flex flex_col align_start justify_center">
+                        <div class="sub_nav gray semi_bold left hover">대형 생활폐기물 SaaS</div>
+                        <div class="sub_nav gray semi_bold left hover">공사장 생활폐기물 접수</div>
+                        <div class="sub_nav gray semi_bold left hover">폐기물 전자 인계서</div>
+                        <div class="sub_nav gray semi_bold left hover">폐플라스틱 리사이클링봇</div>
+                        <div class="sub_nav gray semi_bold left hover">환경공단 GPS 단말기</div>
+                        <div class="sub_nav gray semi_bold left hover">폐기물 처리 카드 결제 시스템</div>
+                    </div>
+                </div>
+                <div class="sub_nav_col">
+                    <p class="text_16 black2 semi_bold mb_16">서비스<br /><br /></p>
+                    <div class="sub_nav_list flex flex_col align_start justify_center">
+                        <div class="sub_nav gray semi_bold left hover">마루철거/종합철거</div>
+                        <div class="sub_nav gray semi_bold left hover">동의/보양/행위허가</div>
+                    </div>
+                </div>
+            </div>
+            <!-- 상생&협력 서브메뉴 -->
+            <div class="sub_nav_body flex justify_center align_start">
+                <div class="sub_nav_col empty_col"></div>
+                <div class="sub_nav_col">
+                    <p class="text_16 black2 semi_bold mb_16">공공기관</p>
+                    <div class="sub_nav_list flex flex_col align_start justify_center">
+                        <div class="sub_nav gray semi_bold left hover">상생&협력 효과</div>
+                        <div class="sub_nav gray semi_bold left hover">상생&협력 업무</div>
+                        <div class="sub_nav gray semi_bold left hover">상생&협력 공공기관</div>
+                    </div>
+                </div>
+                <div class="sub_nav_col">
+                    <p class="text_16 black2 semi_bold hover">민간기업</p>
+                </div>
+                <div class="sub_nav_col">
+                    <p class="text_16 black2 semi_bold hover">제휴 / 제안</p>
+                </div>
+            </div>
+            <!-- 홍보센터 서브메뉴 -->
+            <div class="sub_nav_body flex justify_center align_start" style="padding: 19px 0px;">
+                <div class="sub_nav_col empty_col"></div>
+                <div class="sub_nav_col">
+                    <p class="text_16 black2 semi_bold hover">보도자료</p>
+                </div>
+                <div class="sub_nav_col">
+                    <p class="text_16 black2 semi_bold hover">광고영상</p>
+                </div>
+                <div class="sub_nav_col">
+                    <p class="text_16 black2 semi_bold hover">공지사항</p>
+                </div>
+            </div>
+        </div>
+        <!-- 상단 헤더 -->
+        <nav>
+            <div class="logo">
+                <img id="active_logo" src="../assets/logo.svg" alt="천일에너지 로고" />
+                <img src="../assets/logo_white.svg" alt="천일에너지 로고" />
+            </div>
+
+            <ul class="flex justify_center align_center">
+                <li><a>회사소개</a></li>
+                <li><a>사업영역</a></li>
+                <li><a>상생&협력</a></li>
+                <li><a>홍보센터</a></li>
+                <li><a>인재채용</a></li>
+            </ul>
+
+            <div class="menu_wrap flex justify_end align_center">
+                <button type="button" id="partner_offer" class="hover center white text_14 justify_center align_center">
+                    제휴제안
+                </button>
+                <button type="button" id="sitemap_open" class="hover center justify_center align_center">
+                    <img src="../assets/menu.png" alt="메뉴 아이콘" />
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- sitemap (사이트맵) -->
+    <div id="sitemap">
+        <div class="sitemap_header">
+            <div class="logo">
+                <img src="../assets/logo_white.svg" alt="천일에너지 로고" />
+            </div>
+            <div class="menu_wrap flex justify_end align_center">
+                <button type="button" id="partner_offer" class="hover center white text_14 justify_center align_center">
+                    제휴제안
+                </button>
+                <button type="button" id="sitemap_close" class="hover center justify_center align_center">
+                    <img src="../assets/close.png" alt="닫기 아이콘" />
+                </button>
+            </div>
+        </div>
+
+        <div class="sitemap_body flex justify_space_between align_start">
+            <div class="sitmap_col">
+                <p class="title left white">회사소개</p>
+                <div class="nav_list flex flex_col justify_start align_start">
+                    <p class="sub_title left white nav_hover">인사말</p>
+                    <p class="sub_title left white nav_hover">VISION<br />& MISSION</p>
+                    <div class="sub_nav_list nav_hover">
+                        <p class="sub_title left white">주요 계열사</p>
+                        <p class="sub_nav left white">천일에너지 팩토리</p>
+                        <div class="sub_nav left white">천일에너지 허브</div>
+                        <div class="sub_nav left white">천일 서비스</div>
+                        <div class="sub_nav left white">수거봇</div>
+                        <div class="sub_nav left white">천일 패스파인더</div>
+                        <div class="sub_nav left white">천일C&D</div>
+                        <div class="sub_nav left white">천일</div>
+                        <div class="sub_nav left white">천일 솔라파크</div>
+                    </div>
+                    <p class="sub_title left white nav_hover">주요 연혁</p>
+                    <p class="sub_title left white nav_hover">CI소개</p>
+                </div>
+            </div>
+            <div class="sitmap_col">
+                <p class="title left white">사업영역</p>
+                <div class="nav_list flex flex_col justify_start align_start">
+                    <div class="sub_nav_list nav_hover">
+                        <p class="sub_title left white">폐기물 처리<br />원스탑 솔루션</p>
+                        <div class="sub_nav left white">PROCESS</div>
+                        <div class="sub_nav left white">EFFECT</div>
+                        <div class="sub_nav left white">인허가</div>
+                    </div>
+                    <div class="sub_nav_list nav_hover">
+                        <p class="sub_title left white">주요 계열사</p>
+                        <div class="sub_nav left white">폐기물 처리<br />플랫폼 지구하다</div>
+                        <div class="sub_nav left white">대형 생활폐기물 SaaS</div>
+                        <div class="sub_nav left white">공사장 생활폐기물 접수</div>
+                        <div class="sub_nav left white">폐기물 전자 인계서</div>
+                        <div class="sub_nav left white">폐플라스틱 리사이클링봇</div>
+                        <div class="sub_nav left white">환경공단 GPS 단말기</div>
+                    </div>
+                    <div class="sub_nav_list nav_hover">
+                        <p class="sub_title left white">서비스</p>
+                        <div class="sub_nav left white">마루철거/종합철거</div>
+                        <div class="sub_nav left white">동의/보양/행위허가</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sitmap_col">
+                <p class="title left white">상생&협력</p>
+                <div class="nav_list flex flex_col justify_start align_start">
+                    <div class="sub_nav_list nav_hover">
+                        <p class="sub_title left white">공공기관</p>
+                        <div class="sub_nav left white">상생&협력 효과</div>
+                        <div class="sub_nav left white">상생&협력 업무</div>
+                        <div class="sub_nav left white">상생&협력 공공기관</div>
+                    </div>
+                    <p class="sub_title left white nav_hover">민간기업</p>
+                    <p class="sub_title left white nav_hover">제휴/제안</p>
+                </div>
+            </div>
+            <div class="sitmap_col">
+                <p class="title left white">홍보센터</p>
+                <div class="nav_list flex flex_col justify_start align_start">
+                    <p class="sub_title left white nav_hover">보도자료</p>
+                    <p class="sub_title left white nav_hover">광고영상</p>
+                    <p class="sub_title left white nav_hover">공지사항</p>
+                </div>
+            </div>
+            <div class="sitmap_col">
+                <p class="title left white nav_hover" style="cursor: pointer;">인재채용</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="body">
+        <!-- main -->
+        <section id="main" class="">
+            <div class="main_wrap mainSwiper">
+                <div class="swiper-wrapper">
+                    <div class="img_wrap swiper-slide">
+                        <img src="../assets/main/main_slide_1.jpeg" />
+                        <div class="black_shadow"></div>
+                    </div>
+                    <div class="img_wrap swiper-slide">
+                        <img src="../assets/main/main_slide_2.jpg" />
+                        <!-- <div class="black_shadow"></div> -->
+                    </div>
+                    <div class="img_wrap swiper-slide">
+                        <img src="../assets/main/main_slide_3.png" />
+                        <!-- <div class="black_shadow"></div> -->
+                    </div>
+                </div>
+                <div class="swiper-button-next">
+                    <img src="../assets/main/slide_right.png" />
+                </div>
+                <div class="swiper-button-prev">
+                    <img src="../assets/main/slide_left.png" />
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <!-- <img class="img_earth only_pc_block" src="../assets/image/img_earth.svg" alt="지구이미지" />
+            <img class="img_earth only_mo_block" src="../assets/image/img_earth_mo.svg" alt="지구이미지" />
+
+            <div class="main_container flex justify_center align_center">
+                <div class="main_title_wrap flex flex_row justify_space_between align_center">
+                    <div style="width: 100%;">
+                        <h2 class="text_60 white bold left animation fadeUp">지구를 <br class="only_mo_block" />구하는
+                            <br />가장<br class="only_mo_block" /> 쉬운 방법
+                        </h2>
+                        <p class="text_20 white mid left animation fadeUp delay_2">
+                            <b class="mid only_pc_inline">폐기물 처리 No.1 플랫폼 </b>
+                            지구하다와 함께 <br class="only_pc_block" />올바른<br class="only_mo_block" />폐기
+                            문화를 만들어요.
+                        </p>
+
+                        <div
+                            class="down_button_wrap flex flex_row justify_start align_center  animation fadeUp delay_3">
+                            <button
+                                class="main_button white text_20 bold center bg_primary border_r14 flex flex_row justify_center align_center">
+                                <img src="../assets/image/img_google_play.png" alt="googlePlay" />
+                                Google Play
+                            </button>
+                            <button
+                                class="main_button white text_20 bold center bg_primary border_r14 flex flex_row justify_center align_center">
+                                <img src="../assets/image/img_app_store.png" alt="appStore" />
+                                App Store
+                            </button>
+                        </div>
+                    </div>
+
+                    <img class="img_hero animation fadeUp delay_2" src="../assets/image/img_hero.svg" alt="히어로이미지" />
+                </div>
+            </div> -->
+        </section>
+    
+        <!-- section1 -->
+        <section id="section1">
+
+        </section>
+        <!-- section1 -->
+        <!-- <section id="section1" class="main_section">
+            <div class="main_section_wrap flex flex_col justify_center align_center">
+                <p class="text_50 extra_bold center animation fadeUp">이제, 폐기물 처리가 쉬워집니다.</p>
+                <p class="text_20 mid center animation fadeUp delay_2">언제 어디서나, 어떤 폐기물이든<br />간편하게 입력하고<br
+                        class="only_mo_block" /> 배출하면 끝!</p>
+
+                <div class="slider">
+                    <div class="slider_wrap">
+                        자동 무한 슬라이드 들어갈 자리.
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- section2 -->
+        <!-- <section id="section2" class="main_section">
+            <div class="main_section_wrap flex flex_row justify_center align_center">
+                <div class="left_wrap flex flex_col justify_center align_center">
+                    <img class="img_main_section" src="../assets/image/img_main_section2.png" alt="수거신청_위치선택" />
+                </div>
+                <div class="right_wrap flex flex_col justify_center align_center">
+                    <div class="section_desc">
+                        <span class="text_22 primary semi_bold left animation fadeDown delay_3">배출신고</span>
+                        <p class="text_50 extra_bold left animation fadeUp">전화•방문 없이<br />간편하게 신청해요!</p>
+                        <p class="text_20 mid left gray5 animation fadeUp delay_2">언제 어디서나 간편하게 신청하고<br />원하는 시간에 배출하세요.
+                        </p>
+
+                        <img class="mo_img_section only_mo_block" src="../assets/image/img_section_02.png"
+                            alt="신고가 접수되었어요! 팝업 이미지" />
+
+                        <div class="btn_more_wrap flex flex_row justify_start align_center">
+                            <button class="btn_more text_16 center mid border_r14">대형 생활폐기물 <br
+                                    class="only_pc_block" />스티커</button>
+                            <button class="btn_more text_16 center mid border_r14">공사장 생활폐기물 <br
+                                    class="only_pc_block" />배출신고제</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section> -->
+
+        <!-- section3 -->
+        <!-- <section id="section3" class="main_section">
+            <div class="main_section_wrap flex flex_row justify_center align_center">
+                <div class="left_wrap flex flex_col justify_center align_center">
+                    <div class="section_desc">
+                        <span class="text_22 primary semi_bold left animation fadeDown delay_3">방문수거</span>
+                        <p class="text_50 extra_bold left animation fadeUp">무거운 폐기물,<br />혼자 버리기 힘들다면?</p>
+                        <p class="text_20 mid left gray5 animation fadeUp delay_2">저렴한 비용으로 알아서 옮겨주고<br />올바른 과정으로 처리해
+                            드려요.
+                        </p>
+
+                        <img class="mo_img_section only_mo_block" src="../assets/image/img_section_03.png"
+                            alt="방문수거 배출신고 선택 이미지" />
+
+                        <div class="btn_more_wrap flex flex_row justify_start align_center">
+                            <button class="btn_more text_16 center mid border_r14">더 알아보기</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="right_wrap flex flex_col justify_center align_center">
+                    <img class="img_main_section" src="../assets/image/img_main_section3.png" alt="대생폐 배출방식_배출신고" />
+                </div>
+
+            </div>
+        </section> -->
+
+        <!-- section6 -->
+        <!-- <section id="section6" class="main_section">
+            <div class="main_section_wrap flex flex_col justify_center align_center">
+                <p class="text_60 extra_bold center">서비스 이용이<br />처음이라 고민이세요?</p>
+                <p class="text_22 mid center">상담사가 더 쉽고 편리하게<br />이용할 수 있도록 도와드릴게요.</p>
+                <button class="main_button text_20 mid center white bg_primary border_r14 animation fadeUp delay_2">
+                    무료 상당 받기
+                </button>
+            </div>
+        </section> -->
+
+        <!-- footer -->
+        <!-- <footer>
+            <div class="footer_wrap flex flex_row justify_space_between align_stretch">
+
+                <div class="mo_width_100">
+                    <div class="footer_nav_wrap footer_nav_link_list flex flex_row justify_start align_center">
+                        <a href="#" class="footer_nav text_16 semi_bold">이용약관</a>
+                        <a href="#" class="footer_nav text_16 semi_bold">개인정보처리방침</a>
+                        <a href="#" class="footer_nav text_16 semi_bold">사업자정보</a>
+                    </div>
+                    <div class="flex flex_col justify_start align_start" style="gap: 6px;">
+                        <span class="text_14 gray3 left">(주)수거봇</span>
+                        <div class="left flex justify_start align_center">
+                            <span class="text_14 gray3 left">대표:박상원</span>
+                            <span class="footer_divid"></span>
+                            <span class="text_14 gray3 left">사업자등록번호: 297-86-01887</span>
+                        </div>
+                        <span class="text_14 gray3 left">개인정보관리챔임자: 홍찬의</span>
+                        <span class="text_14 gray3 left">경기도 평택시 포승읍 도대1로 70</span>
+                    </div>
+                    <div class="footer_btn_small_link_wrap flex flex_row justify_start align_end only_mo_flex">
+                        <button><img src="../assets/image/img_btn_small_link_naver_blog.png"
+                                alt="naver_blog" /></button>
+                        <button><img src="../assets/image/img_btn_small_link_playstore.png" alt="playstore" /></button>
+                        <button><img src="../assets/image/img_btn_small_link_appstore.png" alt="appstore" /></button>
+                    </div>
+                </div>
+
+                <div class="mo_divide only_mo_block"></div>
+
+                <div class="mo_width_100">
+                    <div class="footer_nav_wrap flex flex_row justify_end align_center mo_flex_left"
+                        style="padding: 10px 0px;">
+                        <span class="text_16 semi_bold" style="margin-right: 10px;">고객센터</span>
+                        <span class="text_16 semi_bold">02-6907-1042</span>
+                    </div>
+                    <div class="flex flex_col justify_space_between align_end mo_flex_left">
+                        <div>
+                            <p class="right mo_text_left">
+                                <span class="text_16 semi_bold gray3" style="margin-right: 10px;">월- 금</span>
+                                <span class="text_16 semi_bold gray3">09:00 ~ 18:00</span>
+                            </p>
+                            <p class="right mo_text_left" style="margin-top: 6px;">
+                                <span class="text_16 semi_bold gray3" style="margin-right: 10px;">점심시간</span>
+                                <span class="text_16 semi_bold gray3">12:00 ~ 13:00</span>
+                            </p>
+                        </div>
+                        <div class="footer_btn_small_link_wrap flex flex_row justify_center align_end only_pc_flex">
+                            <button><img src="../assets/image/img_btn_small_link_naver_blog.png"
+                                    alt="naver_blog" /></button>
+                            <button><img src="../assets/image/img_btn_small_link_playstore.png"
+                                    alt="playstore" /></button>
+                            <button><img src="../assets/image/img_btn_small_link_appstore.png"
+                                    alt="appstore" /></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer> -->
+    </div>
+
+
+    <!-- 애니메이션 코드 -->
+    <script src="../common/animation.js"></script>
+    <script src="../common/header.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mainSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+
+</html>

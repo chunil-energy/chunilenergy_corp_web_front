@@ -1,0 +1,441 @@
+/* 공통 or 자주 사용되는 css 모음 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+html {
+  line-height: 1.4;
+  -webkit-text-size-adjust: 100%;
+}
+
+body,
+button,
+p,
+span {
+  font-family: "Pretendard", Pretendard, "Pretendard Variable",
+    -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", dotum,
+    "돋움", helvetica, "Apple SD Gothic Neo", sans-serif;
+  letter-spacing: -0.04em;
+  font-weight: 400;
+  color: #000;
+  position: relative;
+}
+
+body {
+  direction: ltr;
+  -webkit-text-size-adjust: none;
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+
+body,
+ul,
+li,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+div,
+ul,
+p {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+}
+
+img {
+  border: 0;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* flex 관련 */
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.flex_col {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.flex_row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.align_start {
+  -webkit-box-align: start;
+  -moz-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.align_center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.align_end {
+  -webkit-box-align: end;
+  -moz-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+.align_stretch {
+  -webkit-box-align: stretch;
+  -moz-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+.justify_start {
+  -webkit-box-pack: start;
+  -moz-box-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+.justify_center {
+  -webkit-box-pack: center;
+  -moz-box-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.justify_end {
+  -webkit-box-pack: end;
+  -moz-box-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+.justify_space_between {
+  -webkit-box-pack: justify;
+  -moz-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.grow {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+/* text 관련 */
+.center {
+  text-align: center;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+
+/* color */
+.white {
+  color: #ffffff;
+}
+.black {
+  color: #000000;
+}
+.black2 {
+  color: #262626;
+}
+.blue {
+  color: #1A83FF;
+}
+.gray {
+  color: #767676;
+}
+/* .
+.pc_error {
+  color: #e21f71;
+} */
+
+.bg_white {
+  background-color: #ffffff;
+}
+.bg_black {
+  background-color: #000000;
+}
+/* 
+.bg_blue {
+  background-color: #123ba3;
+} */
+
+/* typography */
+/* .font_Pretendard {
+  font-family: "Pretendard Variable", Pretendard;
+} */
+
+.mid {
+  font-weight: 500;
+}
+.semi_bold {
+  font-weight: 600;
+}
+.bold {
+  font-weight: 700;
+}
+.extra_bold {
+  font-weight: 800;
+}
+
+.text_12 {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: -0.025em;
+}
+.text_14 {
+  font-size: 14px;
+  line-height: normal;
+}
+.text_16 {
+  font-size: 16px;
+  line-height: normal;
+}
+
+/* border 관련 */
+.border_r14 {
+  border-radius: 14px;
+}
+.border_r100 {
+  border-radius: 100px;
+}
+
+/* page 공통 요소 - layout */
+.page_container {
+  width: 100%;
+  min-height: calc(100% - 230px);
+  /* min-height: 100%; */
+}
+.page_wrap {
+  width: 100%;
+  max-width: 562px;
+  max-height: 100%;
+  margin: 150px auto;
+  /* page_wrap의 상위 요소의 justify_start => justify_center */
+  /* margin: 30px auto 80px; */
+  /* margin: 0 auto; */
+}
+.page_title {
+  margin-bottom: 48px;
+}
+/* page 공통 요소 - input */
+.input_wrap {
+  width: 100%;
+  column-gap: 10px;
+}
+.input_wrap .input_label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  color: #2a3547;
+}
+.input_wrap .input {
+  padding: 11px 12px;
+  color: #7c8fac;
+  border: 1px solid #dfe5ef;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+}
+.input_wrap .input.is_error {
+  border-color: #e21f71;
+}
+.input_wrap .error_message {
+  margin-top: 6px;
+  font-size: 10px;
+  line-height: 14px;
+}
+.input_wrap .input::placeholder {
+  color: #7c8fac;
+}
+.input_wrap .input:disabled {
+  background-color: #dfe5ef;
+}
+/* help_text_wrap */
+ul.help_text_wrap {
+  width: 100%;
+  margin-top: 10px;
+  padding-left: 22px;
+}
+ul.help_text_wrap > li {
+  margin-bottom: 4px;
+  color: #999999;
+  font-size: 12px;
+  line-height: 17px;
+  text-align: left;
+}
+/* page 공통 요소 - input(password) */
+.input_wrap.password_input {
+  position: relative;
+}
+.input_wrap.password_input input {
+  padding-right: 52px;
+}
+.input_wrap.password_input .view_password {
+  position: absolute;
+  right: 12px;
+  top: 36px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+/* input password 디자인 */
+input[type="password"] {
+  font-family: Verdana;
+  letter-spacing: 0.125em;
+}
+
+/* page 공통 요소 - tag */
+.tag_wrap {
+  margin-bottom: 48px;
+}
+.tag_wrap .tag {
+  width: 76px;
+  height: 26px;
+  border-radius: 29px;
+  color: #dfe5ef;
+  border: 1px solid #dfe5ef;
+  font-size: 12px;
+  line-height: 17px;
+  letter-spacing: -0.025em;
+  cursor: pointer;
+}
+.tag_wrap .tag.active {
+  color: #2a3547;
+  border: 1px solid #000000;
+}
+.tag_arrow_right {
+  width: auto;
+  height: 12px;
+  margin: 0px 11px;
+}
+
+/* page 공통 요소 - button */
+.line_text_button {
+  width: 110px;
+  height: 42px;
+  background-color: #fff;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+.line_text_button:hover {
+  color: #fff;
+  background-color: #000000;
+}
+.line_text_button:disabled {
+  background-color: #ededed;
+  border-color: #ededed;
+  color: #767676;
+}
+.full_button {
+  width: 100%;
+  height: 58px;
+  border-radius: 4px;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+.full_button:disabled {
+  background-color: #b4b4b4;
+}
+
+/* hover 액션 */
+.hover:hover {
+  opacity: 0.7;
+}
+
+/* 반응형 관련 */
+.only_pc_block {
+  display: block;
+}
+.only_pc_flex {
+  display: flex;
+}
+.only_pc_inline {
+  display: inline;
+}
+.only_mo_block,
+.only_mo_flex {
+  display: none;
+}
+
+/* 미니 PC 이하 */
+@media screen and (max-width: 1080px) {
+  .text_30 {
+    font-size: 26px;
+  }
+  .text_50 {
+    font-size: 44px;
+    line-height: 56px;
+  }
+  .text_60 {
+    font-size: 48px;
+    line-height: 68px;
+  }
+
+  .page_wrap {
+    margin: 100px auto 150px;
+  }
+}
+
+/* 태블릿 이하 */
+@media screen and (max-width: 800px) {
+  /* typography */
+  .text_60 {
+    font-size: 40px;
+    line-height: 46px;
+  }
+  .text_50 {
+  }
+  .text_22 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .text_16 {
+    font-size: 15px;
+    line-height: 21px;
+  }
+
+  /* 반응형 관련 */
+  .only_mo_block {
+    display: block;
+  }
+  .only_mo_flex {
+    display: flex;
+  }
+  .only_pc_block,
+  .only_pc_flex,
+  .only_pc_inline {
+    display: none;
+  }
+}
