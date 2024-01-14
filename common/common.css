@@ -10,9 +10,9 @@ body,
 button,
 p,
 span {
-  font-family: "Pretendard", Pretendard, "Pretendard Variable",
-    -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", dotum,
-    "돋움", helvetica, "Apple SD Gothic Neo", sans-serif;
+  font-family: "Pretendard", Pretendard, "Pretendard Variable", -apple-system,
+    BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", dotum, "돋움", helvetica,
+    "Apple SD Gothic Neo", sans-serif;
   letter-spacing: -0.04em;
   font-weight: 400;
   color: #000;
@@ -138,6 +138,12 @@ a {
   flex-grow: 1;
 }
 
+.container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
 /* text 관련 */
 .center {
   text-align: center;
@@ -160,7 +166,10 @@ a {
   color: #262626;
 }
 .blue {
-  color: #1A83FF;
+  color: #1a83ff;
+}
+.blue2 {
+  color: #1e64ff;
 }
 .gray {
   color: #767676;
@@ -176,10 +185,12 @@ a {
 .bg_black {
   background-color: #000000;
 }
-/* 
 .bg_blue {
-  background-color: #123ba3;
-} */
+  background-color: #1a83ff;
+}
+.bg_blue2 {
+  background-color: #1e64ff;
+}
 
 /* typography */
 /* .font_Pretendard {
@@ -210,6 +221,14 @@ a {
 }
 .text_16 {
   font-size: 16px;
+  line-height: normal;
+}
+.text_18 {
+  font-size: 18px;
+  line-height: normal;
+}
+.text_24 {
+  font-size: 24px;
   line-height: normal;
 }
 

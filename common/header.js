@@ -1,5 +1,20 @@
 const SUB_MENU_SLIDE_TIME = 400;
 
+/**
+ * 페이지 로드 시
+ */
+function init() {
+  if ($(window).scrollTop()) {
+    $("#header").addClass("active");
+  } else {
+    $("#header").removeClass("active");
+  }
+}
+
+window.onload = function(){
+    init();
+};
+
 $(document).ready(function () {
   let isOpenNav = false;
 
@@ -34,10 +49,8 @@ $(document).ready(function () {
 
   // 로고 클릭 시 메인페이지로
   $(".logo").on("click", function () {
-    //HTTP Redirect를 클라이언트에서 처리할때
-    // window.location.replace("http://example.com");
-    //사용자의 클릭 이벤트용
-    // window.location.href = window.location.href;
+    //HTTP Redirect를 클라이언트에서 처리할때 // window.location.replace("http://example.com");
+    //사용자의 클릭 이벤트용 // window.location.href = window.location.href;
     window.location.href = "index.html";
   });
 

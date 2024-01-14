@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
     <title>pc_main</title>
     <!-- 공통 css -->
     <link rel="stylesheet" href="./common/common.css">
@@ -235,215 +236,476 @@
 
     <div class="body">
         <!-- main -->
-        <section id="main" class="">
+        <section id="main" class="container">
             <div class="main_wrap mainSwiper">
                 <div class="swiper-wrapper">
                     <div class="img_wrap swiper-slide">
-                        <img src="./assets/main/main_slide_1.jpeg" />
+                        <!-- class="animation fade"  -->
+                        <img src="./assets/main/main_slide_1.jpeg" draggable="false" />
                         <div class="black_shadow"></div>
-                        <div class="img_desc">
-                            
+                        <div class="img_content animation fadeUp delay_1">
+                            <p class="title white left semi_bold">폐기물을 에너지로,<br />플라스틱은 새로운 상품으로</p>
+                            <p class="sub_title text_18 white left">가까운 곳에서 신재생 에너지를 찾아<br />지구를 지키기 위한 일들을 하고 있습니다.
+                            </p>
+                            <button id="detail_vision" class="white text_16 flex justify_center align_center hover">
+                                자세히 보기
+                                <img src="./assets/arrow_right.png" alt="->" />
+                            </button>
                         </div>
-                        <!-- data-aos="fade-up" -->
                     </div>
                     <div class="img_wrap swiper-slide">
-                        <img src="./assets/main/main_slide_2.jpg" />
+                        <img src="./assets/main/main_slide_2.jpg" draggable="false" />
                         <!-- <div class="black_shadow"></div> -->
+                        <div class="img_content animation fadeUp">
+                            <p class="title white left semi_bold">지구를 지키는 가장 쉬운 방법<br />지구하다 플랫폼입니다</p>
+                            <p class="sub_title text_18 white left">공사장 생활 폐기물, 인테리어 폐기물, 대형 생활 폐기물, 건설
+                                폐기물까지<br />천일에너지는 폐기물로 지구를 구합니다.</p>
+                            <button id="detail_vision" class="white text_16 flex justify_center align_center hover">
+                                자세히 보기
+                                <img src="./assets/arrow_right.png" alt="->" />
+                            </button>
+                        </div>
                     </div>
                     <div class="img_wrap swiper-slide">
-                        <img src="./assets/main/main_slide_3.png" />
+                        <img src="./assets/main/main_slide_3.png" draggable="false" />
                         <!-- <div class="black_shadow"></div> -->
+                        <div class="img_content animation fadeUp delay_1">
+                            <p class="title white left semi_bold">폐기물 수거, 집하, 처리, 소각까지<br />천일에너지가 폐기물의 생태계를 만듭니다.
+                            </p>
+                            <p class="sub_title text_18 white left">수거부터 집하, 처리, 소각까지<br />인프라가 지구를 지키는 경쟁력이 됩니다.
+                            </p>
+                            <button id="detail_vision" class="white text_16 flex justify_center align_center hover">
+                                자세히 보기
+                                <img src="./assets/arrow_right.png" alt="->" />
+                            </button>
+                        </div>
                     </div>
                 </div>
-                <div class="swiper-button-next">
+                <div class="swiper-button-next hover">
                     <img src="./assets/main/slide_right.png" />
                 </div>
-                <div class="swiper-button-prev">
+                <div class="swiper-button-prev hover">
                     <img src="./assets/main/slide_left.png" />
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-pagination flex justify_start align_start"></div>
             </div>
 
-            <!-- <img class="img_earth only_pc_block" src="../assets/image/img_earth.svg" alt="지구이미지" />
-            <img class="img_earth only_mo_block" src="../assets/image/img_earth_mo.svg" alt="지구이미지" />
+            <button id="jiguhadaButton" class="bg_blue2 flex_col justify_center align_center">
+                <img class="hero" src="./assets/main/hero.png" />
+                <img class="jiguhada_text" src="./assets/main/jiguhada_text.png" alt="지구하다" />
+                <div class="center text_12 white semi_bold flex justify_center align_center">
+                    보러가기 >
+                    <!-- <img class="arrow_left" src="./assets/arrow_left.png" alt=">" /> -->
+                </div>
+            </button>
+        </section>
 
-            <div class="main_container flex justify_center align_center">
-                <div class="main_title_wrap flex flex_row justify_space_between align_center">
-                    <div style="width: 100%;">
-                        <h2 class="text_60 white bold left animation fadeUp">지구를 <br class="only_mo_block" />구하는
-                            <br />가장<br class="only_mo_block" /> 쉬운 방법
-                        </h2>
-                        <p class="text_20 white mid left animation fadeUp delay_2">
-                            <b class="mid only_pc_inline">폐기물 처리 No.1 플랫폼 </b>
-                            지구하다와 함께 <br class="only_pc_block" />올바른<br class="only_mo_block" />폐기
-                            문화를 만들어요.
-                        </p>
+        <!-- section1 -->
+        <section id="section1" class="container">
+            <div class="bg_shape1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="590" height="608" viewBox="0 0 590 608" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M-629 1.45364e-05C-629 335.271 -355.655 608 -19.5 608C316.502 608 590 335.271 590 0.0513916L246.867 0.0513957C246.867 146.514 127.412 265.74 -19.4491 265.74C-166.31 265.74 -285.867 146.514 -285.867 0.051402L-629 0.0514061L-629 1.45364e-05Z"
+                        fill="url(#paint0_linear_681_1871)" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M-629 1.45364e-05C-629 335.271 -355.655 608 -19.5 608C316.502 608 590 335.271 590 0.0513916L246.867 0.0513957C246.867 146.514 127.412 265.74 -19.4491 265.74C-166.31 265.74 -285.867 146.514 -285.867 0.051402L-629 0.0514061L-629 1.45364e-05Z"
+                        fill="white" fill-opacity="0.7" />
+                    <defs>
+                        <linearGradient id="paint0_linear_681_1871" x1="-629" y1="1.45364e-05" x2="590" y2="0"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#ACCBEE" />
+                            <stop offset="1" stop-color="#E7F0FD" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <div class="bg_shape2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="823" height="608" viewBox="0 0 823 608" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M1219 608C1219 272.729 945.655 -1.12768e-05 609.5 -7.26821e-06C273.498 -3.26143e-06 3.25226e-06 272.729 7.24971e-06 607.949L343.133 607.949C343.133 461.486 462.588 342.26 609.449 342.26C756.31 342.26 875.867 461.486 875.867 607.949L1219 607.949L1219 608Z"
+                        fill="url(#paint0_linear_681_1870)" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M1219 608C1219 272.729 945.655 -1.12768e-05 609.5 -7.26821e-06C273.498 -3.26143e-06 3.25226e-06 272.729 7.24971e-06 607.949L343.133 607.949C343.133 461.486 462.588 342.26 609.449 342.26C756.31 342.26 875.867 461.486 875.867 607.949L1219 607.949L1219 608Z"
+                        fill="white" fill-opacity="0.7" />
+                    <defs>
+                        <linearGradient id="paint0_linear_681_1870" x1="1219" y1="608" x2="7.25033e-06" y2="608"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#ACCBEE" />
+                            <stop offset="1" stop-color="#E7F0FD" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
 
-                        <div
-                            class="down_button_wrap flex flex_row justify_start align_center  animation fadeUp delay_3">
-                            <button
-                                class="main_button white text_20 bold center bg_primary border_r14 flex flex_row justify_center align_center">
-                                <img src="../assets/image/img_google_play.png" alt="googlePlay" />
-                                Google Play
-                            </button>
-                            <button
-                                class="main_button white text_20 bold center bg_primary border_r14 flex flex_row justify_center align_center">
-                                <img src="../assets/image/img_app_store.png" alt="appStore" />
-                                App Store
-                            </button>
+            <!-- OUR INFRA -->
+            <div class="section_wrap" id="our_infra">
+                <div class="title_wrap flex justify_space_between align_end" data-aos="fade-up">
+                    <div>
+                        <p class="mini_title left blue semi_bold">OUR INFRA</p>
+                        <p class="title left black semi_bold">폐기물을 에너지로 변화시키는 모든 인프라를 구축</p>
+                    </div>
+                    <button id="our_infra_detail_button"
+                        class="detail_button blue text_16 semi_bold flex justify_center align_center hover">
+                        자세히보기
+                        <img src="./assets/arrow_right_blue.png" alt="->">
+                    </button>
+                </div>
+                <div class="our_infra_wrap flex justify_space_between align_end" data-aos="fade-up">
+                    <div class="infra_item">
+                        <img src="./assets/main/infra_1.jpeg" alt="수집운반 이미지" />
+                        <div class="infra_shadow"></div>
+                        <div class="infta_info">
+                            <div class="infra_sub_title white semi_bold left">Logistics</div>
+                            <div class="infra_title white bold left">수집운반</div>
+                            <div class="infra_desc text_16 white mid left">현장결제, 인계서까지 한번에</div>
                         </div>
                     </div>
-
-                    <img class="img_hero animation fadeUp delay_2" src="../assets/image/img_hero.svg" alt="히어로이미지" />
-                </div>
-            </div> -->
-        </section>
-
-        <!-- section1 -->
-        <section id="section1">
-
-        </section>
-        <!-- section1 -->
-        <!-- <section id="section1" class="main_section">
-            <div class="main_section_wrap flex flex_col justify_center align_center">
-                <p class="text_50 extra_bold center animation fadeUp">이제, 폐기물 처리가 쉬워집니다.</p>
-                <p class="text_20 mid center animation fadeUp delay_2">언제 어디서나, 어떤 폐기물이든<br />간편하게 입력하고<br
-                        class="only_mo_block" /> 배출하면 끝!</p>
-
-                <div class="slider">
-                    <div class="slider_wrap">
-                        자동 무한 슬라이드 들어갈 자리.
+                    <div class="infra_item">
+                        <img src="./assets/main/infra_2.jpeg" alt="집하처리 이미지" />
+                        <div class="infra_shadow"></div>
+                        <div class="infta_info">
+                            <div class="infra_sub_title white semi_bold left">Waste Storage</div>
+                            <div class="infra_title white bold left">집하처리</div>
+                            <div class="infra_desc text_16 white mid left">현장결제, 인계서까지 한번에</div>
+                        </div>
+                    </div>
+                    <div class="infra_item">
+                        <img src="./assets/main/infra_3.jpeg" alt="중간처리 이미지" />
+                        <div class="infra_shadow"></div>
+                        <div class="infta_info">
+                            <div class="infra_sub_title white semi_bold left">Processing</div>
+                            <div class="infra_title white bold left">중간처리</div>
+                            <div class="infra_desc text_16 white mid left">현장결제, 인계서까지 한번에</div>
+                        </div>
+                    </div>
+                    <div class="infra_item">
+                        <img src="./assets/main/infra_4.jpeg" alt="최종처리 이미지" />
+                        <div class="infra_shadow"></div>
+                        <div class="infta_info">
+                            <div class="infra_sub_title white semi_bold left">Final Treatment</div>
+                            <div class="infra_title white bold left">최종처리</div>
+                            <div class="infra_desc text_16 white mid left">현장결제, 인계서까지 한번에</div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section> -->
+
+            <!-- OUR SERVICES -->
+            <div class="section_wrap flex justify_space_between align_start" id="our_services">
+                <div class="title_wrap" data-aos="fade-up">
+                    <p class="mini_title left blue semi_bold">OUR SERVICES</p>
+                    <p class="title left black semi_bold">에너지에 필요한<br />모든 서비스를 제공합니다.</p>
+                    <p class="sub_title left black text_16">천일에너지는 2010년부터 친재생 에너지를 핵심 사업으로 <br />성장시키며 수직계열화한 10년
+                        이상의 노하우를 바탕으로 <br />모든 폐기물을 에너지로 바꾸고 있습니다.</p>
+                    <button id="our_infra_detail_button"
+                        class="detail_button blue text_16 semi_bold flex justify_center align_center hover">
+                        자세히보기
+                        <img src="./assets/arrow_right_blue.png" alt="->">
+                    </button>
+                </div>
+                <div class="our_services_wrap flex justify_start align_start">
+                    <img data-aos="fade-left" src="./assets/main/services_1.png" alt="지구하다는 깨끗한 환경을 넓힙니다." />
+                    <img data-aos="fade-left" data-aos-delay="300" src="./assets/main/services_2.png"
+                        alt="모든 것을 가능하게 하는 천일 서비스" />
+                </div>
+            </div>
+
+        </section>
 
         <!-- section2 -->
-        <!-- <section id="section2" class="main_section">
-            <div class="main_section_wrap flex flex_row justify_center align_center">
-                <div class="left_wrap flex flex_col justify_center align_center">
-                    <img class="img_main_section" src="../assets/image/img_main_section2.png" alt="수거신청_위치선택" />
+        <section id="section2" class="container">
+            <div class="about_us_bg_text_container">
+                <div class="about_us_bg_text">
+                    <span>ABOUT</span>
+                    <span class="about_us_bg_text_dash">-</span>
+                    <span>CHUNIL ENERGY</span>
+                    <span style="visibility: hidden;">-</span>
                 </div>
-                <div class="right_wrap flex flex_col justify_center align_center">
-                    <div class="section_desc">
-                        <span class="text_22 primary semi_bold left animation fadeDown delay_3">배출신고</span>
-                        <p class="text_50 extra_bold left animation fadeUp">전화•방문 없이<br />간편하게 신청해요!</p>
-                        <p class="text_20 mid left gray5 animation fadeUp delay_2">언제 어디서나 간편하게 신청하고<br />원하는 시간에 배출하세요.
+                <div class="about_us_bg_text">
+                    <span>ABOUT</span>
+                    <span class="about_us_bg_text_dash">-</span>
+                    <span>CHUNIL ENERGY</span>
+                    <span style="visibility: hidden;">-</span>
+                </div>
+            </div>
+            <!-- ABOUT US -->
+            <div class="section_wrap" id="about_us">
+                <div class="title_wrap" data-aos="fade-up" data-aos-duration="500">
+                    <p class="mini_title center blue semi_bold">ABOUT US</p>
+                    <p class="title center black semi_bold">CHUNIL ENERGY is</p>
+                </div>
+                <div class="about_us_wrap flex justify_space_between align_end" data-aos="fade-up">
+                    <div class="grow about_box" id="about_box1" data-aos="fade-up" data-aos-delay="300"
+                        data-aos-duration="500">
+                        <p class="title white left mid" data-aos="fade-up" data-aos-delay="1000"
+                            data-aos-duration="500">
+                            400,000 <span class="text_18 white">ton</span>
                         </p>
-
-                        <img class="mo_img_section only_mo_block" src="../assets/image/img_section_02.png"
-                            alt="신고가 접수되었어요! 팝업 이미지" />
-
-                        <div class="btn_more_wrap flex flex_row justify_start align_center">
-                            <button class="btn_more text_16 center mid border_r14">대형 생활폐기물 <br
-                                    class="only_pc_block" />스티커</button>
-                            <button class="btn_more text_16 center mid border_r14">공사장 생활폐기물 <br
-                                    class="only_pc_block" />배출신고제</button>
+                        <p class="text_18 white left mid">연 평균 우드칩 생산</p>
+                        <p class="text_16 white left mid">
+                            천일에너지는 2010년부터 친재생 에너지를 핵심 사업으로<br />
+                            성장시키며 수직계열화한 10년 이상의 노하우를 바탕으로<br />
+                            모든 폐기물을 에너지로 바꾸고 있습니다.
+                        </p>
+                    </div>
+                    <div class="grow flex flex_col justify_start align_stretch">
+                        <div class="about_box grow" id="about_box2" data-aos="fade-up" data-aos-delay="600"
+                            data-aos-duration="500">
+                            <p class="title black left mid" data-aos="fade-up" data-aos-delay="1100"
+                                data-aos-duration="500">One stop</p>
+                            <p class="text_16 black left mid">
+                                폐기물 수집 운반부터 최종처리까지<br />한번에 가능한 원스톱 서비스를 제공합니다.
+                            </p>
+                        </div>
+                        <div class="about_box grow" id="about_box3" data-aos="fade-up" data-aos-delay="700"
+                            data-aos-duration="500">
+                            <p class="title white left mid" data-aos="fade-up" data-aos-delay="1200"
+                                data-aos-duration="500">No.1</p>
+                            <p class="text_18 white left mid">폐목재 시장</p>
+                            <p class="text_16 white left mid">
+                                천일에너지는 국내 폐자원<br />에너지화 시장을 선도하고 있습니다.
+                            </p>
                         </div>
                     </div>
-
                 </div>
-
             </div>
-        </section> -->
+
+        </section>
 
         <!-- section3 -->
-        <!-- <section id="section3" class="main_section">
-            <div class="main_section_wrap flex flex_row justify_center align_center">
-                <div class="left_wrap flex flex_col justify_center align_center">
-                    <div class="section_desc">
-                        <span class="text_22 primary semi_bold left animation fadeDown delay_3">방문수거</span>
-                        <p class="text_50 extra_bold left animation fadeUp">무거운 폐기물,<br />혼자 버리기 힘들다면?</p>
-                        <p class="text_20 mid left gray5 animation fadeUp delay_2">저렴한 비용으로 알아서 옮겨주고<br />올바른 과정으로 처리해
-                            드려요.
-                        </p>
+        <section id="section3" class="">
+            <div class="scroll_wrap flex justify_center" id="business_area">
+                <div class="title_wrap" data-aos="fade-up" data-aos-duration="500">
+                    <p class="mini_title left blue semi_bold">BUSINESS AREAS</p>
+                    <p class="title left white semi_bold">모든 폐기물을<br />에너지로 만드는 기업</p>
+                </div>
+                <div class="fixed_content_wrap">
+                    <div class="fixed_content flex flex_col justify_end align_start" id="business_1" data-aos="fade-up"
+                        data-aos-duration="500">
+                        <p class="text_24 white left bold">폐기물 수거</p>
+                        <p class="text_16 white left mid">데이터 기반의 페기물 수집 운반 혁신</p>
+                    </div>
+                    <div class="fixed_content flex flex_col justify_end align_start" id="business_2" data-aos="fade-up"
+                        data-aos-delay="100" data-aos-duration="500">
+                        <p class="text_24 white left bold">폐기물 집하장</p>
+                        <p class="text_16 white left mid">건설 폐기물, 생활 폐기물 처리</p>
+                    </div>
+                    <div class="fixed_content flex flex_col justify_end align_start" id="business_3" data-aos="fade-up"
+                        data-aos-delay="100" data-aos-duration="500">
+                        <p class="text_24 white left bold">Bio SRF 생산</p>
+                        <p class="text_16 white left mid">폐목재를 활용하여 Bio-SRF를 생산</p>
+                    </div>
+                    <div class="fixed_content flex flex_col justify_end align_start" id="business_4" data-aos="fade-up"
+                        data-aos-delay="100" data-aos-duration="500">
+                        <p class="text_24 white left bold">에너지 생산</p>
+                        <p class="text_16 white left mid">친환경 연료 자체 공급 및 전력, 증기에너지 생산</p>
+                    </div>
+                    <div class="fixed_content flex flex_col justify_end align_start" id="business_5" data-aos="fade-up"
+                        data-aos-delay="100" data-aos-duration="500">
+                        <p class="text_24 white left bold">IT 플랫폼 구축</p>
+                        <p class="text_16 white left mid">IT 시스템, 보안, ERP, 결제 시스템 개발</p>
+                    </div>
+                    <div class="fixed_content flex flex_col justify_end align_start" id="business_6" data-aos="fade-up"
+                        data-aos-delay="100" data-aos-duration="500"></div>
+                </div>
+            </div>
+        </section>
 
-                        <img class="mo_img_section only_mo_block" src="../assets/image/img_section_03.png"
-                            alt="방문수거 배출신고 선택 이미지" />
+        <!-- section4 -->
+        <section id="section4" class="container">
+            <!-- OUR MISSION -->
+            <div class="section_wrap" id="our_mission" data-aos="fade-up" data-aos-duration="500">
+                <div class="misson_banner flex flex_col justify_end align_start">
+                    <p class="mini_title left white semi_bold text_16">OUR MISSION</p>
+                    <p class="title left white semi_bold">지구를 구하기 위해<br />폐기물 속 에너지를 찾는 천일에너지</p>
+                    <button id="our_mission_detail_button"
+                        class="detail_button white text_16 semi_bold flex justify_center align_center hover">
+                        자세히보기
+                        <img src="./assets/arrow_right.png" alt="->">
+                    </button>
+                </div>
+            </div>
 
-                        <div class="btn_more_wrap flex flex_row justify_start align_center">
-                            <button class="btn_more text_16 center mid border_r14">더 알아보기</button>
-                        </div>
+            <!-- OUR CLIENTS -->
+            <div class="section_wrap" id="our_clients">
+                <div class="title_wrap flex justify_space_between align_end" data-aos="fade-up" data-aos-duration="500">
+                    <div>
+                        <p class="mini_title left blue semi_bold">OUR CLIENTS</p>
+                        <p class="title left black semi_bold">천일에너지는 다양한 분야의<br />기업, 브랜드와 함께하고 있습니다.</p>
+                    </div>
+                    <button id="our_clients_detail_button"
+                        class="detail_button blue text_16 semi_bold flex justify_center align_center hover">
+                        자세히보기
+                        <img src="./assets/arrow_right_blue.png" alt="->">
+                    </button>
+                </div>
+            </div>
+            <div class="clients_logo_list" data-aos="fade-up" data-aos-duration="500">
+                <div class="clients_logo_group">
+                    <div class="clients_logo flex justify_center align_center">
+                        <img src="./assets/main/clients_1.svg" alt="쌍용C&E 로고" style="width: 164px;" />
+                    </div>
+                    <div class="clients_logo flex justify_center align_center">
+                        <img src="./assets/main/clients_2.svg" alt="동서발전 로고" style="width: 186px;" />
+                    </div>
+                    <div class="clients_logo flex justify_center align_center">
+                        <img src="./assets/main/clients_3.png" alt="리바트 로고" style="width: 128px;" />
+                    </div>
+                    <div class="clients_logo flex justify_center align_center">
+                        <img src="./assets/main/clients_4.svg" alt="HANSSEM 로고" style="width: 135px;" />
+                    </div>
+                    <div class="clients_logo flex justify_center align_center">
+                        <img src="./assets/main/clients_5.png" alt="SME 로고" style="width: 110px;" />
+                    </div>
+                    <div class="clients_logo flex justify_center align_center">
+                        <img src="./assets/main/clients_6.svg" alt="GS EPS 로고" style="width: 135px;" />
+                    </div>
+                    <div class="clients_logo flex justify_center align_center">
+                        <img src="./assets/main/clients_7.jpg" alt="미래도시 용산 로고" style="width: 121px;" />
+                    </div>
+                    <div class="clients_logo flex justify_center align_center">
+                        <img src="./assets/main/clients_8.jpg" alt="종로구 로고" style="width: 160px;" />
+                    </div>
+                    <div class="clients_logo flex justify_center align_center">
+                        <img src="./assets/main/clients_9.jpg" alt="문화도시 노원 로고" style="width: 89px;" />
+                    </div>
+                    <div class="clients_logo flex justify_center align_center">
+                        <img src="./assets/main/clients_10.jpg" alt="성동구 로고" style="width: 134px;" />
                     </div>
                 </div>
-                <div class="right_wrap flex flex_col justify_center align_center">
-                    <img class="img_main_section" src="../assets/image/img_main_section3.png" alt="대생폐 배출방식_배출신고" />
+                <div class="clients_logo_group">
+                    <div class="clients_logo flex justify_center align_center">
+                        <img src="./assets/main/clients_1.svg" alt="쌍용C&E 로고" style="width: 164px;" />
+                    </div>
+                    <div class="clients_logo flex justify_center align_center">
+                        <img src="./assets/main/clients_2.svg" alt="동서발전 로고" style="width: 186px;" />
+                    </div>
+                    <div class="clients_logo flex justify_center align_center">
+                        <img src="./assets/main/clients_3.png" alt="리바트 로고" style="width: 128px;" />
+                    </div>
+                    <div class="clients_logo flex justify_center align_center">
+                        <img src="./assets/main/clients_4.svg" alt="HANSSEM 로고" style="width: 135px;" />
+                    </div>
+                    <div class="clients_logo flex justify_center align_center">
+                        <img src="./assets/main/clients_5.png" alt="SME 로고" style="width: 110px;" />
+                    </div>
+                    <div class="clients_logo flex justify_center align_center">
+                        <img src="./assets/main/clients_6.svg" alt="GS EPS 로고" style="width: 135px;" />
+                    </div>
+                    <div class="clients_logo flex justify_center align_center">
+                        <img src="./assets/main/clients_7.jpg" alt="미래도시 용산 로고" style="width: 121px;" />
+                    </div>
+                    <div class="clients_logo flex justify_center align_center">
+                        <img src="./assets/main/clients_8.jpg" alt="종로구 로고" style="width: 160px;" />
+                    </div>
+                    <div class="clients_logo flex justify_center align_center">
+                        <img src="./assets/main/clients_9.jpg" alt="문화도시 노원 로고" style="width: 89px;" />
+                    </div>
+                    <div class="clients_logo flex justify_center align_center">
+                        <img src="./assets/main/clients_10.jpg" alt="성동구 로고" style="width: 134px;" />
+                    </div>
                 </div>
-
             </div>
-        </section> -->
+        </section>
 
-        <!-- section6 -->
-        <!-- <section id="section6" class="main_section">
-            <div class="main_section_wrap flex flex_col justify_center align_center">
-                <p class="text_60 extra_bold center">서비스 이용이<br />처음이라 고민이세요?</p>
-                <p class="text_22 mid center">상담사가 더 쉽고 편리하게<br />이용할 수 있도록 도와드릴게요.</p>
-                <button class="main_button text_20 mid center white bg_primary border_r14 animation fadeUp delay_2">
-                    무료 상당 받기
+        <!-- section5 -->
+        <section id="section5" class="container">
+            <div class="bg_shape1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="623" height="200" viewBox="0 0 623 200" fill="none">
+                    <path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd"
+                        d="M623 -43C623 172.61 445.18 348 226.5 348C7.91965 348 -170 172.61 -170 -42.9669L53.2197 -42.9669C53.2197 51.222 130.929 127.895 226.467 127.895C322.005 127.895 399.78 51.2221 399.78 -42.9669L623 -42.9669L623 -43Z"
+                        fill="url(#paint0_linear_681_2124)" />
+                    <defs>
+                        <linearGradient id="paint0_linear_681_2124" x1="17.4364" y1="-43" x2="960.253" y2="195.389"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="white" />
+                            <stop offset="1" stop-color="white" stop-opacity="0" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <div class="bg_shape2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="605" height="200" viewBox="0 0 605 200" fill="none">
+                    <path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd"
+                        d="M821 279C821 53.464 636.901 -130 410.5 -130C184.202 -130 2.18779e-06 53.464 4.87686e-06 278.965L231.101 278.965C231.101 180.44 311.555 100.238 410.466 100.238C509.377 100.238 589.899 180.44 589.899 278.965L821 278.965L821 279Z"
+                        fill="url(#paint0_linear_681_2125)" />
+                    <defs>
+                        <linearGradient id="paint0_linear_681_2125" x1="2.43864e-06" y1="74.5" x2="821" y2="74.5"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="white" />
+                            <stop offset="1" stop-color="white" stop-opacity="0" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <!-- Contact Us -->
+            <div class="section_wrap flex justify_space_between align_center" id="contact_us">
+                <div>
+                    <p class="title left white semi_bold">Contact Us</p>
+                    <p class="sub_title text_14 left white mid">주요 서비스 및 사업 제휴 문의를 원하신다면</p>
+                </div>
+                <button id="contact_us_detail_button"
+                    class="detail_button white text_16 semi_bold flex justify_center align_center hover">
+                    제휴/제안 문의
+                    <img src="./assets/arrow_right.png" alt="->">
                 </button>
             </div>
-        </section> -->
+        </section>
 
         <!-- footer -->
-        <!-- <footer>
-            <div class="footer_wrap flex flex_row justify_space_between align_stretch">
-
-                <div class="mo_width_100">
-                    <div class="footer_nav_wrap footer_nav_link_list flex flex_row justify_start align_center">
-                        <a href="#" class="footer_nav text_16 semi_bold">이용약관</a>
-                        <a href="#" class="footer_nav text_16 semi_bold">개인정보처리방침</a>
-                        <a href="#" class="footer_nav text_16 semi_bold">사업자정보</a>
-                    </div>
-                    <div class="flex flex_col justify_start align_start" style="gap: 6px;">
-                        <span class="text_14 gray3 left">(주)수거봇</span>
-                        <div class="left flex justify_start align_center">
-                            <span class="text_14 gray3 left">대표:박상원</span>
-                            <span class="footer_divid"></span>
-                            <span class="text_14 gray3 left">사업자등록번호: 297-86-01887</span>
+        <footer>
+            <div class="footer_wrap flex flex_col justify_start align_stretch">
+                <div class="footer_row flex justify_space_between align_start">
+                    <div class="footer_contents flex flex_col justify_start align_start">
+                        <!-- logo & footer_nav -->
+                        <div class="flex justify_start align_center">
+                            <a href="./index.html">
+                                <img class="logo" src="./assets/logo_white.svg" alt="천일 에너지 로고" />
+                            </a>
+                            <div class="footer_nav_list flex justify_start align_center">
+                                <a href="#" class="footer_nav text_16 semi_bold">제휴제안</a>
+                                <a href="#" class="footer_nav text_16 semi_bold">플랫폼</a>
+                                <a href="#" class="footer_nav text_16 semi_bold">인프라</a>
+                                <a href="#" class="footer_nav text_16 semi_bold">서비스</a>
+                            </div>
                         </div>
-                        <span class="text_14 gray3 left">개인정보관리챔임자: 홍찬의</span>
-                        <span class="text_14 gray3 left">경기도 평택시 포승읍 도대1로 70</span>
+                        <!-- footer_info & footer_cs -->
+                        <div class="flex justify_space_between align_start" style="gap: 80px;">
+                            <div class="footer_info flex flex_col justify_start align_start">
+                                <p class="text_14 left"><b>천일에너지 대표</b>박상원<b
+                                        style="margin-left: 20px;">사업자등록번호</b>127-86-25218</p>
+                                <p class="text_14 left"><b>서울사무실 소재지</b>서울 성동구 성수이로 51 서울숲한라시그마밸리 601호</p>
+                                <p class="text_14 left"><b>사업소재지</b>경기도 포천시 영중면 양문공단로3길 20</p>
+                            </div>
+                            <div class="footer_cs flex flex_col justify_start align_start">
+                                <p class="text_14 left"><b>TEL</b>02-6907-1017</p>
+                                <p class="text_14 left"><b>FAX</b>02-3409-1014</p>
+                                <p class="text_14 left"><b>CS</b>평일 09:00 - 18:00(점심시간 12:00 - 13:00)</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="footer_btn_small_link_wrap flex flex_row justify_start align_end only_mo_flex">
-                        <button><img src="../assets/image/img_btn_small_link_naver_blog.png"
-                                alt="naver_blog" /></button>
-                        <button><img src="../assets/image/img_btn_small_link_playstore.png" alt="playstore" /></button>
-                        <button><img src="../assets/image/img_btn_small_link_appstore.png" alt="appstore" /></button>
+                    <!-- Family Site -->
+                    <div class="footer_family">
+                        <select name="familt_site" id="familt_site">
+                            <option value="">Family Site</option>
+                            <option value="site1">Site1</option>
+                            <option value="site2">Site2</option>
+                        </select>
                     </div>
                 </div>
 
-                <div class="mo_divide only_mo_block"></div>
+                <div class="footer_row flex justify_space_between align_end">
+                    <p class="copyright left">Copyright 2023 © Chunil Energy. All Right Reserved.</p>
 
-                <div class="mo_width_100">
-                    <div class="footer_nav_wrap flex flex_row justify_end align_center mo_flex_left"
-                        style="padding: 10px 0px;">
-                        <span class="text_16 semi_bold" style="margin-right: 10px;">고객센터</span>
-                        <span class="text_16 semi_bold">02-6907-1042</span>
-                    </div>
-                    <div class="flex flex_col justify_space_between align_end mo_flex_left">
-                        <div>
-                            <p class="right mo_text_left">
-                                <span class="text_16 semi_bold gray3" style="margin-right: 10px;">월- 금</span>
-                                <span class="text_16 semi_bold gray3">09:00 ~ 18:00</span>
-                            </p>
-                            <p class="right mo_text_left" style="margin-top: 6px;">
-                                <span class="text_16 semi_bold gray3" style="margin-right: 10px;">점심시간</span>
-                                <span class="text_16 semi_bold gray3">12:00 ~ 13:00</span>
-                            </p>
-                        </div>
-                        <div class="footer_btn_small_link_wrap flex flex_row justify_center align_end only_pc_flex">
-                            <button><img src="../assets/image/img_btn_small_link_naver_blog.png"
-                                    alt="naver_blog" /></button>
-                            <button><img src="../assets/image/img_btn_small_link_playstore.png"
-                                    alt="playstore" /></button>
-                            <button><img src="../assets/image/img_btn_small_link_appstore.png"
-                                    alt="appstore" /></button>
-                        </div>
+                    <div class="footer_social_wrap flex flex_row justify_end align_end">
+                        <button><img src="./assets/social/facebook.png" alt="facebook" class="hover" /></button>
+                        <button><img src="./assets/social/twitter.png" alt="twitter" class="hover" /></button>
+                        <button><img src="./assets/social/instagram.png" alt="instagram" class="hover" /></button>
                     </div>
                 </div>
-
             </div>
-        </footer> -->
+        </footer>
     </div>
 
 
@@ -461,17 +723,43 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Initialize Swiper -->
     <script>
-        var swiper = new Swiper(".mainSwiper", {
+        const menu = ['VISION', 'JIGUHADA', 'OUR INFRA'];
+        const mainSwiper = new Swiper(".mainSwiper", {
             slidesPerView: 1,
             spaceBetween: 0,
             loop: true,
+            allowTouchMove: false,
+            autoplay: {
+                delay: 5000,
+                waitForTransition: false,
+                disableOnInteraction: false,
+            },
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '">' + (menu[index]) + '</span>';
+                },
             },
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
+            },
+            on: {
+                init: function () {
+
+                },
+                realIndexChange: function () {
+                    const index_currentSlide = this.realIndex;
+                    $('.swiper-wrapper > img_wrap:nth-child(' + index_currentSlide + ') .img_content').addClass('Loaded');
+                    // 배경 이미지 fadeIn
+                    // $('.swiper-wrapper > img_wrap:nth-child(' + index_currentSlide + ') img').addClass('Loaded');
+                },
+                beforeTransitionStart: function () {
+                    $('.img_content').removeClass('Loaded');
+                    // 배경 이미지 fadeIn
+                    // $('.swiper-wrapper .img_wrap img').removeClass('Loaded');
+                },
             },
         });
     </script>
