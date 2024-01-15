@@ -32,7 +32,9 @@
             <div class="sub_nav_body flex justify_center align_start">
                 <div class="sub_nav_col empty_col"></div>
                 <div class="sub_nav_col">
-                    <p class="text_16 black2 semi_bold hover">인사말</p>
+                    <a href="./introduce/greeting.html">
+                        <p class="text_16 black2 semi_bold hover">인사말</p>
+                    </a>
                 </div>
                 <div class="sub_nav_col text_16 black2 semi_bold">
                     <p class="text_16 black2 semi_bold hover">VISION <br />& MISSION</p>
@@ -121,10 +123,10 @@
         </div>
         <!-- 상단 헤더 -->
         <nav>
-            <div class="logo">
+            <a href="../index.html" class="logo">
                 <img id="active_logo" src="./assets/logo.svg" alt="천일에너지 로고" />
                 <img src="./assets/logo_white.svg" alt="천일에너지 로고" />
-            </div>
+            </a>
 
             <ul class="flex justify_center align_center">
                 <li><a>회사소개</a></li>
@@ -148,9 +150,9 @@
     <!-- sitemap (사이트맵) -->
     <div id="sitemap">
         <div class="sitemap_header">
-            <div class="logo">
+            <a href="#"  class="logo">
                 <img src="./assets/logo_white.svg" alt="천일에너지 로고" />
-            </div>
+            </a>
             <div class="menu_wrap flex justify_end align_center">
                 <button type="button" id="partner_offer" class="hover center white text_14 justify_center align_center">
                     제휴제안
@@ -165,7 +167,7 @@
             <div class="sitmap_col">
                 <p class="title left white">회사소개</p>
                 <div class="nav_list flex flex_col justify_start align_start">
-                    <p class="sub_title left white nav_hover">인사말</p>
+                    <a href="./introduce/greeting.html"><p class="sub_title left white nav_hover">인사말</p></a>
                     <p class="sub_title left white nav_hover">VISION<br />& MISSION</p>
                     <div class="sub_nav_list nav_hover">
                         <p class="sub_title left white">주요 계열사</p>
@@ -608,7 +610,7 @@
             </div>
         </section>
 
-        <!-- section5 -->
+        <!-- section5 (Contact Us) -->
         <section id="section5" class="container">
             <div class="bg_shape1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="623" height="200" viewBox="0 0 623 200" fill="none">
@@ -712,6 +714,7 @@
     <!-- 애니메이션 코드 -->
     <script src="./common/animation.js"></script>
     <script src="./common/header.js"></script>
+    <script src="./common/headerChangeByScroll.js"></script>
 
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

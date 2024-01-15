@@ -1,31 +1,7 @@
 const SUB_MENU_SLIDE_TIME = 400;
 
-/**
- * 페이지 로드 시
- */
-function init() {
-  if ($(window).scrollTop()) {
-    $("#header").addClass("active");
-  } else {
-    $("#header").removeClass("active");
-  }
-}
-
-window.onload = function(){
-    init();
-};
-
 $(document).ready(function () {
   let isOpenNav = false;
-
-  // 헤더 스크롤에 따른 css 변경 (메인 페이지만 해당)
-  $(window).on("scroll", function () {
-    if ($(window).scrollTop()) {
-      $("#header").addClass("active");
-    } else {
-      $("#header").removeClass("active");
-    }
-  });
 
   // 헤더(서브 nav) 바깥 클릭 시 서브메뉴 닫힘
   $(document).on("click", function (e) {

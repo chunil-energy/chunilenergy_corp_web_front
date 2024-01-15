@@ -1,0 +1,76 @@
+.page_title_image_wrap {
+  background-image: url("./assets/greeting/greeting_main.jpg");
+  /* background-size: 1920px auto; */
+  background-position: top center;
+}
+
+.greeting_wrap {
+  width: 86%;
+  margin: 150px auto 220px;
+  max-width: 1500px;
+}
+.greeting_wrap .greeting_list_wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.greeting_wrap .greeting_list_wrap .greeting_row {
+  width: 100%;
+  gap: 120px;
+  margin-bottom: 150px;
+  padding-left: 40px;
+}
+.greeting_list_wrap .greeting_row:first-child {
+  padding-left: 0px;
+  padding-right: 40px;
+}
+.greeting_list_wrap .greeting_row .img_wrap {
+  width: 600px;
+  height: 400px;
+  border-radius: 14px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-repeat: no-repeat;
+}
+#greeting_1.greeting_row .img_wrap {
+  background-image: url("./assets/greeting/greeting_1.jpg");
+  background-position: center;
+  background-size: 100% auto;
+}
+#greeting_2.greeting_row .img_wrap {
+  background-image: url("./assets/greeting/greeting_2.jpg");
+  background-position: center;
+  background-size: 639px auto;
+}
+#greeting_3.greeting_row .img_wrap {
+  width: 480px;
+  height: 680px;
+  background-image: url("./assets/greeting/greeting_3.jpg");
+  background-position: center;
+  background-size: 100% auto;
+}
+#greeting_4.greeting_row .img_wrap {
+  background-image: url("./assets/greeting/greeting_4.jpg");
+  background-position: center;
+  background-size: 100% auto;
+}
+.greeting_list_wrap .greeting_row .greeting_title {
+  font-size: 28px;
+  line-height: 150%; /* 42px */
+  letter-spacing: -1.12px;
+  margin-bottom: 20px;
+}
+.greeting_list_wrap .greeting_row .greeting_desc {
+  line-height: 160%; /* 25.6px */
+  letter-spacing: -0.64px;
+}
+
+.greeting_wrap .greeting_banner {
+  width: 100%;
+  height: 500px;
+  border-radius: 14px;
+  background: #00000033;
+  background-image: url("./assets/greeting/greeting_banner.jpg");
+  background-position: center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+}

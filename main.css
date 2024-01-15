@@ -654,45 +654,6 @@ section#section4 .clients_logo_list {
   filter: grayscale(100%);
 }
 
-/* section5 */
-section#section5 {
-  width: 100%;
-  height: 200px;
-  position: relative;
-  background: linear-gradient(91deg, #1a83ff 16.08%, #084299 108.21%);
-}
-section#section5 .bg_shape1 {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
-section#section5 .bg_shape2 {
-  position: absolute;
-  bottom: -8px;
-  right: 0;
-}
-section#section5 #contact_us.section_wrap {
-  height: 100%;
-}
-section#section5.title {
-  font-size: 42px;
-  line-height: 120%; /* 50.4px */
-  letter-spacing: -1.68px;
-  margin-bottom: 14px;
-}
-section#section5 .sub_title {
-  line-height: 160%; /* 22.4px */
-  letter-spacing: -0.56px;
-}
-section#section5 .detail_button {
-  width: 170px;
-  height: 50px;
-  border-radius: 500px;
-  border-color: #ffffff80;
-  padding-right: 3px;
-}
-
-
 /* PC (1440px) */
 @media screen and (max-width: 1440px) {
   section#section3 div.fixed_content {
