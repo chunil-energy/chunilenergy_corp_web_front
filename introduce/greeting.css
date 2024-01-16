@@ -5,7 +5,7 @@
 }
 
 .greeting_wrap {
-  width: 86%;
+  width: 90%;
   margin: 150px auto 220px;
   max-width: 1500px;
 }
@@ -74,3 +74,40 @@
   background-size: auto 100%;
   background-repeat: no-repeat;
 }
+.greeting_wrap .greeting_banner p.title {
+  font-size: 28px;
+  line-height: 150%; /* 42px */
+  letter-spacing: -1.12px;
+  margin-bottom: 30px;
+}
+.greeting_wrap .greeting_banner p.sub_title {
+  line-height: 160%;
+  letter-spacing: -0.72px;
+}
+.greeting_wrap .greeting_banner p.sub_title b {
+  font-weight: 600;
+}
+
+/* 미니 PC */
+@media screen and (max-width: 1080px) {
+  .greeting_wrap .greeting_list_wrap .greeting_row {
+    gap: 86px;
+    margin-bottom: 100px;
+    padding-left: 0px;
+  }
+  .greeting_list_wrap .greeting_row:first-child {
+    padding-right: 0px;
+  }
+
+  .greeting_list_wrap .greeting_row .img_wrap {
+    width: 420px;
+    height: 260px;
+  }
+  #greeting_3.greeting_row .img_wrap {
+    width: 340px;
+    height: 473px;
+  }
+}
+
+/* 태블릿 이하 */
+@media screen and (max-width: 870px) {}

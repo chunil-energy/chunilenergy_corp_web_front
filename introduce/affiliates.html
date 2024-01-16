@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회사소개.인사말</title>
+    <title>회사소개.계열사</title>
     <!-- 공통 css -->
     <link rel="stylesheet" href="../common/common.css">
     <!-- <link rel="stylesheet" href="./common/animation.css"> -->
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../common/header.css">
     <link rel="stylesheet" href="../common/sitemap.css">
     <!-- 페이지 css -->
-    <link rel="stylesheet" href="greeting.css">
+    <link rel="stylesheet" href="affiliates.css">
 
     <!-- Link aos CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -38,29 +38,29 @@
                 </div>
                 <div class="sub_nav_col">
                     <p class="text_16 black2 semi_bold mb_16">주요 계열사</p>
-                    <div class="sub_nav_list flex flex_col align_start justify_center">
-                        <a href="./affiliates.html#factory">
+                    <div class="sub_nav_list flex flex_col align_start justify_center" id="affiliates_nav">
+                        <a href="#factory">
                             <div class="sub_nav gray semi_bold left hover">천일에너지 팩토리</div>
                         </a>
-                        <a href="./affiliates.html#hub">
+                        <a href="#hub">
                             <div class="sub_nav gray semi_bold left hover">천일에너지 허브</div>
                         </a>
-                        <a href="./affiliates.html#service">
+                        <a href="#service">
                             <div class="sub_nav gray semi_bold left hover">천일 서비스</div>
                         </a>
-                        <a href="./affiliates.html#sugerbot">
+                        <a href="#sugerbot">
                             <div class="sub_nav gray semi_bold left hover">수거봇</div>
                         </a>
-                        <a href="./affiliates.html#pathfinder">
+                        <a href="#pathfinder">
                             <div class="sub_nav gray semi_bold left hover">천일 패스파인더</div>
                         </a>
-                        <a href="./affiliates.html#chunilCD">
+                        <a href="#chunilCD">
                             <div class="sub_nav gray semi_bold left hover">천일C&D</div>
                         </a>
-                        <a href="./affiliates.html#chunil">
+                        <a href="#chunil">
                             <div class="sub_nav gray semi_bold left hover">천일</div>
                         </a>
-                        <a href="./affiliates.html#solapark">
+                        <a href="#solapark">
                             <div class="sub_nav gray semi_bold left hover">천일 솔라파크</div>
                         </a>
                     </div>
@@ -253,79 +253,203 @@
 
     <div class="body">
 
-        <div class="page_container container">
-            <!-- 인사말 title & img -->
+        <div class="page_container">
+            <!-- 계열사 title & img -->
             <div class="page_title_wrap">
-                <p class="title" data-aos="fade-up" data-aos-duration="500">인사말</p>
-                <p class="sub_title" data-aos="fade-up" data-aos-duration="500">지구를 위한 사명감, 강력한 인프라, IT혁신까지 더해<br />모든 것을 에너지로 만드는 친환경 에너지 기업, 천일에너지입니다.</p>
+                <p class="title left" data-aos="fade-up" data-aos-duration="500">신재생에너지의 전 과정을<br />천일의 이름으로</p>
+                <p class="sub_title" data-aos="fade-up" data-aos-duration="500">
+                    폐기물에서 신재생에너지로- 더욱 정직하게, 더욱 효울적으로 관리하기 위해<br />
+                    폐기물 처리와 신재생에너지 생산의 모든 과정을 천일의 이름으로 진행합니다.<br />
+                    지속가능한 지구를 위해 완벽한 협업으로 국내 유일의 신재생에너지<br />
+                    원스탑 시스템을 구축한 천일의 가족을 소개합니다.
+                </p>
             </div>
             <div class="page_title_image_wrap" data-aos="fade-up" data-aos-duration="500" data-aos-delay="150"></div>
-            <!-- 인사말 contents -->
-            <div class="greeting_wrap">
-                <div class="greeting_list_wrap">
-                    <div id="greeting_1" class="greeting_row flex justify_space_between align_center">
-                        <div class="img_wrap"></div>
-                        <div class="grow">
-                            <p class="greeting_title black3 semi_bold left">모든 것은 에너지입니다.</p>
-                            <p class="greeting_desc gray2 text_16 left">
-                                건축 폐목재 하나도, 버려진 페트병 하나도<br />
-                                모두 에너지가 될 수 있습니다.<br />
-                                하지만 이런 폐기물들을<br />
-                                누구나 신재생 에너지로<br />
-                                만들 수 있는 것은 아닙니다.
-                            </p>
-                        </div>
-                    </div>
-                    <div id="greeting_2" class="greeting_row flex justify_space_between align_center">
-                        <div class="grow">
-                            <p class="greeting_title black3 semi_bold left">무엇보다 사명감을 가진<br />기업만이 가능합니다.</p>
-                            <p class="greeting_desc gray2 text_16 left">
-                                건축 폐목재 하나도, 버려진 페트병 하나도<br />
-                                모두 에너지가 될 수 있습니다.<br />
-                                하지만 이런 폐기물들을<br />
-                                누구나 신재생 에너지로<br />
-                                만들 수 있는 것은 아닙니다.
-                            </p>
-                        </div>
-                        <div class="img_wrap"></div>
-                    </div>
-                    <div id="greeting_3" class="greeting_row flex justify_space_between align_center">
-                        <div class="img_wrap"></div>
-                        <div class="grow">
-                            <p class="greeting_title black3 semi_bold left">모든 것은 에너지입니다.</p>
-                            <p class="greeting_desc gray2 text_16 left">
-                                건축 폐목재 하나도, 버려진 페트병 하나도<br />
-                                모두 에너지가 될 수 있습니다.<br />
-                                하지만 이런 폐기물들을<br />
-                                누구나 신재생 에너지로<br />
-                                만들 수 있는 것은 아닙니다.
-                            </p>
-                        </div>
-                    </div>
-                    <div id="greeting_4" class="greeting_row flex justify_space_between align_center">
-                        <div class="grow">
-                            <p class="greeting_title black3 semi_bold left">모든 것은 에너지입니다.</p>
-                            <p class="greeting_desc gray2 text_16 left">
-                                건축 폐목재 하나도, 버려진 페트병 하나도<br />
-                                모두 에너지가 될 수 있습니다.<br />
-                                하지만 이런 폐기물들을<br />
-                                누구나 신재생 에너지로<br />
-                                만들 수 있는 것은 아닙니다.
-                            </p>
-                        </div>
-                        <div class="img_wrap"></div>
-                    </div>
+            <!-- 계열사 contents -->
+            <div class="affiliates_wrap flex justify_space_between align_start">
+                <div class="side_nav_wrap flex flex_col justify_start align_start">
+                    <a href="#factory">
+                        <div class="side_nav gray3 mid left hover" data-nav="factory">천일에너지 팩토리</div>
+                    </a>
+                    <a href="#hub">
+                        <div class="side_nav gray3 mid left hover" data-nav="hub">천일에너지 허브</div>
+                    </a>
+                    <a href="#service">
+                        <div class="side_nav gray3 mid left hover" data-nav="service">천일 서비스</div>
+                    </a>
+                    <a href="#sugerbot">
+                        <div class="side_nav gray3 mid left hover" data-nav="sugerbot">수거봇</div>
+                    </a>
+                    <a href="#pathfinder">
+                        <div class="side_nav gray3 mid left hover" data-nav="pathfinder">천일 패스파인더</div>
+                    </a>
+                    <a href="#chunilCD">
+                        <div class="side_nav gray3 mid left hover" data-nav="chunilCD">천일C&D</div>
+                    </a>
+                    <a href="#chunil">
+                        <div class="side_nav gray3 mid left hover" data-nav="chunil">천일</div>
+                    </a>
+                    <a href="#solapark">
+                        <div class="side_nav gray3 mid left hover" data-nav="solapark">천일 솔라파크</div>
+                    </a>
+                    <a href="#private">
+                        <div class="side_nav gray3 mid left hover" data-nav="private">천일프라이빗에쿼티</div>
+                    </a>
+                    <a href="#sungsu">
+                        <div class="side_nav gray3 mid left hover" data-nav="sungsu">천일에너지 성수센터</div>
+                    </a>
                 </div>
-                <div class="greeting_banner flex flex_col justify_center align_center">
-                    <p class="title center white semi_bold">
-                        지구를 위한 사명감,<br />
-                        강력한 협업 인프라, IT적 혁신까지 더해<br />
-                        천일에너지는 우리의 지구를 위해<br />
-                        모든 것을 에너지로 만들고 있습니다.
-                    </p>
-                    <p class="sub_title center white ">
-                        천일에너지 대표이사 <b>박상원</b>
-                    </p>
+                <div class="affiliates_contents flex flex_col justify_start align_start grow">
+                    <div id="factory" class="content_wrap">
+                        <div class="content_wrap_inner">
+                            <p class="title left black semi_bold">천일에너지 팩토리</p>
+                            <p class="sub_title text_16 left mid">폐목재도 에너지다. 대한민국 No.1 BIO-SRF 생산 기업</p>
+                            <div class="img_wrap"></div>
+                            <p class="desc left text_18 gray2">
+                                천일에너지 팩토리는 버려지는 폐목재를 재활용하여 BIO-SRF(가연성 고형 연료, 우드칩)를 생산합니다.<br />
+                                폐목재의 효율적인 처리를 위해 경기권부터 강원권까지 총 7개의 팩토리를 운영하고 있으며 하루 약 1,500톤, 연간 약 50만 톤 규모의 국내
+                                최대 친환경 연료 생산 설비를 갖추고 있습니다. 생산된 친환경 연료는 자체 열 공급 설비를 통해 포천양문염색산업단지에 열 공급을 하고,<br />
+                                열병합발전사(GS-EPS) 등 협력사에서 활용되어 폐목재라는 폐기물을 신재생에너지로 가치 있게 만들고 있습니다.
+                            </p>
+                            <div class="content_tag_list flex justify_start align_start">
+                                <div class="content_tag flex flex_row justify_center align_center">천일에너지 포천팩토리</div>
+                                <div class="content_tag flex flex_row justify_center align_center">천일에너지 평택팩토리</div>
+                                <div class="content_tag flex flex_row justify_center align_center">천일에너지 용인팩토리</div>
+                                <div class="content_tag flex flex_row justify_center align_center">천일에너지 고양팩토리</div>
+                                <div class="content_tag flex flex_row justify_center align_center">천일에너지 강릉팩토리</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="hub" class="content_wrap">
+                        <div class="content_wrap_inner">
+                            <p class="title left black semi_bold">천일에너지 허브</p>
+                            <p class="sub_title text_16 left mid">폐기물 처리의 문턱을 낮추다. 국내 최저가 폐기물 처리</p>
+                            <div class="img_wrap"></div>
+                            <p class="desc left text_18 gray2">
+                                천일에너지 허브는 사업장 폐기물 및 건설폐기물, 생활폐기물 등을 처리합니다.<br />
+                                서울, 경기 지역을 중심으로 총 5개, 약 4000평 규모의 허브를 직접 운영하여 효율적인 폐기물 수거와 집하, 분류 작업을 수행합니다. 또한,
+                                계열사인 천일에너지 팩토리 등 중간처리부터 최종처리가 가능한 천일에너지의 인프라를 통해 폐목재의 국내 최저가 처리가 가능합니다.
+                            </p>
+                            <div class="content_tag_list flex justify_start align_start">
+                                <div class="content_tag flex flex_row justify_center align_center">천일에너지 강서 HUB</div>
+                                <div class="content_tag flex flex_row justify_center align_center">천일에너지 송정 HUB</div>
+                                <div class="content_tag flex flex_row justify_center align_center">천일에너지 수원 HUB</div>
+                                <div class="content_tag flex flex_row justify_center align_center">천일에너지 안양 HUB</div>
+                                <div class="content_tag flex flex_row justify_center align_center">천일에너지 오산 HUB</div>
+                                <div class="content_tag flex flex_row justify_center align_center">천일에너지 화성 HUB</div>
+                                <div class="content_tag flex flex_row justify_center align_center">천일에너지 용인 HUB</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="service" class="content_wrap">
+                        <div class="content_wrap_inner">
+                            <p class="title left black semi_bold">천일 서비스</p>
+                            <p class="sub_title text_16 left mid">인테리어 폐기물에서 에너지를 발견하다. 친환경 인테리어의 시작</p>
+                            <div class="img_wrap"></div>
+                            <p class="desc left text_18 gray2">
+                                천일서비스는 건축, 인테리어 폐기물을 수집하기 위한 목적으로 설립되었습니다.<br />
+                                천일서비스의 종합 철거 서비스, 마루 철거 서비스를 통해 발생한 폐목재, 폐콘크리트 등 다양한 폐기물들을 신재생에너지 생산을 위한
+                                천일에너지의 계열사들에게 제공합니다. 또한 인테리어 사업자들을 위한 다양한 서비스(동의, 보양, 행위허가 등)도 제공합니다.
+                            </p>
+                            <div class="content_tag_list flex justify_start align_start">
+                                <div class="content_tag flex flex_row justify_center align_center">천일서비스 바로가기</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="sugerbot" class="content_wrap">
+                        <div class="content_wrap_inner">
+                            <p class="title left black semi_bold">수거봇</p>
+                            <p class="sub_title text_16 left mid">폐기물 수집, 운반에 IT혁신을 더하다. 신재생에너지의 효율을 키우다</p>
+                            <div class="img_wrap"></div>
+                            <p class="desc left text_18 gray2">
+                                수거봇은 사업장과 생활계에서 발생한 폐기물 및 건설폐기물의 수거를 전문으로 합니다.<br />
+                                AI, 딥러닝, 실시간 GPS 테크 등이 IT 비즈니스에만 국한된 기술일까요? 더 많은 폐기물 수거는 더 많은 신재생에너지 생산으로 이어집니다.
+                                수거봇은 폐기물 수거에 IT 기술들을 더해 폐기물을 효율적으로 수거합니다.
+                            </p>
+                            <div class="content_tag_list flex justify_start align_start">
+                                <div class="content_tag flex flex_row justify_center align_center">수거봇 바로가기</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="pathfinder" class="content_wrap">
+                        <div class="content_wrap_inner">
+                            <p class="title left black semi_bold">천일패스파인더</p>
+                            <p class="sub_title text_16 left mid">에너지는 IT인프라로부터. 천일그룹의 브레인</p>
+                            <div class="img_wrap"></div>
+                            <p class="desc left text_18 gray2">
+                                신재생에너지가 AI, 딥러닝, 실시간 GPS, ERP 시스템 등의 IT 기술을 만나면 더 효율적인 에너지 생산이 가능해집니다.<br />
+                                천일패스파인더는 천일 그룹의 IT 전문 기업입니다. 자체 개발한 ERP 시스템으로 폐기물의 배출부터 최종 처리까지 전과정을 체계적으로 관리하고
+                                보안 시스템, 결제 시스템 구축 등 다양한 IT 인프라 서비스를 제공합니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="chunilCD" class="content_wrap">
+                        <div class="content_wrap_inner">
+                            <p class="title left black semi_bold">천일씨엔디</p>
+                            <p class="sub_title text_16 left mid">올바른 철거로 더 많은 신재생에너지를- 친환경 해체공사 전문 기업</p>
+                            <div class="img_wrap"></div>
+                            <p class="desc left text_18 gray2">
+                                지속 가능한 지구를 위해 해체공사에도 전문성이 필요합니다.<br />
+                                친환경 해체 공사, 원상 복구, 석면해체 전문 기업 천일씨엔디는 도심 재건축 및 고층 건물의 해체 공사를 안전하고 친환경적으로 처리하며
+                                해체공사라는 투박함에 전문성을 더합니다.
+                            </p>
+                            <div class="content_tag_list flex justify_start align_start">
+                                <div class="content_tag flex flex_row justify_center align_center">공사지명원 다운로드 받기</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="chunil" class="content_wrap">
+                        <div class="content_wrap_inner">
+                            <p class="title left black semi_bold">천일</p>
+                            <p class="sub_title text_16 left mid">지구를 위해 안전하고 효율적인 조명을. 산업용 조명의 리더</p>
+                            <div class="img_wrap"></div>
+                            <p class="desc left text_18 gray2">
+                                에너지가 안전하고 효율적으로 사용될 수 있도록 하는 것도 지속 가능한 지구를 위해 꼭 필요한 일입니다.<br />
+                                천일은 2000평 규모의 시화공단 자체 공장에서 도로 조명, 조명탑, 스포츠 조명, 경관 조명 등 조명에 관한 모든 것을 직접 설계하고 제작하며,
+                                시공은 물론 A/S까지 책임집니다. 1982년부터 지금까지 대한민국 곳곳에서 천일의 조명들이 안전하고 효율적으로 세상을 밝히고 있습니다.
+                            </p>
+                            <div class="content_tag_list flex justify_start align_start">
+                                <div class="content_tag flex flex_row justify_center align_center">홈페이지 바로가기</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="solapark" class="content_wrap">
+                        <div class="content_wrap_inner">
+                            <p class="title left black semi_bold">천일 솔라파크</p>
+                            <p class="sub_title text_16 left mid">신재생에너지에 이어 에코에너지, 태양까지</p>
+                            <div class="img_wrap"></div>
+                            <p class="desc left text_18 gray2">
+                                천일그룹의 혁신적인 에코에너지 생산 기술을 바탕으로 경기도, 전라북도 등 전국 10여 개 태양광 발전소를 운영합니다.<br />
+                                2030년까지 약 50여 개의 태양광 발전소 운영을 목표로 하고 있습니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="private" class="content_wrap">
+                        <div class="content_wrap_inner">
+                            <p class="title left black semi_bold">천일프라이빗에쿼티</p>
+                            <p class="sub_title text_16 left mid">신재생에너지에 금융이란 날개를-</p>
+                            <div class="img_wrap"></div>
+                            <p class="desc left text_18 gray2">
+                                신재생에너지는 전세계가 주목하는 비즈니스입니다.<br />
+                                신재생에너지에 금융의 시너지를 더한다면 지구를 위한 더 많은 일들을 해낼 수 있습니다.<br />
+                                천일프라이빗 에쿼티는 천일그룹 계열사들의 금융 및 경영 컨설팅, 투자유치, 인수&합병 업무를 지원하는<br />
+                                국내 유일 신재생에너지(폐기물) 비즈니스 투자전문회사입니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="sungsu" class="content_wrap">
+                        <div class="content_wrap_inner">
+                            <p class="title left black semi_bold">천일에너지 성수센터</p>
+                            <p class="sub_title text_16 left mid">스마트 기술 기반의 효율적인 운영으로 관할구역 통합</p>
+                            <div class="img_wrap"></div>
+                            <p class="desc left text_18 gray2">
+                                주거형태 기준으로 폐기물 수집/운반 권역을 재설정하고<br />
+                                배출접수 APP, 통합솔루션 ERP, 실시간 GPS 운영 등 IT기술까지 더해<br />
+                                대형생활폐기물의 수집/운반의 효율적 시스템을 구축하여 지자체 예산절감에 기여합니다.<br />
+                                또한, 전문 CS 교육을 수료한 인력으로 구성된 자체 통합콜센터 운영을 통해 민원에 적극 대응하여 행정서비스 향상에 기여합니다.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -438,6 +562,60 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+
+    <script async>
+        function onScroll(event) {
+            var scrollPos = $(document).scrollTop() - $('.affiliates_wrap').position().top;
+
+            $('.side_nav_wrap a').each(function () {
+                var currLink = $(this);
+                var refElement = $(currLink.attr("href"));
+                var refElementTop = refElement.position().top;
+                if (refElementTop - refElement.height() / 2 <= scrollPos && refElementTop + refElement.height() - 170 > scrollPos) {
+                    // if (refElementTop <= scrollPos && refElementTop - refElement.height() > scrollPos) {
+                    $('.side_nav').removeClass('active');
+                    currLink.children('.side_nav').addClass("active");
+                } else {
+                    currLink.children('.side_nav').removeClass("active");
+                }
+            });
+        }
+
+        $(window).ready(function () {
+
+            /** currentNav값과 같은 data-nav 값을 가진 엘리먼트 활성화 */
+            function activeNavByDataNav(currentNav) {
+                $('.side_nav').removeClass('active');
+                $('.side_nav[data-nav="' + currentNav + '"]').addClass('active');
+            }
+
+            var hash = window.location.hash;
+
+            if (hash) {
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top - $(hash).height() / 2
+                }, 'slow', function () {
+                    closeHeaderNav();
+                });
+                activeNavByDataNav(hash.replace('#', ''));
+            } else {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 'slow');
+            }
+
+            $(".side_nav_wrap a, #affiliates_nav a").on("click", function (e) {
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $($(this).attr('href')).offset().top - $(hash).height() / 2
+                }, 'slow', function () {
+                    closeHeaderNav();
+                });
+            })
+
+            $(document).on("scroll", onScroll);
+        });
     </script>
 </body>
 

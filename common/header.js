@@ -1,5 +1,15 @@
 const SUB_MENU_SLIDE_TIME = 400;
 
+/** 상단 헤더 닫기 */
+function closeHeaderNav() {
+  $(".sub_nav_wrap").slideUp(SUB_MENU_SLIDE_TIME, function () {
+    $("#header .sub_nav_wrap .sub_nav_body").hide().css("opacity", "0");
+    $("#header").removeClass("isShow_sub");
+    $("#header nav ul li").removeClass("active");
+  });
+  isOpenNav = false;
+}
+
 $(document).ready(function () {
   let isOpenNav = false;
 
@@ -14,12 +24,7 @@ $(document).ready(function () {
       ) &&
       isOpenNav
     ) {
-      $(".sub_nav_wrap").slideUp(SUB_MENU_SLIDE_TIME, function () {
-        $("#header .sub_nav_wrap .sub_nav_body").hide().css("opacity", "0");
-        $("#header").removeClass("isShow_sub");
-        $("#header nav ul li").removeClass("active");
-      });
-      isOpenNav = false;
+      closeHeaderNav();
     }
   });
 
