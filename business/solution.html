@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport"
         content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
-    <title>회사소개.CI</title>
+    <title>사업영역.폐기물 처리 원스탑 솔루션</title>
     <!-- 공통 css -->
     <link rel="stylesheet" href="../common/common.css">
     <!-- <link rel="stylesheet" href="./common/animation.css"> -->
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../common/header.css">
     <link rel="stylesheet" href="../common/sitemap.css">
     <!-- 페이지 css -->
-    <link rel="stylesheet" href="ci.css">
+    <link rel="stylesheet" href="solution.css">
 
     <!-- Link aos CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -257,7 +257,7 @@
     <div class="body">
 
         <div class="page_container bg_white">
-            <!-- CI title & img -->
+            <!-- title & img -->
             <div class="page_title_wrap">
                 <p class="title left" data-aos="fade-up" data-aos-duration="500">
                     IDENTITY of<br />CHUNIL ENERGY
@@ -268,54 +268,110 @@
                 </p>
             </div>
             <div class="page_title_image_wrap" data-aos="fade-up" data-aos-duration="500" data-aos-delay="150"></div>
-            <!-- CI contents -->
-            <div class="ci_wrap">
-                <div class="logo_wrap flex justify_center align_center">
-                    <img src="./assets/ci/symbol.svg" alt="심볼이미지" />
-                </div>
-                <div class="ci_info_wrap flex justify_space_between align_start">
-                    <div class="info_title">Symbol</div>
-                    <div class="info_desc grow flex flex_col justify_start align_start">
-                        <p class="left">
-                            C는 CHUNIL ENERGY의 앞글자이자 창조(Creativity)의 C, 변화(Charge)의 C입니다.<br />
-                            I는 에너지에 대한 새로운 아이디어(Idea)의 I,<br />
-                            늘 새로운 혁신을 추구하는 혁신 (Inovation)의 I이기도 합니다.
+            <!-- contents -->
+            <div class="solution_nav_wrap flex justify_center align_center">
+                <div class="solution_nav hover active" data-divId="#process">PROCESS</div>
+                <div class="solution_nav hover" data-divId="#effect">EFFECT</div>
+                <div class="solution_nav hover" data-divId="#inAuth">인허가</div>
+            </div>
+            <div class="solution_wrap_outer">
+                <div class="solution_wrap flex justify_space_between align_stretch">
+                    <div class="solution_panel" id="process">
+                        <p class="panel_title left">폐기물 처리 원스탑 솔루션<br />PROCESS</p>
+                        <p class="panel_sub_title left">
+                            신재생 에너지 생산의 전 과정을<br />효율적으로, 안전하게, 천일의 이름으로-
                         </p>
-                        <div class="flex justify_start align_start" style="gap: 10px;">
-                            <button id="ai_download" class="download_button flex justify_center align_center hover">
-                                LOGO BI DOWNLOAD AI
-                                <img src="./assets/ci/ico_download.svg" alt="다운로드" />
-                            </button>
-                            <button id="png_download" class="download_button flex justify_center align_center hover">
-                                LOGO BI DOWNLOAD PNG
-                                <img src="./assets/ci/ico_download.svg" alt="다운로드" />
-                            </button>
-                        </div>
+                        <img class="solution_process" src="./assets/solution/solution_process.jpg"
+                            alt="폐자원>수집운반>집하처리>중간처리>최종재활용" />
                     </div>
-                </div>
-                <div class="ci_info_wrap flex justify_space_between align_start">
-                    <div class="info_title">Color</div>
-                    <div class="info_desc grow flex flex_col justify_start align_start">
-                        <p class="left">
-                            블루 컬러는 천일에너지의 노력으로 지속가능한 지구를 표현하며<br />
-                            부드러운 곡선형태는 확장성과 무한한 가능성을 상징합니다.<br />
-                            블루는 친환경을 내포하며, 지구와 환경을 향한 천일에너지의 사명감을 표현합니다.<br />
-                            <br />
-                            옐로우 컬러는 혁신을 상징합니다. 에너지를 상징하는 옐로우를 통해<br />
-                            지구를 위해 혁신하는 천일에너지의 철학을 전하고,<br />
-                            혁신이 만들어 낼 따뜻한 미래를 표현합니다.
-                        </p>
-                        <div class="color_wrap flex justify_start align_start">
-                            <div class="color_box grow">
-                                <div class="color_box_desc flex flex_col justify_start align_start">
-                                    <p class="left text_18 semi_bold">Chunil Blue</p>
-                                    <p class="left text_14 mid">R34 G76 B147</p>
+                    <div class="solution_panel" id="effect">
+                        <p class="panel_title left">폐기물 처리 원스탑 솔루션<br />EFFECT</p>
+                        <p class="panel_sub_title left">폐기물 처리 원스탑 솔루션, 무엇이 다를까요?</p>
+                        <div class="effect_wrap flex flex_col justify_start align_start">
+                            <div class="effect_row_detail flex flex_row justify_space_between align_center">
+                                <img src="./assets/solution/solution_effect_1.jpg" alt="창고이미지" />
+                                <div class="grow flex flex_col justify_start align_start">
+                                    <p class="sub_title">Effect 01</p>
+                                    <p class="title">전국 37개 지자체의 폐기물 처리,<br />처리비용의 절감율이 다릅니다.</p>
+                                    <p class="desc">
+                                        배출, 수집/운반 부터 최종처리까지 천일이 직접합니다.<br />
+                                        중간 마진을 줄여 처리비용을 획기적으로 낮출 수 있는 이유입니다.<br />
+                                        천일에너지는 2023년 기준 전국 37개 지자체에서 폐기물 처리 비용 절감에<br />
+                                        기여하고 있습니다.
+                                    </p>
                                 </div>
                             </div>
-                            <div class="color_box grow">
-                                <div class="color_box_desc flex flex_col justify_start align_start">
-                                    <p class="left text_18 semi_bold">Chunil Yellow</p>
-                                    <p class="left text_14 mid">R246 G172 B46</p>
+                            <div class="effect_row_detail flex flex_row justify_space_between align_center">
+                                <div class="grow flex flex_col justify_start align_start">
+                                    <p class="sub_title">Effect 02</p>
+                                    <p class="title">재활용율 100%,<br />생활폐기물 재활용율이 다릅니다.</p>
+                                    <p class="desc">
+                                        서울 송정, 서울 강서, 서울 성수, 경기 안양<br />
+                                        전국 4개 집하장 직접 운영으로 보다 정확한 폐기물 분류작업이 가능해집니다.<br />
+                                        그 결과, 폐기물 재활용율 100%, 이것이 시스템과 스케일의 힘입니다.
+                                    </p>
+                                </div>
+                                <img src="./assets/solution/solution_effect_2.jpg" alt="집하장이미지" />
+                            </div>
+                            <div class="effect_row_detail flex flex_row justify_space_between align_center">
+                                <img src="./assets/solution/solution_effect_3.jpg" alt="폐목재이미지" />
+                                <div class="grow flex flex_col justify_start align_start">
+                                    <p class="sub_title">Effect 03</p>
+                                    <p class="title">연간 50만톤 처리,<br />폐목재 재활용 스케일이 다릅니다.</p>
+                                    <p class="desc">
+                                        폐가구, 폐건축자재 등 버려지는 폐목재가 전국 6개 지역의 천일에너지 팩토리에서<br />
+                                        하루 최대 1700톤, 연간 50만톤의 BIO-SRF로 중간처리되어 신재생에너지로 재활용 됩니다.<br />
+                                        국내 최대 폐목재 처리 스케일로 지속 가능한 지구의 미래를 위한 효과가 다릅니다.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="effect_row_detail flex flex_row justify_space_between align_center">
+                                <div class="grow flex flex_col justify_start align_start">
+                                    <p class="sub_title">Effect 04</p>
+                                    <p class="title">BIO-SRF 제조부터 사용까지 동시에<br />마무리가 다릅니다.</p>
+                                    <p class="desc">
+                                        하루 최대 300톤 처리 가능한 천일에너지 포천팩토리에서 안전하게 최종처리되어<br />
+                                        포천 43개 염색단지에 안정적인 열에너지를 공급합니다.
+                                    </p>
+                                </div>
+                                <img src="./assets/solution/solution_effect_4.jpg" alt="공장이미지" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="solution_panel" id="inAuth">
+                        <p class="panel_title left">허가증 인증</p>
+                        <p class="panel_sub_title left">적법한 허가를 보유 후, 폐기물 처리 서비스를 제공합니다.</p>
+                        <div class="inAuth_wrap">
+                            <div class="inAuth_tag_list flex justify_start align_center">
+                                <span class="inAuth_tag flex justify_center align_center hover active">수집/운반</span>
+                                <span class="inAuth_tag flex justify_center align_center hover">집하장 운영</span>
+                                <span class="inAuth_tag flex justify_center align_center hover">인증/허가</span>
+                            </div>
+                            <div class="inAuth_list flex justify_center align_start">
+                                <div class="inAuth_item">
+                                    <img src="./assets/solution/solution_inAuth_1.jpg" alt="OOO허가증" />
+                                    <p class="name">폐기물 수집 · 운반업 허가증</p>
+                                    <p class="desc">제 2021-34 호</p>
+                                </div>
+                                <div class="inAuth_item">
+                                    <img src="./assets/solution/solution_inAuth_1.jpg" alt="OOO허가증" />
+                                    <p class="name">폐기물 수집 · 운반업 허가증</p>
+                                    <p class="desc">제 2021-34 호</p>
+                                </div>
+                                <div class="inAuth_item">
+                                    <img src="./assets/solution/solution_inAuth_1.jpg" alt="OOO허가증" />
+                                    <p class="name">폐기물 수집 · 운반업 허가증</p>
+                                    <p class="desc">제 2021-34 호</p>
+                                </div>
+                                <div class="inAuth_item">
+                                    <img src="./assets/solution/solution_inAuth_1.jpg" alt="OOO허가증" />
+                                    <p class="name">폐기물 수집 · 운반업 허가증</p>
+                                    <p class="desc">제 2021-34 호</p>
+                                </div>
+                                <div class="inAuth_item">
+                                    <img src="./assets/solution/solution_inAuth_1.jpg" alt="OOO허가증" />
+                                    <p class="name">폐기물 수집 · 운반업 허가증</p>
+                                    <p class="desc">제 2021-34 호</p>
                                 </div>
                             </div>
                         </div>
@@ -388,6 +444,38 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+
+    <script async>
+        $(window).ready(function () {
+
+            $(".solution_nav").on("click", function (e) {
+                e.preventDefault();
+
+                var currentDidvId = $(this).attr('data-divId');
+
+                $('.solution_nav').removeClass('active');
+                $(this).addClass('active');
+
+                $('.solution_panel').hide();
+                $(currentDidvId).fadeIn();
+            });
+
+            $(".inAuth_tag").on("click", function (e) {
+                $('.inAuth_tag').removeClass('active');
+                $(this).addClass('active');
+            });
+
+            $('.solution_nav[data-divId="#process"]').click();
+
+            var url_href = window.location.href;
+            var url = new URL(url_href);
+            var tab = url.searchParams.get("tab");
+
+            if (tab === 'effect' || tab === 'inAuth') $('.solution_nav[data-divId="#' + tab + '"]').click();
+            else $('.solution_nav[data-divId="#process"]').click();
+
+        });
     </script>
 </body>
 
