@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
         content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
-    <title>회사소개.인사말</title>
+    <title>회사소개.CI</title>
     <!-- 공통 css -->
     <link rel="stylesheet" href="../common/common.css">
     <!-- <link rel="stylesheet" href="./common/animation.css"> -->
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../common/header.css">
     <link rel="stylesheet" href="../common/sitemap.css">
     <!-- 페이지 css -->
-    <link rel="stylesheet" href="greeting.css">
+    <link rel="stylesheet" href="ci.css">
 
     <!-- Link aos CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -256,128 +256,244 @@
 
     <div class="body">
 
-        <div class="page_container container">
-            <!-- 인사말 title & img -->
+        <div class="page_container bg_white">
+            <!-- CI title & img -->
             <div class="page_title_wrap">
-                <p class="title" data-aos="fade-up" data-aos-duration="500">인사말</p>
-                <p class="sub_title" data-aos="fade-up" data-aos-duration="500">지구를 위한 사명감, 강력한 인프라, IT혁신까지 더해<br />모든
-                    것을 에너지로 만드는 친환경 에너지 기업, 천일에너지입니다.</p>
+                <p class="title left" data-aos="fade-up" data-aos-duration="500">
+                    IDENTITY of<br />CHUNIL ENERGY
+                </p>
+                <p class="sub_title" data-aos="fade-up" data-aos-duration="500">
+                    천일에너지는 신재생 에너지를 통한 지속가능한 지구의 미래를 실현합니다.<br />
+                    천일에너지의 CI는 지구와 그 지구를 위한 신재생 에너지의 혁신을 상징합니다
+                </p>
             </div>
             <div class="page_title_image_wrap" data-aos="fade-up" data-aos-duration="500" data-aos-delay="150"></div>
-            <!-- 인사말 contents -->
-            <div class="greeting_wrap">
-                <div class="greeting_list_wrap">
-                    <div id="greeting_1" class="greeting_row flex justify_space_between align_center">
-                        <div class="img_wrap"></div>
-                        <div class="grow">
-                            <p class="greeting_title black3 semi_bold left">모든 것은 에너지입니다.</p>
-                            <p class="greeting_desc gray2 text_16 left">
-                                건축 폐목재 하나도, 버려진 페트병 하나도<br />
-                                모두 에너지가 될 수 있습니다.<br />
-                                하지만 이런 폐기물들을<br />
-                                누구나 신재생 에너지로<br />
-                                만들 수 있는 것은 아닙니다.
-                            </p>
+            <!-- CI contents -->
+            <div class="ci_wrap">
+                <div class="logo_wrap flex justify_center align_center">
+                    <img src="./assets/ci/symbol.svg" alt="심볼이미지" />
+                </div>
+                <div class="ci_info_wrap flex justify_space_between align_start">
+                    <div class="info_title">Symbol</div>
+                    <div class="info_desc grow flex flex_col justify_start align_start">
+                        <p class="left">
+                            C는 CHUNIL ENERGY의 앞글자이자 창조(Creativity)의 C, 변화(Charge)의 C입니다.<br />
+                            I는 에너지에 대한 새로운 아이디어(Idea)의 I,<br />
+                            늘 새로운 혁신을 추구하는 혁신 (Inovation)의 I이기도 합니다.
+                        </p>
+                        <div class="flex justify_start align_start" style="gap: 10px;">
+                            <button id="ai_download" class="download_button flex justify_center align_center hover">
+                                LOGO BI DOWNLOAD AI
+                                <img src="./assets/ci/ico_download.svg" alt="다운로드" />
+                            </button>
+                            <button id="png_download" class="download_button flex justify_center align_center hover">
+                                LOGO BI DOWNLOAD PNG
+                                <img src="./assets/ci/ico_download.svg" alt="다운로드" />
+                            </button>
                         </div>
-                    </div>
-                    <div id="greeting_2" class="greeting_row flex justify_space_between align_center">
-                        <div class="grow">
-                            <p class="greeting_title black3 semi_bold left">무엇보다 사명감을 가진<br />기업만이 가능합니다.</p>
-                            <p class="greeting_desc gray2 text_16 left">
-                                건축 폐목재 하나도, 버려진 페트병 하나도<br />
-                                모두 에너지가 될 수 있습니다.<br />
-                                하지만 이런 폐기물들을<br />
-                                누구나 신재생 에너지로<br />
-                                만들 수 있는 것은 아닙니다.
-                            </p>
-                        </div>
-                        <div class="img_wrap"></div>
-                    </div>
-                    <div id="greeting_3" class="greeting_row flex justify_space_between align_center">
-                        <div class="img_wrap"></div>
-                        <div class="grow">
-                            <p class="greeting_title black3 semi_bold left">모든 것은 에너지입니다.</p>
-                            <p class="greeting_desc gray2 text_16 left">
-                                건축 폐목재 하나도, 버려진 페트병 하나도<br />
-                                모두 에너지가 될 수 있습니다.<br />
-                                하지만 이런 폐기물들을<br />
-                                누구나 신재생 에너지로<br />
-                                만들 수 있는 것은 아닙니다.
-                            </p>
-                        </div>
-                    </div>
-                    <div id="greeting_4" class="greeting_row flex justify_space_between align_center">
-                        <div class="grow">
-                            <p class="greeting_title black3 semi_bold left">모든 것은 에너지입니다.</p>
-                            <p class="greeting_desc gray2 text_16 left">
-                                건축 폐목재 하나도, 버려진 페트병 하나도<br />
-                                모두 에너지가 될 수 있습니다.<br />
-                                하지만 이런 폐기물들을<br />
-                                누구나 신재생 에너지로<br />
-                                만들 수 있는 것은 아닙니다.
-                            </p>
-                        </div>
-                        <div class="img_wrap"></div>
                     </div>
                 </div>
-                <div class="greeting_banner flex flex_col justify_center align_center">
-                    <p class="title center white semi_bold">
-                        지구를 위한 사명감,<br />
-                        강력한 협업 인프라, IT적 혁신까지 더해<br />
-                        천일에너지는 우리의 지구를 위해<br />
-                        모든 것을 에너지로 만들고 있습니다.
-                    </p>
-                    <p class="sub_title center white ">
-                        천일에너지 대표이사 <b>박상원</b>
-                    </p>
+                <div class="ci_info_wrap flex justify_space_between align_start">
+                    <div class="info_title">Color</div>
+                    <div class="info_desc grow flex flex_col justify_start align_start">
+                        <p class="left">
+                            블루 컬러는 천일에너지의 노력으로 지속가능한 지구를 표현하며<br />
+                            부드러운 곡선형태는 확장성과 무한한 가능성을 상징합니다.<br />
+                            블루는 친환경을 내포하며, 지구와 환경을 향한 천일에너지의 사명감을 표현합니다.<br />
+                            <br />
+                            옐로우 컬러는 혁신을 상징합니다. 에너지를 상징하는 옐로우를 통해<br />
+                            지구를 위해 혁신하는 천일에너지의 철학을 전하고,<br />
+                            혁신이 만들어 낼 따뜻한 미래를 표현합니다.
+                        </p>
+                        <div class="color_wrap flex justify_start align_start">
+                            <div class="color_box grow">
+                                <div class="color_box_desc flex flex_col justify_start align_start">
+                                    <p class="left text_18 semi_bold">Chunil Blue</p>
+                                    <p class="left text_14 mid">R34 G76 B147</p>
+                                </div>
+                            </div>
+                            <div class="color_box grow">
+                                <div class="color_box_desc flex flex_col justify_start align_start">
+                                    <p class="left text_18 semi_bold">Chunil Yellow</p>
+                                    <p class="left text_14 mid">R246 G172 B46</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <!-- <div class="history_nav_wrap flex justify_center align_center">
+                <div class="history_nav hover active" data-divId="#2020">2020-현재</div>
+                <div class="history_nav hover" data-divId="#2015">2015-2019</div>
+                <div class="history_nav hover" data-divId="#2010">2010-2014</div>
+            </div>
+            <div class="history_wrap_outer">
+                <div class="history_wrap flex justify_space_between align_stretch">
+                    <div class="history_title_wrap">
+                        <div class="history_title flex flex_col justify_start align_start" data-titleId="#2020">
+                            <p class="title">Now-2020</p>
+                            <p class="sub_title">국내 1위 폐자원 에너지 기업으로 성장</p>
+                        </div>
+                        <div class="history_title flex flex_col justify_start align_start" data-titleId="#2015">
+                            <p class="title">2015-2019</p>
+                            <p class="sub_title">사업의 확장 및 성장성 실현</p>
+                        </div>
+                        <div class="history_title flex flex_col justify_start align_start" data-titleId="#2010">
+                            <p class="title">2010-2014</p>
+                            <p class="sub_title">재생에너지 사업을 향한 새로운 도약</p>
+                        </div>
+                    </div>
+
+                    <div class="history_list flex flex_col justify_start align_start">
+                        <div class="history_line"></div>
+                        <div class="history_item" id="2020">
+                            <p class="title left mid">2022</p>
+                            <div class="day_wrap flex flex_col justify_start align_start">
+                                <div class="flex justify_start align_start">
+                                    <div class="days left">10</div>
+                                    <div class="days_desc left">관계사 천일패스파인더 설립</div>
+                                </div>
+                                <div class="flex justify_start align_start">
+                                    <div class="days left">8</div>
+                                    <div class="days_desc left">
+                                        지점 강릉 1팩토리(장적골영농조합법인) 편입<br />지점 강릉 2팩토리(강릉유성산업) 편입
+                                    </div>
+                                </div>
+                                <div class="flex justify_start align_start">
+                                    <div class="days left">5</div>
+                                    <div class="days_desc left">
+                                        지점 강서허브(대운환경) 편입<br />지점 고양팩토리(화영산업) 편입
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="history_item" id="2020_end">
+                            <p class="title left mid">2021</p>
+                            <div class="day_wrap flex flex_col justify_start align_start">
+                                <div class="flex justify_start align_start">
+                                    <div class="days left">12</div>
+                                    <div class="days_desc left">관계사 천일솔루션 설립</div>
+                                </div>
+                                <div class="flex justify_start align_start">
+                                    <div class="days left">11</div>
+                                    <div class="days_desc left">
+                                        GS포천그린에너지 우드칩 공급 시작
+                                    </div>
+                                </div>
+                                <div class="flex justify_start align_start">
+                                    <div class="days left">10</div>
+                                    <div class="days_desc left">
+                                        지점 안양허브 설립
+                                    </div>
+                                </div>
+                                <div class="flex justify_start align_start">
+                                    <div class="days left">7</div>
+                                    <div class="days_desc left">
+                                        한샘 서비스원 업무제휴(인테리어 폐기물 처리) 양해각서 체결
+                                    </div>
+                                </div>
+                                <div class="flex justify_start align_start">
+                                    <div class="days left">6</div>
+                                    <div class="days_desc left">
+                                        송정허브 사업장생활계폐기물 수집운반 허가 취득 및 임시보관장소승인<br />(성동구청)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="history_item" id="2015">
+                            <p class="title left mid">2019</p>
+                            <div class="day_wrap flex flex_col justify_start align_start">
+                                <div class="flex justify_start align_start">
+                                    <div class="days left">10</div>
+                                    <div class="days_desc left">지점 송정허브 설립</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="history_item">
+                            <p class="title left mid">2018</p>
+                            <div class="day_wrap flex flex_col justify_start align_start">
+                                <div class="flex justify_start align_start">
+                                    <div class="days left">4</div>
+                                    <div class="days_desc left">화성 천일리텍 설립</div>
+                                </div>
+                                <div class="flex justify_start align_start">
+                                    <div class="days left">3</div>
+                                    <div class="days_desc left">계열사 주식회사 수거봇 설립</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="history_item">
+                            <p class="title left mid">2017</p>
+                            <div class="day_wrap flex flex_col justify_start align_start">
+                                <div class="flex justify_start align_start">
+                                    <div class="days left">4</div>
+                                    <div class="days_desc left">지점 수원팩토리 설립</div>
+                                </div>
+                                <div class="flex justify_start align_start">
+                                    <div class="days left">3</div>
+                                    <div class="days_desc left">GS EPS 우드칩 공급 시작</div>
+                                </div>
+                                <div class="flex justify_start align_start">
+                                    <div class="days left">2</div>
+                                    <div class="days_desc left">지점 평택팩토리(우성그린산업) 편입</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="history_item" id="2015_end">
+                            <p class="title left mid">2015</p>
+                            <div class="day_wrap flex flex_col justify_start align_start">
+                                <div class="flex justify_start align_start">
+                                    <div class="days left">11</div>
+                                    <div class="days_desc left">지점 용인팩토리(한국목재재생산업) 편입</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="history_item" id="2010">
+                            <p class="title left mid">2014</p>
+                            <div class="day_wrap flex flex_col justify_start align_start">
+                                <div class="flex justify_start align_start">
+                                    <div class="days left">1</div>
+                                    <div class="days_desc left">녹색사업인증서 취득</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="history_item">
+                            <p class="title left mid">2013</p>
+                            <div class="day_wrap flex flex_col justify_start align_start">
+                                <div class="flex justify_start align_start">
+                                    <div class="days left">9</div>
+                                    <div class="days_desc left">포천팩토리 집단에너지시설 및 우드칩처리공장 운영 시작</div>
+                                </div>
+                                <div class="flex justify_start align_start">
+                                    <div class="days left">4</div>
+                                    <div class="days_desc left">벤처기업확인서 취득</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="history_item">
+                            <p class="title left mid">2011</p>
+                            <div class="day_wrap flex flex_col justify_start align_start">
+                                <div class="flex justify_start align_start">
+                                    <div class="days left">1</div>
+                                    <div class="days_desc left">포천 양문 염색산업단지 스팀 공급계약 체결(포천 염색업체 50개)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="history_item" id="2010_end">
+                            <p class="title left mid">2010</p>
+                            <div class="day_wrap flex flex_col justify_start align_start">
+                                <div class="flex justify_start align_start">
+                                    <div class="days left">5</div>
+                                    <div class="days_desc left">본점 포천팩토리 설립</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div> -->
         </div>
 
-        <!-- section5 (Contact Us) -->
-        <section id="section5" class="container">
-            <div class="bg_shape1">
-                <svg xmlns="http://www.w3.org/2000/svg" width="623" height="200" viewBox="0 0 623 200" fill="none">
-                    <path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd"
-                        d="M623 -43C623 172.61 445.18 348 226.5 348C7.91965 348 -170 172.61 -170 -42.9669L53.2197 -42.9669C53.2197 51.222 130.929 127.895 226.467 127.895C322.005 127.895 399.78 51.2221 399.78 -42.9669L623 -42.9669L623 -43Z"
-                        fill="url(#paint0_linear_681_2124)" />
-                    <defs>
-                        <linearGradient id="paint0_linear_681_2124" x1="17.4364" y1="-43" x2="960.253" y2="195.389"
-                            gradientUnits="userSpaceOnUse">
-                            <stop stop-color="white" />
-                            <stop offset="1" stop-color="white" stop-opacity="0" />
-                        </linearGradient>
-                    </defs>
-                </svg>
-            </div>
-            <div class="bg_shape2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="605" height="200" viewBox="0 0 605 200" fill="none">
-                    <path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd"
-                        d="M821 279C821 53.464 636.901 -130 410.5 -130C184.202 -130 2.18779e-06 53.464 4.87686e-06 278.965L231.101 278.965C231.101 180.44 311.555 100.238 410.466 100.238C509.377 100.238 589.899 180.44 589.899 278.965L821 278.965L821 279Z"
-                        fill="url(#paint0_linear_681_2125)" />
-                    <defs>
-                        <linearGradient id="paint0_linear_681_2125" x1="2.43864e-06" y1="74.5" x2="821" y2="74.5"
-                            gradientUnits="userSpaceOnUse">
-                            <stop stop-color="white" />
-                            <stop offset="1" stop-color="white" stop-opacity="0" />
-                        </linearGradient>
-                    </defs>
-                </svg>
-            </div>
-
-            <!-- Contact Us -->
-            <div class="section_wrap flex justify_space_between align_center" id="contact_us">
-                <div>
-                    <p class="title left white semi_bold">Contact Us</p>
-                    <p class="sub_title text_14 left white mid">주요 서비스 및 사업 제휴 문의를 원하신다면</p>
-                </div>
-                <button id="contact_us_detail_button"
-                    class="detail_button white text_16 semi_bold flex justify_center align_center hover">
-                    제휴/제안 문의
-                    <img src="../assets/arrow_right.png" alt="->">
-                </button>
-            </div>
-        </section>
         <!-- footer -->
         <footer>
             <div class="footer_wrap flex flex_col justify_start align_stretch">

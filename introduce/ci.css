@@ -1,0 +1,101 @@
+.page_title_image_wrap {
+  background-image: url("./assets/ci/ci_main.jpg");
+  /* background-size: 1920px auto; */
+  background-position: top center;
+}
+
+.ci_wrap {
+  width: 90%;
+  margin: 140px auto 100px;
+  max-width: 1200px;
+}
+.ci_wrap .logo_wrap {
+  background: #f6f7f9;
+  width: 100%;
+  min-height: 400px;
+  margin-bottom: 60px;
+}
+.ci_wrap .logo_wrap img {
+  width: 168px;
+  height: auto;
+}
+
+.ci_wrap .ci_info_wrap {
+  width: 100%;
+  gap: 100px;
+}
+.ci_wrap .ci_info_wrap:last-child {
+  margin-top: 200px;
+}
+.ci_wrap .ci_info_wrap .info_title {
+  color: #000;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 130%; /* 52px */
+  letter-spacing: -1.6px;
+}
+.ci_wrap .ci_info_wrap .info_desc {
+  max-width: 800px;
+  gap: 30px;
+}
+.ci_wrap .ci_info_wrap .info_desc p {
+  color: #565656;
+  font-size: 18px;
+  line-height: 160%; /* 28.8px */
+  letter-spacing: -0.72px;
+}
+.ci_wrap .ci_info_wrap .info_desc button.download_button {
+  max-width: 260px;
+  height: 54px;
+  padding: 10px 20px 10px 24px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  /* flex-shrink: 0; */
+}
+.ci_wrap .ci_info_wrap .info_desc button.download_button img {
+  width: 24px;
+  height: 24px;
+  margin-left: 24px;
+  flex-shrink: 0;
+}
+
+.ci_wrap .ci_info_wrap .info_desc .color_wrap {
+    width: 100%;
+    gap: 8px;
+    padding-top: 20px;
+}
+.ci_wrap .ci_info_wrap .info_desc .color_wrap .color_box {
+    border-radius: 14px;
+    border: 1px solid #E4E4E4;
+    overflow: hidden;
+    position: relative;
+    height: 219px;
+}
+.ci_wrap .ci_info_wrap .info_desc .color_wrap .color_box:first-child {
+    background-color: #224C93;
+}
+.ci_wrap .ci_info_wrap .info_desc .color_wrap .color_box:last-child {
+    background-color: #F6AC2E;
+}
+.ci_wrap .ci_info_wrap .info_desc .color_wrap .color_box .color_box_desc {
+    width: 100%;
+    padding: 16px 20px 20px 20px;
+    gap: 8px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.ci_wrap .ci_info_wrap .info_desc .color_wrap .color_box .color_box_desc .semi_bold {
+    color: #1B1B1B;
+    line-height: normal;
+    letter-spacing: -0.72px;
+}
+.ci_wrap .ci_info_wrap .info_desc .color_wrap .color_box .color_box_desc .mid {
+    color: #878787;
+    font-size: 14px;
+    line-height: normal;
+    letter-spacing: -0.56px;
+}
