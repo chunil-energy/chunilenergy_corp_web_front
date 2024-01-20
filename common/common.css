@@ -166,7 +166,7 @@ a {
   color: #262626;
 }
 .black3 {
-  color: #19191A;
+  color: #19191a;
 }
 .blue {
   color: #1a83ff;
@@ -183,10 +183,9 @@ a {
 .gray3 {
   color: #979797;
 }
-/* .
-.pc_error {
-  color: #e21f71;
-} */
+.gray4 {
+  color: #969696;
+}
 
 .bg_white {
   background-color: #ffffff;
@@ -288,7 +287,7 @@ a {
   height: 31.25vw;
   min-height: 280px;
   max-height: 600px;
-  background-color: #19191A;
+  background-color: #19191a;
   background-size: 100% auto;
   background-position: center;
   background-repeat: no-repeat;
@@ -318,6 +317,97 @@ a {
   height: 12px;
   margin: 0px 11px;
 }
+
+/* page 공통 요소 - input */
+.input_wrap {
+  width: 100%;
+  gap: 10px;
+}
+.input_wrap .input_label {
+  position: relative;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 160%;
+  letter-spacing: -0.72px;
+  text-align: left;
+  color: #262626;
+}
+.input_wrap .input_label.required::after {
+  content: "\2022";
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 0.5;
+  position: absolute;
+  right: -8px;
+  top: 2px;
+  color: #1a83ff;
+}
+.input_wrap .input {
+  padding: 14px 20px;
+  color: #969696;
+  border: 1px solid #d7d7d7;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 160%; /* 25.6px */
+  letter-spacing: -0.64px;
+}
+.input_wrap .input.is_error {
+  border-color: #e21f71;
+}
+.input_wrap .error_message {
+  margin-top: 6px;
+  font-size: 10px;
+  line-height: 14px;
+}
+.input_wrap .input:focus {
+  border-color: #1a83ff;
+  outline: #1a83ff;
+}
+.input_wrap .input::placeholder {
+  color: #969696;
+}
+.input_wrap .input:disabled {
+  background-color: #f1f1f1;
+  opacity: 0.8;
+}
+.input_wrap select.input {
+  color: #969696;
+  appearance: none;
+  background-image: url("../assets/arrow_dropdown.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 24px 24px;
+}
+
+/* input - checkbox */
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"] + label {
+  cursor: pointer;
+}
+input[type="checkbox"] + label > span {
+  vertical-align: middle;
+  padding-left: 10px;
+}
+input[type="checkbox"] + label:before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #D7D7D7;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+input[type="checkbox"]:checked + label:before {
+  content: "";
+  background-color: #1A83FF;
+  border-color: #1A83FF;
+  background-image: url('../assets/check.png');
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
 
 /* page 공통 요소 - button */
 .line_text_button {
