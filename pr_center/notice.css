@@ -1,0 +1,117 @@
+/* 목록 */
+.notice_list {
+  width: 100%;
+  margin-bottom: 40px;
+}
+.notice_list .notice_item {
+  width: 100%;
+  height: 120px;
+  padding: 28px;
+  border-bottom: 1px solid #e8e8e9;
+  cursor: default;
+}
+.notice_list .notice_item:hover {
+    opacity: 0.6;
+}
+.notice_list .notice_item .tilte {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 140%; /* 30.8px */
+  letter-spacing: -0.88px;
+  text-transform: uppercase;
+  width: 100%;
+  max-width: 800px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.notice_list .notice_item .date_text {
+  color: #818790;
+  font-size: 14px;
+  line-height: 140%; /* 19.6px */
+  letter-spacing: -0.56px;
+  margin-top: 14px;
+}
+
+/* 페이지네이션 */
+.pagination_wrap {
+  width: 100%;
+  gap: 19px;
+}
+.pagination_wrap .arrow_button {
+  width: 24px;
+  height: 24px;
+}
+.pagination_wrap .page_list {
+}
+.pagination_wrap .page_list .page {
+  position: relative;
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  color: #6b7280;
+  font-size: 17px;
+  line-height: 130%; /* 22.1px */
+  letter-spacing: -0.68px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.pagination_wrap .page_list .page::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  display: block;
+  content: "";
+  width: 0;
+  height: 0;
+  background: #f7f7fa;
+  border-radius: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+@-webkit-keyframes circle {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    width: 150%;
+    height: 150%;
+    opacity: 0;
+  }
+}
+@keyframes circle {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    width: 150%;
+    height: 150%;
+    opacity: 0;
+  }
+}
+.pagination_wrap .page_list .page:hover::before {
+  -webkit-animation: circle 0.5s;
+  animation: circle 0.5s;
+}
+.pagination_wrap .page_list .page:hover {
+  background-color: #f7f7fa;
+  transition-delay: 0.1s;
+  transition-property: background-color;
+}
+
+/* 미니 PC */
+@media screen and (max-width: 1080px) {
+}
+
+/* 태블릿 이하 */
+@media screen and (max-width: 870px) {
+}

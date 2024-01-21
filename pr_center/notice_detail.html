@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title>홍보센터.공지사항 상세</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../common/common.css">
+    <link rel="stylesheet" href="../common/footer.css">
+    <link rel="stylesheet" href="../common/header.css">
+    <link rel="stylesheet" href="../common/sitemap.css">
+    <!-- 페이지 css -->
+    <link rel="stylesheet" href="pr_center_common.css">
+    <link rel="stylesheet" href="notice_detail.css">
+
+    <!-- Link aos CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Link Jquery -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <header id="header" class="active">
+        <!-- 서브메뉴 -->
+        <div class="sub_nav_wrap">
+            <!-- 회사소개 서브메뉴 -->
+            <div class="sub_nav_body flex justify_center align_start">
+                <div class="sub_nav_col empty_col"></div>
+                <div class="sub_nav_col">
+                    <a href="./greeting.html">
+                        <p class="text_16 black2 semi_bold hover">인사말</p>
+                    </a>
+                </div>
+                <div class="sub_nav_col text_16 black2 semi_bold">
+                    <p class="text_16 black2 semi_bold hover">VISION <br />& MISSION</p>
+                </div>
+                <div class="sub_nav_col">
+                    <p class="text_16 black2 semi_bold mb_16">주요 계열사</p>
+                    <div class="sub_nav_list flex flex_col align_start justify_center">
+                        <a href="./affiliates.html#factory">
+                            <div class="sub_nav gray semi_bold left hover">천일에너지 팩토리</div>
+                        </a>
+                        <a href="./affiliates.html#hub">
+                            <div class="sub_nav gray semi_bold left hover">천일에너지 허브</div>
+                        </a>
+                        <a href="./affiliates.html#service">
+                            <div class="sub_nav gray semi_bold left hover">천일 서비스</div>
+                        </a>
+                        <a href="./affiliates.html#sugerbot">
+                            <div class="sub_nav gray semi_bold left hover">수거봇</div>
+                        </a>
+                        <a href="./affiliates.html#pathfinder">
+                            <div class="sub_nav gray semi_bold left hover">천일 패스파인더</div>
+                        </a>
+                        <a href="./affiliates.html#chunilCD">
+                            <div class="sub_nav gray semi_bold left hover">천일C&D</div>
+                        </a>
+                        <a href="./affiliates.html#chunil">
+                            <div class="sub_nav gray semi_bold left hover">천일</div>
+                        </a>
+                        <a href="./affiliates.html#solapark">
+                            <div class="sub_nav gray semi_bold left hover">천일 솔라파크</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="sub_nav_col">
+                    <a href="./history.html">
+                        <p class="text_16 black2 semi_bold hover">주요 연혁</p>
+                    </a>
+                </div>
+                <div class="sub_nav_col">
+                    <p class="text_16 black2 semi_bold hover">CI소개</p>
+                </div>
+            </div>
+            <!-- 사업영역 서브메뉴 -->
+            <div class="sub_nav_body flex justify_center align_start">
+                <div class="sub_nav_col empty_col"></div>
+                <div class="sub_nav_col">
+                    <p class="text_16 black2 semi_bold mb_16">폐기물 처리<br />원스탑 솔루션</p>
+                    <div class="sub_nav_list flex flex_col align_start justify_center">
+                        <div class="sub_nav gray semi_bold left hover">PROCESS</div>
+                        <div class="sub_nav gray semi_bold left hover">EFFECT</div>
+                        <div class="sub_nav gray semi_bold left hover">인허가</div>
+                    </div>
+                </div>
+                <div class="sub_nav_col">
+                    <p class="text_16 black2 semi_bold mb_16">폐기물 처리<br />플랫폼 지구하다</p>
+                    <div class="sub_nav_list flex flex_col align_start justify_center">
+                        <div class="sub_nav gray semi_bold left hover">대형 생활폐기물 SaaS</div>
+                        <div class="sub_nav gray semi_bold left hover">공사장 생활폐기물 접수</div>
+                        <div class="sub_nav gray semi_bold left hover">폐기물 전자 인계서</div>
+                        <div class="sub_nav gray semi_bold left hover">폐플라스틱 리사이클링봇</div>
+                        <div class="sub_nav gray semi_bold left hover">환경공단 GPS 단말기</div>
+                        <div class="sub_nav gray semi_bold left hover">폐기물 처리 카드 결제 시스템</div>
+                    </div>
+                </div>
+                <div class="sub_nav_col">
+                    <p class="text_16 black2 semi_bold mb_16">서비스<br /><br /></p>
+                    <div class="sub_nav_list flex flex_col align_start justify_center">
+                        <div class="sub_nav gray semi_bold left hover">마루철거/종합철거</div>
+                        <div class="sub_nav gray semi_bold left hover">동의/보양/행위허가</div>
+                    </div>
+                </div>
+            </div>
+            <!-- 상생&협력 서브메뉴 -->
+            <div class="sub_nav_body flex justify_center align_start">
+                <div class="sub_nav_col empty_col"></div>
+                <div class="sub_nav_col">
+                    <p class="text_16 black2 semi_bold mb_16">공공기관</p>
+                    <div class="sub_nav_list flex flex_col align_start justify_center">
+                        <div class="sub_nav gray semi_bold left hover">상생&협력 효과</div>
+                        <div class="sub_nav gray semi_bold left hover">상생&협력 업무</div>
+                        <div class="sub_nav gray semi_bold left hover">상생&협력 공공기관</div>
+                    </div>
+                </div>
+                <div class="sub_nav_col">
+                    <p class="text_16 black2 semi_bold hover">민간기업</p>
+                </div>
+                <div class="sub_nav_col">
+                    <p class="text_16 black2 semi_bold hover">제휴 / 제안</p>
+                </div>
+            </div>
+            <!-- 홍보센터 서브메뉴 -->
+            <div class="sub_nav_body flex justify_center align_start" style="padding: 19px 0px;">
+                <div class="sub_nav_col empty_col"></div>
+                <div class="sub_nav_col">
+                    <p class="text_16 black2 semi_bold hover">보도자료</p>
+                </div>
+                <div class="sub_nav_col">
+                    <p class="text_16 black2 semi_bold hover">광고영상</p>
+                </div>
+                <div class="sub_nav_col">
+                    <p class="text_16 black2 semi_bold hover">공지사항</p>
+                </div>
+            </div>
+        </div>
+        <!-- 상단 헤더 -->
+        <nav>
+            <a href="../index.html" class="logo">
+                <img id="active_logo" src="../assets/logo.svg" alt="천일에너지 로고" />
+                <img src="../assets/logo_white.svg" alt="천일에너지 로고" />
+            </a>
+
+            <ul class="flex justify_center align_center">
+                <li><a>회사소개</a></li>
+                <li><a>사업영역</a></li>
+                <li><a>상생&협력</a></li>
+                <li><a>홍보센터</a></li>
+                <li><a>인재채용</a></li>
+            </ul>
+
+            <div class="menu_wrap flex justify_end align_center">
+                <button type="button" id="partner_offer" class="hover center white text_14 justify_center align_center">
+                    제휴제안
+                </button>
+                <button type="button" id="sitemap_open" class="hover center justify_center align_center">
+                    <img src="../assets/menu.png" alt="메뉴 아이콘" />
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- sitemap (사이트맵) -->
+    <div id="sitemap">
+        <div class="sitemap_header">
+            <a href="../index.html" class="logo">
+                <img src="../assets/logo_white.svg" alt="천일에너지 로고" />
+            </a>
+            <div class="menu_wrap flex justify_end align_center">
+                <button type="button" id="partner_offer" class="hover center white text_14 justify_center align_center">
+                    제휴제안
+                </button>
+                <button type="button" id="sitemap_close" class="hover center justify_center align_center">
+                    <img src="../assets/close.png" alt="닫기 아이콘" />
+                </button>
+            </div>
+        </div>
+
+        <div class="sitemap_body flex justify_space_between align_start">
+            <div class="sitmap_col">
+                <p class="title left white">회사소개</p>
+                <div class="nav_list flex flex_col justify_start align_start">
+                    <a href="./greeting.html">
+                        <p class="sub_title left white nav_hover">인사말</p>
+                    </a>
+                    <p class="sub_title left white nav_hover">VISION<br />& MISSION</p>
+                    <div class="sub_nav_list nav_hover">
+                        <p class="sub_title left white">주요 계열사</p>
+                        <p class="sub_nav left white">천일에너지 팩토리</p>
+                        <div class="sub_nav left white">천일에너지 허브</div>
+                        <div class="sub_nav left white">천일 서비스</div>
+                        <div class="sub_nav left white">수거봇</div>
+                        <div class="sub_nav left white">천일 패스파인더</div>
+                        <div class="sub_nav left white">천일C&D</div>
+                        <div class="sub_nav left white">천일</div>
+                        <div class="sub_nav left white">천일 솔라파크</div>
+                    </div>
+                    <p class="sub_title left white nav_hover">주요 연혁</p>
+                    <p class="sub_title left white nav_hover">CI소개</p>
+                </div>
+            </div>
+            <div class="sitmap_col">
+                <p class="title left white">사업영역</p>
+                <div class="nav_list flex flex_col justify_start align_start">
+                    <div class="sub_nav_list nav_hover">
+                        <p class="sub_title left white">폐기물 처리<br />원스탑 솔루션</p>
+                        <div class="sub_nav left white">PROCESS</div>
+                        <div class="sub_nav left white">EFFECT</div>
+                        <div class="sub_nav left white">인허가</div>
+                    </div>
+                    <div class="sub_nav_list nav_hover">
+                        <p class="sub_title left white">주요 계열사</p>
+                        <div class="sub_nav left white">폐기물 처리<br />플랫폼 지구하다</div>
+                        <div class="sub_nav left white">대형 생활폐기물 SaaS</div>
+                        <div class="sub_nav left white">공사장 생활폐기물 접수</div>
+                        <div class="sub_nav left white">폐기물 전자 인계서</div>
+                        <div class="sub_nav left white">폐플라스틱 리사이클링봇</div>
+                        <div class="sub_nav left white">환경공단 GPS 단말기</div>
+                    </div>
+                    <div class="sub_nav_list nav_hover">
+                        <p class="sub_title left white">서비스</p>
+                        <div class="sub_nav left white">마루철거/종합철거</div>
+                        <div class="sub_nav left white">동의/보양/행위허가</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sitmap_col">
+                <p class="title left white">상생&협력</p>
+                <div class="nav_list flex flex_col justify_start align_start">
+                    <div class="sub_nav_list nav_hover">
+                        <p class="sub_title left white">공공기관</p>
+                        <div class="sub_nav left white">상생&협력 효과</div>
+                        <div class="sub_nav left white">상생&협력 업무</div>
+                        <div class="sub_nav left white">상생&협력 공공기관</div>
+                    </div>
+                    <p class="sub_title left white nav_hover">민간기업</p>
+                    <p class="sub_title left white nav_hover">제휴/제안</p>
+                </div>
+            </div>
+            <div class="sitmap_col">
+                <p class="title left white">홍보센터</p>
+                <div class="nav_list flex flex_col justify_start align_start">
+                    <p class="sub_title left white nav_hover">보도자료</p>
+                    <p class="sub_title left white nav_hover">광고영상</p>
+                    <p class="sub_title left white nav_hover">공지사항</p>
+                </div>
+            </div>
+            <div class="sitmap_col">
+                <p class="title left white nav_hover" style="cursor: pointer;">인재채용</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="body">
+
+        <div class="page_container container">
+            <!-- 공지사항 상세 contents -->
+            <div class="detail_wrap">
+                <div class="content_wrap">
+                    <div class="go_back_wrap text_16 mid">
+                        <a href="./notice.html" class="hover flex justify_start align_center">
+                            <img src="./assets/notice/ico_back.png" alt="돌아가기" />
+                            LIST
+                        </a>
+                    </div>
+
+                    <div class="title_wrap">
+                        <p class="mini_title left blue text_18 semi_bold">보도자료</p>
+                        <p class="title left black3 mid">천일에너지 ‘수거인’, 가정 및 산업폐기물 직거래로 신재생에너지 동력 확보</p>
+                        <p class="date left text_16 mid">2023.08.30</p>
+                    </div>
+                    <div class="image_wrap">
+                        <img src="./assets/press/press_1.jpg" alt="본문 이미지" />
+                    </div>
+                    <div class="desc_wrap">
+                        <p>
+                            전 세계적으로 ‘ESG 경영’이 화두로 떠오르면서 폐목재로 만든 에너지원 우드칩이 주목받고 있다. 발전 연료 중 유해가스 발생량이 적어 친환경 에너지원으로 분류되기
+                            때문이다. 국내에서는 천일에너지가 최대 우드칩 에너지 생산업체로 꼽힌다.천일에너지는 폐목재를 잘게 파쇄해 만든 우드칩을 이용해 시간당 80톤, 연간 30만톤의
+                            열에너지를 생산하고 있다고 23일 밝혔다. 가정에서 나오는 폐가구와 가구공장에서 나오는 폐목재를 수거, 파쇄해 연소로에 열원으로 공급하고 있다. 우드칩을 활용한
+                            열에너지 생산 규모로는 국내 최대 규모다.
+                            <br /><br />
+                            우드칩은 석탄이나 석유, 가스 등을 이용한 발전에 비해 이산화탄소나 황산화물, 질산화물 발생이 적어 친환경 에너지원으로 각광받고 있다. 특히 전 세계적으로
+                            ESG경영이 화두가 되고 글로벌 기업들이 RE100 캠페인에 참여하겠다고 선언하면서 몸값이 올라가는 추세다.
+                            <br /><br />
+                            RE(renewable electricity)100은 기업이 사용하는 전력의 100%를 재생에너지로 충당하겠다고 약속하는 글로벌 캠페인을 말한다.천일에너지는 우드칩
+                            생산 뿐 아니라 우드칩의 원재료가 되는 폐목재를 수집·운반하고, 우드칩을 소각해 열을 공급하는 과정을 모두 수직계열화했다.현재 천일에너지가 생산하는 연간 45만 톤의
+                            우드칩 가운데 10만 톤은 소각 후 열 에너지로 전환해 인근 염색산업단지에 공급하고, 연간 30만 톤은 열병합발전소에 보내 전기 생산에 사용하고 있다. 버려질 뻔한
+                            폐목재가 에너지로 전환되는 모든 과정에 천일에너지가 참여하는 셈인데 관련 업계에서 천일에너지가 유일하다.
+                            이영선 천일에너지 이사는 “ 천일에너지는 수거를 비롯해 운반, 소각, 발전 열원을 공급하는 것까지 일체화가 돼 있기 때문에 친환경 에너지 생산기업으로 앞으로
+                            무궁무진한 발전이 가능하다”고 강조했다.
+                        </p>
+                    </div>
+
+                    <div class="notice_sequence">
+                        <div class="sequence flex justify_start align_center hover">
+                            <p class="black3 text_18 mid left">이전글</p>
+                            <p class="notice_title text_18 left">주택가구조합-천일에너지, 폐가구 재활용 협약</p>
+                        </div>
+                        <div class="sequence flex justify_start align_center hover">
+                            <p class="black3 text_18 mid left">다음글</p>
+                            <p class="notice_title text_18 left">포스코에너지, 천일에너지와 1MW급 스팀터빈 공급계약 체결</p>
+                        </div>
+                    </div>
+
+                    <!-- 목록보기 버튼 -->
+                    <button type="button" id="go_to_list"
+                        class="more_info flex justify_center align_center text_16 mid hover">
+                        목록보기
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer>
+            <div class="footer_wrap flex flex_col justify_start align_stretch">
+                <div class="footer_row flex justify_space_between align_start">
+                    <div class="footer_contents flex flex_col justify_start align_start">
+                        <!-- logo & footer_nav -->
+                        <div class="flex justify_start align_center">
+                            <a href="../index.html">
+                                <img class="logo" src="../assets/logo_white.svg" alt="천일 에너지 로고" />
+                            </a>
+                            <div class="footer_nav_list flex justify_start align_center">
+                                <a href="#" class="footer_nav text_16 semi_bold">제휴제안</a>
+                                <a href="#" class="footer_nav text_16 semi_bold">플랫폼</a>
+                                <a href="#" class="footer_nav text_16 semi_bold">인프라</a>
+                                <a href="#" class="footer_nav text_16 semi_bold">서비스</a>
+                            </div>
+                        </div>
+                        <!-- footer_info & footer_cs -->
+                        <div class="flex justify_space_between align_start" style="gap: 80px;">
+                            <div class="footer_info flex flex_col justify_start align_start">
+                                <p class="text_14 left"><b>천일에너지 대표</b>박상원<b
+                                        style="margin-left: 20px;">사업자등록번호</b>127-86-25218</p>
+                                <p class="text_14 left"><b>서울사무실 소재지</b>서울 성동구 성수이로 51 서울숲한라시그마밸리 601호</p>
+                                <p class="text_14 left"><b>사업소재지</b>경기도 포천시 영중면 양문공단로3길 20</p>
+                            </div>
+                            <div class="footer_cs flex flex_col justify_start align_start">
+                                <p class="text_14 left"><b>TEL</b>02-6907-1017</p>
+                                <p class="text_14 left"><b>FAX</b>02-3409-1014</p>
+                                <p class="text_14 left"><b>CS</b>평일 09:00 - 18:00(점심시간 12:00 - 13:00)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Family Site -->
+                    <div class="footer_family">
+                        <select name="familt_site" id="familt_site">
+                            <option value="">Family Site</option>
+                            <option value="site1">Site1</option>
+                            <option value="site2">Site2</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="footer_row flex justify_space_between align_end">
+                    <p class="copyright left">Copyright 2023 © Chunil Energy. All Right Reserved.</p>
+
+                    <div class="footer_social_wrap flex flex_row justify_end align_end">
+                        <button><img src="../assets/social/facebook.png" alt="facebook" class="hover" /></button>
+                        <button><img src="../assets/social/twitter.png" alt="twitter" class="hover" /></button>
+                        <button><img src="../assets/social/instagram.png" alt="instagram" class="hover" /></button>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 애니메이션 코드 -->
+    <!-- <script src="./common/animation.js"></script> -->
+
+    <script src="../common/header.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        $(window).ready(function () {
+
+            $("#go_to_list").on("click", function (e) {
+                window.location.href = './notice.html';
+            })
+        });
+    </script>
+</body>
+
+</html>

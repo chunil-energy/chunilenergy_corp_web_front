@@ -463,6 +463,16 @@ input[type="checkbox"]:checked + label:before {
   display: none;
 }
 
+.block_drag {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
 /* 미니 PC 이하 */
 @media screen and (max-width: 1080px) {
   .page_title_wrap {

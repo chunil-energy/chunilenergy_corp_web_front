@@ -1,0 +1,124 @@
+/* 상세 contents */
+.detail_wrap {
+  position: relative;
+  width: 100%;
+  margin: 100px auto 206px;
+  /* max-width: 1200px; */
+  /* 1050 */
+}
+
+.detail_wrap .content_wrap {
+  width: 90%;
+  max-width: 900px;
+  /* padding-left: 150px; */
+  margin: 0 auto;
+}
+
+/* 리스트 돌아가기 */
+.detail_wrap .content_wrap .go_back_wrap {
+  position: absolute;
+  top: 0;
+  left: -150px;
+  width: 150px;
+  color: #363638;
+  line-height: 140%; /* 22.4px */
+  letter-spacing: -0.64px;
+  text-transform: uppercase;
+}
+.go_back_wrap a {
+  width: fit-content;
+}
+.go_back_wrap img {
+  width: 24px;
+  height: 24px;
+  margin-right: 7px;
+}
+
+/* 제목 */
+.detail_wrap .content_wrap .title_wrap {
+  width: 100%;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #e8e8e9;
+}
+.title_wrap .mini_title {
+  line-height: 140%; /* 25.2px */
+  letter-spacing: -0.72px;
+  margin-bottom: 16px;
+}
+.title_wrap .title {
+  font-size: 56px;
+  line-height: 125%; /* 70px */
+  letter-spacing: -2.24px;
+  text-transform: uppercase;
+}
+.title_wrap .date {
+  color: #818790;
+  line-height: 140%; /* 22.4px */
+  letter-spacing: -0.64px;
+  margin-top: 30px;
+}
+
+/* 이미지 */
+.detail_wrap .content_wrap .image_wrap {
+  width: 100%;
+  max-height: 522px;
+  overflow: hidden;
+  margin: 60px 0px;
+  /* background: #EDEDEF; */
+}
+.detail_wrap .content_wrap .image_wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* 설명(컨텐츠 본문) */
+.detail_wrap .content_wrap .desc_wrap {
+  margin-bottom: 80px;
+  padding-bottom: 60px;
+}
+.detail_wrap .content_wrap .desc_wrap p {
+  color: #363638;
+  opacity: 0.9;
+  font-size: 16px;
+  line-height: 160%; /* 25.6px */
+  letter-spacing: -0.64px;
+}
+
+/* 순서(이전, 다음글) */
+.detail_wrap .notice_sequence {
+  width: 100%;
+  border-top: 1px solid #E8E8E9;
+  border-bottom: 1px solid #E8E8E9;
+}
+.notice_sequence .sequence {
+  width: 100%;
+  padding: 32px 20px 28px;
+  gap: 40px;
+  cursor: default;
+}
+.notice_sequence .sequence p {
+  line-height: 120%; /* 21.6px */
+  letter-spacing: -0.36px;
+  text-transform: uppercase;
+}
+.notice_sequence .sequence .notice_title {
+  color: #939393;
+}
+
+/* PC */
+@media screen and (max-width: 1280px) {
+  .detail_wrap .content_wrap .go_back_wrap {
+    position: relative;
+    top: -20px;
+    left: 0;
+  }
+}
+
+/* 미니 PC */
+@media screen and (max-width: 1080px) {
+}
+
+/* 태블릿 이하 */
+@media screen and (max-width: 870px) {
+}
