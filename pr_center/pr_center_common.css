@@ -116,7 +116,11 @@ button.more_info img {
 }
 
 /* 미니 PC */
-@media screen and (max-width: 1080px) {}
+@media screen and (max-width: 1080px) {
+    .content_wrap {
+        width: 94%;
+    }
+}
 
 /* 태블릿 이하 */
 @media screen and (max-width: 870px) {}

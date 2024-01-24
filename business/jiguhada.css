@@ -126,3 +126,14 @@
   background-position: center;
   background-size: contain;
 }
+
+/* 미니 PC */
+@media screen and (max-width: 1080px) {
+  .jiguhada_wrap {
+    width: 94%;
+  }
+}
+
+/* 태블릿 이하 */
+@media screen and (max-width: 870px) {
+}

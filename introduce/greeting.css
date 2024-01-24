@@ -90,6 +90,11 @@
 
 /* 미니 PC */
 @media screen and (max-width: 1080px) {
+  .greeting_wrap {
+    width: 94%;
+    margin: 120px auto 200px;
+  }
+
   .greeting_wrap .greeting_list_wrap .greeting_row {
     gap: 86px;
     margin-bottom: 100px;
@@ -110,4 +115,5 @@
 }
 
 /* 태블릿 이하 */
-@media screen and (max-width: 870px) {}
+@media screen and (max-width: 870px) {
+}

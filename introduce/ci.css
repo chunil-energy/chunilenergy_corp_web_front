@@ -62,40 +62,57 @@
 }
 
 .ci_wrap .ci_info_wrap .info_desc .color_wrap {
-    width: 100%;
-    gap: 8px;
-    padding-top: 20px;
+  width: 100%;
+  gap: 8px;
+  padding-top: 20px;
 }
 .ci_wrap .ci_info_wrap .info_desc .color_wrap .color_box {
-    border-radius: 14px;
-    border: 1px solid #E4E4E4;
-    overflow: hidden;
-    position: relative;
-    height: 219px;
+  border-radius: 14px;
+  border: 1px solid #e4e4e4;
+  overflow: hidden;
+  position: relative;
+  height: 219px;
 }
 .ci_wrap .ci_info_wrap .info_desc .color_wrap .color_box:first-child {
-    background-color: #224C93;
+  background-color: #224c93;
 }
 .ci_wrap .ci_info_wrap .info_desc .color_wrap .color_box:last-child {
-    background-color: #F6AC2E;
+  background-color: #f6ac2e;
 }
 .ci_wrap .ci_info_wrap .info_desc .color_wrap .color_box .color_box_desc {
-    width: 100%;
-    padding: 16px 20px 20px 20px;
-    gap: 8px;
-    background-color: #fff;
-    position: absolute;
-    left: 0;
-    bottom: 0;
+  width: 100%;
+  padding: 16px 20px 20px 20px;
+  gap: 8px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
-.ci_wrap .ci_info_wrap .info_desc .color_wrap .color_box .color_box_desc .semi_bold {
-    color: #1B1B1B;
-    line-height: normal;
-    letter-spacing: -0.72px;
+.ci_wrap
+  .ci_info_wrap
+  .info_desc
+  .color_wrap
+  .color_box
+  .color_box_desc
+  .semi_bold {
+  color: #1b1b1b;
+  line-height: normal;
+  letter-spacing: -0.72px;
 }
 .ci_wrap .ci_info_wrap .info_desc .color_wrap .color_box .color_box_desc .mid {
-    color: #878787;
-    font-size: 14px;
-    line-height: normal;
-    letter-spacing: -0.56px;
+  color: #878787;
+  font-size: 14px;
+  line-height: normal;
+  letter-spacing: -0.56px;
+}
+
+/* 미니 PC */
+@media screen and (max-width: 1080px) {
+  .ci_wrap {
+    width: 94%;
+  }
+}
+
+/* 태블릿 이하 */
+@media screen and (max-width: 870px) {
 }

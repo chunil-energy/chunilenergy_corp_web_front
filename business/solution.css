@@ -175,6 +175,11 @@ img.solution_process {
 
 /* 미니 PC */
 @media screen and (max-width: 1080px) {
+
+  .solution_wrap_outer .solution_wrap {
+    width: 94%;
+  }
+
   /* effect */
   .solution_panel .effect_wrap .effect_row_detail {
     gap: 60px;

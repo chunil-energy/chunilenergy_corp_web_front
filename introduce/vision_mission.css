@@ -1,6 +1,15 @@
 .body {
   background-color: #000;
 }
+.page_path_wrap {
+  z-index: 2;
+}
+.page_path_wrap span {
+  color: rgba(255, 255, 255, 0.70);
+}
+.page_path_wrap span:last-child {
+  color: rgba(255, 255, 255, 0.90);
+}
 
 /* seection1 */
 #section1 {

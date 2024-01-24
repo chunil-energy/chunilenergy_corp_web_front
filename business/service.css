@@ -45,7 +45,7 @@
   width: 100%;
   min-height: 388px;
   padding-bottom: 40px;
-  border-bottom: 1px solid #E8E8E9;
+  border-bottom: 1px solid #e8e8e9;
 }
 .service_wrap .service_contents .content_wrap:last-child {
   border-bottom: none;
@@ -114,4 +114,15 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+/* 미니 PC */
+@media screen and (max-width: 1080px) {
+  .service_wrap {
+    width: 94%;
+  }
+}
+
+/* 태블릿 이하 */
+@media screen and (max-width: 870px) {
 }

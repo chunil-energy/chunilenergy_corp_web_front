@@ -292,6 +292,26 @@ a {
   background-position: center;
   background-repeat: no-repeat;
 }
+.page_path_wrap {
+  position: absolute;
+  top: 106px;
+  right: 60px;
+  gap: 8px;
+}
+.page_path_wrap .ico_arrow {
+  width: 12px;
+  height: 12px;
+}
+.page_path_wrap span {
+  color: #979797;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.52px;
+}
+.page_path_wrap span:last-child {
+  color: rgba(0, 0, 0, 0.90);
+}
 
 /* page 공통 요소 - tag */
 .tag_wrap {
@@ -395,19 +415,18 @@ input[type="checkbox"] + label:before {
   display: inline-block;
   width: 18px;
   height: 18px;
-  border: 1px solid #D7D7D7;
+  border: 1px solid #d7d7d7;
   border-radius: 4px;
   vertical-align: middle;
 }
 input[type="checkbox"]:checked + label:before {
   content: "";
-  background-color: #1A83FF;
-  border-color: #1A83FF;
-  background-image: url('../assets/check.png');
+  background-color: #1a83ff;
+  border-color: #1a83ff;
+  background-image: url("../assets/check.png");
   background-repeat: no-repeat;
   background-position: 50%;
 }
-
 
 /* page 공통 요소 - button */
 .line_text_button {
@@ -476,7 +495,11 @@ input[type="checkbox"]:checked + label:before {
 /* 미니 PC 이하 */
 @media screen and (max-width: 1080px) {
   .page_title_wrap {
+    width: 94%;
     margin: 80px auto;
+  }
+  .page_path_wrap {
+    right: 30px;
   }
 }
 

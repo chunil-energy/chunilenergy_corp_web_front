@@ -122,7 +122,7 @@
   cursor: pointer;
 }
 .affiliates_wrap .content_wrap .content_tag_list .content_tag:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 .affiliates_wrap .content_wrap .content_tag_list .content_tag::before {
   content: "";
@@ -132,4 +132,16 @@
   background-image: url("./assets/affiliates/map_pin.svg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+/* 미니 PC */
+@media screen and (max-width: 1080px) {
+  .affiliates_wrap {
+    width: 94%;
+    margin: 150px auto 170px;
+  }
+}
+
+/* 태블릿 이하 */
+@media screen and (max-width: 870px) {
 }
