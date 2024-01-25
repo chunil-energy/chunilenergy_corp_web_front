@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: unset;
+}
+
 .page_title_image_wrap {
   background-image: url("./assets/affiliates/affiliates_main.jpg");
   /* background-size: 1920px auto; */
