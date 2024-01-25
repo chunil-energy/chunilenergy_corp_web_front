@@ -44,6 +44,7 @@
   padding: 0px 24px;
 }
 #header nav ul li a {
+  display:inline-block;
   line-height: normal;
   text-decoration: none;
   color: #fff;
@@ -51,12 +52,19 @@
   letter-spacing: -0.64px;
   font-weight: 600;
 }
+#header nav ul li:hover {
+  padding: 0px 26px;
+}
 #header nav ul li:hover a {
   opacity: 0.7;
-  font-size: 17px;
-}
-#header nav ul li a {
-  transition: 0.3s;
+  /* font-size: 18px; */
+  transform: scale(1.03);
+  letter-spacing: -0.1px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease
 }
 #header nav ul li.active a {
   position: relative;
@@ -139,27 +147,30 @@
   width: 200px;
 }
 .sub_nav_body .sub_nav_col p {
-    cursor: pointer;
+  cursor: pointer;
 }
 .sub_nav_body .sub_nav_col p.mb_16 {
-    margin-bottom: 16px;
-    cursor: unset;
+  margin-bottom: 16px;
+  cursor: unset;
 }
 .sub_nav_body .sub_nav_col .sub_nav_list .sub_nav {
-    align-self: stretch;
-    line-height: 240%; /* 36px */
-    letter-spacing: -0.6px;
-    font-size: 15px;
-    cursor: pointer;
+  align-self: stretch;
+  line-height: 240%; /* 36px */
+  letter-spacing: -0.6px;
+  font-size: 15px;
+  cursor: pointer;
 }
 
 /* 스크롤 내렸을때 CSS .active */
-#header.active, #header.isShow_sub {
+#header.active,
+#header.isShow_sub {
   /* background: #fffffff0; */
   background: rgba(255, 255, 255, 0.9);
 }
-#header.active .sub_nav_wrap, #header.isShow_sub .sub_nav_wrap,
-#header.active nav, #header.isShow_sub nav {
+#header.active .sub_nav_wrap,
+#header.isShow_sub .sub_nav_wrap,
+#header.active nav,
+#header.isShow_sub nav {
   backdrop-filter: blur(12.5px);
 }
 #header.active nav .logo img,
