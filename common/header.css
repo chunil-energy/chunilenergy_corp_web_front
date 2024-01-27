@@ -276,9 +276,11 @@
     opacity: 0;
     transition: opacity 250ms ease-in;
     -webkit-transition: opacity 250ms ease-in;
+    z-index: -1;
   }
   #header.show_mo_menu::before {
     opacity: 1;
+    z-index: 1;
   }
   #header.active.show_mo_menu,
   #header.active.show_mo_menu .sub_nav_wrap {
@@ -312,6 +314,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    z-index: 2;
   }
   #header.show_mo_menu nav ul li {
     position: relative;
