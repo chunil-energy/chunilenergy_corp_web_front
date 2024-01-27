@@ -10,6 +10,22 @@ function closeHeaderNav() {
   isOpenNav = false;
 }
 
+/** 반응형 검사 함수 */
+const isBreakPoint = function (bp) {
+  let bps = [870, 1080, 1280, 1440],
+    w = $(window).width(),
+    min,
+    max;
+  for (let i = 0, l = bps.length; i < l; i++) {
+    if (bps[i] === bp) {
+      min = bps[i - 1] || 0;
+      max = bps[i];
+      break;
+    }
+  }
+  return w > min && w <= max;
+};
+
 $(document).ready(function () {
   let isOpenNav = false;
 
@@ -68,22 +84,34 @@ $(document).ready(function () {
   });
 
   // 헤더 우측 사이트맵 열기 아이콘 클릭
-  $("#sitemap_open").on("click", function () {
-    $("#sitemap").fadeIn();
+  $("#menu_open").on("click", function () {
+    if (isBreakPoint(870)) {
+      // $("#header .sub_nav_wrap").fadeIn();
+      
+      if ($("#header").hasClass("show_mo_menu")) {
+        // 모바일메뉴가 열려있다면,
+        $("#header").removeClass("show_mo_menu");
+        // $("#header.show_mo_menu::before").fadeOut();
 
-    // $("#sitemap").animate({
-    //     // left: 0
-    //     left: 0
-    // }, 400, "linear");
+        $("#header .sub_nav_wrap").fadeOut();
+        $("body").css("overflow", "auto");
+      } else {
+        // 모바일메뉴가 닫혀있다면,
+        $("#header").addClass("show_mo_menu");
+        // $("#header.show_mo_menu::before").fadeIn();
+
+        $("#header .sub_nav_wrap").fadeIn();
+        $("body").css("overflow", "hidden");
+      }
+    } else {
+      $("#sitemap").fadeIn();
+      $("body").css("overflow", "hidden");
+    }
   });
 
   // 사이트맵 닫기 아이콘 클릭
   $("#sitemap_close").on("click", function () {
     $("#sitemap").fadeOut();
-
-    // $("#sitemap").animate({
-    //     // left: '100%'
-    //     left: '-100%'
-    // }, 400, "linear");
+    $("body").css("overflow", "auto");
   });
 });

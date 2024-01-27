@@ -52,19 +52,31 @@
   margin-left: 36px;
 }
 #sitemap .sitemap_header #sitemap_close img {
-  width: 24px;
-  height: 24px;
+  width: 36px;
+  height: 36px;
 }
 
 #sitemap .sitemap_body {
   width: 80%;
   max-width: 1200px;
-  gap: 24px;
-  margin: 30px auto 0px;
+  margin: 0px auto;
+  padding: 30px 0px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
 }
 #sitemap .sitemap_body .sitmap_col {
-  flex: 1 1 auto;
+  flex: 1 1 20%;
+  padding-left: 24px;
+  padding-right: 18px;
+  border-left: 1px solid rgba(255, 255, 255, 0.10);
 }
+#sitemap .sitemap_body .sitmap_col:first-child {
+  border-left: none;
+}
+#sitemap .sitemap_body .sitmap_col:last-child {
+  flex-basis: auto;
+}
+
 #sitemap .sitemap_body .sitmap_col .title {
   letter-spacing: -0.96px;
   font-size: 24px;
@@ -88,8 +100,9 @@
 #sitemap .nav_list .sub_nav_list .sub_nav {
   opacity: 0.7;
   font-size: 16px;
-  line-height: 200%; /* 32px */
   letter-spacing: -0.64px;
+  line-height: normal;
+  padding: 7px 0px;
 }
 #sitemap .nav_list .sub_nav_list .sub_nav:hover {
   opacity: 1;
@@ -105,13 +118,22 @@
 /* 미니 PC */
 @media screen and (max-width: 1080px) {
   #sitemap .sitemap_header {
-    padding: 0px 30px;
+    padding: 30px 30px;
   }
   #sitemap .sitemap_header .logo {
     left: 30px;
   }
   #sitemap .sitemap_header .menu_wrap {
     right: 30px;
+  }
+
+  #sitemap .sitemap_body {
+    width: 100%;
+    padding: 0px 30px;
+  }
+  #sitemap .sitemap_body .sitmap_col {
+    /* flex: 1 1 auto; */
+    padding-left: 16px;
   }
 }
 
