@@ -4,8 +4,6 @@ html {
 
 .page_title_image_wrap {
   background-image: url("./assets/affiliates/affiliates_main.jpg");
-  /* background-size: 1920px auto; */
-  background-position: top center;
 }
 
 .affiliates_wrap {
@@ -48,75 +46,75 @@ html {
   width: 100%;
   min-height: 500px;
 }
-.affiliates_wrap .affiliates_contents .content_wrap .content_wrap_inner {
+.content_wrap .content_wrap_inner {
   width: 100%;
   max-width: 920px;
 }
-.affiliates_wrap .affiliates_contents .content_wrap .title {
+.content_wrap .title {
   font-size: 36px;
   line-height: 130%; /* 46.8px */
   letter-spacing: -1.44px;
 }
-.affiliates_wrap .affiliates_contents .content_wrap .sub_title {
+.content_wrap .sub_title {
   color: #969696;
   line-height: 160%; /* 25.6px */
   letter-spacing: -0.64px;
   margin-top: 10px;
 }
-.affiliates_wrap .affiliates_contents .content_wrap .img_wrap {
+.content_wrap .img_wrap {
   width: 100%;
   height: 340px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% auto;
+  background-size: cover;
   border-radius: 14px;
   overflow: hidden;
   margin: 36px 0px;
 }
-.affiliates_wrap .affiliates_contents #factory.content_wrap .img_wrap {
+#factory.content_wrap .img_wrap {
   background-image: url("./assets/affiliates/affiliates_1.jpg");
 }
-.affiliates_wrap .affiliates_contents #hub.content_wrap .img_wrap {
+#hub.content_wrap .img_wrap {
   background-image: url("./assets/affiliates/affiliates_2.jpg");
 }
-.affiliates_wrap .affiliates_contents #service.content_wrap .img_wrap {
+#service.content_wrap .img_wrap {
   background-image: url("./assets/affiliates/affiliates_3.jpg");
 }
-.affiliates_wrap .affiliates_contents #sugerbot.content_wrap .img_wrap {
+#sugerbot.content_wrap .img_wrap {
   background-image: url("./assets/affiliates/affiliates_4.jpg");
 }
-.affiliates_wrap .affiliates_contents #pathfinder.content_wrap .img_wrap {
+#pathfinder.content_wrap .img_wrap {
   background-image: url("./assets/affiliates/affiliates_5.jpg");
 }
-.affiliates_wrap .affiliates_contents #chunilCD.content_wrap .img_wrap {
+#chunilCD.content_wrap .img_wrap {
   background-image: url("./assets/affiliates/affiliates_6.jpg");
 }
-.affiliates_wrap .affiliates_contents #chunil.content_wrap .img_wrap {
+#chunil.content_wrap .img_wrap {
   background-image: url("./assets/affiliates/affiliates_7.jpg");
 }
-.affiliates_wrap .affiliates_contents #solapark.content_wrap .img_wrap {
+#solapark.content_wrap .img_wrap {
   background-image: url("./assets/affiliates/affiliates_8.jpg");
 }
-.affiliates_wrap .affiliates_contents #private.content_wrap .img_wrap {
+#private.content_wrap .img_wrap {
   background-image: url("./assets/affiliates/affiliates_9.jpg");
 }
-.affiliates_wrap .affiliates_contents #sungsu.content_wrap .img_wrap {
+#sungsu.content_wrap .img_wrap {
   background-image: url("./assets/affiliates/affiliates_10.jpg");
 }
 
-.affiliates_wrap .affiliates_contents .content_wrap .desc {
+.content_wrap .desc {
   line-height: 160%; /* 28.8px */
   letter-spacing: -0.72px;
 }
-.affiliates_wrap .affiliates_contents .content_wrap .content_tag_list {
+.content_wrap .content_tag_list {
   width: 100%;
   gap: 8px;
   flex-wrap: wrap;
   margin-top: 40px;
 }
-.affiliates_wrap .content_wrap .content_tag_list .content_tag {
+.content_tag_list .content_tag {
   max-width: 224px;
-  /* padding: 10px 24px; */
+  padding: 10px 24px;
   height: 54px;
   align-items: center;
   gap: 8px;
@@ -125,17 +123,35 @@ html {
   flex: 1 1 224px;
   cursor: pointer;
 }
-.affiliates_wrap .content_wrap .content_tag_list .content_tag:hover {
+#chunilCD .content_tag_list .content_tag {
+  max-width: 240px;
+}
+.content_tag_list .content_tag:hover {
   opacity: 0.7;
 }
-.affiliates_wrap .content_wrap .content_tag_list .content_tag::before {
+.content_tag_list .content_tag::before {
   content: "";
   position: relative;
-  width: 22px;
-  height: 22px;
-  background-image: url("./assets/affiliates/map_pin.svg");
+  width: 24px;
+  height: 24px;
+  background-image: url("./assets/affiliates/ico_map.svg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+.content_tag_list .content_tag.ico_right,
+.content_tag_list .content_tag.ico_download {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -moz-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.content_tag_list .content_tag.ico_right::before {
+  background-image: url("./assets/affiliates/ico_right.svg");
+}
+.content_tag_list .content_tag.ico_download::before {
+  background-image: url("./assets/affiliates/ico_download.svg");
 }
 
 /* 미니 PC */

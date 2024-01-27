@@ -1,7 +1,7 @@
 .page_title_image_wrap {
   background-image: url("./assets/greeting/greeting_main.jpg");
-  /* background-size: 1920px auto; */
-  background-position: top center;
+  background-position: center;
+  background-size: cover;
 }
 
 .greeting_wrap {
