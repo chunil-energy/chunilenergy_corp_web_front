@@ -176,8 +176,8 @@
         <!-- 상단 헤더 -->
         <nav>
             <a href="../index.html" class="logo">
-                <img id="active_logo" src="../assets/logo.svg" alt="천일에너지 로고" />
-                <img src="../assets/logo_white.svg" alt="천일에너지 로고" />
+                <img id="active_logo" src="../assets/ci_logo.svg" alt="천일에너지 로고" />
+                <img src="../assets/ci_logo_wh.svg" alt="천일에너지 로고" />
             </a>
 
             <ul class="flex justify_center align_center">
@@ -192,7 +192,7 @@
                 <button type="button" id="partner_offer" class="hover center white text_14 justify_center align_center">
                     제휴제안
                 </button>
-                <button type="button" id="sitemap_open" class="hover center justify_center align_center">
+                <button type="button" id="menu_open" class="hover center justify_center align_center">
                     <img src="../assets/menu.png" alt="메뉴 아이콘" />
                 </button>
             </div>
@@ -203,7 +203,7 @@
     <div id="sitemap">
         <div class="sitemap_header">
             <a href="../index.html" class="logo">
-                <img src="../assets/logo_white.svg" alt="천일에너지 로고" />
+                <img src="../assets/ci_logo_wh.svg" alt="천일에너지 로고" />
             </a>
             <div class="menu_wrap flex justify_end align_center">
                 <button type="button" id="partner_offer"
@@ -211,12 +211,12 @@
                     제휴제안
                 </button>
                 <button type="button" id="sitemap_close" class="hover center justify_center align_center">
-                    <img src="../assets/close.png" alt="닫기 아이콘" />
+                    <img src="../assets/ico_close_sitemap.svg" alt="닫기 아이콘" />
                 </button>
             </div>
         </div>
 
-        <div class="sitemap_body flex justify_space_between align_start">
+        <div class="sitemap_body flex justify_space_between align_stretch">
             <!-- 회사소개 -->
             <div class="sitmap_col">
                 <p class="title left white">회사소개</p>
@@ -399,34 +399,7 @@
 
         <!-- section5 (Contact Us) -->
         <section id="section5" class="container">
-            <div class="bg_shape1">
-                <svg xmlns="http://www.w3.org/2000/svg" width="623" height="200" viewBox="0 0 623 200" fill="none">
-                    <path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd"
-                        d="M623 -43C623 172.61 445.18 348 226.5 348C7.91965 348 -170 172.61 -170 -42.9669L53.2197 -42.9669C53.2197 51.222 130.929 127.895 226.467 127.895C322.005 127.895 399.78 51.2221 399.78 -42.9669L623 -42.9669L623 -43Z"
-                        fill="url(#paint0_linear_681_2124)" />
-                    <defs>
-                        <linearGradient id="paint0_linear_681_2124" x1="17.4364" y1="-43" x2="960.253" y2="195.389"
-                            gradientUnits="userSpaceOnUse">
-                            <stop stop-color="white" />
-                            <stop offset="1" stop-color="white" stop-opacity="0" />
-                        </linearGradient>
-                    </defs>
-                </svg>
-            </div>
-            <div class="bg_shape2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="605" height="200" viewBox="0 0 605 200" fill="none">
-                    <path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd"
-                        d="M821 279C821 53.464 636.901 -130 410.5 -130C184.202 -130 2.18779e-06 53.464 4.87686e-06 278.965L231.101 278.965C231.101 180.44 311.555 100.238 410.466 100.238C509.377 100.238 589.899 180.44 589.899 278.965L821 278.965L821 279Z"
-                        fill="url(#paint0_linear_681_2125)" />
-                    <defs>
-                        <linearGradient id="paint0_linear_681_2125" x1="2.43864e-06" y1="74.5" x2="821" y2="74.5"
-                            gradientUnits="userSpaceOnUse">
-                            <stop stop-color="white" />
-                            <stop offset="1" stop-color="white" stop-opacity="0" />
-                        </linearGradient>
-                    </defs>
-                </svg>
-            </div>
+            <div class="contact_us_bg"></div>
 
             <!-- Contact Us -->
             <div class="section_wrap flex justify_space_between align_center" id="contact_us">
@@ -437,7 +410,7 @@
                 <button id="contact_us_detail_button"
                     class="detail_button partner_offer white text_16 semi_bold flex justify_center align_center hover">
                     제휴/제안 문의
-                    <img src="../assets/arrow_right.png" alt="->">
+                    <img src="../assets/ico_right_wh.svg" alt="->">
                 </button>
             </div>
         </section>
@@ -449,7 +422,7 @@
                         <!-- logo & footer_nav -->
                         <div class="flex justify_start align_center">
                             <a href="../index.html">
-                                <img class="logo" src="../assets/logo_white.svg" alt="천일 에너지 로고" />
+                                <img class="logo" src="../assets/ci_logo_wh.svg" alt="천일 에너지 로고" />
                             </a>
                             <div class="footer_nav_list flex justify_start align_center">
                                 <a href="#" class="footer_nav text_16 semi_bold">제휴제안</a>
@@ -461,8 +434,13 @@
                         <!-- footer_info & footer_cs -->
                         <div class="flex justify_space_between align_start" style="gap: 80px;">
                             <div class="footer_info flex flex_col justify_start align_start">
-                                <p class="text_14 left"><b>천일에너지 대표</b>박상원<b
-                                        style="margin-left: 20px;">사업자등록번호</b>127-86-25218</p>
+                                 <p class="text_14 left">
+                                    <b>천일에너지 대표</b>박상원
+                                    <b style="margin-left: 20px;" class="only_pc_block">사업자등록번호</b>
+                                    <br class="only_mo_block" />
+                                    <b class="only_mo_block">사업자등록번호</b>
+                                    127-86-25218
+                                </p>
                                 <p class="text_14 left"><b>서울사무실 소재지</b>서울 성동구 성수이로 51 서울숲한라시그마밸리 601호</p>
                                 <p class="text_14 left"><b>사업소재지</b>경기도 포천시 영중면 양문공단로3길 20</p>
                             </div>
