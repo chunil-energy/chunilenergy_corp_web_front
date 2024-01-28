@@ -250,13 +250,6 @@ a {
 }
 
 /* page 공통 요소 - layout */
-/* 
-.page_wrap {
-  width: 100%;
-  max-width: 562px;
-  max-height: 100%;
-  margin: 150px auto;
-} */
 .page_container {
   width: 100%;
   /* 90(header) + 355(footer) */
@@ -311,7 +304,7 @@ a {
   letter-spacing: -0.52px;
 }
 .page_path_wrap span:last-child {
-  color: rgba(0, 0, 0, 0.9);
+  color: #000000e6;
 }
 
 /* page 공통 요소 - tag */
@@ -537,5 +530,46 @@ input[type="checkbox"]:checked + label:before {
   .only_pc_flex,
   .only_pc_inline {
     display: none;
+  }
+
+  /* page 공통 요소 - layout */
+  .page_container {
+    /* 72(header) + 713(footer) */
+    min-height: calc(100vh - 785px);
+    padding-top: 72px;
+  }
+  .page_title_wrap {
+    width: 87%;
+    margin: 72px auto 56px;
+  }
+  .page_title_wrap .title {
+    font-size: 28px;
+    letter-spacing: -1.12px;
+  }
+  .page_title_wrap .sub_title {
+    font-size: 14px;
+    letter-spacing: -0.56px;
+    margin-top: 16px;
+  }
+  .page_title_image_wrap {
+    width: 100%;
+    height: 66.67vw;
+    min-height: 240px;
+    max-height: 300px;
+  }
+  .page_path_wrap {
+    top: 76px;
+    right: 24px;
+    gap: 3px;
+  }
+  .page_path_wrap .ico_arrow {
+    width: 12px;
+    height: 12px;
+  }
+  .page_path_wrap span {
+    color: #B7B7B7;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -0.48px;
   }
 }

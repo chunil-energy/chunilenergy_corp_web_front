@@ -98,7 +98,6 @@
   box-shadow: 0px 10px 14px 0px rgba(137, 140, 148, 0.3);
   border-radius: 14px;
   background-color: #80ecee;
-  mix-blend-mode: overlay;
   position: relative;
   overflow: hidden;
   flex-shrink: 0;

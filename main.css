@@ -511,6 +511,9 @@ section#section2 {
   width: 100%;
   overflow: hidden;
 }
+.business-swiper-pagination {
+  display: none;
+}
 section#section3 {
   position: relative;
   background-color: #000;
@@ -1114,6 +1117,9 @@ section#section4 .clients_logo_list {
     height: 113.89vw;
     visibility: visible;
     z-index: 1;
+  }
+  .business-swiper-pagination {
+    display: block;
   }
   section#section3 div.swiper-slide.fixed_content {
     /* width: 312px; */
