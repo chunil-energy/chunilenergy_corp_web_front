@@ -30,28 +30,22 @@
   overflow: hidden;
   flex-shrink: 0;
   background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
 }
 #greeting_1.greeting_row .img_wrap {
   background-image: url("./assets/greeting/greeting_1.jpg");
-  background-position: center;
-  background-size: 100% auto;
 }
 #greeting_2.greeting_row .img_wrap {
   background-image: url("./assets/greeting/greeting_2.jpg");
-  background-position: center;
-  background-size: 639px auto;
 }
 #greeting_3.greeting_row .img_wrap {
   width: 480px;
   height: 680px;
   background-image: url("./assets/greeting/greeting_3.jpg");
-  background-position: center;
-  background-size: 100% auto;
 }
 #greeting_4.greeting_row .img_wrap {
   background-image: url("./assets/greeting/greeting_4.jpg");
-  background-position: center;
-  background-size: 100% auto;
 }
 .greeting_list_wrap .greeting_row .greeting_title {
   font-size: 28px;
@@ -96,7 +90,7 @@
   }
 
   .greeting_wrap .greeting_list_wrap .greeting_row {
-    gap: 86px;
+    gap: 80px;
     margin-bottom: 100px;
     padding-left: 0px;
   }
@@ -116,4 +110,77 @@
 
 /* 태블릿 이하 */
 @media screen and (max-width: 870px) {
+  .greeting_wrap {
+    width: 87%;
+    margin: 60px auto 80px;
+  }
+  .greeting_wrap .greeting_list_wrap .greeting_row {
+    gap: 22px;
+    margin-bottom: 70px;
+    padding-left: 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  #greeting_2.greeting_row, 
+  #greeting_4.greeting_row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -moz-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+  .greeting_list_wrap .greeting_row .img_wrap {
+    width: 100%;
+    height: 57.78vw;
+    min-height: 208px;
+    max-height: 300px;
+    border-radius: 10px;
+  }
+  #greeting_3.greeting_row .img_wrap {
+    width: 100%;
+    height: 122.78vw;
+    min-height: 442px;
+    max-height: 580px;
+  }
+
+  .greeting_row .grow {
+    width: 100%;
+  }
+  .greeting_list_wrap .greeting_row .greeting_title {
+    width: 100%;
+    font-size: 20px;
+    line-height: 140%; /* 42px */
+    letter-spacing: -0.8px;
+    margin-bottom: 12px;
+  }
+  .greeting_list_wrap .greeting_row .greeting_desc {
+    width: 100%;
+    letter-spacing: -0.56px;
+  }
+  .greeting_row .greeting_desc br {
+    display: none;
+  }
+
+  .greeting_wrap .greeting_banner {
+    height: 380px;
+    border-radius: 10px;
+  }
+  .greeting_wrap .greeting_banner p.title {
+    font-size: 16px;
+    letter-spacing: -0.64px;
+    margin-bottom: 16px;
+  }
+  .greeting_wrap .greeting_banner p.sub_title {
+    font-size: 13px;
+    letter-spacing: -0.52px;
+  }
+}
+
+/* 모바일 (greeting_desc 줄바꿈) */
+@media screen and (max-width: 560px) {
+  .greeting_row .greeting_desc br {
+    display: block;
+  }
 }
