@@ -28,6 +28,7 @@ const isBreakPoint = function (bp) {
 
 $(document).ready(function () {
   let isOpenNav = false;
+  $("body").css("overflow", "auto");
 
   console.log('init');
   $("#header").removeClass("show_mo_menu");
