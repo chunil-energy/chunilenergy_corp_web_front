@@ -29,6 +29,20 @@ const isBreakPoint = function (bp) {
 $(document).ready(function () {
   let isOpenNav = false;
 
+  console.log('init');
+  $("#header").removeClass("show_mo_menu");
+  // todo 페이지 최초 진입 후 화면의 크기가 바뀐다면, 대응 코드 작성.
+
+  // 모바일일 경우 네비 엘리먼트 클론
+  if (isBreakPoint(870)) {
+    var navElement = $("#header nav ul").clone();
+    navElement.addClass("nav_list");
+    navElement.find('li').each(function (index, item) {
+      $(item).data('idx', index+1); 
+    })
+    navElement.appendTo("#header .sub_nav_wrap");
+  }
+
   // 헤더(서브 nav) 바깥 클릭 시 서브메뉴 닫힘
   $(document).on("click", function (e) {
     var clickedEl = $(e.target);
@@ -82,23 +96,70 @@ $(document).ready(function () {
       $(selector).animate({ opacity: 1 });
     }
   });
+  // 모바일 헤더 메뉴 클릭 시 (하위 메뉴 show)
+  $(".nav_list li").on("click", function () {
+    isOpenNav = true;
+    const selector =
+      "#header .sub_nav_wrap .sub_nav_body:nth-child(" +
+      $(this).data('idx') +
+      ")";
+
+    // "인재채용" 메뉴 클릭 시
+    if ($(this).is(':last-child')) {
+      console.log('This is the last LI');
+      return;
+    }
+
+    var findChildren = $(this).next('.sub_nav_body')
+
+    // 하위 메뉴 엘리먼트가 없다면
+    if (findChildren?.length === 0) {
+      var cloneSub = $(selector).clone();
+      $(this).after(cloneSub);
+    }
+
+    // 하위메뉴 엘리먼트
+    const childrenMenu = $(this).next('.sub_nav_body');
+    // 하위메뉴의 display 속성검사
+    const alreadyShow = childrenMenu.css("display");
+
+    if (alreadyShow === "block") {
+      $(".nav_list li").removeClass("active");
+
+      childrenMenu.slideUp(200);
+      childrenMenu.css('opacity', 0);
+      // childrenMenu.animate({ opacity: 0 });
+    } else {
+      $(".nav_list li").removeClass("active");
+      $(this).addClass("active");
+
+      // $('.nav_list .sub_nav_body').slideUp();
+      // $('.nav_list .sub_nav_body').animate({ opacity: 0, display: 'none' });
+      $(".nav_list .sub_nav_body").each(function (index, item) {
+        if ($(item).css("display") === "block") {
+          $(item).slideUp(200);
+        }
+      })
+
+      childrenMenu.css('opacity', 1);
+      childrenMenu.slideDown(300);
+    }
+  });
 
   // 헤더 우측 사이트맵 열기 아이콘 클릭
   $("#menu_open").on("click", function () {
     if (isBreakPoint(870)) {
       // $("#header .sub_nav_wrap").fadeIn();
-      
+
       if ($("#header").hasClass("show_mo_menu")) {
         // 모바일메뉴가 열려있다면,
         $("#header").removeClass("show_mo_menu");
-        // $("#header.show_mo_menu::before").fadeOut();
 
         $("#header .sub_nav_wrap").fadeOut();
         $("body").css("overflow", "auto");
       } else {
         // 모바일메뉴가 닫혀있다면,
         $("#header").addClass("show_mo_menu");
-        // $("#header.show_mo_menu::before").fadeIn();
 
         $("#header .sub_nav_wrap").fadeIn();
         $("body").css("overflow", "hidden");
