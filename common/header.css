@@ -221,8 +221,8 @@
   }
   #header nav {
     height: 72px;
-    width: 87%;
-    padding: 0px;
+    width: 100%;
+    padding: 0px 24px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -256,7 +256,7 @@
     top: 0px;
     right: 0px;
     width: 87%;
-    margin: 0 auto;
+    margin: 0px;
   }
   #header button#partner_offer {
     display: none;
@@ -329,9 +329,9 @@
   }
   .sub_nav_wrap .nav_list li {
     position: relative;
-    width: 83%;
+    width: 100%;
     margin: 0 auto;
-    padding: 24px 0px;
+    padding: 24px 30px;
     display: block;
     list-style: none;
     cursor: pointer;
@@ -379,9 +379,9 @@
     background: #ebecef;
   }
   .nav_list .sub_nav_col {
-    width: 83%;
+    width: 100%;
     margin: 0 auto;
-    padding: 14px 0px;
+    padding: 14px 30px;
   }
   .nav_list .sub_nav_col.empty_col {
     display: none;

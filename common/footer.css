@@ -162,7 +162,8 @@ footer .footer_wrap .footer_row {
     box-sizing: border-box; */
   }
   footer .footer_wrap {
-    width: 87%;
+    width: 100%;
+    padding: 0px 24px;
     gap: 0px;
   }
   .footer_row .footer_family {

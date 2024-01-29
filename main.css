@@ -505,10 +505,12 @@ section#section2 {
 .business_moSwiper {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   visibility: hidden;
   z-index: -1;
   width: 100%;
+  max-width: 500px;
   overflow: hidden;
 }
 .business-swiper-pagination {
@@ -851,7 +853,8 @@ section#section4 .clients_logo_list {
 
   /* section 공통 */
   section .section_wrap {
-    width: 87%;
+    width: 100%;
+    padding: 0px 24px;
   }
   section .mini_title {
     font-size: 16px;

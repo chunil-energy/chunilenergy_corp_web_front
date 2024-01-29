@@ -31,7 +31,13 @@ $(document).ready(function () {
   $("body").css("overflow", "auto");
 
   console.log('init');
-  $("#header").removeClass("show_mo_menu");
+  
+  // 모바일메뉴가 열려있다면, 닫기
+  if ($("#header").hasClass("show_mo_menu")) {
+    $("#header").removeClass("show_mo_menu");
+    $("#header .sub_nav_wrap").hide();
+    $("body").css("overflow", "auto");
+  }
   // todo 페이지 최초 진입 후 화면의 크기가 바뀐다면, 대응 코드 작성.
 
   // 모바일일 경우 네비 엘리먼트 클론
@@ -115,7 +121,7 @@ $(document).ready(function () {
 
     // 하위 메뉴 엘리먼트가 없다면
     if (findChildren?.length === 0) {
-      var cloneSub = $(selector).clone();
+      var cloneSub = $(selector).clone(true);
       $(this).after(cloneSub);
     }
 

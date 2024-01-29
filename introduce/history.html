@@ -354,13 +354,22 @@
 
         <div class="page_container bg_white">
             <!-- 연혁 title & img -->
-            <div class="page_title_wrap">
+            <div class="page_title_wrap only_pc_block">
                 <p class="title left" data-aos="fade-up" data-aos-duration="500">
                     HISTORY of<br />CHUNIL ENERGY
                 </p>
                 <p class="sub_title" data-aos="fade-up" data-aos-duration="500">
                     지속가능한 지구의 미래를 위해<br />
                     천일에너지가 묵묵히 걸어 온 도전과 성취의 여정을 만나보세요.
+                </p>
+            </div>
+            <div class="page_title_wrap only_mo_block">
+                <p class="title left" data-aos="fade-up" data-aos-duration="500">
+                    연혁
+                </p>
+                <p class="sub_title" data-aos="fade-up" data-aos-duration="500">
+                    천일에너지만의 혁신은 지속가능한 미래를 더욱 앞당기고<br />있습니다.
+                    천일에너지가 걸어온 도전과 성취의 여정을 만나보세요.
                 </p>
             </div>
             <div class="page_title_image_wrap" data-aos="fade-up" data-aos-duration="500" data-aos-delay="150"></div>
@@ -387,11 +396,13 @@
                             <p class="title">Now-2020</p>
                             <p class="sub_title">국내 1위 폐자원 에너지 기업으로 성장</p>
                         </div>
-                        <div class="history_title flex flex_col justify_start align_start" data-titleId="#2015">
+                        <div class="history_title flex flex_col justify_start align_start only_pc_flex"
+                            data-titleId="#2015">
                             <p class="title">2015-2019</p>
                             <p class="sub_title">사업의 확장 및 성장성 실현</p>
                         </div>
-                        <div class="history_title flex flex_col justify_start align_start" data-titleId="#2010">
+                        <div class="history_title flex flex_col justify_start align_start only_pc_flex"
+                            data-titleId="#2010">
                             <p class="title">2010-2014</p>
                             <p class="sub_title">재생에너지 사업을 향한 새로운 도약</p>
                         </div>
@@ -453,6 +464,13 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="history_title_wrap">
+                            <div class="history_title flex flex_col justify_start align_start only_mo_flex"
+                                data-titleId="#2015">
+                                <p class="title">2015-2019</p>
+                                <p class="sub_title">사업의 확장 및 성장성 실현</p>
+                            </div>
+                        </div>
                         <div class="history_item" id="2015">
                             <p class="title left mid">2019</p>
                             <div class="day_wrap flex flex_col justify_start align_start">
@@ -499,6 +517,13 @@
                                     <div class="days left">11</div>
                                     <div class="days_desc left">지점 용인팩토리(한국목재재생산업) 편입</div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="history_title_wrap">
+                            <div class="history_title flex flex_col justify_start align_start only_mo_flex"
+                                data-titleId="#2010">
+                                <p class="title">2010-2014</p>
+                                <p class="sub_title">재생에너지 사업을 향한 새로운 도약</p>
                             </div>
                         </div>
                         <div class="history_item" id="2010">
@@ -640,6 +665,8 @@
 
         $(window).ready(function () {
 
+            var isMo = isBreakPoint(870);
+
             $('.history_nav').each(function () {
                 var idValue = $(this).attr("data-divId");
                 var refElement = $(idValue);
@@ -652,7 +679,7 @@
                 var currentDidvId = $(this).attr('data-divId');
 
                 $('html, body').animate({
-                    scrollTop: $(currentDidvId).offset().top - 180
+                    scrollTop: $(currentDidvId).offset().top - (isMo ? 250 : 180)
                 }, 'fast');
             })
 

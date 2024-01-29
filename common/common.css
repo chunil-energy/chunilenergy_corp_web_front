@@ -539,7 +539,8 @@ input[type="checkbox"]:checked + label:before {
     padding-top: 72px;
   }
   .page_title_wrap {
-    width: 87%;
+    width: 100%;
+    padding: 0px 24px;
     margin: 72px auto 56px;
   }
   .page_title_wrap .title {

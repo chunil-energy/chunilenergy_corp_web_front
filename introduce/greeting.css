@@ -111,8 +111,10 @@
 /* 태블릿 이하 */
 @media screen and (max-width: 870px) {
   .greeting_wrap {
-    width: 87%;
+    width: 100%;
     margin: 60px auto 80px;
+    padding: 0px 24px;
+    max-width: 550px;
   }
   .greeting_wrap .greeting_list_wrap .greeting_row {
     gap: 22px;
@@ -179,7 +181,7 @@
 }
 
 /* 모바일 (greeting_desc 줄바꿈) */
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 550px) {
   .greeting_row .greeting_desc br {
     display: block;
   }
