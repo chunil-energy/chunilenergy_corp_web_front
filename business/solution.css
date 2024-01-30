@@ -149,10 +149,10 @@ img.solution_process {
   max-height: 410px;
 }
 .inAuth_wrap .inAuth_list .inAuth_item img {
-    width: 100%;
-    max-width: 240px;
-    height: auto;
-    box-shadow: 0px 10px 20px 0px rgba(25, 25, 26, 0.10);
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  box-shadow: 0px 10px 20px 0px rgba(25, 25, 26, 0.1);
 }
 .inAuth_wrap .inAuth_list .inAuth_item .name {
   color: #262626;
@@ -175,7 +175,6 @@ img.solution_process {
 
 /* 미니 PC */
 @media screen and (max-width: 1080px) {
-
   .solution_wrap_outer .solution_wrap {
     width: 94%;
   }
@@ -197,4 +196,128 @@ img.solution_process {
 
 /* 태블릿 이하 */
 @media screen and (max-width: 870px) {
+  .solution_nav_wrap {
+    top: 72px;
+    padding: 0px 24px;
+    gap: 0;
+  }
+  .solution_nav_wrap .solution_nav {
+    width: 88px;
+    height: 56px;
+    padding: 0px 14px;
+    font-size: 14px;
+    letter-spacing: -0.56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .solution_wrap_outer .solution_wrap {
+    width: 100%;
+    max-width: 550px;
+    padding: 0px 24px;
+    margin: 0px auto 100px;
+  }
+  .solution_wrap_outer .solution_wrap .solution_panel {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .solution_wrap .solution_panel .panel_title {
+    margin-top: 50px;
+    font-size: 22px;
+    letter-spacing: -0.88px;
+    margin-bottom: 12px;
+  }
+  .solution_wrap .solution_panel .panel_sub_title {
+    font-size: 14px;
+    font-weight: 400;
+    color: #565656;
+    line-height: 130%; /* 20.8px */
+    letter-spacing: -0.56px;
+  }
+
+  /* process */
+  #process .panel_title {
+    margin-bottom: 40px;
+  }
+  #process .panel_sub_title {
+    color: #1a83ff;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.64px;
+  }
+  img.solution_process {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin: 20px auto 0px;
+  }
+
+  /* effect */
+  .solution_panel .effect_wrap {
+    gap: 70px;
+    margin-top: 50px;
+  }
+  .solution_panel .effect_wrap .effect_row_detail {
+    -webkit-box-orient: vertical;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -moz-box-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    gap: 22px;
+  }
+  .solution_panel .effect_wrap .effect_row_detail:nth-child(2),
+  .solution_panel .effect_wrap .effect_row_detail:nth-child(4) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -moz-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+  .solution_panel .effect_wrap .effect_row_detail img {
+    max-width: 100%;
+  }
+  .solution_panel .effect_wrap .effect_row_detail .grow {
+    width: 100%;
+  }
+  .solution_panel .effect_wrap .effect_row_detail .sub_title {
+    font-size: 14px;
+    letter-spacing: -0.56px;
+  }
+  .solution_panel .effect_wrap .effect_row_detail .title {
+    font-size: 20px;
+    letter-spacing: -0.8px;
+  }
+  .solution_panel .effect_wrap .effect_row_detail .desc {
+    font-size: 14px;
+    letter-spacing: -0.56px;
+  }
+
+  /* inAuth */
+  .inAuth_wrap .inAuth_tag_list {
+    gap: 6px;
+    margin: 40px 0px;
+  }
+  .inAuth_wrap .inAuth_tag_list .inAuth_tag {
+    height: 18px;
+    padding: 9px 16px;
+    font-size: 14px;
+    letter-spacing: -0.56px;
+  }
+  .inAuth_wrap .inAuth_list {
+    gap: 30px;
+    grid-template-columns: repeat(auto-fill, 141px);
+  }
+  .inAuth_wrap .inAuth_list .inAuth_item .name {
+    font-size: 13px;
+    letter-spacing: -0.52px;
+    margin-top: 16px;
+  }
+  .inAuth_wrap .inAuth_list .inAuth_item .desc {
+    font-size: 12px;
+    letter-spacing: -0.48px;
+  }
 }

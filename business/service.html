@@ -391,13 +391,13 @@
                         <div class="content_wrap_inner flex justify_space_between align_center">
                             <div class="grow">
                                 <p class="title left black semi_bold">마루철거/종합철거</p>
-                                <p class="sub_title left">잘 처리될지, 환경에 해가 되진 않을지<br />폐기물 처리에 대한 불안함까지 완벽하게 철거합니다</p>
+                                <p class="sub_title left">잘 처리될지, 환경에 해가 되진 않을지<br />폐기물 처리에 대한 불안함까지 <br class="only_mo_block"/>완벽하게 철거합니다</p>
                                 <div class="flex justify_start align_start">
                                     <div class="trash_can_icon"></div>
                                     <p class="desc left text_16 gray2">
                                         철거전문가와 철거에 필요한 특수장비를 보유하여<br />
-                                        바닥재 철거(마루철거), 종합철거 서비스를 제공하고,<br />
-                                        완벽하게 수거된 폐기물은 천일에너지의 인프라를 통해 다시<br />
+                                        바닥재 철거(마루철거), 종합철거 서비스를 <br class="only_mo_block"/>제공하고,<br class="only_pc_block" />
+                                        완벽하게 수거된 폐기물은 천일에너지의 인프라를 통해 다시<br class="only_pc_block" />
                                         신재생에너지로 재탄생 됩니다
                                     </p>
                                 </div>
@@ -410,13 +410,13 @@
                         <div class="content_wrap_inner flex justify_space_between align_center">
                             <div class="grow">
                                 <p class="title left black semi_bold">동의/보양/행위허가</p>
-                                <p class="sub_title left">당신의 에너지가 더 완벽한 인테리어의 에너지로 쓰일 수 있게</p>
+                                <p class="sub_title left">당신의 에너지가 더 완벽한 인테리어의 <br class="only_mo_block"/>에너지로 쓰일 수 있게</p>
                                 <div class="flex justify_start align_start">
                                     <div class="trash_can_icon"></div>
                                     <p class="desc left text_16 gray2">
                                         공동주택 인테리어 공사 전, 필요한 모든 서비스를 제공합니다.<br />
-                                        입주민 동의서 수령 대행부터 시설물에 대한 건설, 변경, 추가 등에 따른 행위허가
-                                        신고 대행서비스부터 승강기와 작업 동선 내 손상을 최소화 하기 위한 보양지 설치
+                                        입주민 동의서 수령 대행부터 시설물에 대한 건설, <br class="only_mo_block"/>변경, 추가 등에 따른 행위허가
+                                        신고 대행서비스부터 <br class="only_mo_block"/>승강기와 작업 동선 내 손상을 최소화 하기 위한 <br class="only_mo_block"/>보양지 설치
                                         작업까지 작지만 불편한 업무들에 대한 서비스를 제공합니다.
                                     </p>
                                 </div>
@@ -529,21 +529,27 @@
             if (hash) {
                 $('html, body').animate({
                     scrollTop: $(hash).offset().top - $(hash).height() / 2
-                }, 'slow', function () {
+                }, 'fast', function () {
                     closeHeaderNav();
                 });
                 activeNavByDataNav(hash.replace('#', ''));
             } else {
                 $('html, body').animate({
                     scrollTop: 0
-                }, 'slow');
+                }, 'fast');
             }
 
             $(".side_nav_wrap a, #service_nav a").on("click", function (e) {
-                e.preventDefault();
+                // 모바일메뉴가 열려있다면, 닫기
+                if ($("#header").hasClass("show_mo_menu")) {
+                    $("#header").removeClass("show_mo_menu");
+                    $("#header .sub_nav_wrap").hide();
+                    $("body").css("overflow", "auto");
+                }
+
                 $('html, body').animate({
                     scrollTop: $($(this).attr('href')).offset().top - $(hash).height() / 2
-                }, 'slow', function () {
+                }, 'fast', function () {
                     closeHeaderNav();
                 });
             })
@@ -555,7 +561,7 @@
                 $("#sitemap").fadeOut();
                 $('html, body').animate({
                     scrollTop: $($(this).attr('href')).offset().top - $(hash).height() / 2
-                }, '');
+                }, 'fast');
             });
         });
     </script>

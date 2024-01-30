@@ -30,8 +30,8 @@ $(document).ready(function () {
   let isOpenNav = false;
   $("body").css("overflow", "auto");
 
-  console.log('init');
-  
+  console.log("init");
+
   // 모바일메뉴가 열려있다면, 닫기
   if ($("#header").hasClass("show_mo_menu")) {
     $("#header").removeClass("show_mo_menu");
@@ -44,9 +44,9 @@ $(document).ready(function () {
   if (isBreakPoint(870)) {
     var navElement = $("#header nav ul").clone();
     navElement.addClass("nav_list");
-    navElement.find('li').each(function (index, item) {
-      $(item).data('idx', index+1); 
-    })
+    navElement.find("li").each(function (index, item) {
+      $(item).data("idx", index + 1);
+    });
     navElement.appendTo("#header .sub_nav_wrap");
   }
 
@@ -108,16 +108,16 @@ $(document).ready(function () {
     isOpenNav = true;
     const selector =
       "#header .sub_nav_wrap .sub_nav_body:nth-child(" +
-      $(this).data('idx') +
+      $(this).data("idx") +
       ")";
 
     // "인재채용" 메뉴 클릭 시
-    if ($(this).is(':last-child')) {
-      console.log('This is the last LI');
+    if ($(this).is(":last-child")) {
+      console.log("This is the last LI");
       return;
     }
 
-    var findChildren = $(this).next('.sub_nav_body')
+    var findChildren = $(this).next(".sub_nav_body");
 
     // 하위 메뉴 엘리먼트가 없다면
     if (findChildren?.length === 0) {
@@ -126,7 +126,7 @@ $(document).ready(function () {
     }
 
     // 하위메뉴 엘리먼트
-    const childrenMenu = $(this).next('.sub_nav_body');
+    const childrenMenu = $(this).next(".sub_nav_body");
     // 하위메뉴의 display 속성검사
     const alreadyShow = childrenMenu.css("display");
 
@@ -134,7 +134,7 @@ $(document).ready(function () {
       $(".nav_list li").removeClass("active");
 
       childrenMenu.slideUp(200);
-      childrenMenu.css('opacity', 0);
+      childrenMenu.css("opacity", 0);
       // childrenMenu.animate({ opacity: 0 });
     } else {
       $(".nav_list li").removeClass("active");
@@ -146,9 +146,9 @@ $(document).ready(function () {
         if ($(item).css("display") === "block") {
           $(item).slideUp(200);
         }
-      })
+      });
 
-      childrenMenu.css('opacity', 1);
+      childrenMenu.css("opacity", 1);
       childrenMenu.slideDown(300);
     }
   });

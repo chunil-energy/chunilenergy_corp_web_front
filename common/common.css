@@ -541,7 +541,7 @@ input[type="checkbox"]:checked + label:before {
   .page_title_wrap {
     width: 100%;
     padding: 0px 24px;
-    margin: 72px auto 56px;
+    margin: 72px auto 50px;
   }
   .page_title_wrap .title {
     font-size: 28px;
