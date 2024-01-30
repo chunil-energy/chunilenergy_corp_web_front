@@ -153,6 +153,44 @@ footer .footer_wrap .footer_row {
 
 /* 태블릿 이하 */
 @media screen and (max-width: 870px) {
+  /* Contact Us */
+  section#section5 {
+    height: 240px;
+  }
+  section#section5 .contact_us_bg {
+    min-width: unset;
+    background-image: url("../assets/contact_us_bg_mo.jpg");
+  }
+  section#section5 #contact_us.section_wrap {
+    width: 100%;
+    padding: 0px 24px;
+    -webkit-box-orient: vertical;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -moz-box-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: start;
+    -moz-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  section#section5 .title {
+    font-size: 26px;
+    letter-spacing: -1.04px;
+    margin-bottom: 10px;
+  }
+
+  section#section5 .detail_button {
+    width: 160px;
+    height: 44px;
+    padding: 10px 20px 10px 24px;
+    letter-spacing: -0.56px;
+  }
+
   /* footer */
   footer {
     /* height: 355px; */

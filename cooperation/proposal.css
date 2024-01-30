@@ -329,13 +329,182 @@
 
 /* 태블릿 이하 */
 @media screen and (max-width: 870px) {
+  .proposal_nav_wrap {
+    padding: 0px 24px;
+    top: 72px;
+    gap: 8px;
+    z-index: 2;
+  }
+  .proposal_wrap_outer {
+    padding: 50px 24px 80px;
+    max-width: 550px;
+    margin: 0 auto;
+  }
+  .proposal_wrap_outer .proposal_wrap {
+    width: 100%;
+  }
+
   /* guide tab */
+  #guide.proposal_panel .guide_process {
+    width: 98vw;
+    max-width: 240px;
+    padding: 12px;
+    row-gap: 10px;
+    -webkit-box-orient: vertical;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
   #guide.proposal_panel .guide_process {
     align-content: center;
     flex-wrap: wrap;
   }
   #guide.proposal_panel .guide_process .step_circle {
-    width: 208px;
-    height: 208px;
+    width: 97vw;
+    height: 97vw;
+    max-width: 208px;
+    max-height: 208px;
+  }
+  #guide.proposal_panel .guide_process .step_circle .step_text {
+    font-size: 13px;
+    letter-spacing: -0.52px;
+    margin-bottom: 10px;
+  }
+  #guide.proposal_panel .guide_process .step_circle .step_title {
+    font-size: 16px;
+    letter-spacing: -0.64px;
+  }
+  #guide.proposal_panel .guide_process .arrow_right {
+    width: 14px;
+    height: 24px;
+    transform: rotate(90deg);
+  }
+  #guide.proposal_panel button#offer_button {
+    margin: 50px auto 80px;
+  }
+
+  .proposal_panel .row_wrap {
+    -webkit-box-orient: vertical;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -moz-box-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    gap: 30px;
+  }
+  #guide.proposal_panel .step_wrap {
+    gap: 74px;
+  }
+  #guide.proposal_panel .step_wrap .step_text {
+    font-size: 14px;
+    letter-spacing: -0.56px;
+    margin-bottom: 8px;
+  }
+  .proposal_panel .row_wrap .title {
+    font-size: 22px;
+    letter-spacing: -0.88px;
+    width: 100%;
+    max-width: 183px;
+  }
+  #guide.proposal_panel .step_wrap .guide_ul li {
+    padding: 16px 0px 16px 18px;
+    letter-spacing: -0.56px;
+  }
+  #guide.proposal_panel .step_wrap .guide_ul li::before {
+    font-size: 16px;
+    left: 4px;
+    top: 15px;
+  }
+
+  /* register tab */
+  #register.proposal_panel .register_wrap {
+    gap: 80px;
+  }
+  #register.proposal_panel .row_wrap {
+    gap: 34px;
+  }
+  #register.proposal_panel .row_wrap .title {
+    width: 100%;
+  }
+  .title_wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .required_text.only_mo_block {
+    color: #969696;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 160%; /* 22.4px */
+    letter-spacing: -0.48px;
+  }
+  .required_text::before {
+    content: "\2022";
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 0.5;
+    position: absolute;
+    left: -8px;
+    top: 0;
+    color: #1a83ff;
+  }
+  #register.proposal_panel .row_wrap .right_side_wrap {
+    width: 100%;
+    gap: 24px;
+  }
+  .file_info {
+    -webkit-box-orient: vertical;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -moz-box-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: start;
+    -moz-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    gap: 20px !important;
+  }
+  #register.proposal_panel .right_side_wrap .upload_file_list {
+    margin-top: 10px;
+    gap: 6px;
+  }
+
+  #company_info .company_tab_list {
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+  #company_info .company_tab_list .company_tab {
+    flex: 1 1 48%;
+    padding: 8px 20px;
+    height: 38px;
+    font-size: 14px;
+    letter-spacing: -0.56px;
+  }
+  #company_info .company_form_panel.active {
+    padding-bottom: 20px;
+  }
+  #company_info .terms_wrap {
+    gap: 10px;
+    margin-top: 40px;
+  }
+  #company_info .terms_wrap .term_title {
+    font-size: 17px;
+    letter-spacing: -0.68px;
+  }
+  #company_info .terms_wrap .term_box {
+    color: #363638;
+    font-size: 14px;
+    line-height: 160%;
+    letter-spacing: -0.56px;
+  }
+  #company_info button#submit {
+    width: 100%;
+    margin-top: 40px;
   }
 }

@@ -358,7 +358,7 @@
             <div class="page_title_wrap">
                 <p class="title" data-aos="fade-up" data-aos-duration="500">제휴/제안</p>
                 <p class="sub_title" data-aos="fade-up" data-aos-duration="500">
-                    제휴 및 제안은 본 시스템 또는 아래 이메일을 통하여 접수 된 건만 정식으로 검토되며<br />
+                    제휴 및 제안은 본 시스템 또는 아래 이메일을 통하여 접수 된 건만 정식으로 검토되며,<br class="only_pc_block" />
                     제안 내용 및 관련자료는 제휴 검토 목적으로만 이용합니다
                 </p>
             </div>
@@ -454,14 +454,15 @@
                     <div class="proposal_panel" id="register">
                         <div class="register_wrap flex flex_col justify_start align_start">
                             <div class="row_wrap">
-                                <div>
-                                    <p class="title left">제휴제안<br />내용</p>
+                                <div class="title_wrap">
+                                    <p class="title left">제휴제안 <br class="only_pc_block" />내용</p>
+                                    <p class="required_text right only_mo_block">필수 입력 항목입니다.</p>
                                 </div>
                                 <div class="right_side_wrap flex flex_col justify_start align_start">
                                     <div class="input_wrap flex flex_col justify_start align_stretch">
                                         <div class="flex justify_space_between align_center" style="width: 100%;">
                                             <label class="input_label required" for="register_type">제휴 구분</label>
-                                            <p class="required_text right">필수 입력 항목입니다.</p>
+                                            <p class="required_text right only_pc_block">필수 입력 항목입니다.</p>
                                         </div>
 
                                         <select name="register_type" id="register_type" class="input">
@@ -488,7 +489,7 @@
                                         <div>
                                             <span class="input_label">제안서 파일 첨부</span>
                                         </div>
-                                        <div class="flex justify_space_between align_center" style="gap: 30px;">
+                                        <div class="flex justify_space_between align_center file_info" style="gap: 30px;">
                                             <p class="gray4 left text_14">
                                                 *50MB를 초과 할 수 없으며, PDF/PPT/DOCX/HWP/ZIP 파일만 가능합니다.
                                             </p>
@@ -505,7 +506,7 @@
                             </div>
                             <div class="row_wrap" id="company_info">
                                 <div>
-                                    <p class="title left">제휴제안<br />업체정보</p>
+                                    <p class="title left">제휴제안 <br class="only_pc_block" />업체정보</p>
                                 </div>
                                 <div class="right_side_wrap">
                                     <div class="company_tab_list flex justify_space_between align_center">

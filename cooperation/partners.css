@@ -78,4 +78,24 @@
 
 /* 태블릿 이하 */
 @media screen and (max-width: 870px) {
+  .partners_wrap {
+    width: 100%;
+    max-width: 550px;
+    margin: 50px auto 80px;
+    padding: 0px 24px;
+  }
+  .partners_wrap .partners_title {
+    font-size: 22px;
+    letter-spacing: -0.88px;
+    margin-bottom: 30px;
+  }
+  .partners_wrap .partners_list_wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .partners_list_wrap .partner_box {
+    flex: unset;
+    max-width: 300px;
+  }
 }

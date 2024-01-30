@@ -11,7 +11,7 @@
   cursor: default;
 }
 .notice_list .notice_item:hover {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 .notice_list .notice_item .tilte {
   font-size: 22px;
@@ -55,6 +55,10 @@
   letter-spacing: -0.68px;
   border-radius: 50px;
   cursor: pointer;
+}
+.pagination_wrap .page_list .page.active {
+  background: #f7f7fa;
+  border-radius: 100%;
 }
 .pagination_wrap .page_list .page::before {
   content: "";
@@ -114,4 +118,21 @@
 
 /* 태블릿 이하 */
 @media screen and (max-width: 870px) {
+  .notice_list .notice_item:first-child {
+    border-top: 1px solid #e8e8e9;
+  }
+  .notice_list .notice_item {
+    height: 88px;
+    padding: 20px;
+  }
+  .notice_list .notice_item .tilte {
+    font-size: 16px;
+    letter-spacing: -0.64px;
+    text-transform: uppercase;
+  }
+  .notice_list .notice_item .date_text {
+    font-size: 12px;
+    letter-spacing: -0.48px;
+    margin-top: 8px;
+  }
 }

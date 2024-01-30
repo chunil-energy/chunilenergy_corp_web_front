@@ -64,6 +64,7 @@
   max-height: 522px;
   overflow: hidden;
   margin: 60px 0px;
+  border-radius: 16px;
   /* background: #EDEDEF; */
 }
 .detail_wrap .content_wrap .image_wrap img {
@@ -88,8 +89,8 @@
 /* 순서(이전, 다음글) */
 .detail_wrap .notice_sequence {
   width: 100%;
-  border-top: 1px solid #E8E8E9;
-  border-bottom: 1px solid #E8E8E9;
+  border-top: 1px solid #e8e8e9;
+  border-bottom: 1px solid #e8e8e9;
 }
 .notice_sequence .sequence {
   width: 100%;
@@ -117,8 +118,62 @@
 
 /* 미니 PC */
 @media screen and (max-width: 1080px) {
+  .title_wrap .title {
+    font-size: 42px;
+  }
 }
 
 /* 태블릿 이하 */
 @media screen and (max-width: 870px) {
+  .detail_wrap {
+    margin: 50px auto 80px;
+  }
+  .detail_wrap .content_wrap {
+    width: 100%;
+    max-width: 550px;
+    padding: 0px 24px;
+  }
+  .detail_wrap .content_wrap .go_back_wrap {
+    display: none;
+  }
+  .detail_wrap .content_wrap .title_wrap {
+    padding-bottom: 36px;
+  }
+  .title_wrap .mini_title {
+    letter-spacing: -0.56px;
+  }
+  .title_wrap .title {
+    font-size: 28px;
+    line-height: 130%;
+    letter-spacing: -1.12px;
+  }
+  .title_wrap .date {
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: -0.48px;
+    margin-top: 16px;
+  }
+  .detail_wrap .content_wrap .image_wrap {
+    max-height: 180px;
+    margin: 50px 0px 40px;
+    border-radius: 10px;
+  }
+  .detail_wrap .content_wrap .desc_wrap {
+    margin-bottom: 50px;
+    padding-bottom: 40px;
+  }
+  .notice_sequence .sequence {
+    padding: 28px 0px 18px;
+    gap: 16px;
+  }
+  .notice_sequence .sequence p {
+    font-size: 15px;
+    line-height: normal;
+    letter-spacing: -0.6px;
+  }
+  .notice_sequence .sequence .notice_title {
+    font-size: 16px;
+    line-height: 140%; /* 22.4px */
+    letter-spacing: -0.64px;
+  }
 }
