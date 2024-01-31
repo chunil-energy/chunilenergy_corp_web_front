@@ -182,4 +182,47 @@ $(document).ready(function () {
     $("#sitemap").fadeOut();
     $("body").css("overflow", "auto");
   });
+
+  // 패밀리사이트 onchange
+  $("select[name=familt_site]").change(function () {
+    const selectSiteName = $(this).val();
+    let site_url = "";
+
+    switch (selectSiteName) {
+      case "service":
+        site_url = "https://www.chunilservice.com/";
+        break;
+      case "light":
+        site_url = "";
+        break;
+      default:
+        break;
+    }
+
+    if (site_url) {
+      window.open(site_url, "_target");
+    }
+  });
+
+  // footer sns button click
+  $(".footer_social_wrap button").on("click", function () {
+    const clickButtonId = $(this).attr('id');
+    console.log(clickButtonId)
+    let site_url = "";
+
+    switch (clickButtonId) {
+      case "blog":
+        site_url = "https://blog.naver.com/zguhada";
+        break;
+      case "instagram":
+        site_url = "https://www.instagram.com/zguhada/";
+        break;
+      default:
+        break;
+    }
+
+    if (site_url) {
+      window.open(site_url, "_target");
+    }
+  });
 });
