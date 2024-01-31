@@ -12,10 +12,14 @@ jobs:
       AWS_ACCESS_KEY_ID: ${{ secrets.S3_ACCESS_KEY }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.S3_SECRET_KEY }}
     steps:
+        - uses: actions/checkout@v3
+          with:
+            path: dist
+
         - name: Deploy
           uses: reggionick/s3-deploy@v3
           with:
-            folder: ./
+            folder: dist
             bucket: ${{ secrets.S3_BUCKET_NAME }}
             bucket-region: ap-northeast-2
             dist-id: ${{ secrets.CF_ID }}
