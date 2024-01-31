@@ -15,7 +15,7 @@ jobs:
         - name: Deploy
           uses: reggionick/s3-deploy@v3
           with:
-            folder: /
+            folder: ./
             bucket: ${{ secrets.S3_BUCKET_NAME }}
             bucket-region: ap-northeast-2
             dist-id: ${{ secrets.CF_ID }}
