@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
         content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
-    <title>회사소개.CI</title>
+    <title>상생&협력.공공기관</title>
     <!-- 공통 css -->
     <link rel="stylesheet" href="../common/common.css">
     <link rel="stylesheet" href="../common/footer.css">
     <link rel="stylesheet" href="../common/header.css">
     <link rel="stylesheet" href="../common/sitemap.css">
     <!-- 페이지 css -->
-    <link rel="stylesheet" href="ci.css">
+    <link rel="stylesheet" href="governance.css">
 
     <!-- Link aos CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -135,10 +135,17 @@
                 <div class="sub_nav_col empty_col"></div>
                 <div class="sub_nav_col">
                     <p class="text_16 black2 semi_bold mb_16">공공기관</p>
-                    <div class="sub_nav_list flex flex_col align_start justify_center">
-                        <a href="../cooperation/governance.html#effect"><div class="sub_nav gray semi_bold left hover">상생&협력 효과</div></a>
-                        <a href="../cooperation/governance.html#work"><div class="sub_nav gray semi_bold left hover">상생&협력 업무</div></a>
-                        <a href="../cooperation/governance.html#logo"><div class="sub_nav gray semi_bold left hover">상생&협력 공공기관</div></a>
+                    <div class="sub_nav_list flex flex_col align_start justify_center governances_nav"
+                        id="governances_nav">
+                        <a href="#effect">
+                            <div class="sub_nav gray semi_bold left hover">상생&협력 효과</div>
+                        </a>
+                        <a href="#work">
+                            <div class="sub_nav gray semi_bold left hover">상생&협력 업무</div>
+                        </a>
+                        <a href="#logo">
+                            <div class="sub_nav gray semi_bold left hover">상생&협력 공공기관</div>
+                        </a>
                     </div>
                 </div>
                 <div class="sub_nav_col">
@@ -188,7 +195,8 @@
             </ul>
 
             <div class="menu_wrap flex justify_end align_center">
-                <button type="button" id="partner_offer" class="hover center white text_14 justify_center align_center">
+                <button type="button" id="partner_offer"
+                    class="partner_offer hover center white text_14 justify_center align_center">
                     제휴제안
                 </button>
                 <button type="button" id="menu_open" class="hover center justify_center align_center">
@@ -314,11 +322,17 @@
             <div class="sitmap_col">
                 <p class="title left white">상생&협력</p>
                 <div class="nav_list flex flex_col justify_start align_start">
-                    <div class="sub_nav_list nav_hover">
+                    <div class="sub_nav_list nav_hover" id="same_page_url">
                         <p class="sub_title left white">공공기관</p>
-                        <a href="../cooperation/governance.html#effect"><div class="sub_nav left white">상생&협력 효과</div></a>
-                        <a href="../cooperation/governance.html#work"><div class="sub_nav left white">상생&협력 업무</div></a>
-                        <a href="../cooperation/governance.html#logo"><div class="sub_nav left white">상생&협력 공공기관</div></a>
+                        <a href="#effect">
+                            <div class="sub_nav left white">상생&협력 효과</div>
+                        </a>
+                        <a href="#work">
+                            <div class="sub_nav left white">상생&협력 업무</div>
+                        </a>
+                        <a href="#logo">
+                            <div class="sub_nav left white">상생&협력 공공기관</div>
+                        </a>
                     </div>
                     <a href="../cooperation/partners.html">
                         <p class="sub_title left white nav_hover">민간기업</p>
@@ -352,83 +366,182 @@
 
     <div class="body">
 
-        <div class="page_container bg_white">
-            <!-- CI title & img -->
+        <div class="page_container">
+            <!-- 공공기관 title & img -->
             <div class="page_title_wrap">
-                <p class="title left" data-aos="fade-up" data-aos-duration="500">
-                    IDENTITY of<br />CHUNIL ENERGY
-                </p>
+                <p class="title left" data-aos="fade-up" data-aos-duration="500">공공기관</p>
                 <p class="sub_title" data-aos="fade-up" data-aos-duration="500">
-                    천일에너지는 신재생 에너지를 통한<br class="only_mo_block" /> 지속가능한 지구의 미래를 실현합니다.<br />
-                    천일에너지의 CI는 지구와 그 지구를 위한 <br class="only_mo_block" />신재생 에너지의 혁신을 상징합니다
+                    폐기물 처리 예산 절감 및 집하장 위탁 수익, 폐기물 판매 수익까지<br />전국 37개 지자체가 천일에너지의 ESG 경영과 함께 합니다.
                 </p>
             </div>
             <div class="page_title_image_wrap" data-aos="fade-up" data-aos-duration="500" data-aos-delay="150"></div>
 
-            <!-- CI 페이지 경로 -->
+            <!-- 공공기관 페이지 경로 -->
             <div class="page_path_wrap flex justify_end align_center">
                 <span>HOME</span>
                 <img class="ico_arrow" src="../assets/ico_right_breadcrumb.svg" alt=">" />
-                <span>회사소개</span>
+                <span>상생&협력</span>
                 <img class="ico_arrow" src="../assets/ico_right_breadcrumb.svg" alt=">" />
-                <span>CI소개</span>
+                <span>공공기관</span>
             </div>
 
-            <!-- CI contents -->
-            <div class="ci_wrap">
-                <div class="logo_wrap flex justify_center align_center">
-                    <img src="./assets/ci/symbol.svg" alt="심볼이미지" />
+            <!-- 공공기관 contents -->
+            <div class="governance_wrap flex justify_space_between align_start">
+                <div class="side_nav_wrap flex flex_col justify_start align_start">
+                    <a href="#effect">
+                        <div class="side_nav gray3 mid left hover" data-nav="effect">상생&협력 효과</div>
+                    </a>
+                    <a href="#work">
+                        <div class="side_nav gray3 mid left hover" data-nav="work">상생&협력 업무</div>
+                    </a>
+                    <a href="#logo">
+                        <div class="side_nav gray3 mid left hover" data-nav="logo">상생&협력 공공기관</div>
+                    </a>
                 </div>
-                <div class="ci_info_wrap flex justify_space_between align_start">
-                    <div class="info_title">Symbol</div>
-                    <div class="info_desc grow flex flex_col justify_start align_start">
-                        <p class="left">
-                            C는 CHUNIL ENERGY의 앞글자이자 창조(Creativity)의 C, 변화(Charge)의 C입니다.<br />
-                            I는 에너지에 대한 새로운 아이디어(Idea)의 I,<br />
-                            늘 새로운 혁신을 추구하는 혁신 (Inovation)의 I이기도 합니다.
-                        </p>
-                        <div class="flex justify_start align_start mo_wrap" style="gap: 10px;">
-                            <button id="ai_download" class="download_button flex justify_center align_center hover">
-                                LOGO BI DOWNLOAD AI
-                                <img src="./assets/ci/ico_download.svg" alt="다운로드" />
-                            </button>
-                            <button id="png_download" class="download_button flex justify_center align_center hover">
-                                LOGO BI DOWNLOAD PNG
-                                <img src="./assets/ci/ico_download.svg" alt="다운로드" />
-                            </button>
+                <div class="governance_contents flex flex_col justify_start align_start grow">
+                    <div id="effect" class="content_wrap">
+                        <div class="content_wrap_inner">
+                            <p class="title left black semi_bold">공공기관 상생&협력 효과</p>
+
+                            <div class="effect_row">
+                                <div class="flex justify_start align_start">
+                                    <p class="number sub_title left">01</p>
+                                    <p class="row_title sub_title left">폐목재, 커피박 무상처리를 통한<br />예산 절감 효과</p>
+                                    <p class="grow desc">
+                                        천일에너지는 ESG 경영의 일환으로 수많은 지자체의 폐목재 및
+                                        커피박을 무상처리합니다. 이미 서울 권역 17개구, 경기 권역 16개 시군,
+                                        인천 2개 구군, 강원 4개 시군 등 전국 39개의 지자체에서 천일에너지를
+                                        통해 예산 절감 효과를 얻고 있습니다. 지속적으로 지자체와의 협력을
+                                        확대해 나갈 예정입니다.
+                                    </p>
+                                </div>
+                                <img class="img_map" src="./assets/governance/img_map.png" alt="폐목재(커피박) 무상처리 구역 지도" />
+                            </div>
+                            <div class="effect_row flex justify_start align_start">
+                                <p class="number sub_title left">02</p>
+                                <p class="row_title sub_title left">집하장 대여 수익, 폐기물 판매 수익을 통한<br />세수 증대 효과</p>
+                                <div class="grow">
+                                    <p class="desc">
+                                        배출, 수집/운반 부터 최종처리까지 천일에너지가 모두 직접 합니다.
+                                        중간 마진을 줄여 처리비용을 획기적으로 낮출 수 있습니다.
+                                        전국 39개의 지자체에서 천일에너지와 함께 폐기물 처리 비용 절감,
+                                        공공선별장 및 집하장 임대수익, 폐기물 판매 등으로 지자체 예산 절감 및
+                                        세수증대 효과를 보고 있습니다.
+                                    </p>
+                                    <ul>
+                                        <li class="desc">대형생활폐기물 수집/운반 처리 현행 대비 <b>약 20% 수준 절감 가능</b></li>
+                                        <li class="desc">공공선별장 폐목재 무상처리 및 선별률 증대 등 효율 운영을 통한 연간 예산 <b>약 5억원 수준 절감 가능</b>
+                                        </li>
+                                        <li class="desc">공유재산 유상사용 수익 허가를 통한 <b>세외수입 증대 기여</b></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="effect_row flex justify_start align_start">
+                                <p class="number sub_title left">03</p>
+                                <p class="row_title sub_title left">천일에너지를 통한 폐기물 재활용율 100%,<br />지자체 폐기물의 선순환 효과</p>
+                                <p class="grow desc">
+                                    매립/소각 등으로 폐기물을 처리하는 방식이 아닌<br />
+                                    선별 인프라 및 신재생에너지 생산 인프라를 통해<br />
+                                    지자체 폐기물이 신재생에너지화 되는 자원의 선순환 시스템을 만들어 갑니다.
+                                </p>
+                            </div>
+
                         </div>
                     </div>
-                </div>
-                <div class="ci_info_wrap flex justify_space_between align_start">
-                    <div class="info_title">Color</div>
-                    <div class="info_desc grow flex flex_col justify_start align_start">
-                        <p class="left">
-                            블루 컬러는 천일에너지의 노력으로 지속가능한 지구를 표현하며<br class="only_pc_block" />
-                            부드러운 곡선형태는 확장성과 무한한 가능성을 상징합니다.<br />
-                            블루는 친환경을 내포하며, 지구와 환경을 향한 천일에너지의 사명감을 표현합니다.<br />
-                            <br />
-                            옐로우 컬러는 혁신을 상징합니다. 에너지를 상징하는 옐로우를 통해<br class="only_pc_block" />
-                            지구를 위해 혁신하는 천일에너지의 철학을 전하고,<br class="only_pc_block" />
-                            혁신이 만들어 낼 따뜻한 미래를 표현합니다.
-                        </p>
-                        <div class="color_wrap flex justify_start align_start">
-                            <div class="color_box grow">
-                                <div class="color_box_desc flex flex_col justify_start align_start">
-                                    <p class="left text_18 semi_bold">Chunil Blue</p>
-                                    <p class="left text_14 mid">R34 G76 B147</p>
+                    <div id="work" class="content_wrap">
+                        <div class="content_wrap_inner">
+                            <p class="title left black semi_bold">공공기관 상생&협력 업무</p>
+
+                            <div class="work_wrap flex justify_start align_stretch">
+                                <div class="work_item">
+                                    <img src="./assets/governance/work/img.jpg" alt="img" />
+                                    <p class="sub_title left">폐목재/커피박 등 폐기물 무상 처리</p>
+                                    <p class="desc left">
+                                        대형생활폐기물(폐목재)과 식물성잔재물(커피박)을 무상으로 수거하고
+                                        재활용 처리를 통해 친환경 신재생에너지 BIO-SRF(우드칩)을
+                                        제조/생산하여 화석연료의 대체 에너지원으로 사용합니다.
+                                    </p>
+                                </div>
+                                <div class="work_item">
+                                    <img src="./assets/governance/work/img-1.jpg" alt="img1" />
+                                    <p class="sub_title left">폐기물 공공선별장 및 적환장 위탁 운영</p>
+                                    <p class="desc left">
+                                        공사장 생활폐기물 공공선별장 및 대형생활폐기물 적환장 운영을 통해
+                                        폐기물의 성상별 분리/선별을 강화하여 재활용률을 증대합니다.<br />
+                                        또한, 축적된 노하우를 통한 효율적인 운영으로 운영관리비 등을
+                                        절감합니다.
+                                    </p>
+                                </div>
+                                <div class="work_item">
+                                    <img src="./assets/governance/work/img-2.jpg" alt="img2" />
+                                    <p class="sub_title left">대형생활폐기물 위탁 처리</p>
+                                    <p class="desc left">
+                                        폐기물의 자체 처리 및 협력사 납품을 통한 처리비용 절감을 실현하여,
+                                        기존 소각/매립에 의존하던 대형생활폐기물의 처리를 100% 재활용하여 자원순환 사회에 기여합니다. 폐목재는 BIO-SRF(우드칩)로 폐합성수지는
+                                        시멘트 제조 연료 및 원료로, 폐콘크리트는 순환골재 등으로
+                                        재활용됩니다.
+                                    </p>
+                                </div>
+                                <div class="work_item">
+                                    <img src="./assets/governance/work/img-3.jpg" alt="img3" />
+                                    <p class="sub_title left">대형생활폐기물 수집/운반 위탁운영</p>
+                                    <p class="desc left">
+                                        주거형태 기준 권역 재설정, 배출접수 APP, 통합솔루션 ERP, GPS 운영 등 스마트 기술 기반의 효율적인 운영으로 관할구역을 통합하여
+                                        대형생활폐기물의 수집/운반 시스템을 실현하여 예산절감에 기여합니다. 또한, 전문 CS 교육을 수료한 자체 통합콜센터 운영으로 민원에 적극
+                                        대응하여 행정서비스 향상에 기여합니다.
+                                    </p>
+                                </div>
+                                <div class="work_item">
+                                    <img src="./assets/governance/work/img-4.jpg" alt="img4" />
+                                    <p class="sub_title left">생활폐기물 대행사업 원가용역</p>
+                                    <p class="desc left">
+                                        적정 노무비, 경비, 인력, 장비 등 산출을 위한 원가계산을 통해
+                                        생활폐기물 대행사업을 위한 합리적인 예산 산출 근거를 제시합니다.
+                                        표준단가 및 DB 업데이트를 상시적으로 관리하고 있습니다.
+                                    </p>
+                                </div>
+                                <div class="work_item">
+                                    <img src="./assets/governance/work/img-5.jpg" alt="img5" />
+                                    <p class="sub_title left">재활용선별장 위탁운영</p>
+                                    <p class="desc left">
+                                        재활용품 선별률 향상을 통한 잔재물 처리비 감소 및 유가품 판매수익
+                                        증대를 실현합니다. 또한, 협력사(정유 및 화학사 등)의 열분해유 생산원료
+                                        공급으로 운영관리비 절감을 실현하여 재활용선별장 경상수지 정상화에 적극 기여합니다.
+                                    </p>
                                 </div>
                             </div>
-                            <div class="color_box grow">
-                                <div class="color_box_desc flex flex_col justify_start align_start">
-                                    <p class="left text_18 semi_bold">Chunil Yellow</p>
-                                    <p class="left text_14 mid">R246 G172 B46</p>
-                                </div>
-                            </div>
+                        </div>
+                    </div>
+                    <div id="logo" class="content_wrap">
+                        <div class="content_wrap_inner">
+                            <p class="title left black semi_bold">상생&협력 공공기관</p>
+
+                            <p style="min-height: 500px;">
+                                DUMMY
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- section5 (Contact Us) -->
+        <section id="section5" class="container only_pc_block">
+            <div class="contact_us_bg"></div>
+
+            <!-- Contact Us -->
+            <div class="section_wrap flex justify_space_between align_center" id="contact_us">
+                <div>
+                    <p class="title left white semi_bold">Contact Us</p>
+                    <p class="sub_title text_14 left white mid">주요 서비스 및 사업 제휴 문의를 원하신다면</p>
+                </div>
+                <button id="contact_us_detail_button"
+                    class="detail_button partner_offer white text_16 semi_bold flex justify_center align_center hover">
+                    제휴/제안 문의
+                    <img src="../assets/ico_right_wh.svg" alt="->">
+                </button>
+            </div>
+        </section>
 
         <!-- footer -->
         <footer>
@@ -482,7 +595,7 @@
 
                     <div class="footer_social_wrap flex flex_row justify_end align_end">
                         <button id="instagram">
-                            <img src="../assets/social/instagram.png" alt="instagram"class="hover" />
+                            <img src="../assets/social/instagram.png" alt="instagram" class="hover" />
                         </button>
                         <button id="blog"><img src="../assets/social/blog.png" alt="blog" class="hover" /></button>
                     </div>
@@ -498,6 +611,76 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+
+    <script async>
+        function onScroll(event) {
+            var scrollPos = $(document).scrollTop() - $('.governance_wrap').position().top;
+
+            $('.side_nav_wrap a').each(function () {
+                var currLink = $(this);
+                var refElement = $(currLink.attr("href"));
+                var refElementTop = refElement.position().top;
+
+                if (refElementTop - 92 <= scrollPos && refElementTop + refElement.height() + 100 > scrollPos) {
+                    $('.side_nav').removeClass('active');
+                    currLink.children('.side_nav').addClass("active");
+                } else {
+                    currLink.children('.side_nav').removeClass("active");
+                }
+            });
+        }
+
+        $(window).ready(function () {
+
+            /** currentNav값과 같은 data-nav 값을 가진 엘리먼트 활성화 */
+            function activeNavByDataNav(currentNav) {
+                $('.side_nav').removeClass('active');
+                $('.side_nav[data-nav="' + currentNav + '"]').addClass('active');
+            }
+
+            var hash = window.location.hash;
+
+            if (hash) {
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top - 180
+                }, 'fast', function () {
+                    closeHeaderNav();
+                });
+                activeNavByDataNav(hash.replace('#', ''));
+            } else {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 'fast');
+            }
+
+            $(".side_nav_wrap a, .governances_nav a").on("click", function (e) {
+                e.preventDefault();
+                // 모바일메뉴가 열려있다면, 닫기
+                if ($("#header").hasClass("show_mo_menu")) {
+                    $("#header").removeClass("show_mo_menu");
+                    $("#header .sub_nav_wrap").hide();
+                    $(".nav_list li").removeClass("active");
+                    $("body").css("overflow", "auto");
+                }
+
+                $('html, body').animate({
+                    scrollTop: $($(this).attr('href')).offset().top - 180
+                }, 'fast', function () {
+                    closeHeaderNav();
+                });
+            })
+
+            $(document).on("scroll", onScroll);
+
+            // 현재 페이지 클릭 시 사이트맵 닫기 
+            $("#sitemap #same_page_url a").on("click", function (e) {
+                $("#sitemap").fadeOut();
+                $('html, body').animate({
+                    scrollTop: $($(this).attr('href')).offset().top - 180
+                }, 'fast');
+            });
+        });
     </script>
 </body>
 
