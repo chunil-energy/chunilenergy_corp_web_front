@@ -239,18 +239,18 @@ section#section1 .bg_shape2 {
 }
 .infra_item#infra_1 {
   background-position: left center;
-  background-image: url("./assets/main/infra_img_1.jpg");
+  background-image: url("./assets/main/infra_img_1_compressed.jpg");
 }
 .infra_item#infra_2 {
   background-position: right center;
-  background-image: url("./assets/main/infra_img_2.jpg");
+  background-image: url("./assets/main/infra_img_2_compressed.jpg");
 }
 .infra_item#infra_3 {
   background-position: left center;
-  background-image: url("./assets/main/infra_img_3.jpg");
+  background-image: url("./assets/main/infra_img_3_compressed.jpg");
 }
 .infra_item#infra_4 {
-  background-image: url("./assets/main/infra_img_4.jpg");
+  background-image: url("./assets/main/infra_img_4_compressed.jpg");
 }
 .infra_item::after {
   content: "";
@@ -271,16 +271,16 @@ section#section1 .bg_shape2 {
   transition-delay: 0.2s;
 }
 .infra_item#infra_1::after {
-  background-image: url("./assets/main/infra_img_1_dim.jpg");
+  background-image: url("./assets/main/infra_img_1_dim_compressed.jpg");
 }
 .infra_item#infra_2::after {
-  background-image: url("./assets/main/infra_img_2_dim.jpg");
+  background-image: url("./assets/main/infra_img_2_dim_compressed.jpg");
 }
 .infra_item#infra_3::after {
-  background-image: url("./assets/main/infra_img_3_dim.jpg");
+  background-image: url("./assets/main/infra_img_3_dim_compressed.jpg");
 }
 .infra_item#infra_4::after {
-  background-image: url("./assets/main/infra_img_4_dim.jpg");
+  background-image: url("./assets/main/infra_img_4_dim_compressed.jpg");
 }
 .infra_item:hover {
   flex: 2.4;
@@ -470,7 +470,7 @@ section#section2 {
 }
 .about_us_wrap #about_box1.about_box {
   height: 100%;
-  background-image: url("./assets/main/aboutus_img_1.jpg");
+  background-image: url("./assets/main/aboutus_img_1_compressed.jpg");
 }
 .about_us_wrap #about_box1 .title,
 .about_us_wrap #about_box3 .title {
@@ -497,7 +497,7 @@ section#section2 {
 }
 .about_us_wrap #about_box3.about_box {
   flex: 1 1 330px;
-  background-image: url("./assets/main/aboutus_img_2.jpg");
+  background-image: url("./assets/main/aboutus_img_2_compressed.jpg");
   background-size: auto 100% !important;
 }
 
@@ -539,7 +539,7 @@ section#section3 .scroll_wrap_bg::before {
   left: 50%;
   transform: translateX(-50%);
   /* opacity: 0.4; */
-  background-image: url("./assets/main/business_area_bg.jpg");
+  background-image: url("./assets/main/business_area_bg_compressed.jpg");
   /* background-size: auto 1924px; */
   background-size: 100% auto;
   /* background-position: calc(50% - 240px) bottom; */
@@ -589,31 +589,31 @@ section#section3 div.fixed_content {
 }
 section#section3 div#business_1 {
   align-self: flex-start;
-  background: url("./assets/main/business_img_1.jpg") center center/auto 100%
+  background: url("./assets/main/business_img_1_compressed.jpg") center center/auto 100%
     no-repeat;
 }
 section#section3 div#business_2 {
   margin-top: 346px;
   margin-left: 110px;
-  background: url("./assets/main/business_img_2.jpg") center center/auto 100%
+  background: url("./assets/main/business_img_2_compressed.jpg") center center/auto 100%
     no-repeat;
 }
 section#section3 div#business_3 {
   align-self: flex-start;
   margin-top: -180px;
-  background: url("./assets/main/business_img_3.jpg") center center/auto 100%
+  background: url("./assets/main/business_img_3_compressed.jpg") center center/auto 100%
     no-repeat;
 }
 section#section3 div#business_4 {
   margin-top: 180px;
   margin-left: 110px;
-  background: url("./assets/main/business_img_4.jpg") center center/auto 100%
+  background: url("./assets/main/business_img_4_compressed.jpg") center center/auto 100%
     no-repeat;
 }
 section#section3 div#business_5 {
   align-self: flex-start;
   margin-top: -180px;
-  background: url("./assets/main/business_img_5.jpg") center center/auto 100%
+  background: url("./assets/main/business_img_5_compressed.jpg") center center/auto 100%
     no-repeat;
 }
 section#section3 .fixed_content_wrap .fixed_content:nth-of-type(6) {
@@ -667,7 +667,7 @@ section#section4 #our_mission .misson_banner {
   height: 390px;
   border-radius: 14px;
   overflow: hidden;
-  background: url("./assets/main/mission_img.jpg") right center/1500px auto
+  background: url("./assets/main/mission_img_compressed.jpg") right center/1500px auto
     no-repeat;
   padding-left: 80px;
   padding-bottom: 58px;
@@ -988,10 +988,10 @@ section#section4 .clients_logo_list {
     background-position: center;
   }
   .our_services_wrap .img_wrap:first-child {
-    background-image: url("./assets/main/service_img_1.jpg");
+    background-image: url("./assets/main/service_img_1_compressed.jpg");
   }
   .our_services_wrap .img_wrap:last-child {
-    background-image: url("./assets/main/service_img_2.jpg");
+    background-image: url("./assets/main/service_img_2_compressed.jpg");
   }
   .our_services_wrap img.bg {
     display: none;
@@ -1071,7 +1071,7 @@ section#section4 .clients_logo_list {
   .about_us_wrap #about_box3.about_box {
     flex: 1 1 186px;
     height: 186px;
-    background-image: url("./assets/main/aboutus_img_2_mo.jpg");
+    background-image: url("./assets/main/aboutus_img_2_mo_compressed.jpg");
     background-size: 100% auto !important;
     /* background-position: bottom center !important; */
   }
@@ -1083,7 +1083,7 @@ section#section4 .clients_logo_list {
   }
   section#section3 .scroll_wrap_bg::before {
     min-width: 100%;
-    background-image: url("./assets/main/business_area_bg_mo.jpg");
+    background-image: url("./assets/main/business_area_bg_mo_compressed.jpg");
   }
   section#section3 div.scroll_wrap {
     width: 87%;
@@ -1175,7 +1175,7 @@ section#section4 .clients_logo_list {
   section#section4 #our_mission .misson_banner {
     height: 312px;
     border-radius: 10px;
-    background: url("./assets/main/mission_img_mo.jpg") right center/100% auto
+    background: url("./assets/main/mission_img_mo_compressed.jpg") right center/100% auto
       no-repeat;
     padding-left: 24px;
     padding-bottom: 30px;

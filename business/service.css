@@ -1,5 +1,5 @@
 .page_title_image_wrap {
-  background-image: url("./assets/service/service_main.jpg");
+  background-image: url("./assets/service/service_main_compressed.jpg");
 }
 
 .service_wrap {
@@ -123,7 +123,7 @@
 /* 태블릿 이하 */
 @media screen and (max-width: 870px) {
   .page_title_image_wrap {
-    background-image: url("./assets/service/service_main_mo.jpg");
+    background-image: url("./assets/service/service_main_mo_compressed.jpg");
   }
   .service_wrap {
     width: 100%;

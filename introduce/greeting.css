@@ -1,5 +1,5 @@
 .page_title_image_wrap {
-  background-image: url("./assets/greeting/greeting_main.jpg");
+  background-image: url("./assets/greeting/greeting_main_compressed.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -34,18 +34,18 @@
   background-position: center;
 }
 #greeting_1.greeting_row .img_wrap {
-  background-image: url("./assets/greeting/greeting_1.jpg");
+  background-image: url("./assets/greeting/greeting_1_compressed.jpg");
 }
 #greeting_2.greeting_row .img_wrap {
-  background-image: url("./assets/greeting/greeting_2.jpg");
+  background-image: url("./assets/greeting/greeting_2_compressed.jpg");
 }
 #greeting_3.greeting_row .img_wrap {
   width: 480px;
   height: 680px;
-  background-image: url("./assets/greeting/greeting_3.jpg");
+  background-image: url("./assets/greeting/greeting_3_compressed.jpg");
 }
 #greeting_4.greeting_row .img_wrap {
-  background-image: url("./assets/greeting/greeting_4.jpg");
+  background-image: url("./assets/greeting/greeting_4_compressed.jpg");
 }
 .greeting_list_wrap .greeting_row .greeting_title {
   font-size: 28px;
@@ -63,7 +63,7 @@
   height: 500px;
   border-radius: 14px;
   background: #00000033;
-  background-image: url("./assets/greeting/greeting_banner.jpg");
+  background-image: url("./assets/greeting/greeting_banner_compressed.jpg");
   background-position: center;
   background-size: auto 100%;
   background-repeat: no-repeat;
