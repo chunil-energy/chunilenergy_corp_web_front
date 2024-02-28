@@ -3,7 +3,7 @@ html {
 }
 
 .page_title_image_wrap {
-  background-image: url("./assets/affiliates/affiliates_main.jpg");
+  background-image: url("./assets/affiliates/affiliates_main_compressed.jpg");
 }
 
 .affiliates_wrap {
@@ -72,34 +72,34 @@ html {
   margin: 36px 0px;
 }
 #factory.content_wrap .img_wrap {
-  background-image: url("./assets/affiliates/affiliates_1.jpg");
+  background-image: url("./assets/affiliates/affiliates_1_compressed.jpg");
 }
 #hub.content_wrap .img_wrap {
-  background-image: url("./assets/affiliates/affiliates_2.jpg");
+  background-image: url("./assets/affiliates/affiliates_2_compressed.jpg");
 }
 #service.content_wrap .img_wrap {
-  background-image: url("./assets/affiliates/affiliates_3.jpg");
+  background-image: url("./assets/affiliates/affiliates_3_compressed.jpg");
 }
 #sugerbot.content_wrap .img_wrap {
-  background-image: url("./assets/affiliates/affiliates_4.jpg");
+  background-image: url("./assets/affiliates/affiliates_4_compressed.jpg");
 }
 #pathfinder.content_wrap .img_wrap {
-  background-image: url("./assets/affiliates/affiliates_5.jpg");
+  background-image: url("./assets/affiliates/affiliates_5_compressed.jpg");
 }
 #chunilCD.content_wrap .img_wrap {
-  background-image: url("./assets/affiliates/affiliates_6.jpg");
+  background-image: url("./assets/affiliates/affiliates_6_compressed.jpg");
 }
 #chunil.content_wrap .img_wrap {
-  background-image: url("./assets/affiliates/affiliates_7.jpg");
+  background-image: url("./assets/affiliates/affiliates_7_compressed.jpg");
 }
 #solapark.content_wrap .img_wrap {
-  background-image: url("./assets/affiliates/affiliates_8.jpg");
+  background-image: url("./assets/affiliates/affiliates_8_compressed.jpg");
 }
 #private.content_wrap .img_wrap {
-  background-image: url("./assets/affiliates/affiliates_9.jpg");
+  background-image: url("./assets/affiliates/affiliates_9_compressed.jpg");
 }
 #sungsu.content_wrap .img_wrap {
-  background-image: url("./assets/affiliates/affiliates_10.jpg");
+  background-image: url("./assets/affiliates/affiliates_10_compressed.jpg");
 }
 
 .content_wrap .desc {

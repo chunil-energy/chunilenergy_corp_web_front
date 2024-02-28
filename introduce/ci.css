@@ -1,5 +1,5 @@
 .page_title_image_wrap {
-  background-image: url("./assets/ci/ci_main.jpg");
+  background-image: url("./assets/ci/ci_main_compressed.jpg");
 }
 
 .ci_wrap {
@@ -114,7 +114,7 @@
 /* 태블릿 이하 */
 @media screen and (max-width: 870px) {
   .page_title_image_wrap {
-    background-image: url("./assets/ci/ci_main_mo.jpg");
+    background-image: url("./assets/ci/ci_main_mo_compressed.jpg");
   }
 
   .ci_wrap {

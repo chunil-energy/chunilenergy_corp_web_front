@@ -1,5 +1,5 @@
 .page_title_image_wrap {
-  background-image: url("./assets/jiguhada/jiguhada_main.jpg");
+  background-image: url("./assets/jiguhada/jiguhada_main_compressed.jpg");
   background-position: top center;
 }
 
@@ -135,7 +135,7 @@
 /* 태블릿 이하 */
 @media screen and (max-width: 870px) {
   .page_title_image_wrap {
-    background-image: url("./assets/jiguhada/jiguhada_main_mo.jpg");
+    background-image: url("./assets/jiguhada/jiguhada_main_mo_compressed.jpg");
   }
 
   .jiguhada_wrap {

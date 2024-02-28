@@ -14,7 +14,7 @@ section#section5 .contact_us_bg {
   width: 100%;
   min-width: 1920px;
   height: 100%;
-  background-image: url("../assets/contact_us_bg.jpg");
+  background-image: url("../assets/contact_us_bg_compressed.jpg");
   background-position: top center;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -159,7 +159,7 @@ footer .footer_wrap .footer_row {
   }
   section#section5 .contact_us_bg {
     min-width: unset;
-    background-image: url("../assets/contact_us_bg_mo.jpg");
+    background-image: url("../assets/contact_us_bg_mo_compressed.jpg");
   }
   section#section5 #contact_us.section_wrap {
     width: 100%;
