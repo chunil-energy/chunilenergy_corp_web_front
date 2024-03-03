@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title>천일에너지</title>
+    <meta name="description" content="모든 것을 에너지로 만드는 친환경 에너지 기업, 천일에너지입니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="천일에너지">
+    <meta property="og:description" content="모든 것을 에너지로 만드는 친환경 에너지 기업, 천일에너지입니다.">
+    <meta property="og:image" content="https://chunilenergy.com/assets/favicon/apple-icon-152x152.png">
+    <meta property="og:url" content="https://chunilenergy.com/">
+
+    <meta name="naver-site-verification" content="df7339f31fd494555695ae9fe2f1fe504662bd60" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="../common/common.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <style>
+        .text_16 {
+            line-height: 140%;
+            letter-spacing: -0.04em;
+        }
+
+        .pop_bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 99;
+        }
+
+        .pop_wrap {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 440px;
+        }
+
+        .pop_box {
+            position: relative;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .chunil_energy_logo {
+            width: 97px;
+            height: auto;
+            margin-top: 30px;
+            margin-left: 30px;
+        }
+
+        .pop_desc {
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 80px;
+            gap: 16px;
+            padding: 0px 60px;
+        }
+
+        .pop_title {
+            font-size: 26px;
+            line-height: 140%;
+            letter-spacing: -0.04em;
+        }
+
+        .pop_bottom {
+            margin-top: 16px;
+            padding: 0px 8px;
+        }
+
+        .pop_close {
+            text-decoration: underline;
+        }
+
+        /* 태블릿 이하 */
+        @media screen and (max-width: 870px) {
+            .pop_wrap {
+                max-width: 300px;
+            }
+
+            .pop_box {
+                box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+                border-radius: 14px;
+            }
+
+            .chunil_energy_logo {
+                width: 80px;
+                margin-top: 24px;
+                margin-left: 20px;
+            }
+
+            .pop_desc {
+                gap: 14px;
+                padding: 0px 25px;
+                margin-top: 45px;
+                margin-bottom: 75px;
+            }
+
+            .pop_title {
+                font-size: 20px;
+            }
+
+            .pop_bottom {
+                margin-top: 10px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pop_bg">
+        <div class="pop_wrap">
+            <div class="pop_box flex flex_col justify_start align_start">
+                <img class="chunil_energy_logo" src="./assets/chunil_energy_logo_gray.png" alt="천일에너지 로고" />
+
+                <div class="pop_desc flex flex_col">
+                    <p class="pop_title black semi_bold center">홈페이지 리뉴얼 오픈</p>
+                    <p class="gray2 center text_16">
+                        천일에너지는 태양과 폐기물로부터 신재생에너지를 만들어 지속가능한 미래에 기여하는 친환경에너지 혁신기업입니다. 천일에너지만의 혁신은 지속가능한 미래를 더욱 앞당기고 있습니다.
+                    </p>
+                </div>
+            </div>
+            <div class="pop_bottom flex flex_row justify_space_between align_center">
+                <div class="grow">
+                    <input type="checkbox" id="no_more_today">
+                    <label for="no_more_today">
+                        <span class="text_16 white semi_bold left">오늘 하루 그만보기</span>
+                    </label>
+                </div>
+                <button type="button" class="pop_close text_16 white semi_bold">닫기</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $(".pop_close").click(function () {
+                if ($("#no_more_today").is(":checked")) {
+                    setCookie("main_pop", "done", 1);
+                }
+                $(".pop_bg").hide();
+                $("body").css("overflow", "auto");
+            });
+
+            function setCookie(name, value, expiredays) {
+                var todayDate = new Date();
+                todayDate.setDate(todayDate.getDate() + expiredays);
+                var cookieValue = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";";
+                document.cookie = cookieValue;
+            }
+
+            function getCookie(name) {
+                var nameOfCookie = name + "=";
+                var x = 0;
+                while (x <=
+                    length) {
+                    var y = (x + nameOfCookie.length);
+                    if (document.cookie.substring(x, y) == nameOfCookie) {
+                        if ((endOfCookie = document.cookie.indexOf(";", y)) == -1)
+                            endOfCookie = document.cookie.length;
+                        return unescape(document.cookie.substring(y, endOfCookie));
+                    }
+                    x = document.cookie.indexOf(" ", x) + 1;
+                    if (x == 0)
+                        break;
+                }
+                return "";
+            }
+
+            if (getCookie("main_pop") != "done") {
+                $(".pop_bg").show();
+                $("body").css("overflow", "hidden");
+            }
+        });
+    </script>
+</body>
+
+</html>

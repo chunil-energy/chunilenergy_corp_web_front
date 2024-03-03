@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title>천일에너지</title>
+    <meta name="description" content="모든 것을 에너지로 만드는 친환경 에너지 기업, 천일에너지입니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="천일에너지">
+    <meta property="og:description" content="모든 것을 에너지로 만드는 친환경 에너지 기업, 천일에너지입니다.">
+    <meta property="og:image" content="https://chunilenergy.com/assets/favicon/apple-icon-152x152.png">
+    <meta property="og:url" content="https://chunilenergy.com/">
+
+    <meta name="naver-site-verification" content="df7339f31fd494555695ae9fe2f1fe504662bd60" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="../common/common.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <style>
+        .text_16 {
+            line-height: 140%;
+            letter-spacing: -0.04em;
+        }
+
+        .pop_bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 99;
+        }
+
+        .pop_wrap {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 440px;
+        }
+
+        .pop_box {
+            position: relative;
+            width: 100%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+            background-color: #5298E4;
+            overflow: hidden;
+        }
+
+        .pop_box_bg {
+            width: 482px;
+            height: 482px;
+            border-radius: 50%;
+            /* TODO 그라데이션 예정 */
+            background-color: pink;
+            position: absolute;
+            top: 78px;
+            left: 78px;
+        }
+
+        img.chunil_energy_txt {
+            width: 98%;
+            max-width: 426px;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        img.hero {
+            position: relative;
+            z-index: 1;
+            width: 80%;
+            max-width: 220px;
+            height: auto;
+            margin-top: 75px;
+            margin-bottom: 15px;
+        }
+
+        .pop_desc {
+            width: 100%;
+            padding-left: 30px;
+            padding-bottom: 40px;
+        }
+
+        .chunil_energy_logo {
+            width: 106px;
+            height: auto;
+            margin-bottom: 12px;
+        }
+
+        .pop_title {
+            font-size: 36px;
+            line-height: 140%;
+            letter-spacing: -0.04em;
+        }
+
+        .pop_sub_title {
+            opacity: 0.9;
+            margin-top: 8px;
+        }
+
+        .pop_bottom {
+            margin-top: 16px;
+            padding: 0px 8px;
+        }
+
+        .pop_close {
+            text-decoration: underline;
+        }
+
+        /* 태블릿 이하 */
+        @media screen and (max-width: 870px) {
+            .text_16 {
+                font-size: 14px;
+                line-height: 140%;
+                letter-spacing: -0.04em;
+            }
+
+            .pop_wrap {
+                max-width: 300px;
+            }
+
+            .pop_box {
+                box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+                border-radius: 14px;
+            }
+
+            .pop_box_bg {
+                width: 328px;
+                height: 328px;
+                top: 53px;
+                left: 53px;
+            }
+
+            img.chunil_energy_txt {
+                max-width: 294px;
+            }
+
+            img.hero {
+                width: 90%;
+                max-width: 153px;
+                margin-top: 51px;
+                margin-bottom: 10px;
+            }
+
+            .pop_desc {
+                padding-left: 20px;
+                padding-bottom: 27px;
+            }
+
+            .chunil_energy_logo {
+                width: 72px;
+                margin-bottom: 8px;
+            }
+
+            .pop_title {
+                font-size: 24px;
+            }
+
+            .pop_sub_title {
+                margin-top: 5px;
+            }
+
+            .pop_bottom {
+                margin-top: 10px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pop_bg">
+        <div class="pop_wrap">
+            <div class="pop_box flex flex_col justify_center align_center">
+                <div class="pop_box_bg"></div>
+                <img class="chunil_energy_txt" src="./assets/chunil_energy_txt.png" alt="CHUNIL ENERGY">
+                <img class="hero" src="./assets/hero.png" alt="히어로이미지">
+
+                <div class="pop_desc">
+                    <img class="chunil_energy_logo" src="./assets/chunil_energy_logo.png" alt="천일에너지 로고" />
+                    <p class="pop_title white semi_bold left">홈페이지 리뉴얼 오픈</p>
+                    <p class="pop_sub_title white left text_16">새로워진 홈페이지를 소개합니다.</p>
+                </div>
+            </div>
+            <div class="pop_bottom flex flex_row justify_space_between align_center">
+                <div class="grow">
+                    <input type="checkbox" id="no_more_today">
+                    <label for="no_more_today">
+                        <span class="text_16 white semi_bold left">오늘 하루 그만보기</span>
+                    </label>
+                </div>
+                <button type="button" class="pop_close text_16 white semi_bold">닫기</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $(".pop_close").click(function () {
+                if ($("#no_more_today").is(":checked")) {
+                    setCookie("main_pop", "done", 1);
+                }
+                $(".pop_bg").hide();
+                $("body").css("overflow", "auto");
+            });
+
+            function setCookie(name, value, expiredays) {
+                var todayDate = new Date();
+                todayDate.setDate(todayDate.getDate() + expiredays);
+                var cookieValue = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";";
+                document.cookie = cookieValue;
+            }
+
+            function getCookie(name) {
+                var nameOfCookie = name + "=";
+                var x = 0;
+                while (x <=
+                    length) {
+                    var y = (x + nameOfCookie.length);
+                    if (document.cookie.substring(x, y) == nameOfCookie) {
+                        if ((endOfCookie = document.cookie.indexOf(";", y)) == -1)
+                            endOfCookie = document.cookie.length;
+                        return unescape(document.cookie.substring(y, endOfCookie));
+                    }
+                    x = document.cookie.indexOf(" ", x) + 1;
+                    if (x == 0)
+                        break;
+                }
+                return "";
+            }
+
+            if (getCookie("main_pop") != "done") {
+                $(".pop_bg").show();
+                $("body").css("overflow", "hidden");
+            }
+        });
+    </script>
+</body>
+
+</html>
