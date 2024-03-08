@@ -568,16 +568,25 @@
                     </div>
                     <!-- Family Site -->
                     <div class="footer_family">
-                        <select name="familt_site" id="familt_site">
-                            <option value="">Family Site</option>
-                            <option value="service">천일서비스</option>
-                            <option value="light">천일조명</option>
-                        </select>
+                        <div class="area-custom-select">
+                            <div class="custom-select" tabindex="0">
+                                <span class="custom-select-text">Family Site</span>
+                                <img src="../assets/ico_down_familysite.svg" class="custom-select-arrow">
+                            </div>
+                            <ul class="custom-select-list" style="display:none;">
+                                <li value="light" class="custom-select-option">천일조명</li>
+                                <li value="service" class="custom-select-option">천일서비스</li>
+                            </ul>
+                            <select class="select-origin">
+                                <option value="light" selected="selected">천일조명</option>
+                                <option value="service">천일서비스</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
 
                 <div class="footer_row flex justify_space_between align_end">
-                    <p class="copyright left">Copyright 2023 © Chunil Energy. All Right Reserved.</p>
+                    <p class="copyright left">Copyright 2024 © Chunil Energy. All Right Reserved.</p>
 
                     <div class="footer_social_wrap flex flex_row justify_end align_end">
                         <button id="instagram">

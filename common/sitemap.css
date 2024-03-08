@@ -86,25 +86,25 @@
 #sitemap .sitemap_body .sitmap_col .nav_list {
   gap: 40px;
 }
-#sitemap .nav_list .sub_title {
+#sitemap .sub_title {
   font-size: 17px;
   font-weight: 600;
   line-height: 140%;
   letter-spacing: -0.68px;
   cursor: pointer;
 }
-#sitemap .nav_list .sub_nav_list > .sub_title {
+#sitemap .sub_nav_list > .sub_title {
   margin-bottom: 10px;
   cursor: unset;
 }
-#sitemap .nav_list .sub_nav_list .sub_nav {
+#sitemap .sub_nav {
   opacity: 0.7;
   font-size: 16px;
   letter-spacing: -0.64px;
   line-height: normal;
   padding: 7px 0px;
 }
-#sitemap .nav_list .sub_nav_list .sub_nav:hover {
+#sitemap .sub_nav:hover {
   opacity: 1;
   text-decoration: underline;
   cursor: pointer;

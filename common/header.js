@@ -184,16 +184,40 @@ $(document).ready(function () {
   });
 
   // 패밀리사이트 onchange
-  $("select[name=familt_site]").change(function () {
-    const selectSiteName = $(this).val();
+  let selectFlag;
+  $(".custom-select").on("click", function () {
+    $(this).toggleClass("selected");
+    if ($(this).hasClass("selected")) {
+      $(".custom-select-list").show();
+    } else {
+      $(".custom-select-list").hide();
+    }
+  });
+  $(".custom-select").on("focusin", function () {
+    $(".custom-select-list").show();
+  });
+  $(".custom-select").on("focusout", function () {
+    if (!selectFlag) {
+      $(".custom-select-list").hide();
+    }
+    $(this).removeClass("selected");
+  });
+  $(".custom-select-option").on("mouseenter", function () {
+    selectFlag = true;
+  });
+  $(".custom-select-option").on("mouseout", function () {
+    selectFlag = false;
+  });
+  $(".custom-select-option").on("click", function () {
+    let value = $(this).attr("value");
     let site_url = "";
 
-    switch (selectSiteName) {
+    switch (value) {
       case "service":
         site_url = "https://www.chunilservice.com/";
         break;
       case "light":
-        site_url = "";
+        site_url = "http://www.ichunil.com/";
         break;
       default:
         break;
@@ -206,8 +230,8 @@ $(document).ready(function () {
 
   // footer sns button click
   $(".footer_social_wrap button").on("click", function () {
-    const clickButtonId = $(this).attr('id');
-    console.log(clickButtonId)
+    const clickButtonId = $(this).attr("id");
+    console.log(clickButtonId);
     let site_url = "";
 
     switch (clickButtonId) {

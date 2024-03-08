@@ -227,11 +227,11 @@ section#section1 .bg_shape2 {
   overflow: hidden;
   background: #103061;
   flex-grow: 1;
-  -webkit-transition: flex-grow 0.3s ease;
-  -moz-transition: flex-grow 0.3s ease;
-  -o-transition: flex-grow 0.3s ease;
-  -ms-transition: flex-grow 0.3s ease;
-  transition: flex-grow 0.3s ease;
+  -webkit-transition: flex-grow 0.5s ease;
+  -moz-transition: flex-grow 0.5s ease;
+  -o-transition: flex-grow 0.5s ease;
+  -ms-transition: flex-grow 0.5s ease;
+  transition: flex-grow 0.5s ease;
   backface-visibility: unset;
   -webkit-backface-visibility: hidden;
   background-size: auto 500px;
@@ -263,11 +263,11 @@ section#section1 .bg_shape2 {
   background-size: auto 500px;
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-transition: opacity 0.2s ease;
-  -moz-transition: opacity 0.2s ease;
-  -o-transition: opacity 0.2s ease;
-  -ms-transition: opacity 0.2s ease;
-  transition: opacity 0.2s ease;
+  -webkit-transition: opacity 0.1s ease;
+  -moz-transition: opacity 0.1s ease;
+  -o-transition: opacity 0.1s ease;
+  -ms-transition: opacity 0.1s ease;
+  transition: opacity 0.1s ease;
   opacity: 1;
   transition-delay: 0.2s;
 }
@@ -706,8 +706,8 @@ section#section4 .clients_logo_list {
 .clients_logo_group {
   display: flex;
   align-items: top;
-  -webkit-animation: loop 20s infinite linear;
-  animation: loop 20s infinite linear;
+  -webkit-animation: loop 50s infinite linear;
+  animation: loop 50s infinite linear;
 }
 .clients_logo_group .clients_logo {
   width: 320px;
