@@ -526,6 +526,9 @@ input[type="checkbox"]:checked + label:before {
   .only_mo_flex {
     display: flex;
   }
+  .only_mo_inline {
+    display: inline;
+  }
   .only_pc_block,
   .only_pc_flex,
   .only_pc_inline {

@@ -356,7 +356,7 @@
             <!-- 인사말 title & img -->
             <div class="page_title_wrap">
                 <p class="title" data-aos="fade-up" data-aos-duration="500">인사말</p>
-                <p class="sub_title" data-aos="fade-up" data-aos-duration="500">지구를 위한 사명감, 강력한 인프라, IT혁신까지 더해<br />모든
+                <p class="sub_title" data-aos="fade-up" data-aos-duration="500">지구를 위한 사명감, 강력한 인프라, IT 혁신까지 더해<br />모든
                     것을 에너지로 만드는 친환경 에너지 기업, 천일에너지입니다.</p>
             </div>
             <div class="page_title_image_wrap" data-aos="fade-up" data-aos-duration="500" data-aos-delay="150"></div>
@@ -417,6 +417,10 @@
                                 전국 7개 지역에 약 4000평 규모의 직운영 집하장과<br />
                                 5개 중간처리 시설, 00개의 발전소를 건립하여<br />
                                 천일에너지만의 원스탑 시스템을 구축하였습니다.
+
+                                폐기물 수거부터 처리까지 
+                                친환경적으로 완벽하게 처리할 수 있는 
+                                단단한 인프라가 있는 기업만이 가능합니다. 
                             </p>
                         </div>
                     </div>
@@ -505,16 +509,25 @@
                     </div>
                     <!-- Family Site -->
                     <div class="footer_family">
-                        <select name="familt_site" id="familt_site">
-                            <option value="">Family Site</option>
-                            <option value="service">천일서비스</option>
-                            <option value="light">천일조명</option>
-                        </select>
+                        <div class="area-custom-select">
+                            <div class="custom-select" tabindex="0">
+                                <span class="custom-select-text">Family Site</span>
+                                <img src="../assets/ico_down_familysite.svg" class="custom-select-arrow">
+                            </div>
+                            <ul class="custom-select-list" style="display:none;">
+                                <li value="light" class="custom-select-option">천일조명</li>
+                                <li value="service" class="custom-select-option">천일서비스</li>
+                            </ul>
+                            <select class="select-origin">
+                                <option value="light" selected="selected">천일조명</option>
+                                <option value="service">천일서비스</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
 
                 <div class="footer_row flex justify_space_between align_end">
-                    <p class="copyright left">Copyright 2023 © Chunil Energy. All Right Reserved.</p>
+                    <p class="copyright left">Copyright 2024 © Chunil Energy. All Right Reserved.</p>
 
                     <div class="footer_social_wrap flex flex_row justify_end align_end">
                         <button id="instagram">

@@ -383,9 +383,9 @@
                     <div class="info_title">Symbol</div>
                     <div class="info_desc grow flex flex_col justify_start align_start">
                         <p class="left">
-                            C는 CHUNIL ENERGY의 앞글자이자 창조(Creativity)의 C, 변화(Charge)의 C입니다.<br />
+                            C는 CHUNIL ENERGY의 앞글자이자 창조(Creativity)의 C, 변화(Change)의 C입니다.<br />
                             I는 에너지에 대한 새로운 아이디어(Idea)의 I,<br />
-                            늘 새로운 혁신을 추구하는 혁신 (Inovation)의 I이기도 합니다.
+                            늘 새로운 혁신을 추구하는 혁신 (Innovation)의 I이기도 합니다.
                         </p>
                         <div class="flex justify_start align_start mo_wrap" style="gap: 10px;">
                             <button id="ai_download" class="download_button flex justify_center align_center hover">
@@ -469,16 +469,25 @@
                     </div>
                     <!-- Family Site -->
                     <div class="footer_family">
-                        <select name="familt_site" id="familt_site">
-                            <option value="">Family Site</option>
-                            <option value="service">천일서비스</option>
-                            <option value="light">천일조명</option>
-                        </select>
+                        <div class="area-custom-select">
+                            <div class="custom-select" tabindex="0">
+                                <span class="custom-select-text">Family Site</span>
+                                <img src="../assets/ico_down_familysite.svg" class="custom-select-arrow">
+                            </div>
+                            <ul class="custom-select-list" style="display:none;">
+                                <li value="light" class="custom-select-option">천일조명</li>
+                                <li value="service" class="custom-select-option">천일서비스</li>
+                            </ul>
+                            <select class="select-origin">
+                                <option value="light" selected="selected">천일조명</option>
+                                <option value="service">천일서비스</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
 
                 <div class="footer_row flex justify_space_between align_end">
-                    <p class="copyright left">Copyright 2023 © Chunil Energy. All Right Reserved.</p>
+                    <p class="copyright left">Copyright 2024 © Chunil Energy. All Right Reserved.</p>
 
                     <div class="footer_social_wrap flex flex_row justify_end align_end">
                         <button id="instagram">
