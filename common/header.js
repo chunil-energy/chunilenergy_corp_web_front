@@ -82,7 +82,8 @@ $(document).ready(function () {
 
     // "인재채용" 메뉴 클릭 시
     if ($(this).index() === 4) {
-      console.log("end");
+      // console.log("end");
+      window.open('https://www.saramin.co.kr/zf_user/company-info/view?csn=T0RHaXAxd2t3UCtoZGk3eSt6Yk8wQT09')
       return;
     }
 
@@ -113,7 +114,8 @@ $(document).ready(function () {
 
     // "인재채용" 메뉴 클릭 시
     if ($(this).is(":last-child")) {
-      console.log("This is the last LI");
+      // console.log("This is the last LI");
+      window.open('https://www.saramin.co.kr/zf_user/company-info/view?csn=T0RHaXAxd2t3UCtoZGk3eSt6Yk8wQT09')
       return;
     }
 
