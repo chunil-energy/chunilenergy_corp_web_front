@@ -240,18 +240,18 @@ section#section1 .bg_shape2 {
 }
 .infra_item#infra_1 {
   background-position: left center;
-  background-image: url("./assets/main/infra_img_1.jpg");
+  background-image: url("./assets/main/infra_img_1_compressed.jpg");
 }
 .infra_item#infra_2 {
   background-position: right center;
-  background-image: url("./assets/main/infra_img_2.jpg");
+  background-image: url("./assets/main/infra_img_2_compressed.jpg");
 }
 .infra_item#infra_3 {
   background-position: left center;
-  background-image: url("./assets/main/infra_img_3.jpg");
+  background-image: url("./assets/main/infra_img_3_compressed.jpg");
 }
 .infra_item#infra_4 {
-  background-image: url("./assets/main/infra_img_4.jpg");
+  background-image: url("./assets/main/infra_img_4_compressed.jpg");
 }
 .infra_item::after {
   content: "";
@@ -272,16 +272,16 @@ section#section1 .bg_shape2 {
   transition-delay: 0.2s;
 }
 .infra_item#infra_1::after {
-  background-image: url("./assets/main/infra_img_1_dim.jpg");
+  background-image: url("./assets/main/infra_img_1_dim_compressed.jpg");
 }
 .infra_item#infra_2::after {
-  background-image: url("./assets/main/infra_img_2_dim.jpg");
+  background-image: url("./assets/main/infra_img_2_dim_compressed.jpg");
 }
 .infra_item#infra_3::after {
-  background-image: url("./assets/main/infra_img_3_dim.jpg");
+  background-image: url("./assets/main/infra_img_3_dim_compressed.jpg");
 }
 .infra_item#infra_4::after {
-  background-image: url("./assets/main/infra_img_4_dim.jpg");
+  background-image: url("./assets/main/infra_img_4_dim_compressed.jpg");
 }
 .infra_item:hover {
   flex: 2.4;
