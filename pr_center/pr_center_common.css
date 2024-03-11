@@ -67,12 +67,20 @@
 .content_list .content_item:hover {
   opacity: 0.8;
 }
-.content_list .content_item img {
+.content_item .img_wrap {
   max-width: 380px;
-  height: auto;
-  /* height: 220px; */
   border-radius: 14px;
+  height: 220px;
+  overflow: hidden;
   background-color: #ededef;
+  margin: 0 auto;
+}
+.content_list .content_item img {
+  /* max-width: 380px; */
+  /* height: auto; */
+  /* height: 220px; */
+  /* background-color: #ededef; */
+  object-fit: cover;
 }
 .content_list .content_item .tilte {
   font-size: 22px;
@@ -93,6 +101,9 @@
   line-height: 150%; /* 21px */
   letter-spacing: -0.56px;
   margin-top: 16px;
+}
+.empty_item {
+  visibility: hidden;
 }
 
 /* 더보기 버튼 */
@@ -180,12 +191,14 @@ button.more_info img {
   .content_list .content_item .tilte {
     font-size: 18px;
     letter-spacing: -0.72px;
-    margin-top: 4px;
+    max-width: 380px;
+    margin: 4px auto 0px;
   }
   .content_list .content_item .date_text {
     font-size: 12px;
     letter-spacing: -0.48px;
-    margin-top: 8px;
+    max-width: 380px;
+    margin: 8px auto 0px;
   }
   button.more_info {
     margin-top: 40px;
