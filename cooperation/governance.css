@@ -3,8 +3,10 @@ html {
 }
 
 .page_title_image_wrap {
-  background-image: url("");
+  background-image: url("./assets/governance/governance_main_compressed.jpg");
+  background-position: top center;
 }
+
 
 .governance_wrap {
   width: 90%;
