@@ -1,6 +1,7 @@
 /* 목록 */
 .notice_list {
   width: 100%;
+  min-height: 140px;
   margin-bottom: 40px;
 }
 .notice_list .notice_item {
@@ -118,6 +119,9 @@
 
 /* 태블릿 이하 */
 @media screen and (max-width: 870px) {
+  .notice_list {
+    min-height: 100px;
+  }
   .notice_list .notice_item:first-child {
     border-top: 1px solid #e8e8e9;
   }
