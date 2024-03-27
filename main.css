@@ -418,6 +418,10 @@ section#section2 {
     #fff;
 }
 @keyframes loop {
+  0% {
+    -webkit-transform: translateX(100vw);
+    transform: translateX(100vw);
+  }
   100% {
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);

@@ -661,8 +661,8 @@
                     </div>
                     <div class="img_wrap" data-aos="fade-left" data-aos-delay="250">
                         <img class="logo" src="./assets/main/jiguhada_text.png" alt="지구하다 로고" />
-                        <p class="white left semi_bold">모든 것을 가능하게 하는<br />천일 서비스</p>
-                        <img class="bg2" src="./assets/main/service_img_2.png" alt="모든 것을 가능하게 하는 천일 서비스" />
+                        <p class="white left semi_bold">모든 것을 가능하게 하는<br />지구하다</p>
+                        <img class="bg2" src="./assets/main/service_img_2.png" alt="모든 것을 가능하게 하는 지구하다" />
                     </div>
                 </div>
             </div>
@@ -822,7 +822,7 @@
                 <div class="title_wrap flex justify_space_between align_end" data-aos="fade-up" data-aos-duration="500">
                     <div>
                         <p class="mini_title left blue semi_bold">OUR CLIENTS</p>
-                        <p class="title left black semi_bold">천일에너지는 다양한 분야의<br />기업, 브랜드와 함께하고 있습니다.</p>
+                        <p class="title left black semi_bold">천일에너지는 다양한 분야의 기업,<br />브랜드, 지자체와 함께하고 있습니다.</p>
                     </div>
                     <button id="our_clients_detail_button"
                         class="detail_button blue text_16 semi_bold flex justify_center align_center hover">
@@ -833,7 +833,6 @@
             </div>
             <div class="clients_logo_list" data-aos="fade-up" data-aos-duration="500">
                 <div class="clients_logo_group"></div>
-                <!-- <div class="clients_logo_group"></div> -->
             </div>
         </section>
 
@@ -987,11 +986,11 @@
             {src: './assets/logos/img_logo_02.jpg', alt: "동대문구 회색로고"},
             {src: './assets/logos/img_logo_03.jpg', alt: "노원구 회색로고"},
             {src: './assets/logos/img_logo_04.jpg', alt: "서초구 회색로고"},
-            {src: './assets/logos/img_logo_05.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_06.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_07.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_08.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_09.jpg', alt: " 회색로고"},
+            // {src: './assets/logos/img_logo_05.jpg', alt: " 회색로고"},
+            // {src: './assets/logos/img_logo_06.jpg', alt: " 회색로고"},
+            // {src: './assets/logos/img_logo_07.jpg', alt: " 회색로고"},
+            // {src: './assets/logos/img_logo_08.jpg', alt: " 회색로고"},
+            // {src: './assets/logos/img_logo_09.jpg', alt: " 회색로고"},
         ]
 
 
@@ -1016,6 +1015,11 @@
                     return `<div class="clients_logo flex justify_center align_center">
                         <img src="${client.src}" alt="${client.alt}" />
                     </div>`
+                })
+            );
+            $('.clients_logo_group').append(
+                our_clients.map((client) => {
+                    return `<div class="clients_logo flex justify_center align_center"></div>`
                 })
             );
 
