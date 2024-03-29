@@ -718,7 +718,7 @@
         }
         function onScroll(event) {
             var scrollPos = $(document).scrollTop() - $('.affiliates_wrap').position().top;
-            var isMoblile = $(window).width() <= 870;
+            var isMoblile = isBreakPoint(870);
 
             $('.side_nav_wrap a').each(function () {
                 var currLink = $(this);
@@ -739,7 +739,7 @@
         }
 
         $(window).ready(function () {
-            var isMoblile = $(window).width() <= 870;
+            var isMoblile = isBreakPoint(870);
 
             /** currentNav값과 같은 data-nav 값을 가진 엘리먼트 활성화 */
             function activeNavByDataNav(currentNav) {
