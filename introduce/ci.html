@@ -118,7 +118,7 @@
                         </a>
                     </div>
                 </div>
-                
+
             </div>
             <!-- 상생&협력 서브메뉴 -->
             <div class="sub_nav_body flex justify_center align_start">
@@ -126,9 +126,15 @@
                 <div class="sub_nav_col">
                     <p class="text_16 black2 semi_bold mb_16">공공기관</p>
                     <div class="sub_nav_list flex flex_col align_start justify_center">
-                        <a href="../cooperation/governance.html#effect"><div class="sub_nav gray semi_bold left hover">상생&협력 효과</div></a>
-                        <a href="../cooperation/governance.html#work"><div class="sub_nav gray semi_bold left hover">상생&협력 업무</div></a>
-                        <a href="../cooperation/governance.html#logo"><div class="sub_nav gray semi_bold left hover">상생&협력 공공기관</div></a>
+                        <a href="../cooperation/governance.html#effect">
+                            <div class="sub_nav gray semi_bold left hover">상생&협력 효과</div>
+                        </a>
+                        <a href="../cooperation/governance.html#work">
+                            <div class="sub_nav gray semi_bold left hover">상생&협력 업무</div>
+                        </a>
+                        <a href="../cooperation/governance.html#logo">
+                            <div class="sub_nav gray semi_bold left hover">상생&협력 공공기관</div>
+                        </a>
                     </div>
                 </div>
                 <div class="sub_nav_col">
@@ -289,7 +295,7 @@
                         </a>
 
                     </div>
-                    
+
                 </div>
             </div>
             <!-- 상생&협력 -->
@@ -298,9 +304,15 @@
                 <div class="nav_list flex flex_col justify_start align_start">
                     <div class="sub_nav_list nav_hover">
                         <p class="sub_title left white">공공기관</p>
-                        <a href="../cooperation/governance.html#effect"><div class="sub_nav left white">상생&협력 효과</div></a>
-                        <a href="../cooperation/governance.html#work"><div class="sub_nav left white">상생&협력 업무</div></a>
-                        <a href="../cooperation/governance.html#logo"><div class="sub_nav left white">상생&협력 공공기관</div></a>
+                        <a href="../cooperation/governance.html#effect">
+                            <div class="sub_nav left white">상생&협력 효과</div>
+                        </a>
+                        <a href="../cooperation/governance.html#work">
+                            <div class="sub_nav left white">상생&협력 업무</div>
+                        </a>
+                        <a href="../cooperation/governance.html#logo">
+                            <div class="sub_nav left white">상생&협력 공공기관</div>
+                        </a>
                     </div>
                     <a href="../cooperation/partners.html">
                         <p class="sub_title left white nav_hover">민간기업</p>
@@ -475,7 +487,7 @@
 
                     <div class="footer_social_wrap flex flex_row justify_end align_end">
                         <button id="instagram">
-                            <img src="../assets/social/instagram.png" alt="instagram"class="hover" />
+                            <img src="../assets/social/instagram.png" alt="instagram" class="hover" />
                         </button>
                         <button id="blog"><img src="../assets/social/blog.png" alt="blog" class="hover" /></button>
                     </div>
@@ -491,6 +503,34 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            // LOGO BI DOWNLOAD AI 버튼 클릭 이벤트 리스너
+            $("#ai_download").on('click', function () {
+                // 파일 경로 설정
+                var filePath = './assets/ci/CHUNIL_BI_logo_ai.zip';
+                // 다운로드 링크 생성
+                var downloadLink = document.createElement('a');
+                downloadLink.href = filePath;
+                downloadLink.download = filePath.split('/').pop(); // 파일 이름 설정
+                downloadLink.click();
+                $(downloadLink).remove();
+            });
+
+            // LOGO BI DOWNLOAD PNG 버튼 클릭 이벤트 리스너
+            $("#png_download").on('click', function () {
+                // 파일 경로 설정
+                var filePath = './assets/ci/CHUNIL_BI_logo_png.zip';
+                // 다운로드 링크 생성
+                var downloadLink = document.createElement('a');
+                downloadLink.href = filePath;
+                downloadLink.download = filePath.split('/').pop(); // 파일 이름 설정
+                downloadLink.click();
+                $(downloadLink).remove();
+            });
+        });
     </script>
 </body>
 
