@@ -364,6 +364,9 @@ a {
   font-size: 16px;
   line-height: 160%; /* 25.6px */
   letter-spacing: -0.64px;
+  font-family: "Pretendard", Pretendard, "Pretendard Variable", -apple-system,
+    BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", dotum, "돋움", helvetica,
+    "Apple SD Gothic Neo", sans-serif;
 }
 .input_wrap .input.is_error {
   border-color: #e21f71;
