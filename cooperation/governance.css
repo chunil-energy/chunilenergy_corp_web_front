@@ -7,7 +7,6 @@ html {
   background-position: top center;
 }
 
-
 .governance_wrap {
   width: 90%;
   margin: 160px auto 190px;
@@ -74,10 +73,13 @@ html {
 #effect .effect_row {
   width: 100%;
   padding: 40px 0px 80px;
-  border-top: 1px solid #DCDCE0;
+  border-top: 1px solid #dcdce0;
 }
 #effect .effect_row:last-child {
   padding-bottom: 0px;
+}
+.effect_row > div {
+  width: 100%;
 }
 .effect_row .number {
   flex-shrink: 0;
@@ -88,15 +90,23 @@ html {
   width: 41%;
   margin-right: 20px;
 }
+.effect_row .row_title .text_14 {
+  line-height: 160%;
+  padding-top: 10px;
+  display: block;
+}
 .effect_row .desc {
-  max-width: 424px;
+  max-width: 445px;
 }
-.effect_row ul {
-  padding-left: 18px;
-  margin-top: 24px;
+.effect_row .desc > span {
+  display: block;
+  padding-top: 4px;
 }
-.effect_row ul b {
-  font-weight: 600;
+.effect_row .sub_text {
+  max-width: 445px;
+}
+.effect_row .mt_40 {
+  margin-top: 40px;
 }
 .effect_row:last-child .desc {
   max-width: unset;
@@ -113,16 +123,15 @@ html {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-.work_wrap .work_item {
-  
+.work_item {
 }
-.work_wrap .work_item img {
+.work_item img {
   width: 100%;
   height: auto;
   margin-bottom: 24px;
   border-radius: 14px;
 }
-.work_wrap .work_item .sub_title {
+.work_item .sub_title {
   margin-bottom: 10px;
 }
 
@@ -170,7 +179,6 @@ html {
     flex: 1 1 17%;
   }
 }
-
 
 /* 미니 PC */
 @media screen and (max-width: 1080px) {
@@ -239,14 +247,42 @@ html {
   .content_wrap .title {
     font-size: 22px;
     letter-spacing: -0.88px;
+    margin-bottom: 30px;
   }
   .content_wrap .sub_title {
-    font-size: 13px;
-    letter-spacing: -0.52px;
-    margin-top: 6px;
+    font-size: 18px;
+    letter-spacing: -0.72px;
   }
   .content_wrap .desc {
+    font-size: 14px;
     letter-spacing: -0.56px;
+  }
+
+  #effect .effect_row {
+    padding: 24px 0px 50px;
+  }
+  .effect_row .number {
+    width: 30px;
+  }
+  .effect_row > div {
+    flex-wrap: wrap;
+    row-gap: 16px;
+  }
+  .effect_row .row_title {
+    flex-shrink: 1;
+    width: auto;
+    margin-right: 0px;
+  }
+  .effect_row .desc > span {
+    font-size: 13px;
+    padding-top: 6px;
+  }
+  .effect_row img.img_map {
+    max-width: 400px;
+    margin: 24px auto 0px;
+  }
+  .effect_row .mt_40 {
+    margin-top: 8px;
   }
 
   .logos_wrap {
@@ -257,5 +293,17 @@ html {
   .logos_wrap .logo_box {
     flex: unset;
     max-width: 300px;
+  }
+
+  /* work */
+  #work .work_wrap {
+    gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .work_item img {
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 10px;
   }
 }
