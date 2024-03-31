@@ -728,8 +728,8 @@ section#section4 .clients_logo_list {
 .clients_logo_group {
   display: flex;
   align-items: top;
-  -webkit-animation: loop 30s infinite linear;
-  animation: loop 30s infinite linear;
+  -webkit-animation: loop 73s infinite linear;
+  animation: loop 73s infinite linear;
 }
 .clients_logo_group .clients_logo {
   width: 320px;
