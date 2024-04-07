@@ -5,6 +5,7 @@ section#section5 {
   position: relative;
   overflow: hidden;
   background: linear-gradient(91deg, #1a83ff 16.08%, #084299 108.21%);
+  z-index: 1;
 }
 section#section5 .contact_us_bg {
   position: absolute;
@@ -305,5 +306,10 @@ footer .footer_wrap .footer_row {
   }
   .footer_info .only_pc_block {
     display: none;
+  }
+
+  /* footer_family */
+  .area-custom-select, .custom-select-list {
+    width: 100%;
   }
 }

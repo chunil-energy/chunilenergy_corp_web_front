@@ -6,7 +6,7 @@
   width: 100%;
   height: 100vh;
   background-color: #000000cc;
-  backdrop-filter: blur(12.5px);
+  /* backdrop-filter: blur(12.5px); */
   z-index: 90;
   display: none;
 }
@@ -145,4 +145,50 @@
 
 /* 태블릿 이하 */
 @media screen and (max-width: 870px) {
+  #sitemap .sitemap_header {
+    padding: 24px;
+  }
+  #sitemap .sitemap_body {
+    padding: 0px 24px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #sitemap .logo img {
+    height: 24px;
+  }
+  #sitemap button#partner_offer {
+    display: none;
+  }
+  #sitemap #sitemap_close, #sitemap #sitemap_close img {
+    width: 30px;
+    height: 30px;
+    margin-left: 0px;
+  }
+  #sitemap .sitemap_body .sitmap_col {
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    border-left: none;
+    flex: 1 0 50%;
+    padding: 36px 0px;
+  }
+  #sitemap .sitemap_body .sitmap_col:first-child,
+  #sitemap .sitemap_body .sitmap_col:nth-child(2) {
+    border-top: none;
+  }
+  #sitemap .sitemap_body .sitmap_col .nav_list {
+    gap: 16px;
+  }
+  #sitemap .sitemap_body .sitmap_col .title {
+    letter-spacing: -0.04em;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  #sitemap .sub_title {
+    font-size: 15px;
+    letter-spacing: -0.04em;
+  }
+  #sitemap .sub_nav {
+    font-size: 14px;
+    letter-spacing: -0.04em;
+    padding: 5px 0px;
+  }
 }

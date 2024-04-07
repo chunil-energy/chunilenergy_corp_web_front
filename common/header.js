@@ -179,9 +179,17 @@ $(document).ready(function () {
     }
   });
 
+  // 사이트맵 열기 클릭
+  $(".sitemap_open").on("click", function () {
+    $("#sitemap").fadeIn();
+    $('.body').css('filter', 'blur(10px)');
+    $("body").css("overflow", "hidden");
+  });
+
   // 사이트맵 닫기 아이콘 클릭
   $("#sitemap_close").on("click", function () {
     $("#sitemap").fadeOut();
+    $('.body').css('filter', 'none');
     $("body").css("overflow", "auto");
   });
 
