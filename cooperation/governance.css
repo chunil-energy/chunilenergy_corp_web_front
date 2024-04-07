@@ -304,7 +304,7 @@ button.more_info img {
   }
   .logos_wrap .logo_box {
     flex: unset;
-    height: 130px;
+    height: auto;
     max-width: 300px;
   }
 
