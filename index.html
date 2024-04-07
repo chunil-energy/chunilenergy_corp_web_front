@@ -485,6 +485,22 @@
                             </button>
                         </div>
                     </div>
+                    <div class="img_wrap swiper-slide">
+                        <img class="only_pc_inline" src="./assets/main/banner/hero_bg_08.jpg" draggable="false" />
+                        <img class="only_mo_inline" src="./assets/main/banner/mo/hero_bg_08.jpg" draggable="false" />
+                        <div class="img_content animation fadeUp delay_1">
+                            <p class="title white left semi_bold">
+                                지구가 사랑하는 플레이<br/>천일에너지 & 지자체 콤비플레이!
+                            </p>
+                            <p class="sub_title text_18 white left">
+                                전국 37개 지자체가 천일에너지와 함께하는 이유,<br/>궁금하지 않으세요?
+                            </p>
+                            <button id="main_slide_8" class="white text_16 flex justify_center align_center hover">
+                                자세히 보기
+                                <img src="./assets/ico_right_wh.svg" alt="->" />
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 <div class="swiper-button-next hover">
                     <img src="./assets/main/ico_right_r.svg" />
@@ -920,7 +936,7 @@
     <!-- Initialize Swiper -->
     <script>
         // OUR INFRA, 상생협력(COOPERATION), 원스톱 솔루션(SOLUTION)
-        const menu = ['VISION', 'ZGUHADA', 'ONE STOP', 'GOVERNMENT', 'TEAM CHUNIL'];
+        const menu = ['VISION', 'ZGUHADA', 'ONE STOP', 'GOVERNMENT', 'TEAM CHUNIL', 'COOPERATION'];
         const mainSwiper = new Swiper(".mainSwiper", {
             slidesPerView: 1,
             spaceBetween: 0,
@@ -1065,10 +1081,14 @@
             $("#main_slide_6").on("click", function () {
                 window.location.href = "./business/service.html#service1";
             });
-            // 슬라이드 6 자세히 보기 클릭 시
+            // 슬라이드 7 자세히 보기 클릭 시
             $("#main_slide_7").on("click", function () {
                 window.open('https://www.saramin.co.kr/zf_user/company-info/view?csn=T0RHaXAxd2t3UCtoZGk3eSt6Yk8wQT09')
                 // window.location.href = "#";
+            });
+            // 슬라이드 8 자세히 보기 클릭 시
+            $("#main_slide_8").on("click", function () {
+                window.location.href = "./cooperation/governance.html";
             });
 
             // 제휴제안 버튼 클릭 시
