@@ -17,6 +17,10 @@
   padding: 0px 60px;
   position: relative;
 }
+#header.active nav,
+#header.isShow_sub nav {
+  backdrop-filter: blur(12.5px);
+}
 
 #header nav .logo {
   position: absolute;
@@ -107,7 +111,7 @@
   left: 0;
   width: 100%;
   max-height: 426px;
-  background: #fffffff0;
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(12.5px);
   border-top: 1px solid #e8e8e9;
   display: none;
@@ -161,7 +165,7 @@
 #header.isShow_sub {
   /* background: #fffffff0; */
   background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(12.5px);
+  /* backdrop-filter: blur(12.5px); */
 }
 #header.active .sub_nav_wrap,
 #header.isShow_sub .sub_nav_wrap {
