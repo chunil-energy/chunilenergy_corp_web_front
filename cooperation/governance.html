@@ -676,6 +676,12 @@
                                 </div>
                                 <div class="logo_box flex justify_center align_center hidden only_pc_block"></div>
                             </div>
+
+                            <!-- 더보기 버튼 -->
+                            <button type="button" id="more_info" class="more_info flex justify_center align_center text_16 mid hover">
+                                더보기
+                                <img src="./assets/governance/ico_down.svg" alt="더보기 아이콘" />
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -780,6 +786,10 @@
     </script>
 
     <script async>
+        var NOW_MORE = 1; // 현재 더보기 버튼 클릭 횟수
+        var SHOW_COUNTE = 16; // 한번에 보여줄 갯수
+        var MAX_COUNT = 39; // 전체 갯수
+
         function onScroll(event) {
             var scrollPos = $(document).scrollTop() - $('.governance_wrap').position().top;
 
@@ -804,6 +814,28 @@
                 $('.side_nav').removeClass('active');
                 $('.side_nav[data-nav="' + currentNav + '"]').addClass('active');
             }
+
+            /** 첫 페이지 외 보도자료 모두 숨기기 */
+            $('.logo_box').map((index, item) => {
+                if (index > NOW_MORE * SHOW_COUNTE - 1) {
+                    $(item).css('display', 'none');
+                }
+            });
+            /** 더보기 버튼 클릭 시 */
+            $('#more_info').click(function () {
+                NOW_MORE++;
+                $('.logo_box').map((index, item) => {
+                    if (index > NOW_MORE * SHOW_COUNTE - 1) {
+                        $(item).css('display', 'none');
+                    } else {
+                        $(item).css('display', 'block');
+                    }
+                });
+
+                if (NOW_MORE * SHOW_COUNTE >= MAX_COUNT) {
+                    $('#more_info').css('display', 'none');
+                }
+            });
 
             var hash = window.location.hash;
 
