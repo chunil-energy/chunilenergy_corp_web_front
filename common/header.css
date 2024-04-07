@@ -284,9 +284,11 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(255, 255, 255, 0.94);
-    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.94);
     display: none;
+  }
+  #header.show_mo_menu ~ .body {
+    filter: blur(10px);
   }
   #header.show_mo_menu::before {
     display: block;
