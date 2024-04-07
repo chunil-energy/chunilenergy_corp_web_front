@@ -21,37 +21,43 @@
   padding: 0px 60px;
   position: relative;
 }
-#sitemap .sitemap_header .logo {
+#sitemap .logo {
   position: absolute;
   top: 30px;
   left: 60px;
   z-index: 2;
   cursor: pointer;
 }
-#sitemap .sitemap_header .logo img {
+#sitemap .logo img {
   width: auto;
   height: 30px;
 }
-#sitemap .sitemap_header .menu_wrap {
+#sitemap .menu_wrap {
   position: absolute;
   top: 28px;
   right: 60px;
   z-index: 2;
 }
-#sitemap .sitemap_header button#partner_offer {
+#sitemap button#partner_offer {
   border-radius: 500px;
   border: 1px solid #fff;
   display: inline-flex;
   height: 32px;
   padding: 8px 16px;
   flex-shrink: 0;
+  transition: background-color,border-color 0.3s;
 }
-#sitemap .sitemap_header #sitemap_close {
+#sitemap button#partner_offer:hover {
+  background-color: #1A83FF;
+  border-color: #1A83FF;
+  color: #fff !important;
+}
+#sitemap #sitemap_close {
   width: 36px;
   height: 36px;
   margin-left: 36px;
 }
-#sitemap .sitemap_header #sitemap_close img {
+#sitemap #sitemap_close img {
   width: 36px;
   height: 36px;
 }

@@ -186,7 +186,7 @@
 
             <div class="menu_wrap flex justify_end align_center">
                 <button type="button" id="partner_offer"
-                    class="partner_offer hover center white text_14 justify_center align_center">
+                    class="partner_offer center white text_14 justify_center align_center">
                     제휴제안
                 </button>
                 <button type="button" id="menu_open" class="hover center justify_center align_center">
@@ -204,7 +204,7 @@
             </a>
             <div class="menu_wrap flex justify_end align_center">
                 <button type="button" id="partner_offer"
-                    class="partner_offer hover center white text_14 justify_center align_center">
+                    class="partner_offer center white text_14 justify_center align_center">
                     제휴제안
                 </button>
                 <button type="button" id="sitemap_close" class="hover center justify_center align_center">
@@ -731,7 +731,14 @@
                     $('.side_nav').removeClass('active');
                     currLink.children('.side_nav').addClass("active");
                     // 모바일일 경우, 네비 스크롤 이동
-                    if (isMoveNavByScroll) $('.side_nav_wrap').animate({ scrollLeft: $('.side_nav.active').offset().left / 2 }, 300);
+                    if (isMoveNavByScroll) {
+                        var scrollLeft = currLink.offset().left; // $(this).scrollLeft();
+                        var itemWidth = currLink.width();
+                        var itemLeft = currLink.children('.side_nav').scrollLeft();
+                        console.log('scrollLeft:', scrollLeft, '//', itemWidth, '//', itemLeft);
+                        // $('.side_nav_wrap').stop().animate({scrollLeft: scrollLeft}, 300);
+                        // $('.side_nav_wrap').animate({ scrollLeft: currLink.offset().left }, 300);
+                    }
                 } else {
                     currLink.children('.side_nav').removeClass("active");
                 }
@@ -750,15 +757,16 @@
             var hash = window.location.hash;
 
             if (hash) {
-                isMoveNavByScroll = false;
+                // isMoveNavByScroll = false;
                 $('html, body').animate({
                     scrollTop: $(hash).offset().top - $(hash).height() / 2
                 }, 'slow', function () {
                     closeHeaderNav();
                     if (isMoblile) {
+                        console.log('isMoblile // ', $('.side_nav.active').offset().left / 2);
                         $('.side_nav_wrap').animate({ scrollLeft: $('.side_nav.active').offset().left / 2 }, 100, function () {
-                            isMoveNavByScroll = true;
-                            console.log('scroll end // ', isMoveNavByScroll);
+                            // isMoveNavByScroll = true;
+                            console.log('left scroll end // ', isMoveNavByScroll);
                         });
                     }
                 });
@@ -778,7 +786,7 @@
                     $(".nav_list li").removeClass("active");
                     $("body").css("overflow", "auto");
                 }
-                isMoveNavByScroll = false;
+                // isMoveNavByScroll = false;
 
                 var hash = $(this).attr('href');
 
@@ -788,7 +796,7 @@
                     closeHeaderNav();
                     if (isMoblile) {
                         $('.side_nav_wrap').animate({ scrollLeft: $('.side_nav.active').offset().left / 2 }, 300, function () {
-                            isMoveNavByScroll = true;
+                            // isMoveNavByScroll = true;
                             console.log('scroll end // ', isMoveNavByScroll);
                         });
                     }
