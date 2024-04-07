@@ -328,8 +328,19 @@
     align-items: flex-start;
     z-index: 2;
   }
-  .sub_nav_wrap .nav_list li {
+  .mo_nav_item .arrow_right {
+    width: 16px;
+    height: 20px;
+    background-image: url("../assets/ico_right_menu.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .mo_nav_item .arrow_right.blue {
+    background-image: url("../assets/ico_right_menu_blue.svg");
+  }
+  .sub_nav_wrap .nav_list li, .mo_nav_item {
     position: relative;
+    box-sizing: border-box;
     width: 100%;
     margin: 0 auto;
     padding: 24px 30px;
@@ -341,7 +352,7 @@
     content: "";
     position: absolute;
     left: unset;
-    right: 0px;
+    right: 30px;
     top: 24px;
     width: 24px;
     height: 24px;

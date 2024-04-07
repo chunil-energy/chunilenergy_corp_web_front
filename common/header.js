@@ -48,6 +48,18 @@ $(document).ready(function () {
       $(item).data("idx", index + 1);
     });
     navElement.appendTo("#header .sub_nav_wrap");
+    $('#header .sub_nav_wrap').append(`<!-- 모바일 제휴/제안, 지구하다 플랫폼 -->
+      <div class="mo_nav_item flex_col justify_center align_start" style="display: flex;gap: 20px; padding-top:48px;">
+        <button class="partner_offer semi_bold flex justify_start align_center" style="color:#262626;font-size:16px;letter-spacing: -0.04rem;">
+          제휴/제안
+          <span class="arrow_right"></span>
+        </button>
+        <a href="https://zguhada.com/" class="semi_bold flex justify_start align_center" style="color:#1A83FF;font-size:16px;letter-spacing: -0.04rem;">
+          플랫폼 지구하다
+          <span class="arrow_right blue"></span>
+        </a>
+      </div>`
+    );
   }
 
   // 헤더(서브 nav) 바깥 클릭 시 서브메뉴 닫힘
