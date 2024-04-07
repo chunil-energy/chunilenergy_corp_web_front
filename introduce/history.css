@@ -216,7 +216,7 @@
   }
 
   .history_wrap .history_list {
-    padding-left: 47px;
+    padding-left: 20px;
     margin-top: 40px;
     gap: 36px;
   }
@@ -249,7 +249,7 @@
   .history_list .history_line {
     width: 9px;
     height: calc(100% - 55px);
-    left: 20px;
+    left: -7px;
     top: 5px;
   }
 }
