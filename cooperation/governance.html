@@ -789,6 +789,7 @@
     <script async>
         var NOW_MORE = 1; // 현재 더보기 버튼 클릭 횟수
         var SHOW_COUNTE = 16; // 한번에 보여줄 갯수
+        var SHOW_MO_COUNTE = 8; // 한번에 보여줄 갯수
         var MAX_COUNT = 39; // 전체 갯수
 
         function onScroll(event) {
@@ -810,6 +811,8 @@
 
         $(window).ready(function () {
 
+            const nowCount = isBreakPoint(870) ? SHOW_MO_COUNTE : SHOW_COUNTE;
+
             /** currentNav값과 같은 data-nav 값을 가진 엘리먼트 활성화 */
             function activeNavByDataNav(currentNav) {
                 $('.side_nav').removeClass('active');
@@ -818,7 +821,7 @@
 
             /** 첫 페이지 외 보도자료 모두 숨기기 */
             $('.logo_box').map((index, item) => {
-                if (index > NOW_MORE * SHOW_COUNTE - 1) {
+                if (index > NOW_MORE * nowCount - 1) {
                     $(item).css('display', 'none');
                 }
             });
@@ -826,14 +829,14 @@
             $('#more_info').click(function () {
                 NOW_MORE++;
                 $('.logo_box').map((index, item) => {
-                    if (index > NOW_MORE * SHOW_COUNTE - 1) {
+                    if (index > NOW_MORE * nowCount - 1) {
                         $(item).css('display', 'none');
                     } else {
                         $(item).css('display', 'block');
                     }
                 });
 
-                if (NOW_MORE * SHOW_COUNTE >= MAX_COUNT) {
+                if (NOW_MORE * nowCount >= MAX_COUNT) {
                     $('#more_info').css('display', 'none');
                 }
             });
