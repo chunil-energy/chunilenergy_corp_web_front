@@ -42,7 +42,7 @@
 #greeting_3.greeting_row .img_wrap {
   width: 480px;
   height: 680px;
-  background-image: url("./assets/greeting/greeting_3_compressed.jpg");
+  background-image: url("./assets/greeting/greeting_3_fix.jpg");
 }
 #greeting_4.greeting_row .img_wrap {
   background-image: url("./assets/greeting/greeting_4_compressed.jpg");
