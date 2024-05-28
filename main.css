@@ -907,22 +907,10 @@ section#section4 .clients_logo_list {
     font-size: 10px;
     text-align: center;
   }
-  /* #main .swiper-pagination {
-    bottom: 60px;
-    right: unset;
-    left: 25px;
-    width: 310px;
-    width: 700px;
-    gap: 8px;
+  #main .slick-dots .slick-active::after {
+    /* !! (speed + autoplaySpeed) slide 시간 변경 시 애니메이션 시간 변경하기. */
+    animation: process linear 2.7s forwards;
   }
-  #main .swiper-pagination .swiper-pagination-bullet {
-    height: 27px;
-    font-size: 12px;
-  }
-  #main .swiper-button-prev,
-  #main .swiper-button-next {
-    display: none !important;
-  } */
 
   /* section 공통 */
   section .section_wrap {

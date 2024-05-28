@@ -1019,7 +1019,15 @@
                 customPaging: function (slider, i) {
                     return menu[i];
                 },
-                useTransform: false
+                useTransform: false,
+                responsive: [
+                    {
+                        breakpoint: 870,
+                        settings: {
+                            speed : 200,
+                            autoplaySpeed: 2500,
+                        }
+                    }]
             });
 
             const moInfraSwiper = new Swiper(".our_infra_moSwiper", {
