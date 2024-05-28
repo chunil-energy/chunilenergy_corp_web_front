@@ -159,7 +159,7 @@
 }
 #main .slick-dots .slick-active::after {
   /* !! (speed + autoplaySpeed) slide 시간 변경 시 애니메이션 시간 변경하기. */
-  animation: process linear 5.8s forwards;
+  animation: process linear 5.6s forwards;
   animation-iteration-count: unset;
 }
 
@@ -863,6 +863,11 @@ section#section4 .clients_logo_list {
   }
 
   /* main_wrap === 메인 롤링배너 (mainSwiper) */
+  .mainSwiper .slick-list {
+    width: 1px;
+    min-width: 100%;
+    width: 100%;
+  }
   #main .img_content {
     left: 24px;
     bottom: 143px;

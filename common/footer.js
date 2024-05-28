@@ -4,7 +4,7 @@ $(document).ready(function () {
     <a href="../business/jiguhada.html" class="footer_nav text_16 semi_bold">플랫폼</a>
     <a href="../introduce/affiliates.html" class="footer_nav text_16 semi_bold">인프라</a>
     <a href="../business/solution.html" class="footer_nav text_16 semi_bold">서비스</a>
-    <a href="Brochure-CHUNILENERGY_official.pdf" download="Brochure-CHUNILENERGY_official.pdf" class="footer_nav text_16 semi_bold">다운로드</a>
+    <a href="Brochure-CHUNILENERGY_official.pdf" download="Brochure-CHUNILENERGY_official.pdf" class="footer_nav text_16 semi_bold">소개서 다운로드</a>
     <button type="button" class="sitemap_open footer_nav text_16 semi_bold only_mo_block">사이트맵</button>`);
     //   <button type="button" class="footer_file_down footer_nav text_16 semi_bold">파일 다운</button>
 
