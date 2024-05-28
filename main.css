@@ -891,6 +891,11 @@ section#section4 .clients_logo_list {
     gap: 5px;
     align-items: flex-end;
   }
+  #main .slick-dots {
+    gap: 5px;
+    left: 0px;
+    padding: 0px 5px;
+  }
   #main .slick-dots li {
     height: auto;
     min-height: 24px;

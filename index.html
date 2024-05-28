@@ -954,29 +954,6 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- Initialize Swiper -->
     <script>
-        // OUR INFRA, 상생협력(COOPERATION), 원스톱 솔루션(SOLUTION)
-        const menu = ['VISION', 'ZGUHADA', 'ONE STOP', 'GOVERNMENT', 'TEAM CHUNIL']; // 'COOPERATION'
-        $('.mainSwiper').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            speed : 800,
-            autoplay: true,
-            autoplaySpeed: 5000,
-            infinite: true,
-            dots : true, 
-            pauseOnFocus: false,
-            pauseOnHover: false,
-            pauseOnDotsHover: false,
-            vertical : false,
-            prevArrow: '.swiper-button-prev',
-            nextArrow: '.swiper-button-next',
-            appendDots: '.swiper-pagination',
-            customPaging: function (slider, i) {
-                console.log(slider);
-                return menu[i];
-            },
-        });
-
         // cooperation
         const our_clients = [
             { src: './assets/logos/img_logo_01.jpg', alt: "성동구 회색로고" },
@@ -1022,6 +999,37 @@
 
 
         $(document).ready(function () {
+            // OUR INFRA, 상생협력(COOPERATION), 원스톱 솔루션(SOLUTION)
+            const menu = ['VISION', 'ZGUHADA', 'ONE STOP', 'GOVERNMENT', 'TEAM CHUNIL']; // 'COOPERATION'
+            $('.mainSwiper').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                speed : 800,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                infinite: true,
+                dots : true, 
+                pauseOnFocus: false,
+                pauseOnHover: false,
+                pauseOnDotsHover: false,
+                vertical : false,
+                prevArrow: '.swiper-button-prev',
+                nextArrow: '.swiper-button-next',
+                appendDots: '.swiper-pagination',
+                customPaging: function (slider, i) {
+                    return menu[i];
+                },
+                responsive: [
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+
             const moInfraSwiper = new Swiper(".our_infra_moSwiper", {
                 // slidesPerView: 4,
                 slidesPerView: "auto",
