@@ -112,10 +112,16 @@
   right: 220px;
   /* width: 380px; */
   width: 780px;
-  gap: 10px;
   z-index: 2;
 }
-#main .swiper-pagination .swiper-pagination-bullet {
+#main .slick-dots {
+  width: 100%;
+  gap: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+#main .slick-dots li {
   flex: 1 1 auto;
   border-radius: 0;
   /* width: auto; */
@@ -131,7 +137,7 @@
   background: transparent;
   border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 }
-#main .swiper-pagination .swiper-pagination-bullet::after {
+#main .slick-dots li::after {
   content: "";
   width: 0;
   height: 2px;
@@ -148,11 +154,12 @@
     width: 100%;
   }
 }
-#main .swiper-pagination .swiper-pagination-bullet-active {
+#main .slick-dots .slick-active {
   opacity: 1;
 }
-#main .swiper-pagination .swiper-pagination-bullet-active::after {
-  animation: process linear 5s forwards;
+#main .slick-dots .slick-active::after {
+  /* !! (speed + autoplaySpeed) slide 시간 변경 시 애니메이션 시간 변경하기. */
+  animation: process linear 5.8s forwards;
   animation-iteration-count: unset;
 }
 
@@ -551,7 +558,7 @@ section#section3 .scroll_wrap_bg {
 }
 section#section3 .scroll_wrap_bg::before {
   content: "";
-  width: 100vw;
+  width: 100%;
   /* min-width: 1920px; */
   height: 100vh;
   position: absolute;
@@ -783,7 +790,7 @@ section#section4 .clients_logo_list {
     width: 700px;
     gap: 8px;
   }
-  #main .swiper-pagination .swiper-pagination-bullet {
+  #main .slick-dots li {
     height: 27px;
     font-size: 12px;
   }
@@ -884,7 +891,7 @@ section#section4 .clients_logo_list {
     gap: 5px;
     align-items: flex-end;
   }
-  #main .swiper-pagination .swiper-pagination-bullet {
+  #main .slick-dots li {
     height: auto;
     min-height: 24px;
     font-size: 10px;

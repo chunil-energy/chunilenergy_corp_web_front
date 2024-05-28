@@ -249,26 +249,4 @@ $(document).ready(function () {
       window.open(site_url, "_target");
     }
   });
-
-  // footer sns button click
-  $(".footer_social_wrap button").on("click", function () {
-    const clickButtonId = $(this).attr("id");
-    console.log(clickButtonId);
-    let site_url = "";
-
-    switch (clickButtonId) {
-      case "blog":
-        site_url = "https://blog.naver.com/zguhada";
-        break;
-      case "instagram":
-        site_url = "https://www.instagram.com/zguhada/";
-        break;
-      default:
-        break;
-    }
-
-    if (site_url) {
-      window.open(site_url, "_target");
-    }
-  });
 });

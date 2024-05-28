@@ -25,6 +25,7 @@ function observerCallback(entries) {
                 }, 880);
             } else {
                 setTimeout(() => {
+                    animationElements.forEach(element => element.classList.remove('Loaded'));
                     entry.target.classList.add("Loaded");
                 }, 1)
             }

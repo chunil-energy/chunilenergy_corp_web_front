@@ -42,6 +42,10 @@
     <!-- 메인 css -->
     <link rel="stylesheet" href="main.css">
 
+     <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- Link aos CSS -->
@@ -384,12 +388,60 @@
 
     <div class="body">
         <!-- main -->
+        <!-- <div class="img_wrap swiper-slide">
+            <img class="only_pc_inline" src="./assets/main/banner/hero_bg_03_compressed.png" draggable="false" />
+            <img class="only_mo_inline" src="./assets/main/banner/mo/hero_bg_03_compressed.jpg" draggable="false" />
+            <div class="img_content animation fadeUp delay_1">
+                <p class="title white left semi_bold only_pc_block">폐기물 수거, 집하, 처리, 소각까지<br />천일에너지가 폐기물의
+                    생태계를 만듭니다.</p>
+                <p class="title white left semi_bold only_mo_block">천일에너지가 폐기물의<br />생태계를 만듭니다.</p>
+                <p class="sub_title text_18 white left">수거부터 집하, 처리, 소각까지<br />인프라가 지구를 지키는 경쟁력이 됩니다.</p>
+                <button id="main_slide_3" class="white text_16 flex justify_center align_center hover">
+                    자세히 보기
+                    <img src="./assets/ico_right_wh.svg" alt="->" />
+                </button>
+            </div>
+        </div> -->
+        <!-- <div class="img_wrap swiper-slide">
+            <img class="only_pc_inline" src="./assets/main/banner/hero_bg_06_compressed.png" draggable="false" />
+            <img class="only_mo_inline" src="./assets/main/banner/mo/hero_bg_06_compressed.jpg" draggable="false" />
+            <div class="img_content animation fadeUp delay_1">
+                <p class="title white left semi_bold">
+                    천일서비스와 함께 한다는 것<br />지구를 위한 인테리어를 <br class="only_mo_block" />한다는 것
+                </p>
+                <p class="sub_title text_18 white left">
+                    그냥 인테리어 말고, 지구를 위한 인테리어<br />천일서비스와 함께 진정한 친환경 인테리어를 시작해보세요
+                </p>
+                <button id="main_slide_6" class="white text_16 flex justify_center align_center hover">
+                    자세히 보기
+                    <img src="./assets/ico_right_wh.svg" alt="->" />
+                </button>
+            </div>
+        </div> -->
+        <!-- <div class="img_wrap swiper-slide">
+            <img class="only_pc_inline" src="./assets/main/banner/hero_bg_08.jpg" draggable="false" />
+            <img class="only_mo_inline" src="./assets/main/banner/mo/hero_bg_08.jpg" draggable="false" />
+            <div class="img_content animation fadeUp delay_1">
+                <p class="title white left semi_bold">
+                    지구가 사랑하는 플레이<br/>천일에너지 & 지자체 콤비플레이!
+                </p>
+                <p class="sub_title text_18 white left">
+                    전국 37개 지자체가 천일에너지와 함께하는 이유,<br/>궁금하지 않으세요?
+                </p>
+                <button id="main_slide_8" class="white text_16 flex justify_center align_center hover">
+                    자세히 보기
+                    <img src="./assets/ico_right_wh.svg" alt="->" />
+                </button>
+            </div>
+        </div> -->   
         <section id="main" class="container">
-            <div class="main_wrap mainSwiper">
-                <div class="swiper-wrapper">
+            <div class="main_wrap">
+                <div class="swiper-wrapper mainSwiper">
                     <div class="img_wrap swiper-slide">
-                        <img class="only_pc_inline" src="./assets/main/banner/hero_bg_01_compressed.jpg" draggable="false" />
-                        <img class="only_mo_inline" src="./assets/main/banner/mo/hero_bg_01_compressed.jpg" draggable="false" />
+                        <img class="only_pc_inline" src="./assets/main/banner/hero_bg_01_compressed.jpg"
+                            draggable="false" />
+                        <img class="only_mo_inline" src="./assets/main/banner/mo/hero_bg_01_compressed.jpg"
+                            draggable="false" />
                         <!-- <div class="black_shadow"></div> -->
                         <div class="img_content animation fadeUp delay_1">
                             <p class="title white left semi_bold">폐기물을 에너지로, <br />모든것이 에너지로</p>
@@ -402,12 +454,14 @@
                         </div>
                     </div>
                     <div class="img_wrap swiper-slide">
-                        <img class="only_pc_inline" src="./assets/main/banner/hero_bg_02_compressed.png" draggable="false" />
-                        <img class="only_mo_inline" src="./assets/main/banner/mo/hero_bg_02_compressed.jpg" draggable="false" />
-                        <div class="img_content animation fadeUp">
+                        <img class="only_pc_inline" src="./assets/main/banner/hero_bg_02_compressed.png"
+                            draggable="false" />
+                        <img class="only_mo_inline" src="./assets/main/banner/mo/hero_bg_02_compressed.jpg"
+                            draggable="false" />
+                        <div class="img_content animation fadeUp delay_1">
                             <p class="title white left semi_bold">지구를 구하는<br />가장 쉬운 방법</p>
                             <p class="sub_title text_18 white left">
-                                폐기물 처리 No.1 플랫폼 지구하다와 함께 <br/>올바른 폐기 문화를 만들어요!
+                                폐기물 처리 No.1 플랫폼 지구하다와 함께 <br />올바른 폐기 문화를 만들어요!
                             </p>
                             <button id="main_slide_2" class="white text_16 flex justify_center align_center hover">
                                 자세히 보기
@@ -415,23 +469,11 @@
                             </button>
                         </div>
                     </div>
-                    <!-- <div class="img_wrap swiper-slide">
-                        <img class="only_pc_inline" src="./assets/main/banner/hero_bg_03_compressed.png" draggable="false" />
-                        <img class="only_mo_inline" src="./assets/main/banner/mo/hero_bg_03_compressed.jpg" draggable="false" />
-                        <div class="img_content animation fadeUp delay_1">
-                            <p class="title white left semi_bold only_pc_block">폐기물 수거, 집하, 처리, 소각까지<br />천일에너지가 폐기물의
-                                생태계를 만듭니다.</p>
-                            <p class="title white left semi_bold only_mo_block">천일에너지가 폐기물의<br />생태계를 만듭니다.</p>
-                            <p class="sub_title text_18 white left">수거부터 집하, 처리, 소각까지<br />인프라가 지구를 지키는 경쟁력이 됩니다.</p>
-                            <button id="main_slide_3" class="white text_16 flex justify_center align_center hover">
-                                자세히 보기
-                                <img src="./assets/ico_right_wh.svg" alt="->" />
-                            </button>
-                        </div>
-                    </div> -->
                     <div class="img_wrap swiper-slide">
-                        <img class="only_pc_inline" src="./assets/main/banner/hero_bg_04_compressed.jpg" draggable="false" />
-                        <img class="only_mo_inline" src="./assets/main/banner/mo/hero_bg_04_compressed.jpg" draggable="false" />
+                        <img class="only_pc_inline" src="./assets/main/banner/hero_bg_04_compressed.jpg"
+                            draggable="false" />
+                        <img class="only_mo_inline" src="./assets/main/banner/mo/hero_bg_04_compressed.jpg"
+                            draggable="false" />
                         <div class="img_content animation fadeUp delay_1">
                             <p class="title white left semi_bold">신재생 에너지 생산의 <br class="only_mo_block" />전 과정을 <br
                                     class="only_pc_block" />천일의 이름으로, <br class="only_mo_block" />One Stop Solution</p>
@@ -446,8 +488,10 @@
                         </div>
                     </div>
                     <div class="img_wrap swiper-slide">
-                        <img class="only_pc_inline" src="./assets/main/banner/hero_bg_05_compressed.jpg" draggable="false" />
-                        <img class="only_mo_inline" src="./assets/main/banner/mo/hero_bg_05_compressed.jpg" draggable="false" />
+                        <img class="only_pc_inline" src="./assets/main/banner/hero_bg_05_compressed.jpg"
+                            draggable="false" />
+                        <img class="only_mo_inline" src="./assets/main/banner/mo/hero_bg_05_compressed.jpg"
+                            draggable="false" />
                         <div class="img_content animation fadeUp delay_1">
                             <p class="title white left semi_bold">
                                 지구가 사랑하는 플레이<br />천일에너지 & 지자체 <br class="only_mo_block" />콤비플레이!
@@ -461,25 +505,11 @@
                             </button>
                         </div>
                     </div>
-                    <!-- <div class="img_wrap swiper-slide">
-                        <img class="only_pc_inline" src="./assets/main/banner/hero_bg_06_compressed.png" draggable="false" />
-                        <img class="only_mo_inline" src="./assets/main/banner/mo/hero_bg_06_compressed.jpg" draggable="false" />
-                        <div class="img_content animation fadeUp delay_1">
-                            <p class="title white left semi_bold">
-                                천일서비스와 함께 한다는 것<br />지구를 위한 인테리어를 <br class="only_mo_block" />한다는 것
-                            </p>
-                            <p class="sub_title text_18 white left">
-                                그냥 인테리어 말고, 지구를 위한 인테리어<br />천일서비스와 함께 진정한 친환경 인테리어를 시작해보세요
-                            </p>
-                            <button id="main_slide_6" class="white text_16 flex justify_center align_center hover">
-                                자세히 보기
-                                <img src="./assets/ico_right_wh.svg" alt="->" />
-                            </button>
-                        </div>
-                    </div> -->
                     <div class="img_wrap swiper-slide">
-                        <img class="only_pc_inline" src="./assets/main/banner/hero_bg_07_compressed.jpg" draggable="false" />
-                        <img class="only_mo_inline" src="./assets/main/banner/mo/hero_bg_07_compressed.jpg" draggable="false" />
+                        <img class="only_pc_inline" src="./assets/main/banner/hero_bg_07_compressed.jpg"
+                            draggable="false" />
+                        <img class="only_mo_inline" src="./assets/main/banner/mo/hero_bg_07_compressed.jpg"
+                            draggable="false" />
                         <div class="img_content animation fadeUp delay_1">
                             <p class="title white left semi_bold">
                                 모든 것을 에너지로<br />당신은 신재생에너지 전문가로
@@ -493,22 +523,6 @@
                             </button>
                         </div>
                     </div>
-                    <!-- <div class="img_wrap swiper-slide">
-                        <img class="only_pc_inline" src="./assets/main/banner/hero_bg_08.jpg" draggable="false" />
-                        <img class="only_mo_inline" src="./assets/main/banner/mo/hero_bg_08.jpg" draggable="false" />
-                        <div class="img_content animation fadeUp delay_1">
-                            <p class="title white left semi_bold">
-                                지구가 사랑하는 플레이<br/>천일에너지 & 지자체 콤비플레이!
-                            </p>
-                            <p class="sub_title text_18 white left">
-                                전국 37개 지자체가 천일에너지와 함께하는 이유,<br/>궁금하지 않으세요?
-                            </p>
-                            <button id="main_slide_8" class="white text_16 flex justify_center align_center hover">
-                                자세히 보기
-                                <img src="./assets/ico_right_wh.svg" alt="->" />
-                            </button>
-                        </div>
-                    </div> -->
                 </div>
                 <div class="swiper-button-next hover">
                     <img src="./assets/main/ico_right_r.svg" />
@@ -868,13 +882,7 @@
                             <a href="./index.html">
                                 <img class="logo" src="./assets/ci_logo_wh.svg" alt="천일 에너지 로고" />
                             </a>
-                            <div class="footer_nav_list flex justify_start align_center">
-                                <a href="./cooperation/proposal.html" class="footer_nav text_16 semi_bold">제휴제안</a>
-                                <a href="./business/jiguhada.html" class="footer_nav text_16 semi_bold">플랫폼</a>
-                                <a href="./introduce/affiliates.html" class="footer_nav text_16 semi_bold">인프라</a>
-                                <a href="./business/solution.html" class="footer_nav text_16 semi_bold">서비스</a>
-                                <button type="button" class="sitemap_open footer_nav text_16 semi_bold only_mo_block">사이트맵</button>
-                            </div>
+                            <div class="footer_nav_list flex justify_start align_center"></div>
                         </div>
                         <!-- footer_info & footer_cs -->
                         <div class="flex justify_space_between align_start" style="gap: 80px;">
@@ -931,6 +939,7 @@
 
     <!-- 애니메이션 코드 -->
     <script src="./common/animation.js"></script>
+    <script src="./common/footer_main.js"></script>
     <script src="./common/header.js"></script>
     <script src="./common/headerChangeByScroll.js"></script>
 
@@ -942,90 +951,73 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- Initialize Swiper -->
     <script>
         // OUR INFRA, 상생협력(COOPERATION), 원스톱 솔루션(SOLUTION)
         const menu = ['VISION', 'ZGUHADA', 'ONE STOP', 'GOVERNMENT', 'TEAM CHUNIL']; // 'COOPERATION'
-        const mainSwiper = new Swiper(".mainSwiper", {
-            slidesPerView: 1,
-            spaceBetween: 0,
-            loop: true,
-            allowTouchMove: false,
-            autoplay: {
-                delay: 5000,
-                waitForTransition: false,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-                renderBullet: function (index, className) {
-                    return '<span class="' + className + '">' + (menu[index]) + '</span>';
-                },
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            on: {
-                init: function () {
-
-                },
-                realIndexChange: function () {
-                    const index_currentSlide = this.realIndex;
-                    $('.swiper-wrapper > img_wrap:nth-child(' + index_currentSlide + ') .img_content').addClass('Loaded');
-                    // 배경 이미지 fadeIn
-                    // $('.swiper-wrapper > img_wrap:nth-child(' + index_currentSlide + ') img').addClass('Loaded');
-                },
-                beforeTransitionStart: function () {
-                    $('.img_content').removeClass('Loaded');
-                    // 배경 이미지 fadeIn
-                    // $('.swiper-wrapper .img_wrap img').removeClass('Loaded');
-                },
+        $('.mainSwiper').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            speed : 800,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            infinite: true,
+            dots : true, 
+            pauseOnFocus: false,
+            pauseOnHover: false,
+            pauseOnDotsHover: true,
+            vertical : false,
+            prevArrow: '.swiper-button-prev',
+            nextArrow: '.swiper-button-next',
+            appendDots: '.swiper-pagination',
+            customPaging: function (slider, i) {
+                console.log(slider);
+                return menu[i];
             },
         });
 
         // cooperation
         const our_clients = [
-            {src: './assets/logos/img_logo_01.jpg', alt: "성동구 회색로고"},
-            {src: './assets/logos/img_logo_02.jpg', alt: "동대문구 회색로고"},
-            {src: './assets/logos/img_logo_03.jpg', alt: "노원구 회색로고"},
-            {src: './assets/logos/img_logo_04.jpg', alt: "서초구 회색로고"},
-            {src: './assets/logos/img_logo_05.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_06.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_07.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_08.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_09.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_10.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_11.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_12.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_13.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_14.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_15.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_16.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_17.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_18.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_19.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_20.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_21.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_22.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_23.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_24.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_25.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_26.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_27.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_28.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_29.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_30.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_31.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_32.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_33.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_34.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_35.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_36.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_37.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_38.jpg', alt: " 회색로고"},
-            {src: './assets/logos/img_logo_39.jpg', alt: " 회색로고"},
+            { src: './assets/logos/img_logo_01.jpg', alt: "성동구 회색로고" },
+            { src: './assets/logos/img_logo_02.jpg', alt: "동대문구 회색로고" },
+            { src: './assets/logos/img_logo_03.jpg', alt: "노원구 회색로고" },
+            { src: './assets/logos/img_logo_04.jpg', alt: "서초구 회색로고" },
+            { src: './assets/logos/img_logo_05.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_06.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_07.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_08.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_09.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_10.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_11.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_12.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_13.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_14.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_15.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_16.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_17.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_18.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_19.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_20.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_21.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_22.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_23.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_24.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_25.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_26.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_27.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_28.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_29.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_30.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_31.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_32.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_33.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_34.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_35.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_36.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_37.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_38.jpg', alt: " 회색로고" },
+            { src: './assets/logos/img_logo_39.jpg', alt: " 회색로고" },
         ]
 
 
