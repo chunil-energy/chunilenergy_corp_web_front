@@ -3,7 +3,7 @@ html {
 }
 
 .page_title_image_wrap {
-  background-image: url("./assets/affiliates/affiliates_main_compressed.jpg");
+  background-image: url("./assets/affiliates_main_compressed.jpg");
 }
 
 .affiliates_wrap {
@@ -72,34 +72,34 @@ html {
   margin: 36px 0px;
 }
 #factory.content_wrap .img_wrap {
-  background-image: url("./assets/affiliates/affiliates_1_compressed.jpg");
+  background-image: url("./assets/affiliates_1_compressed.jpg");
 }
 #hub.content_wrap .img_wrap {
-  background-image: url("./assets/affiliates/affiliates_2_compressed.jpg");
+  background-image: url("./assets/affiliates_2_compressed.jpg");
 }
 #service.content_wrap .img_wrap {
-  background-image: url("./assets/affiliates/affiliates_3_compressed.jpg");
+  background-image: url("./assets/affiliates_3_compressed.jpg");
 }
 #sugerbot.content_wrap .img_wrap {
-  background-image: url("./assets/affiliates/affiliates_4_compressed.jpg");
+  background-image: url("./assets/affiliates_4_compressed.jpg");
 }
 #pathfinder.content_wrap .img_wrap {
-  background-image: url("./assets/affiliates/affiliates_5_compressed.jpg");
+  background-image: url("./assets/affiliates_5_compressed.jpg");
 }
 #chunilCD.content_wrap .img_wrap {
-  background-image: url("./assets/affiliates/affiliates_6_compressed.jpg");
+  background-image: url("./assets/affiliates_6_compressed.jpg");
 }
 #chunil.content_wrap .img_wrap {
-  background-image: url("./assets/affiliates/affiliates_7_compressed.jpg");
+  background-image: url("./assets/affiliates_7_compressed.jpg");
 }
 #solapark.content_wrap .img_wrap {
-  background-image: url("./assets/affiliates/affiliates_8_compressed.jpg");
+  background-image: url("./assets/affiliates_8_compressed.jpg");
 }
 #private.content_wrap .img_wrap {
-  background-image: url("./assets/affiliates/affiliates_9_compressed.jpg");
+  background-image: url("./assets/affiliates_9_compressed.jpg");
 }
 #sungsu.content_wrap .img_wrap {
-  background-image: url("./assets/affiliates/affiliates_10_compressed.jpg");
+  background-image: url("./assets/affiliates_10_compressed.jpg");
 }
 
 .content_wrap .desc {
@@ -135,7 +135,7 @@ html {
   position: relative;
   width: 24px;
   height: 24px;
-  background-image: url("./assets/affiliates/ico_map.svg");
+  background-image: url("./assets/ico_map.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -149,10 +149,10 @@ html {
   justify-content: space-between;
 }
 .content_tag_list .content_tag.ico_right::before {
-  background-image: url("./assets/affiliates/ico_right.svg");
+  background-image: url("./assets/ico_right.svg");
 }
 .content_tag_list .content_tag.ico_download::before {
-  background-image: url("./assets/affiliates/ico_download.svg");
+  background-image: url("./assets/ico_download.svg");
 }
 
 /* 미니 PC */
