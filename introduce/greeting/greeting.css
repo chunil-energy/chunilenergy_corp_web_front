@@ -1,0 +1,188 @@
+.page_title_image_wrap {
+  background-image: url("./assets/greeting_main_compressed.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.greeting_wrap {
+  width: 90%;
+  margin: 150px auto 220px;
+  max-width: 1500px;
+}
+.greeting_wrap .greeting_list_wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.greeting_wrap .greeting_list_wrap .greeting_row {
+  width: 100%;
+  gap: 120px;
+  margin-bottom: 150px;
+  padding-left: 40px;
+}
+.greeting_list_wrap .greeting_row:first-child {
+  padding-left: 0px;
+  padding-right: 40px;
+}
+.greeting_list_wrap .greeting_row .img_wrap {
+  width: 600px;
+  height: 400px;
+  border-radius: 14px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+#greeting_1.greeting_row .img_wrap {
+  background-image: url("./assets/greeting_1_compressed.jpg");
+}
+#greeting_2.greeting_row .img_wrap {
+  background-image: url("./assets/greeting_2_compressed.jpg");
+}
+#greeting_3.greeting_row .img_wrap {
+  width: 480px;
+  height: 680px;
+  background-image: url("./assets/greeting_3_fix.jpg");
+}
+#greeting_4.greeting_row .img_wrap {
+  background-image: url("./assets/greeting_4_compressed.jpg");
+}
+.greeting_list_wrap .greeting_row .greeting_title {
+  font-size: 28px;
+  line-height: 150%; /* 42px */
+  letter-spacing: -1.12px;
+  margin-bottom: 20px;
+}
+.greeting_list_wrap .greeting_row .greeting_desc {
+  line-height: 160%; /* 25.6px */
+  letter-spacing: -0.64px;
+}
+
+.greeting_wrap .greeting_banner {
+  width: 100%;
+  height: 500px;
+  border-radius: 14px;
+  background: #00000033;
+  background-image: url("./assets/greeting_banner_compressed.jpg");
+  background-position: center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+}
+.greeting_wrap .greeting_banner p.title {
+  font-size: 28px;
+  line-height: 150%; /* 42px */
+  letter-spacing: -1.12px;
+  margin-bottom: 30px;
+}
+.greeting_wrap .greeting_banner p.sub_title {
+  line-height: 160%;
+  letter-spacing: -0.72px;
+}
+.greeting_wrap .greeting_banner p.sub_title b {
+  font-weight: 600;
+}
+
+/* 미니 PC */
+@media screen and (max-width: 1080px) {
+  .greeting_wrap {
+    width: 94%;
+    margin: 120px auto 200px;
+  }
+
+  .greeting_wrap .greeting_list_wrap .greeting_row {
+    gap: 80px;
+    margin-bottom: 100px;
+    padding-left: 0px;
+  }
+  .greeting_list_wrap .greeting_row:first-child {
+    padding-right: 0px;
+  }
+
+  .greeting_list_wrap .greeting_row .img_wrap {
+    width: 420px;
+    height: 260px;
+  }
+  #greeting_3.greeting_row .img_wrap {
+    width: 340px;
+    height: 473px;
+  }
+}
+
+/* 태블릿 이하 */
+@media screen and (max-width: 870px) {
+  .greeting_wrap {
+    width: 100%;
+    margin: 60px auto 80px;
+    padding: 0px 24px;
+    max-width: 550px;
+  }
+  .greeting_wrap .greeting_list_wrap .greeting_row {
+    gap: 22px;
+    margin-bottom: 70px;
+    padding-left: 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  #greeting_2.greeting_row, 
+  #greeting_4.greeting_row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -moz-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+  .greeting_list_wrap .greeting_row .img_wrap {
+    width: 100%;
+    height: 57.78vw;
+    min-height: 208px;
+    max-height: 300px;
+    border-radius: 10px;
+  }
+  #greeting_3.greeting_row .img_wrap {
+    width: 100%;
+    height: 122.78vw;
+    min-height: 442px;
+    max-height: 580px;
+  }
+
+  .greeting_row .grow {
+    width: 100%;
+  }
+  .greeting_list_wrap .greeting_row .greeting_title {
+    width: 100%;
+    font-size: 20px;
+    line-height: 140%; /* 42px */
+    letter-spacing: -0.8px;
+    margin-bottom: 12px;
+  }
+  .greeting_list_wrap .greeting_row .greeting_desc {
+    width: 100%;
+    letter-spacing: -0.56px;
+  }
+  .greeting_row .greeting_desc br {
+    display: none;
+  }
+
+  .greeting_wrap .greeting_banner {
+    height: 380px;
+    border-radius: 10px;
+  }
+  .greeting_wrap .greeting_banner p.title {
+    font-size: 16px;
+    letter-spacing: -0.64px;
+    margin-bottom: 16px;
+  }
+  .greeting_wrap .greeting_banner p.sub_title {
+    font-size: 13px;
+    letter-spacing: -0.52px;
+  }
+}
+
+/* 모바일 (greeting_desc 줄바꿈) */
+@media screen and (max-width: 550px) {
+  .greeting_row .greeting_desc br {
+    display: block;
+  }
+}

@@ -81,7 +81,7 @@ $(document).ready(function () {
               <p class="text_16 black2 semi_bold mb_16">
                   <a class="hover" href="../../business/jiguhada/">폐기물 처리<br />플랫폼 지구하다</a>
               </p>
-              <div class="sub_nav_list flex flex_col align_start justify_center">
+              <div class="sub_nav_list flex flex_col align_start justify_center" id="jiguhada_nav">
                   <a href="../../business/jiguhada/#saas">
                       <div class="sub_nav gray semi_bold left hover">대형 생활폐기물 SaaS</div>
                   </a>
@@ -247,7 +247,7 @@ $(document).ready(function () {
         <div class="sitmap_col">
             <p class="title left white">사업영역</p>
             <div class="nav_list flex flex_col justify_start align_start">
-                <div class="sub_nav_list nav_hover">
+                <div class="sub_nav_list nav_hover" id="same_page_url">
                     <p class="sub_title left white">폐기물 처리<br />원스탑 솔루션</p>
                     <a href="../../business/solution/">
                         <div class="sub_nav left white">PROCESS</div>

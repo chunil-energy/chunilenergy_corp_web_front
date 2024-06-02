@@ -1,0 +1,101 @@
+.page_title_image_wrap {
+  background-image: url("./assets/partners_main_compressed.jpg");
+  /* background-size: 1920px auto; */
+  background-position: top center;
+}
+
+.partners_wrap {
+  width: 90%;
+  margin: 140px auto 70px;
+  max-width: 1200px;
+}
+.partners_wrap .partners_title {
+  width: 100%;
+  font-size: 40px;
+  line-height: 130%; /* 52px */
+  letter-spacing: -1.6px;
+  margin-bottom: 60px;
+}
+
+.partners_wrap .partners_list_wrap {
+  width: 100%;
+  margin: 0 auto;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.partners_list_wrap .partner_box {
+  flex: 1 1 20%;
+  max-width: 232px;
+  border-radius: 8px;
+  background: #f7f7fa;
+  height: 152px;
+}
+.partners_list_wrap .partner_box.hidden {
+  visibility: hidden;
+}
+.partners_list_wrap .partner_box:last-child {
+  display: none;
+}
+
+.partner_box img {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+.partner_box .logo_c {
+  display: none;
+}
+.partner_box:hover .logo {
+  display: none;
+}
+.partner_box:hover .logo_c {
+  display: block;
+}
+
+/* partners_list_wrap 줄바꿈 */
+@media screen and (max-width: 1380px) {
+  .partners_list_wrap .partner_box {
+    flex: 1 1 17%;
+  }
+}
+
+/* 미니 PC */
+@media screen and (max-width: 1080px) {
+  .partners_wrap {
+    width: 94%;
+  }
+  .partners_list_wrap .partner_box {
+    flex: 1 1 20%;
+  }
+  .partners_list_wrap .partner_box:last-child {
+    display: block;
+  }
+}
+
+/* 태블릿 이하 */
+@media screen and (max-width: 870px) {
+  .partners_wrap {
+    width: 100%;
+    max-width: 550px;
+    margin: 50px auto 80px;
+    padding: 0px 24px;
+  }
+  .partners_wrap .partners_title {
+    font-size: 22px;
+    letter-spacing: -0.88px;
+    margin-bottom: 30px;
+  }
+  .partners_wrap .partners_list_wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .partners_list_wrap .partner_box {
+    flex: unset;
+    max-width: 300px;
+  }
+}
