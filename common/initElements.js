@@ -156,10 +156,10 @@ $(document).ready(function () {
   </div>
   <!-- 상단 헤더 -->
   <nav>
-      <a href="../../index.html" class="logo">
+      <button class="logo">
           <img id="active_logo" src="../../assets/ci_logo.svg" alt="천일에너지 로고" />
           <img src="../../assets/ci_logo_wh.svg" alt="천일에너지 로고" />
-      </a>
+      </button>
 
       <ul class="flex justify_center align_center">
           <li><a>회사소개</a></li>
@@ -183,9 +183,9 @@ $(document).ready(function () {
   //
   $('#sitemap').append(`
     <div class="sitemap_header">
-        <a href="../../index.html" class="logo">
+        <button class="logo">
             <img src="../../assets/ci_logo_wh.svg" alt="천일에너지 로고" />
-        </a>
+        </button>
         <div class="menu_wrap flex justify_end align_center">
             <button type="button" id="partner_offer"
                 class="partner_offer center white text_14 justify_center align_center">
@@ -339,9 +339,9 @@ $(document).ready(function () {
             <div class="footer_contents flex flex_col justify_start align_start">
                 <!-- logo & footer_nav -->
                 <div class="flex justify_start align_center">
-                    <a href="../../index.html">
-                        <img class="logo" src="../../assets/ci_logo_wh.svg" alt="천일 에너지 로고" />
-                    </a>
+                    <button class="logo">
+                        <img src="../../assets/ci_logo_wh.svg" alt="천일 에너지 로고" />
+                    </button>
                     <div class="footer_nav_list flex justify_start align_center"></div>
                 </div>
                 <!-- footer_info & footer_cs -->
