@@ -114,7 +114,7 @@ html {
 }
 .content_tag_list .content_tag {
   max-width: 224px;
-  padding: 10px 24px;
+  padding: 10px 16px 10px 24px;
   height: 54px;
   align-items: center;
   gap: 8px;
