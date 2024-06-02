@@ -81,7 +81,7 @@ $(document).ready(function () {
   $(".logo").on("click", function () {
     //HTTP Redirect를 클라이언트에서 처리할때 // window.location.replace("http://example.com");
     //사용자의 클릭 이벤트용 // window.location.href = window.location.href;
-    window.location.href = "index.html";
+    window.location.href = "https://chunilenergy.com/";
   });
 
   // 헤더 메뉴 클릭 시 (하위 메뉴 show)
