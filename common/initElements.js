@@ -138,17 +138,17 @@ $(document).ready(function () {
       <div class="sub_nav_body flex justify_center align_start" style="padding: 19px 0px;">
           <div class="sub_nav_col empty_col"></div>
           <div class="sub_nav_col">
-              <a href="../../press/">
+              <a href="../../pr_center/press/">
                   <p class="text_16 black2 semi_bold hover">보도자료</p>
               </a>
           </div>
           <div class="sub_nav_col">
-              <a href="../../video/">
+              <a href="../../pr_center/video/">
                   <p class="text_16 black2 semi_bold hover">광고영상</p>
               </a>
           </div>
           <div class="sub_nav_col">
-              <a href="../../notice/">
+              <a href="../../pr_center/notice/">
                   <p class="text_16 black2 semi_bold hover">공지사항</p>
               </a>
           </div>
@@ -312,13 +312,13 @@ $(document).ready(function () {
         <div class="sitmap_col">
             <p class="title left white">홍보센터</p>
             <div class="nav_list flex flex_col justify_start align_start">
-                <a href="../../press/">
+                <a href="../../pr_center/press/">
                     <p class="sub_title left white nav_hover">보도자료</p>
                 </a>
-                <a href="../../video/">
+                <a href="../../pr_center/video/">
                     <p class="sub_title left white nav_hover">광고영상</p>
                 </a>
-                <a href="../../notice/">
+                <a href="../../pr_center/notice/">
                     <p class="sub_title left white nav_hover">공지사항</p>
                 </a>
             </div>
