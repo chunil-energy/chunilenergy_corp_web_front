@@ -249,18 +249,22 @@ section#section1 .bg_shape2 {
 }
 .infra_item#infra_1 {
   background-position: left center;
-  background-image: url("./assets/main/infra_img_1.jpg");
+  /* background-image: url("./assets/main/infra_img_1.jpg"); */
+  background-image: url("./assets/optimize/infra_img_1.webp");
 }
 .infra_item#infra_2 {
   background-position: right center;
-  background-image: url("./assets/main/infra_img_2.jpg");
+  /* background-image: url("./assets/main/infra_img_2.jpg"); */
+  background-image: url("./assets/optimize/infra_img_2.webp");
 }
 .infra_item#infra_3 {
   background-position: left center;
-  background-image: url("./assets/main/infra_img_3.jpg");
+  /* background-image: url("./assets/main/infra_img_3.jpg"); */
+  background-image: url("./assets/optimize/infra_img_3.webp");
 }
 .infra_item#infra_4 {
-  background-image: url("./assets/main/infra_img_4.jpg");
+  /* background-image: url("./assets/main/infra_img_4.jpg"); */
+  background-image: url("./assets/optimize/infra_img_4.webp");
 }
 .infra_item::after {
   content: "";
@@ -502,7 +506,7 @@ section#section2 {
 }
 .about_us_wrap #about_box1.about_box {
   height: 100%;
-  background-image: url("./assets/main/aboutus_img_1_compressed.jpg");
+  background-image: url("./assets/optimize/aboutus_img_1_compressed.webp");
 }
 .about_us_wrap #about_box1 .title,
 .about_us_wrap #about_box3 .title {
@@ -529,7 +533,7 @@ section#section2 {
 }
 .about_us_wrap #about_box3.about_box {
   flex: 1 1 330px;
-  background-image: url("./assets/main/aboutus_img_2_compressed.jpg");
+  background-image: url("./assets/optimize/aboutus_img_2_compressed.webp");
   background-size: auto 100% !important;
 }
 
@@ -620,7 +624,8 @@ section#section3 div.fixed_content {
 }
 section#section3 div#business_1 {
   align-self: flex-start;
-  background: url("./assets/main/business_img_1_compressed.jpg") center center/auto 100%
+  /* background: url("./assets/main/business_img_1_compressed.jpg") center center/auto 100% */
+  background: url("./assets/optimize/business_img_1_compressed.webp") center center/auto 100%
     no-repeat;
 }
 section#section3 div#business_2 {
@@ -698,7 +703,7 @@ section#section4 #our_mission .misson_banner {
   height: 390px;
   border-radius: 14px;
   overflow: hidden;
-  background: url("./assets/main/mission_img_compressed.jpg") right center/1500px auto
+  background: url("./assets/optimize/mission_img_compressed.webp") right center/1500px auto
     no-repeat;
   padding-left: 80px;
   padding-bottom: 58px;
