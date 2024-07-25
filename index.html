@@ -48,8 +48,16 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <!-- Link aos CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Link Jquery -->
-    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+
+    <!-- Link Jquery
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script> -->
+
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -468,7 +476,9 @@
                         </div>
                     </div>
                     <div class="img_wrap swiper-slide">
-                        <img class="only_pc_inline" src="./assets/main/banner/hero_bg_04_compressed.jpg"
+                        <!-- <img class="only_pc_inline" src="./assets/main/banner/hero_bg_04_compressed.jpg"
+                            draggable="false" /> -->
+                            <img class="only_pc_inline" src="./assets/optimize/hero_bg_04_compressed.webp"
                             draggable="false" />
                         <img class="only_mo_inline" src="./assets/main/banner/mo/hero_bg_04_compressed.jpg"
                             draggable="false" />
@@ -504,7 +514,7 @@
                         </div>
                     </div>
                     <div class="img_wrap swiper-slide">
-                        <img class="only_pc_inline" src="./assets/main/banner/hero_bg_07_compressed.jpg"
+                        <img class="only_pc_inline" src="./assets/optimize/hero_bg_07_compressed.webp"
                             draggable="false" />
                         <img class="only_mo_inline" src="./assets/main/banner/mo/hero_bg_07_compressed.jpg"
                             draggable="false" />
@@ -588,7 +598,7 @@
                     </button>
                 </div>
                 <!-- mo -->
-                <div class="our_infra_moSwiper">
+                <div class="our_infra_moSwiper" id="our_infra_moSwiper">
                     <div class="swiper-slide infra_item" id="infra_1">
                         <div class="infta_info">
                             <div class="infra_sub_title white semi_bold left">Logistics</div>
@@ -671,7 +681,8 @@
                     <div class="img_wrap" data-aos="fade-left">
                         <img class="logo" src="./assets/main/jiguhada_text.png" alt="지구하다 로고" />
                         <p class="white left semi_bold">지구하다는<br />깨끗한 환경을 넓힙니다.</p>
-                        <img class="bg" src="./assets/main/service_img_1.jpg" alt="지구하다는 깨끗한 환경을 넓힙니다." />
+                        <!-- <img class="bg" src="./assets/main/service_img_1.jpg" alt="지구하다는 깨끗한 환경을 넓힙니다." /> -->
+                        <img class="bg" src="./assets/optimize/service_img_1.webp" alt="지구하다는 깨끗한 환경을 넓힙니다." />
                     </div>
                     <div class="img_wrap" data-aos="fade-left" data-aos-delay="250">
                         <img class="logo" src="./assets/main/jiguhada_text.png" alt="지구하다 로고" />
@@ -783,6 +794,7 @@
                 <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
                     <span class="slider__label sr-only">
                 </div>
+
                 <!-- pc -->
                 <div class="fixed_content_wrap">
                     <div class="fixed_content flex flex_col justify_end align_start" id="business_1" data-aos="fade-up"
@@ -1026,6 +1038,24 @@
                     }]
             });
 
+            var curDown = false, curYPos = 0, curXPos = 0;
+            $('.our_infra_moSwiper').mousemove(function(m){
+                if(curDown){
+                    document.getElementById("our_infra_moSwiper").scrollBy({
+                        left: curXPos - m.pageX,
+                        behaviour: 'smooth'
+                    })
+                }
+            });
+            $('.our_infra_moSwiper').mousedown(function(m){
+                curYPos = m.pageY;
+                curXPos = m.pageX;
+                curDown = true;
+            });            
+            $('.our_infra_moSwiper').mouseup(function(){
+                curDown = false;
+            });
+
             const moBusinessSwiper = $('.business_moSwiper').slick({
                 arrow: false,
                 dots: false,
@@ -1033,6 +1063,7 @@
                 slidesToScroll: 1,
                 infinite: false,
             });
+
             var $progressBar = $('.progress');
             var $progressBarLabel = $('.slider__label');
             
@@ -1043,6 +1074,7 @@
                 
                 $progressBarLabel.text( calc + '% completed' );
             });
+                
 
             $('.clients_logo_group').append(
                 our_clients.map((client) => {
