@@ -539,6 +539,7 @@ section#section2 {
 
 /* section3 */
 .business_moSwiper {
+  display: none !important;
   position: absolute;
   top: 0;
   left: 50%;
