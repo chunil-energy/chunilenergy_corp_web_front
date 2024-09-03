@@ -54,7 +54,14 @@
     <!-- sitemap (사이트맵) -->
     <div id="sitemap"></div>
 
+    <div id="overlay">
+        <div class="cv-spinner">
+          <span class="spinner"></span>
+        </div>
+      </div>
+
     <div class="body">
+
 
         <div class="page_container">
             <!-- 제휴제안 title & img -->
@@ -458,6 +465,7 @@
 
     <script async>
 
+
         function dateFormat(date) {
             let month = date.getMonth() + 1;
             let day = date.getDate();
@@ -477,6 +485,8 @@
         var uploadFileList = []
 
         $(window).ready(function () {
+
+
 
             $(".proposal_nav").on("click", function (e) {
                 e.preventDefault();
@@ -704,6 +714,9 @@
                     return
                 }
 
+                $("#overlay").fadeIn(300);
+
+
 
                 var formData = new FormData();
 
@@ -716,7 +729,6 @@
                     formData.append("files", uploadFileList[i]);
                 }
 
-
                 $.ajax({
                     url: 'https://hook.eu2.make.com/2br5uh2vv49p9rjmjr1wg1q9sbnway74',
                     type: 'POST',
@@ -725,9 +737,11 @@
                     processData: false,
                     contentType: false,
                     success: function (data) {
+                        $("#overlay").fadeOut(300);
                         alert('제출되었습니다.');
                     },
                     error: function (error) {
+                        $("#overlay").fadeOut(300);
                         alert('제출실패! 다시 시도해주세요.' + error);
                         console.log(error);
                     }
