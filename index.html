@@ -439,7 +439,7 @@
                     <img src="./assets/ico_right_wh.svg" alt="->" />
                 </button>
             </div>
-        </div> -->   
+        </div> -->           
         <section id="main" class="container">
             <div class="main_wrap">
                 <div class="swiper-wrapper mainSwiper">
@@ -543,6 +543,26 @@
                 <img class="btn_jiguhada" src="./assets/main/btn_jiguhada.png" />
             </button>
         </section>
+
+        <!-- TODO: 디자인 반영 및 파일 추가 -->
+        <button 
+            id="newsButton" 
+            class="news_button flex_col justify_center align_center"             
+            v-show="showNewsPannel"
+        >
+            <span> 천일 뉴스</span>
+        </button>
+
+        <div 
+            id="news_pannel" 
+            class="news_pannel flex_col justify_center align_center"
+            v-show="showNewsPannel"
+        >
+            <div class="flex flex_row justify_space_between w-full">
+                <span> 천일 뉴~~스</span>
+                <button id="close_news_button"> 닫기 </button>            
+            </div>
+        </div>
 
         <!-- section1 -->
         <section id="section1" class="container">
@@ -1062,6 +1082,8 @@
             });
             var $progressBar = $('.progress');
             var $progressBarLabel = $('.slider__label');
+
+            var showNewsPannel = false;
             
             moBusinessSwiper.on('beforeChange', function(event, slick, currentSlide, nextSlide) {   
                 var calc = ( (nextSlide) / (slick.slideCount-1) ) * 100;
@@ -1092,6 +1114,14 @@
             // 지구하다 버튼 클릭 시
             $("#jiguhadaButton").on("click", function () {
                 window.location.href = "https://zguhada.com/";
+            });
+
+            $("#newsButton").on("click", function () {
+                $("#news_pannel").addClass('open_news_pannel');
+            });
+
+            $("#close_news_button").on("click", function () {                
+                $("#news_pannel").removeClass('open_news_pannel');
             });
 
             // 슬라이드 1 자세히 보기 클릭 시

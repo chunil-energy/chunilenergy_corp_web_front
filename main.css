@@ -371,7 +371,7 @@ section#section1 .bg_shape2 {
   border-radius: 14px;
 }
 .our_services_wrap .img_wrap:last-child {
-  background: linear-gradient(180deg, #1D7CEC 42.45%, #004FAC 100%);
+  background: linear-gradient(180deg, #1d7cec 42.45%, #004fac 100%);
 }
 .our_services_wrap .img_wrap:last-child::before {
   content: "";
@@ -380,7 +380,11 @@ section#section1 .bg_shape2 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(270deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.10) 100%);
+  background: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
 }
 .our_services_wrap img.logo {
   position: absolute;
@@ -620,32 +624,32 @@ section#section3 div.fixed_content {
 }
 section#section3 div#business_1 {
   align-self: flex-start;
-  background: url("./assets/main/business_img_1_compressed.jpg") center center/auto 100%
-    no-repeat;
+  background: url("./assets/main/business_img_1_compressed.jpg") center
+    center/auto 100% no-repeat;
 }
 section#section3 div#business_2 {
   margin-top: 346px;
   margin-left: 110px;
-  background: url("./assets/main/business_img_2_compressed.jpg") center center/auto 100%
-    no-repeat;
+  background: url("./assets/main/business_img_2_compressed.jpg") center
+    center/auto 100% no-repeat;
 }
 section#section3 div#business_3 {
   align-self: flex-start;
   margin-top: -180px;
-  background: url("./assets/main/business_img_3_compressed.jpg") center center/auto 100%
-    no-repeat;
+  background: url("./assets/main/business_img_3_compressed.jpg") center
+    center/auto 100% no-repeat;
 }
 section#section3 div#business_4 {
   margin-top: 180px;
   margin-left: 110px;
-  background: url("./assets/main/business_img_4_compressed.jpg") center center/auto 100%
-    no-repeat;
+  background: url("./assets/main/business_img_4_compressed.jpg") center
+    center/auto 100% no-repeat;
 }
 section#section3 div#business_5 {
   align-self: flex-start;
   margin-top: -180px;
-  background: url("./assets/main/business_img_5_compressed.jpg") center center/auto 100%
-    no-repeat;
+  background: url("./assets/main/business_img_5_compressed.jpg") center
+    center/auto 100% no-repeat;
 }
 section#section3 .fixed_content_wrap .fixed_content:nth-of-type(6) {
   min-height: 0px;
@@ -698,8 +702,8 @@ section#section4 #our_mission .misson_banner {
   height: 390px;
   border-radius: 14px;
   overflow: hidden;
-  background: url("./assets/main/mission_img_compressed.jpg") right center/1500px auto
-    no-repeat;
+  background: url("./assets/main/mission_img_compressed.jpg") right
+    center/1500px auto no-repeat;
   padding-left: 80px;
   padding-bottom: 58px;
 }
@@ -747,6 +751,53 @@ section#section4 .clients_logo_list {
   object-fit: contain;
   width: 100%;
   height: 100%;
+}
+
+/* 메인 floating pannel css */
+.news_button {
+  z-index: 1000;
+  position: fixed;
+  right: 0;
+  top: 350px;
+  background-color: blue;
+  width: 200px;
+  height: 150px;
+}
+
+.news_pannel {
+  z-index: 1000;
+  position: fixed;
+  right: -800px;
+  top: 300px;
+  background-color: white;
+  width: 800px;
+  height: 300px;
+  border-radius: 8px;
+  padding: 8px;
+  transition: right 0.5s ease, opacity 0.5s ease;
+}
+
+.open_news_pannel {
+  right: 0 !important;
+}
+
+@media screen and (max-width: 1080px) {
+  .news_pannel {
+    z-index: 1000;
+    position: fixed;
+    right: -200px;
+    top: 300px;
+    background-color: white;
+    width: 200px;
+    height: 300px;
+    border-radius: 8px;
+    padding: 8px;
+    transition: right 0.5s ease, opacity 0.5s ease;
+  }
+
+  .open_news_pannel {
+    right: 0 !important;
+  }
 }
 
 /* PC (1440px) */
@@ -981,11 +1032,11 @@ section#section4 .clients_logo_list {
     overflow-x: scroll;
     display: flex;
     gap: 20px;
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
   }
-  .our_infra_moSwiper::-webkit-scrollbar { 
-    display: none;  /* Safari and Chrome */
+  .our_infra_moSwiper::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
   }
   .swiper-slide.infra_item {
     width: 280px;
@@ -1191,7 +1242,8 @@ section#section4 .clients_logo_list {
     visibility: visible;
     z-index: 1;
   }
-  .business_moSwiper .slick-list, .business_moSwiper .slick-track {
+  .business_moSwiper .slick-list,
+  .business_moSwiper .slick-track {
     height: 100%;
   }
   .progress {
@@ -1202,13 +1254,13 @@ section#section4 .clients_logo_list {
     border-radius: 10px;
     overflow: hidden;
     margin: 40px auto 0px;
-    
+
     background-color: #ffffff4d;
     background-image: linear-gradient(to right, #fff, #fff);
     background-repeat: no-repeat;
     background-size: 0 100%;
-    
-    transition: background-size .4s ease-in-out;
+
+    transition: background-size 0.4s ease-in-out;
   }
   .sr-only {
     position: absolute;
@@ -1217,7 +1269,7 @@ section#section4 .clients_logo_list {
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip: rect(0,0,0,0);
+    clip: rect(0, 0, 0, 0);
     border: 0;
   }
   section#section3 div.swiper-slide.fixed_content {
@@ -1268,8 +1320,8 @@ section#section4 .clients_logo_list {
   section#section4 #our_mission .misson_banner {
     height: 312px;
     border-radius: 10px;
-    background: url("./assets/main/mission_img_mo_compressed.jpg") right center/100% auto
-      no-repeat;
+    background: url("./assets/main/mission_img_mo_compressed.jpg") right
+      center/100% auto no-repeat;
     padding-left: 24px;
     padding-bottom: 30px;
   }
