@@ -552,6 +552,72 @@
 
         </div>
 
+        <div id="newsPopupWrap" class="flex flex_col">
+            <div class="flex flex_row justify_space_between">
+                <p class="newsPopupTitle ">지역상생 및 ESG 행정 실현</p>
+                <button id="newsPopupClose" class="">
+                    <img class="btn_close" src="./assets/main/news_ico_close.svg"/>
+                </button>
+            </div>
+
+            <div style="height: 60px"></div>
+
+            <div class="newsPopupContent flex flex_row grow">
+
+                <div class="newsCard flex flex_col">
+                    <a href="https://n.news.naver.com/article/056/0011808743" target="_blank">
+                        <img class="newsCardThumbnail" src="./assets/main/news_1_thumbnail.png"/>
+                    </a>
+                    <div class="newsCardInfoSection flex flex_row align_center">
+                        <div class="newsCardType">
+                            <p>보도자료</p>
+                        </div>
+                        <p class="newsCardRegDate">2023.08.22</p>
+
+                    </div>
+                    <p class="newsCardTitle">
+                        생활 폐기물 남김없이 재활용 <br>
+                        처리비용까지 절감
+                    </p>
+                </div>
+
+                <div class="newsCard flex flex_col">
+                    <a href="https://n.news.naver.com/article/001/0014424093" target="_blank">
+                        <img class="newsCardThumbnail" src="./assets/main/news_2_thumbnail.png"/>
+                    </a>
+                    <div class="newsCardInfoSection flex flex_row align_center">
+                        <div class="newsCardType">
+                            <p>보도자료</p>
+                        </div>
+                        <p class="newsCardRegDate">2023.07.16</p>
+
+                    </div>
+                    <p class="newsCardTitle">
+                        천일에너지·광명시 업무 협약식<br>
+                        생활폐기물 순환 경제 처리체계 구축
+                    </p>
+                </div>
+
+                <div class="newsCard flex flex_col">
+                    <a href="https://n.news.naver.com/article/081/0003462267" target="_blank">
+                        <img class="newsCardThumbnail" src="./assets/main/news_3_thumbnail.png"/>
+                    </a>
+                    <div class="newsCardInfoSection flex flex_row align_center">
+                        <div class="newsCardType">
+                            <p>보도자료</p>
+                        </div>
+                        <p class="newsCardRegDate">2023.06.10</p>
+
+                    </div>
+                    <p class="newsCardTitle">
+                        천일에너지·광명시 커피박 자원순환 협약식<br>
+                        커피박·산림바이오매스 무상처리
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
 
     </section>
 
@@ -1095,8 +1161,6 @@
         var $progressBar = $('.progress');
         var $progressBarLabel = $('.slider__label');
 
-        var showNewsPannel = false;
-
         moBusinessSwiper.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
             var calc = ((nextSlide) / (slick.slideCount - 1)) * 100;
 
@@ -1124,15 +1188,15 @@
 
         // 지구하다 버튼 클릭 시
         $("#jiguhadaButton").on("click", function () {
-            window.location.href = "https://zguhada.com/";
+            window.open("https://zguhada.com/");
         });
 
         $("#newsButton").on("click", function () {
-            $("#news_pannel").addClass('open_news_pannel');
+            $("#newsPopupWrap").addClass('open_news_pannel');
         });
 
-        $("#close_news_button").on("click", function () {
-            $("#news_pannel").removeClass('open_news_pannel');
+        $("#newsPopupClose").on("click", function () {
+            $("#newsPopupWrap").removeClass('open_news_pannel');
         });
 
         // 슬라이드 1 자세히 보기 클릭 시
