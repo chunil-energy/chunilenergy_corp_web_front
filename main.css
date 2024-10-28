@@ -90,7 +90,10 @@
 
 .newsPopupContent {
     gap: 20px;
+    max-width: calc(100vw - 60px - 20px);
+    overflow-x: auto;
 }
+
 
 .newsCardThumbnail {
     width: 413px;
@@ -110,6 +113,10 @@
 .newsCardRegDate {
     font-size: 14px;
     color: #818790;
+}
+
+#newsPopupTitleSection {
+    margin-bottom: 60px;
 }
 
 /* main_wrap === 메인 롤링배너 (mainSwiper) */
@@ -1114,10 +1121,9 @@ section#section4 .clients_logo_list {
     /*    top: 92px;*/
     /*    transform: translateY(0);*/
     /*}*/
-
-#main #snbArea {
-    right: -55px;
-}
+    #main #snbArea {
+        right: -55px;
+    }
 
     #jiguhadaButton img.btn_jiguhada {
         /*width: 82px;*/
@@ -1634,19 +1640,69 @@ section#section4 .clients_logo_list {
         height: 106px;
     }
 
-    #newsPopupWrap {
-        max-width: 90vw;
+    .newsPopupContent {
+        max-width: calc(100vw - 40px - 20px);
         overflow-x: scroll;
+        gap: 20px;
     }
 
     #newsPopupTitleSection {
         justify-content: start;
         flex-flow: column-reverse;
         gap: 36px;
+        margin-bottom: 28px;
     }
 
     #newsPopupClose {
         display: flex;
     }
+
+    #newsPopupClose img.btn_close {
+        width: 40px;
+        height: 40px;
+    }
+
+    #newsPopupWrap .newsPopupTitle {
+        font-size: 28px;
+        font-weight: 600;
+    }
+
+    #newsPopupWrap {
+        padding-top: 40px;
+    }
+
+    .newsCardTitle {
+        font-size: 18px;
+        font-weight: 500;
+        padding-bottom: 20px;
+        -webkit-line-clamp: 2;
+        text-overflow: ellipsis;
+    }
+
+    .newsCardInfoSection {
+        margin-top: 16px;
+        margin-bottom: 8px;
+        gap: 8px;
+    }
+
+    #newsPopupWrap {
+        top: 72px;
+    }
+
+    .newsCardThumbnail {
+        width: 250px;
+        height: 114px;
+        cursor: pointer;
+
+    }
+
+    #newsPopupWrap {
+        padding-right: 0;
+    }
+
+    .newsPopupContent .newsCard:last-child{
+        margin-right: 20px;
+    }
+
 
 }
