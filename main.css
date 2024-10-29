@@ -84,7 +84,7 @@
 
 .newsCardTitle {
     font-size: 26px;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 42px;
 }
 
@@ -1714,7 +1714,7 @@ section#section4 .clients_logo_list {
 
     .newsCardThumbnail {
         width: 250px;
-        height: 114px;
+        height: 144px;
         cursor: pointer;
         border-radius: 14px;
     }
