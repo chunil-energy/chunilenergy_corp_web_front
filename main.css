@@ -85,7 +85,7 @@
 .newsCardTitle {
     font-size: 26px;
     font-weight: 600;
-    padding-bottom: 42px;
+    margin-bottom: 42px;
 }
 
 .newsPopupContent {
@@ -94,11 +94,25 @@
     overflow-x: auto;
 }
 
+.newsCard a {
+    user-drag: none;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
 
 .newsCardThumbnail {
     width: 413px;
     height: 221px;
     cursor: pointer;
+    user-select: none;
+    user-drag: none;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 .newsCardType {
@@ -1133,7 +1147,7 @@ section#section4 .clients_logo_list {
     #newsButton img.btn_news {
         /*width: 82px;*/
         height: 108px;
-    margin-bottom: 4px;
+        margin-bottom: 4px;
 
     }
 
@@ -1676,9 +1690,12 @@ section#section4 .clients_logo_list {
     .newsCardTitle {
         font-size: 18px;
         font-weight: 500;
-        padding-bottom: 20px;
+        margin-bottom: 20px;
         -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
         text-overflow: ellipsis;
+        word-break: break-word;
     }
 
     .newsCardInfoSection {
@@ -1702,10 +1719,9 @@ section#section4 .clients_logo_list {
         padding-right: 0;
     }
 
-    .newsPopupContent .newsCard:last-child{
+    .newsPopupContent .newsCard:last-child {
         margin-right: 20px;
     }
-
 
 
 }
