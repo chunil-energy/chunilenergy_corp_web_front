@@ -94,11 +94,25 @@
     overflow-x: auto;
 }
 
+.newsCard a {
+    user-drag: none;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
 
 .newsCardThumbnail {
     width: 413px;
     height: 221px;
     cursor: pointer;
+    user-select: none;
+    user-drag: none;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 .newsCardType {
@@ -1133,7 +1147,7 @@ section#section4 .clients_logo_list {
     #newsButton img.btn_news {
         /*width: 82px;*/
         height: 108px;
-    margin-bottom: 4px;
+        margin-bottom: 4px;
 
     }
 
@@ -1702,10 +1716,9 @@ section#section4 .clients_logo_list {
         padding-right: 0;
     }
 
-    .newsPopupContent .newsCard:last-child{
+    .newsPopupContent .newsCard:last-child {
         margin-right: 20px;
     }
-
 
 
 }
