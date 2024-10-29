@@ -85,7 +85,7 @@
 .newsCardTitle {
     font-size: 26px;
     font-weight: 600;
-    padding-bottom: 42px;
+    margin-bottom: 42px;
 }
 
 .newsPopupContent {
@@ -1690,9 +1690,12 @@ section#section4 .clients_logo_list {
     .newsCardTitle {
         font-size: 18px;
         font-weight: 500;
-        padding-bottom: 20px;
+        margin-bottom: 20px;
         -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
         text-overflow: ellipsis;
+        word-break: break-word;
     }
 
     .newsCardInfoSection {
