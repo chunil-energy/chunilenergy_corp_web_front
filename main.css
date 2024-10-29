@@ -84,7 +84,7 @@
 
 .newsCardTitle {
     font-size: 26px;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 42px;
 }
 
@@ -1716,7 +1716,7 @@ section#section4 .clients_logo_list {
         width: 250px;
         height: 114px;
         cursor: pointer;
-
+        border-radius: 14px;
     }
 
     #newsPopupWrap {
