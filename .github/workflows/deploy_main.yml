@@ -55,7 +55,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "지구하다 ERP 프론트엔드 배포 결과: ${{ job.status }}\nBranch: PRODUCTION\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
+                    "text": "천일에너지 홈페이지 배포 결과: ${{ job.status }}\nBranch: PRODUCTION\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
                   }
                 }
               ]
