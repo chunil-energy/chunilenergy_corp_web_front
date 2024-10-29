@@ -113,6 +113,8 @@
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+    object-fit: cover;
+    border-radius: 14px;
 }
 
 .newsCardType {
@@ -1696,7 +1698,7 @@ section#section4 .clients_logo_list {
         max-width: 250px;
     }
 
-    .newsCardTitle p{
+    .newsCardTitle p {
         font-size: 18px;
         font-weight: 500;
         max-width: 250px;
@@ -1715,8 +1717,6 @@ section#section4 .clients_logo_list {
     .newsCardThumbnail {
         width: 250px;
         height: 144px;
-        cursor: pointer;
-        border-radius: 14px;
     }
 
     #newsPopupWrap {
