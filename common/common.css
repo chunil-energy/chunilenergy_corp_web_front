@@ -459,6 +459,10 @@ input[type="checkbox"]:checked + label:before {
   background-color: #b4b4b4;
 }
 
+.w_full {
+  width: 100%;
+}
+
 /* hover 액션 */
 .hover:hover {
   opacity: 0.7;
