@@ -117,15 +117,17 @@
 
 .newsCardType {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     color: #787A7C;
     background-color: #F3F7FA;
     border-radius: 14px;
     padding: 4px 12px;
 }
 
+
 .newsCardRegDate {
     font-size: 14px;
+    font-weight: 400;
     color: #818790;
 }
 
@@ -1691,11 +1693,13 @@ section#section4 .clients_logo_list {
         font-size: 18px;
         font-weight: 500;
         margin-bottom: 20px;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        word-break: break-word;
+        max-width: 250px;
+    }
+
+    .newsCardTitle p{
+        font-size: 18px;
+        font-weight: 500;
+        max-width: 250px;
     }
 
     .newsCardInfoSection {
@@ -1721,6 +1725,14 @@ section#section4 .clients_logo_list {
 
     .newsPopupContent .newsCard:last-child {
         margin-right: 20px;
+    }
+
+    .newsCardType {
+        font-size: 12px;
+    }
+
+    .newsCardRegDate {
+        font-size: 12px;
     }
 
 

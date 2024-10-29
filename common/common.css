@@ -562,6 +562,22 @@ input[type="checkbox"]:checked + label:before {
     pointer-events: none;
 }
 
+.one_line_ellipsis {
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-word;
+}
+
+.two_line_ellipsis {
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-word;
+}
+
 /* 미니 PC 이하 */
 @media screen and (max-width: 1080px) {
     .page_title_wrap {
