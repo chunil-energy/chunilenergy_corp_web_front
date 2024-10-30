@@ -200,239 +200,67 @@
       const isProd = location.host === "chunilenergy.com";
       const apiBaseUrl = isProd
         ? "https://backend.soogobot.com"
-        : "http://192.168.12.22:8000";
+        : "https://backend-dev.soogobot.com";
 
-      var NOW_MORE = 1; // 현재 더보기 버튼 클릭 횟수
-      var SHOW_COUNTE = 6; // 한번에 보여줄 갯수
-      var pressList = [
-        {
-          date: "2021.9.16",
-          title: `박상원 천일에너지 대표 “신재생에너지 혁신기업으로 거듭나겠다”`,
-          filePath: "./assets/1.jpg",
-          link: "https://www.electimes.com/news/articleView.html?idxno=222844",
-        },
-        {
-          date: "2022.1.10",
-          title: "㈜천일에너지, 포천시에 이웃돕기 성금 3000만 원 기탁",
-          filePath: "./assets/2.jpg",
-          link: "https://www.kihoilbo.co.kr/news/articleView.html?idxno=962540",
-        },
-        {
-          date: "2022.12.22",
-          title: "중구, ㈜천일에너지·㈜화영산업과 폐목재 자원순환 협약 체결",
-          filePath: "./assets/3.jpg",
-          link: "https://www.siminilbo.co.kr/news/newsview.php?ncode=1160288379901566",
-        },
-        {
-          date: "2022.12.27",
-          title: "부천시·천일에너지, 폐목재류 자원순환 협약",
-          filePath: "./assets/4.jpg",
-          link: "https://www.incheonilbo.com/news/articleView.html?idxno=1175961",
-        },
-        {
-          date: "2023.2.2",
-          title: "수거인, 한국건설폐기물수집운반협회와 앱 개발·보급 업무 체결",
-          filePath: "./assets/5.jpg",
-          link: "https://www.hankyung.com/economy/article/202302020068g",
-        },
-        {
-          date: "2023.2.14",
-          title: "난방비 폭탄 시대…쓰레기로 에너지 만드는 이 곳",
-          filePath: "./assets/6.jpg",
-          link: "https://www.edaily.co.kr/news/read?newsId=02141846635510520&mediaCodeNo=257&OutLnkChk=Y",
-        },
-        {
-          date: "2023.2.23",
-          title: "속초시·천일에너지, 폐목재 무상위탁처리 협약 체결",
-          filePath: "./assets/7.jpg",
-          link: "https://www.newspim.com/news/view/20230223001137",
-        },
-        {
-          date: "2023.3.23",
-          title: '"폐목재를 신재생에너지로"…천일에너지 우드칩 주목',
-          filePath: "./assets/8.jpg",
-          link: "https://www.edaily.co.kr/news/read?newsId=01256246635546272&mediaCodeNo=257&OutLnkChk=Y",
-        },
-        {
-          date: "2023.4.26",
-          title: `수거봇 "매립되던 폐기물, 시멘트 제조에 활용"`,
-          filePath: "./assets/9.jpg",
-          link: "https://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202304260177&t=NN",
-        },
-        {
-          date: "2023.5.31",
-          title: "동대문구, 커피박 자원화 프로젝트 MOU 체결",
-          filePath: "./assets/10.jpg",
-          link: "https://www.jeonmae.co.kr/news/articleView.html?idxno=961054",
-        },
-        {
-          date: "2023.7.24",
-          title: "용인특례시, 대형폐기물 처리 방식바꿔 상반기 6억 비용 절감",
-          filePath: "./assets/press_1_compressed.jpg",
-          link: "https://www.siminilbo.co.kr/news/newsview.php?ncode=1160283692633075",
-        },
-        {
-          date: "2023.9.2",
-          title: "삼척시-천일에너지, 폐목재 자원순환 '맞손'",
-          filePath: "./assets/12.jpg",
-          link: "https://www.ekn.kr/web/view.php?key=20230902010000300",
-        },
-        {
-          date: "2023.10.6",
-          title:
-            "플라젠, 천일에너지·옵티멈트레이딩과 그린메탄올 원료공급 및 투자 협약",
-          filePath: "./assets/13.jpg",
-          link: "https://www.e2news.com/news/articleView.html?idxno=301530",
-        },
-        {
-          date: "2023.10.20",
-          title:
-            "천일에너지, 폐기물 전자인계서 도입을 통하여 투명한 폐기물 관리 선두",
-          filePath: "./assets/14.jpg",
-          link: "https://www.ekn.kr/web/view.php?key=20231019010004973",
-        },
-        {
-          date: "2023.11.17",
-          title:
-            "천일에너지, 커피박 활용한 친환경 고형연료 제조 및 사용 허가 취득",
-          filePath: "./assets/15.jpg",
-          link: "https://www.itbiznews.com/news/articleView.html?idxno=117824",
-        },
-        {
-          date: "2023.11.27",
-          title: "양천구, 폐목재 재활용 업무협약···신재생 에너지로 활용",
-          filePath: "./assets/16.webp",
-          link: "https://www.khan.co.kr/national/national-general/article/202311271054001",
-        },
-        {
-          date: "2023.12.14",
-          title: "시흥시, (주)천일에너지 평택팩토리와 업무협약 체결",
-          filePath: "./assets/17.jpg",
-          link: "https://www.siminilbo.co.kr/news/newsview.php?ncode=1160259477966486",
-        },
-        {
-          date: "2023.12.22",
-          title: "강원 고성군, 폐목재 재활용 업무협약···신재생 에너지로 전환",
-          filePath: "./assets/18.jpg",
-          link: "https://www.siminilbo.co.kr/news/newsview.php?ncode=1160287327210236",
-        },
-        {
-          date: "2024.1.4",
-          title: "광명시, 천일에너지와 순환경제 처리체계 업무협약 체결",
-          filePath: "./assets/19.jpg",
-          link: "https://www.incheonilbo.com/news/articleView.html?idxno=1228240",
-        },
-        {
-          date: "2024.1.18",
-          title:
-            "성동구, ‘지구하다’ 앱 도입으로 간편 대형생활폐기물 신고 효율화",
-          filePath: "./assets/20.jpg",
-          link: "https://www.ekn.kr/web/view.php?key=20240118001535489",
-        },
-        {
-          date: "2024.4.2",
-          title: "인천 서구, 대형폐기물 편리한 수거 돕는 '지구하다' 어플 도입",
-          filePath: "./assets/24.jpg",
-          link: "https://www.wikitree.co.kr/articles/939850",
-        },
-        {
-          date: "2024.5.1",
-          title: "버릴 것 하나 없이 100% 재활용…천일에너지 포천팩토리를 가다",
-          filePath: "./assets/23.jpg",
-          link: "https://www.metroseoul.co.kr/article/20240501500161",
-        },
-        {
-          date: "2024.5.7",
-          title: '광명시 "재활용 안 되는 게 어딨어"',
-          filePath:
-            "https://imgnews.pstatic.net/image/003/2024/05/07/NISI20240507_0001543878_web_20240507120322_20240507121207915.jpg?type=w647",
-          link: "https://n.news.naver.com/article/003/0012531532?sid=102",
-        },
-        {
-          date: "2024.5.8",
-          title: "천일에너지, 제천 자원관리센터 폐목재 무상위탁처리",
-          filePath: "./assets/22.jpg",
-          link: "https://www.inews24.com/view/1716829",
-        },
-        {
-          date: "2024.5.21",
-          title: "양천구, 서울시 최초 '무상 커피박 재활용 처리 시스템' 구축",
-          filePath:
-            "https://cdn.gukjenews.com/news/photo/202405/2998786_3077517_2859.jpg",
-          link: "https://www.gukjenews.com/news/articleView.html?idxno=2998786",
-        },
-      ];
+      const queryParams = new URLSearchParams(window.location.search);
 
+      var currentPage = 1;
+      var numberOfPage = 20;
+      var search = queryParams.get("search");
       var apiPressList = [];
 
-      // api:  http://192.168.12.22:8000/api/homepage/promotions/?page_num=1&pr_type=advertising_video
-      $.ajax({
-        url: `${apiBaseUrl}/api/homepage/promotion/?page_num=1&pr_type=advertising_video`,
-        type: "GET",
-        contentType: "application/json; charset=utf-8",
-        datatype: "json",
-        success: function (data) {
-          apiPressList = data.results;
-          console.log(data);
+      requestPressList();
 
-          $(document).ready(function () {
-            /** 보도자료 리스트 렌더 */
-            const reverseList = [...apiPressList].reverse();
-            const listLength = reverseList.length;
+      /** 더보기 버튼 클릭 시 */
+      $("#more_info").click(function () {});
 
-            if (!(reverseList.length % 3 === 0)) {
-              var emptyElCount = 3 - (apiPressList.length % 3);
-              for (var i = 0; i < emptyElCount; i++) {
-                reverseList.push({ date: "", title: "", link: "" });
-              }
-            }
+      function requestPressList() {
+        $.ajax({
+          url: `${apiBaseUrl}/api/homepage/promotion/press/`,
+          type: "GET",
+          contentType: "application/json; charset=utf-8",
+          datatype: "json",
+          success: function (data) {
+            apiPressList = data.results;
+            console.log(data);
 
-            reverseList.map((item, index) => {
-              $(".content_list").append(
-                `<a class="content_item ${
-                  item?.date === "" ? "empty_item" : ""
-                }" href="${item.link}" target="_blank">
-                              <div class="img_wrap flex justify_center align_center">
-                                  <img class="block_drag" src="${
-                                    item.thumbnail
-                                  }" alt="${
-                  index + 1
-                }" width="380" height="220" />
-                              </div>
-                              <p class="tilte left">${item.title}</p>
-                              <p class="date_text left">${item.pub_date}</p>
-                          </a>`
-              );
-            });
+            $(document).ready(function () {
+              /** 보도자료 리스트 렌더 */
+              const reverseList = [...apiPressList].reverse();
+              const listLength = reverseList.length;
 
-            /** 첫 페이지 외 보도자료 모두 숨기기 */
-            $(".content_item").map((index, item) => {
-              if (index > NOW_MORE * SHOW_COUNTE - 1) {
-                $(item).css("display", "none");
-              }
-            });
-
-            /** 더보기 버튼 클릭 시 */
-            $("#more_info").click(function () {
-              NOW_MORE++;
-              $(".content_item").map((index, item) => {
-                if (index > NOW_MORE * SHOW_COUNTE - 1) {
-                  $(item).css("display", "none");
-                } else {
-                  $(item).css("display", "block");
+              if (!(reverseList.length % 3 === 0)) {
+                var emptyElCount = 3 - (apiPressList.length % 3);
+                for (var i = 0; i < emptyElCount; i++) {
+                  reverseList.push({ date: "", title: "", link: "" });
                 }
-              });
-
-              if (NOW_MORE * SHOW_COUNTE >= apiPressList.length) {
-                $("#more_info").css("display", "none");
               }
+
+              reverseList.map((item, index) => {
+                $(".content_list").append(
+                  `<a class="content_item ${
+                    item?.date === "" ? "empty_item" : ""
+                  }" href="${item.link}" target="_blank">
+                    <div class="img_wrap flex justify_center align_center">
+                      <img 
+                      class="block_drag" 
+                      src="${item.thumbnail_file?.file}" 
+                      alt="${index + 1}" 
+                      width="380" 
+                      height="220" />
+                    </div>
+                    <p class="tilte left">${item.title}</p>
+                    <p class="date_text left">${item.posted_datetime}</p>
+                  </a>`
+                );
+              });
             });
-          });
-        },
-        error: function (error) {
-          console.log(error);
-        },
-      });
+          },
+          error: function (error) {
+            console.log(error);
+          },
+        });
+      }
     </script>
   </body>
 </html>

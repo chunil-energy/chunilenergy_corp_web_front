@@ -205,36 +205,10 @@
     </script>
 
     <script>
-      var videoList = [
-        {
-          date: "2024.3.22",
-          title: `폐기물 처리는 비싸고 어렵다? 폐기물 최저가 천일에너지`,
-          link: "https://youtu.be/HI7z3sVpFQk",
-          og_img: "https://img.youtube.com/vi/HI7z3sVpFQk/sddefault.jpg",
-        },
-        {
-          date: "2024.3.22",
-          title: `[모든것이 에너지다 - ①] 천일에너지는 어떤 기업일까요?`,
-          link: "https://youtu.be/MCmhXEu7Vdc",
-          og_img: "https://img.youtube.com/vi/MCmhXEu7Vdc/sddefault.jpg",
-        },
-        {
-          date: "2024.3.22",
-          title: `[모든것이 에너지다 - ②] 천일에너지에서는 어떤 일을 할까요?`,
-          link: "https://youtu.be/FB20ebuMW9g",
-          og_img: "https://img.youtube.com/vi/FB20ebuMW9g/sddefault.jpg",
-        },
-        {
-          date: "2024.3.22",
-          title: `[모든것이 에너지다 - ③] 폐기물의 새로운 패러다임`,
-          link: "https://youtu.be/qxfwc517nEg",
-          og_img: "https://img.youtube.com/vi/qxfwc517nEg/sddefault.jpg",
-        },
-      ];
       const isProd = location.host === "chunilenergy.com";
       const apiBaseUrl = isProd
         ? "https://backend.soogobot.com"
-        : "http://192.168.12.22:8000";
+        : "https://backend-dev.soogobot.com";
       var countOfRow = 3;
       var moCountOfRow = 2;
 
@@ -252,7 +226,7 @@
       }
 
       $.ajax({
-        url: `${apiBaseUrl}/api/homepage/promotion/?page_num=1&pr_type=advertising_video`,
+        url: `${apiBaseUrl}/api/homepage/promotion/video/`,
         type: "GET",
         contentType: "application/json; charset=utf-8",
         datatype: "json",
@@ -290,35 +264,85 @@
             }
 
             renderList.map((item, index) => {
-              $(".pc_content_list").append(
-                `<a class="content_item ${
-                  item?.date === "" ? "empty_item" : ""
-                }" href="${item.link}" target="_blank">
-                        <div class="img_wrap flex justify_center align_center">
-                            <img class="block_drag" src="${
-                              item.thumbnail
-                            }" alt="${index + 1}" width="380" height="220" />
-                        </div>
-                        <p class="tilte left">${item.title}</p>
-                        <p class="date_text left">${item.pub_date}</p>
-                    </a>`
-              );
+              var isEmbed = item.video_embed_url;
+              if (isEmbed) {
+                $(".pc_content_list").append(
+                  `<div class="content_item ${
+                    item?.date === "" ? "empty_item" : ""
+                  }">
+                    <div class="img_wrap flex justify_center align_center">
+                        <iframe 
+                            src="${item.video_embed_url}" 
+                            width="380" 
+                            height="220"                                 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                        />
+                    </div>
+                    <p class="tilte left">${item.title}</p>
+                    <p class="date_text left">${item.posted_datetime}</p>
+                </div>`
+                );
+              } else {
+                $(".pc_content_list").append(
+                  `<a class="content_item ${
+                    item?.date === "" ? "empty_item" : ""
+                  }" href="${item.external_link}" target="_blank">
+                    <div class="img_wrap flex justify_center align_center">
+                        <img 
+                            class="block_drag" 
+                            src="${item.thumbnail_file?.file}" 
+                            alt="${index + 1}" width="380" height="220" 
+                        />                      
+                    </div>
+                    <p class="tilte left">${item.title}</p>
+                    <p class="date_text left">${item.posted_datetime}</p>
+                </a>`
+                );
+              }
             });
 
             moRenderList.map((item, index) => {
-              $(".mo_content_list").append(
-                `<a class="content_item ${
-                  item?.date === "" ? "empty_item" : ""
-                }" href="${item.link}" target="_blank">
-                        <div class="img_wrap flex justify_center align_center">
-                            <img class="block_drag" src="${item.og_img}" alt="${
-                  index + 1
-                }" />
-                        </div>
-                        <p class="tilte left">${item.title}</p>
-                        <p class="date_text left">${item.date}</p>
-                    </a>`
-              );
+              var isEmbed = item.video_embed_url;
+              if (isEmbed) {
+                $(".mo_content_list").append(
+                  `<div class="content_item ${
+                    item?.date === "" ? "empty_item" : ""
+                  }">
+                    <div class="img_wrap flex justify_center align_center" style="margin: 0">
+                        <iframe 
+                            src="${item.video_embed_url}" 
+                            width="380" 
+                            height="220"                                 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                        />
+                    </div>
+                    <p class="tilte left">${item.title}</p>
+                    <p class="date_text left">${item.posted_datetime}</p>
+                </div>`
+                );
+              } else {
+                $(".mo_content_list").append(
+                  `<a class="content_item ${
+                    item?.date === "" ? "empty_item" : ""
+                  }" href="${item.external_link}" target="_blank">
+                    <div class="img_wrap flex justify_center align_center">
+                        <img 
+                            class="block_drag" 
+                            src="${item.thumbnail_file?.file}" 
+                            alt="${index + 1}" 
+                        />                      
+                    </div>
+                    <p class="tilte left">${item.title}</p>
+                    <p class="date_text left">${item.posted_datetime}</p>
+                </a>`
+                );
+              }
             });
           });
         },
