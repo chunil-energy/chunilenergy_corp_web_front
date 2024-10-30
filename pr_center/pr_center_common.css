@@ -63,7 +63,7 @@
 }
 .content_list .content_item {
   flex: 1 1 30%;
-  cursor: default;
+  cursor: pointer;
 }
 .content_list .content_item:hover {
   opacity: 0.8;
