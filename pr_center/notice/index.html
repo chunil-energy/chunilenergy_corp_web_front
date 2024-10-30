@@ -212,7 +212,7 @@
       const apiBaseUrl = isProd
         ? "https://backendv.soogobot.com"
         : "https://backend-dev.soogobot.com";
-      const numberOfPage = 2;
+      const numberOfPage = 18;
       var pageSize = 1;
       var currentPage = 1;
       var noticeList = [];
@@ -243,7 +243,7 @@
         const searchQuery = searchText == null ? "" : `&search=${search}`;
         $.ajax({
           url:
-            `${apiBaseUrl}/api/homepage/promotion/notice/?page_num=${currentPage}&page_size=${pageSize}` +
+            `${apiBaseUrl}/api/homepage/promotion/notice/?page=${currentPage}&page_size=${numberOfPage}` +
             searchQuery,
           type: "GET",
           contentType: "application/json; charset=utf-8",

@@ -183,7 +183,7 @@
           <button
             type="button"
             id="more_info"
-            class="more_info flex justify_center align_center text_16 mid">
+            class="more_info flex justify_center align_center text_16 mid hover">
             더보기
             <img src="../assets/ico_down.svg" alt="더보기 아이콘" />
           </button>
@@ -214,6 +214,7 @@
       var countOfRow = 3;
       var moCountOfRow = 2;
 
+      const numberOfPage = 18;
       var currentPage = 1;
       var totalCount = 0;
       var videoApiList = [];
@@ -263,7 +264,7 @@
         const searchQuery = searchText == null ? "" : `&search=${searchText}`;
         $.ajax({
           url:
-            `${apiBaseUrl}/api/homepage/promotion/video/?page=${currentPage}&page_size=6` +
+            `${apiBaseUrl}/api/homepage/promotion/video/?page=${currentPage}&page_size=${numberOfPage}` +
             searchQuery,
           type: "GET",
           contentType: "application/json; charset=utf-8",
@@ -273,13 +274,11 @@
             totalCount = data.count;
             hasNext = data.next;
 
-            // 더보기 버튼 disable처리 & hover 제거
-            $("#more_info").attr("disabled", hasNext == null);
+            // 더보기 버튼 hidden 처리
             if (hasNext == null) {
-              $("#more_info").css("hover", "");
-              $("#more_info").css("cursor", "default");
+              $("#more_info").hide();
             } else {
-              $("#more_info").css("hover");
+              $("#more_info").show();
             }
 
             $(document).ready(function () {
