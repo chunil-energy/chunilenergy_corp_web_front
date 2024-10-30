@@ -241,7 +241,7 @@
         const searchQuery = searchText != null ? `&search=${searchText}` : "";
         $.ajax({
           url:
-            `${apiBaseUrl}/api/homepage/promotion/press/?page=${currentPage}` +
+            `${apiBaseUrl}/api/homepage/promotion/press/?page=${currentPage}&page_size=12` +
             searchQuery,
           type: "GET",
           contentType: "application/json; charset=utf-8",
