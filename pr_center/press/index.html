@@ -264,7 +264,7 @@
                   `<a class="content_item ${
                     item?.date === "" ? "empty_item" : ""
                   }" href="${item.external_link}" target="_blank">
-                    <div class="img_wrap flex justify_center align_center">
+                    <div class="img_wrap flex justify_center align_center skeleton_img">
                       <img
                       class="block_drag"
                       src="${item.thumbnail_file?.file}"
@@ -276,6 +276,14 @@
                     <p class="date_text left">${item.posted_datetime}</p>
                   </a>`
                 );
+
+                $(".content_list")
+                  .find("img")
+                  .on("load", function () {
+                    console.log(`load`);
+                    $(this).closest(".img_wrap").removeClass("skeleton_img");
+                    $(this).show(); // 이미지 표시
+                  });
               });
             });
           },
