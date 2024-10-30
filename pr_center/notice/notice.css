@@ -9,7 +9,7 @@
   height: 120px;
   padding: 28px 0px;
   border-bottom: 1px solid #e8e8e9;
-  cursor: default;
+  cursor: pointer;
 }
 .notice_list .notice_item:hover {
   opacity: 0.6;
