@@ -174,7 +174,7 @@
           <button
             type="button"
             id="more_info"
-            class="more_info flex justify_center align_center text_16 mid hover">
+            class="more_info flex justify_center align_center text_16 mid">
             더보기
             <img src="../assets/ico_down.svg" alt="더보기 아이콘" />
           </button>
@@ -206,47 +206,72 @@
 
       var currentPage = 1;
       var numberOfPage = 20;
+      var totalCount = 0;
+      var hasNext = false;
       var search = queryParams.get("search");
       var apiPressList = [];
 
-      requestPressList();
+      $(document).ready(function () {
+        $("#serach").val(search);
+
+        $("#serach").keyup(function (event) {
+          if (event.which === 13) {
+            event.preventDefault();
+            search = $("#serach").val();
+
+            var searchParams = new URLSearchParams(window.location.search);
+            searchParams.set("search", search);
+            location.search = searchParams.toString();
+          }
+        });
+
+        requestPressList(search);
+      });
 
       /** 더보기 버튼 클릭 시 */
-      $("#more_info").click(function () {});
+      $("#more_info").click(function () {
+        if (hasNext) {
+          currentPage += 1;
+          requestPressList(search);
+        }
+      });
 
-      function requestPressList() {
+      // list 호출
+      function requestPressList(searchText) {
+        const searchQuery = searchText != null ? `&search=${searchText}` : "";
         $.ajax({
-          url: `${apiBaseUrl}/api/homepage/promotion/press/`,
+          url:
+            `${apiBaseUrl}/api/homepage/promotion/press/?page=${currentPage}` +
+            searchQuery,
           type: "GET",
           contentType: "application/json; charset=utf-8",
           datatype: "json",
           success: function (data) {
             apiPressList = data.results;
-            console.log(data);
+            totalCount = data.count;
+            hasNext = data.next;
+
+            // 더보기 버튼 disable처리 & hover 제거
+            $("#more_info").attr("disabled", hasNext == null);
+            if (hasNext == null) {
+              $("#more_info").css("hover", "");
+              $("#more_info").css("cursor", "default");
+            } else {
+              $("#more_info").css("hover");
+            }
 
             $(document).ready(function () {
-              /** 보도자료 리스트 렌더 */
-              const reverseList = [...apiPressList].reverse();
-              const listLength = reverseList.length;
-
-              if (!(reverseList.length % 3 === 0)) {
-                var emptyElCount = 3 - (apiPressList.length % 3);
-                for (var i = 0; i < emptyElCount; i++) {
-                  reverseList.push({ date: "", title: "", link: "" });
-                }
-              }
-
-              reverseList.map((item, index) => {
+              apiPressList.map((item, index) => {
                 $(".content_list").append(
                   `<a class="content_item ${
                     item?.date === "" ? "empty_item" : ""
-                  }" href="${item.link}" target="_blank">
+                  }" href="${item.external_link}" target="_blank">
                     <div class="img_wrap flex justify_center align_center">
-                      <img 
-                      class="block_drag" 
-                      src="${item.thumbnail_file?.file}" 
-                      alt="${index + 1}" 
-                      width="380" 
+                      <img
+                      class="block_drag"
+                      src="${item.thumbnail_file?.file}"
+                      alt="${index + 1}"
+                      width="380"
                       height="220" />
                     </div>
                     <p class="tilte left">${item.title}</p>

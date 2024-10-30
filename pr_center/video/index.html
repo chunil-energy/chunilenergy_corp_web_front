@@ -180,11 +180,13 @@
             class="mo_content_list content_list flex justify_start align_start"></div>
 
           <!-- 더보기 버튼 -->
-          <!-- <button type="button" id="more_info"
-                    class="more_info flex justify_center align_center text_16 mid hover">
-                    더보기
-                    <img src="./assets/ico_down.svg" alt="더보기 아이콘" />
-                </button> -->
+          <button
+            type="button"
+            id="more_info"
+            class="more_info flex justify_center align_center text_16 mid">
+            더보기
+            <img src="../assets/ico_down.svg" alt="더보기 아이콘" />
+          </button>
         </div>
       </div>
 
@@ -212,7 +214,13 @@
       var countOfRow = 3;
       var moCountOfRow = 2;
 
+      var currentPage = 1;
+      var totalCount = 0;
       var videoApiList = [];
+      var hasNext = false;
+
+      const queryParams = new URLSearchParams(window.location.search);
+      var search = queryParams.get("search");
 
       function resizeFunction() {
         var isMoblile = isBreakPoint(870);
@@ -225,51 +233,93 @@
         }
       }
 
-      $.ajax({
-        url: `${apiBaseUrl}/api/homepage/promotion/video/`,
-        type: "GET",
-        contentType: "application/json; charset=utf-8",
-        datatype: "json",
-        success: function (data) {
-          videoList = data.results;
-          $(document).ready(function () {
-            var resizeTimeout;
+      $(document).ready(function () {
+        $("#serach").val(search);
 
-            // 리사이즈 이벤트 리스너
-            $(window).on("resize", function () {
-              // 기존에 설정된 리사이즈 타이머를 취소
-              cancelAnimationFrame(resizeTimeout);
-              // 새로운 리사이즈 타이머 설정
-              resizeTimeout = requestAnimationFrame(resizeFunction);
-            });
+        $("#serach").keyup(function (event) {
+          if (event.which === 13) {
+            event.preventDefault();
+            search = $("#serach").val();
 
-            resizeFunction();
+            var searchParams = new URLSearchParams(window.location.search);
+            searchParams.set("search", search);
+            location.search = searchParams.toString();
+          }
+        });
 
-            /** 광고영상 리스트 렌더 */
-            const renderList = [...videoList];
-            const moRenderList = [...videoList];
-            const listLength = videoList.length;
+        requestVideoList(search);
+      });
 
-            if (!(listLength % countOfRow === 0)) {
-              var emptyElCount = countOfRow - (listLength % countOfRow);
-              for (var i = 0; i < emptyElCount; i++) {
-                renderList.push({ date: "", title: "", link: "" });
-              }
+      /** 더보기 버튼 클릭 시 */
+      $("#more_info").click(function () {
+        if (hasNext) {
+          currentPage += 1;
+          requestVideoList(search);
+        }
+      });
+
+      // list 호출
+      function requestVideoList(searchText) {
+        const searchQuery = searchText == null ? "" : `&search=${searchText}`;
+        $.ajax({
+          url:
+            `${apiBaseUrl}/api/homepage/promotion/video/?page=${currentPage}` +
+            searchQuery,
+          type: "GET",
+          contentType: "application/json; charset=utf-8",
+          datatype: "json",
+          success: function (data) {
+            videoList = data.results;
+            totalCount = data.count;
+            hasNext = data.next;
+
+            // 더보기 버튼 disable처리 & hover 제거
+            $("#more_info").attr("disabled", hasNext == null);
+            if (hasNext == null) {
+              $("#more_info").css("hover", "");
+              $("#more_info").css("cursor", "default");
+            } else {
+              $("#more_info").css("hover");
             }
-            if (!(listLength % moCountOfRow === 0)) {
-              var emptyElCount = moCountOfRow - (listLength % moCountOfRow);
-              for (var i = 0; i < emptyElCount; i++) {
-                renderList.push({ date: "", title: "", link: "" });
-              }
-            }
 
-            renderList.map((item, index) => {
-              var isEmbed = item.video_embed_url;
-              if (isEmbed) {
-                $(".pc_content_list").append(
-                  `<div class="content_item ${
-                    item?.date === "" ? "empty_item" : ""
-                  }">
+            $(document).ready(function () {
+              var resizeTimeout;
+
+              // 리사이즈 이벤트 리스너
+              $(window).on("resize", function () {
+                // 기존에 설정된 리사이즈 타이머를 취소
+                cancelAnimationFrame(resizeTimeout);
+                // 새로운 리사이즈 타이머 설정
+                resizeTimeout = requestAnimationFrame(resizeFunction);
+              });
+
+              resizeFunction();
+
+              /** 광고영상 리스트 렌더 */
+              const renderList = [...videoList];
+              const moRenderList = [...videoList];
+              const listLength = videoList.length;
+
+              if (!(listLength % countOfRow === 0)) {
+                var emptyElCount = countOfRow - (listLength % countOfRow);
+                for (var i = 0; i < emptyElCount; i++) {
+                  renderList.push({ date: "", title: "", link: "" });
+                }
+              }
+              if (!(listLength % moCountOfRow === 0)) {
+                var emptyElCount = moCountOfRow - (listLength % moCountOfRow);
+                for (var i = 0; i < emptyElCount; i++) {
+                  renderList.push({ date: "", title: "", link: "" });
+                }
+              }
+
+              renderList.map((item, index) => {
+                var isEmbed = item.video_embed_url;
+                if (isEmbed) {
+                  $(".pc_content_list").append(
+                    `<div class="content_item ${
+                      item?.date === "" ? "empty_item" : ""
+                    }">
                     <div class="img_wrap flex justify_center align_center">
                         <iframe 
                             src="${item.video_embed_url}" 
@@ -284,12 +334,12 @@
                     <p class="tilte left">${item.title}</p>
                     <p class="date_text left">${item.posted_datetime}</p>
                 </div>`
-                );
-              } else {
-                $(".pc_content_list").append(
-                  `<a class="content_item ${
-                    item?.date === "" ? "empty_item" : ""
-                  }" href="${item.external_link}" target="_blank">
+                  );
+                } else {
+                  $(".pc_content_list").append(
+                    `<a class="content_item ${
+                      item?.date === "" ? "empty_item" : ""
+                    }" href="${item.external_link}" target="_blank">
                     <div class="img_wrap flex justify_center align_center">
                         <img 
                             class="block_drag" 
@@ -300,17 +350,17 @@
                     <p class="tilte left">${item.title}</p>
                     <p class="date_text left">${item.posted_datetime}</p>
                 </a>`
-                );
-              }
-            });
+                  );
+                }
+              });
 
-            moRenderList.map((item, index) => {
-              var isEmbed = item.video_embed_url;
-              if (isEmbed) {
-                $(".mo_content_list").append(
-                  `<div class="content_item ${
-                    item?.date === "" ? "empty_item" : ""
-                  }">
+              moRenderList.map((item, index) => {
+                var isEmbed = item.video_embed_url;
+                if (isEmbed) {
+                  $(".mo_content_list").append(
+                    `<div class="content_item ${
+                      item?.date === "" ? "empty_item" : ""
+                    }">
                     <div class="img_wrap flex justify_center align_center" style="margin: 0">
                         <iframe 
                             src="${item.video_embed_url}" 
@@ -325,12 +375,12 @@
                     <p class="tilte left">${item.title}</p>
                     <p class="date_text left">${item.posted_datetime}</p>
                 </div>`
-                );
-              } else {
-                $(".mo_content_list").append(
-                  `<a class="content_item ${
-                    item?.date === "" ? "empty_item" : ""
-                  }" href="${item.external_link}" target="_blank">
+                  );
+                } else {
+                  $(".mo_content_list").append(
+                    `<a class="content_item ${
+                      item?.date === "" ? "empty_item" : ""
+                    }" href="${item.external_link}" target="_blank">
                     <div class="img_wrap flex justify_center align_center">
                         <img 
                             class="block_drag" 
@@ -341,15 +391,16 @@
                     <p class="tilte left">${item.title}</p>
                     <p class="date_text left">${item.posted_datetime}</p>
                 </a>`
-                );
-              }
+                  );
+                }
+              });
             });
-          });
-        },
-        error: function (error) {
-          console.log(error);
-        },
-      });
+          },
+          error: function (error) {
+            console.log(error);
+          },
+        });
+      }
     </script>
   </body>
 </html>

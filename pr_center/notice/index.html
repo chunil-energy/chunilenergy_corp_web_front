@@ -240,8 +240,11 @@
       });
 
       function requestNoticeList(searchText) {
+        const searchQuery = searchText == null ? "" : `&search=${search}`;
         $.ajax({
-          url: `${apiBaseUrl}/api/homepage/promotion/notice/?page_num=${currentPage}&page_size=${pageSize}$searc=${search}`,
+          url:
+            `${apiBaseUrl}/api/homepage/promotion/notice/?page_num=${currentPage}&page_size=${pageSize}` +
+            searchQuery,
           type: "GET",
           contentType: "application/json; charset=utf-8",
           datatype: "json",
