@@ -332,10 +332,12 @@
                     `<div class="content_item ${
                       item?.date === "" ? "empty_item" : ""
                     }">
-                    <div class="img_wrap flex justify_center align_center">
+                    <div class="img_wrap flex justify_center align_center" style="margin: 0 auto">
                         <iframe 
-                            src="${item.video_embed_url}" 
-                            width="380" 
+                            src="${
+                              item.video_embed_url
+                            }"                            
+                            width="100%" 
                             height="220"                                 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -373,10 +375,11 @@
                     `<div class="content_item ${
                       item?.date === "" ? "empty_item" : ""
                     }">
-                    <div class="img_wrap flex justify_center align_center" style="margin: 0">
+                    <div class="img_wrap flex justify_center align_center" style="margin: 0 auto">
                         <iframe 
-                            src="${item.video_embed_url}" 
-                            width="380" 
+                            class=""
+                            src="${item.video_embed_url}"
+                            width="100%"
                             height="220"                                 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
