@@ -174,7 +174,7 @@
           <button
             type="button"
             id="more_info"
-            class="more_info flex justify_center align_center text_16 mid">
+            class="more_info flex justify_center align_center text_16 mid hover">
             더보기
             <img src="../assets/ico_down.svg" alt="더보기 아이콘" />
           </button>
@@ -204,8 +204,8 @@
 
       const queryParams = new URLSearchParams(window.location.search);
 
+      const numberOfPage = 18;
       var currentPage = 1;
-      var numberOfPage = 20;
       var totalCount = 0;
       var hasNext = false;
       var search = queryParams.get("search");
@@ -241,7 +241,7 @@
         const searchQuery = searchText != null ? `&search=${searchText}` : "";
         $.ajax({
           url:
-            `${apiBaseUrl}/api/homepage/promotion/press/?page=${currentPage}&page_size=12` +
+            `${apiBaseUrl}/api/homepage/promotion/press/?page=${currentPage}&page_size=${numberOfPage}` +
             searchQuery,
           type: "GET",
           contentType: "application/json; charset=utf-8",
@@ -251,13 +251,11 @@
             totalCount = data.count;
             hasNext = data.next;
 
-            // 더보기 버튼 disable처리 & hover 제거
-            $("#more_info").attr("disabled", hasNext == null);
+            // 더보기 버튼 hidden 처리
             if (hasNext == null) {
-              $("#more_info").css("hover", "");
-              $("#more_info").css("cursor", "default");
+              $("#more_info").hide();
             } else {
-              $("#more_info").css("hover");
+              $("#more_info").show();
             }
 
             $(document).ready(function () {
@@ -266,7 +264,7 @@
                   `<a class="content_item ${
                     item?.date === "" ? "empty_item" : ""
                   }" href="${item.external_link}" target="_blank">
-                    <div class="img_wrap flex justify_center align_center">
+                    <div class="img_wrap flex justify_center align_center skeleton_img">
                       <img
                       class="block_drag"
                       src="${item.thumbnail_file?.file}"
@@ -278,6 +276,14 @@
                     <p class="date_text left">${item.posted_datetime}</p>
                   </a>`
                 );
+
+                $(".content_list")
+                  .find("img")
+                  .on("load", function () {
+                    console.log(`load`);
+                    $(this).closest(".img_wrap").removeClass("skeleton_img");
+                    $(this).show(); // 이미지 표시
+                  });
               });
             });
           },
