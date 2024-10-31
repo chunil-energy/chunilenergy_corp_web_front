@@ -1,39 +1,65 @@
 name: Deploy Main Branch To S3 and Invalidate CloundFront Cache
-on: [push, pull_request]
+on: [ push, pull_request ]
 jobs:
   run:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [ 18.x ]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.S3_ACCESS_KEY }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.S3_SECRET_KEY }}
     steps:
-        - uses: actions/checkout@v3
-          with:
-            path: dist
+      - uses: actions/checkout@v3
+        with:
+          path: dist
 
-        - name: Deploy
-          uses: reggionick/s3-deploy@v3
-          with:
-            folder: dist
-            bucket: ${{ secrets.S3_BUCKET_NAME }}
-            bucket-region: ap-northeast-2
-            dist-id: ${{ secrets.CF_ID }}
-            invalidation: /
-            delete-removed: true
-            no-cache: true
-            private: true
-            filesToInclude: ".*/*,*/*,**"
-        - name: pushover-actions
-          uses: umahmood/pushover-actions@main
-          env:
-            PUSHOVER_TOKEN: ${{ secrets.PUSHOVER_TOKEN }}
-            PUSHOVER_USER: ${{ secrets.PUSHOVER_USER }}
-          with:
-            status: ${{ job.status }}
-            title: '천일에너지 홈페이지 배포완료'
-            message: '천일에너지 홈페이지 배포완료'
+      - name: Deploy
+        uses: reggionick/s3-deploy@v3
+        with:
+          folder: dist
+          bucket: ${{ secrets.S3_BUCKET_NAME }}
+          bucket-region: ap-northeast-2
+          dist-id: ${{ secrets.CF_ID }}
+          invalidation: /
+          delete-removed: true
+          no-cache: true
+          private: true
+          filesToInclude: ".*/*,*/*,**"
+      - name: Get Cat JSON
+        id: get_cat
+        continue-on-error: true
+        run: |
+          response=$(curl -X GET  "https://cataas.com/cat?type=small&json=true")
+          echo "Response: $response"
+          cat_id=$(echo $response | jq -r '._id')
+          echo "cat_id: $cat_id"
+          echo "CAT_URL=https://cataas.com/cat/$cat_id" >> $GITHUB_ENV
+      - name: Send custom JSON data to Slack workflow
+        id: slack
+        uses: slackapi/slack-github-action@v1.27.0
+        with:
+          # This data can be any valid JSON from a previous step in the GitHub Action
+          payload: |
+            {
+              "text": "[PRODUCTION]천일에너지 홈페이지 배포 결과: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}",
+              "blocks": [
+                {
+                  "type": "image",
+                  "image_url": "${{ env.CAT_URL }}",
+                  "alt_text": "Caaaaat"
+                },
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "천일에너지 홈페이지 배포 결과: ${{ job.status }}\nBranch: PRODUCTION\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
+                  }
+                }
+              ]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_CICD_WEBHOOK_URL }}
+          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK

@@ -1,5 +1,5 @@
 /* 공통 or 자주 사용되는 css 모음 */
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
 html {
     line-height: 1.4;
@@ -565,7 +565,23 @@ input[type="checkbox"]:checked + label:before {
 .no_data {
     margin: auto;
     padding-top: 44px;
+
+  .one_line_ellipsis {
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-word;
 }
+
+.two_line_ellipsis {
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-word;
+
+  }
 
 /* 미니 PC 이하 */
 @media screen and (max-width: 1080px) {
