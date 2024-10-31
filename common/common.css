@@ -562,7 +562,11 @@ input[type="checkbox"]:checked + label:before {
     pointer-events: none;
 }
 
-.one_line_ellipsis {
+.no_data {
+    margin: auto;
+    padding-top: 44px;
+
+  .one_line_ellipsis {
         -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
         overflow: hidden;
@@ -576,7 +580,8 @@ input[type="checkbox"]:checked + label:before {
         overflow: hidden;
         text-overflow: ellipsis;
         word-break: break-word;
-}
+
+  }
 
 /* 미니 PC 이하 */
 @media screen and (max-width: 1080px) {

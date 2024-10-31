@@ -312,6 +312,19 @@
                 }
               }
 
+            if (listLength === 0) {
+                $(".pc_content_list").append(
+                  `<p  class="gray3 mid text_14 center no_data">
+                    광고영상이 없습니다.
+                  </p>`
+                );
+                $(".mo_content_list").append(
+                  `<p class="gray3 mid text_14 center no_data">
+                    광고영상이 없습니다.
+                  </p>`
+                );
+              }
+
               renderList.map((item, index) => {
                 var isEmbed = item.video_embed_url;
                 if (isEmbed) {
@@ -319,10 +332,12 @@
                     `<div class="content_item ${
                       item?.date === "" ? "empty_item" : ""
                     }">
-                    <div class="img_wrap flex justify_center align_center">
+                    <div class="img_wrap flex justify_center align_center" style="margin: 0 auto">
                         <iframe 
-                            src="${item.video_embed_url}" 
-                            width="380" 
+                            src="${
+                              item.video_embed_url
+                            }"                            
+                            width="100%" 
                             height="220"                                 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -360,10 +375,11 @@
                     `<div class="content_item ${
                       item?.date === "" ? "empty_item" : ""
                     }">
-                    <div class="img_wrap flex justify_center align_center" style="margin: 0">
+                    <div class="img_wrap flex justify_center align_center" style="margin: 0 auto">
                         <iframe 
-                            src="${item.video_embed_url}" 
-                            width="380" 
+                            class=""
+                            src="${item.video_embed_url}"
+                            width="100%"
                             height="220"                                 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 

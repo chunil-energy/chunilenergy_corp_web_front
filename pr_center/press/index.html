@@ -259,6 +259,15 @@
             }
 
             $(document).ready(function () {
+
+            if (apiPressList.length === 0) {
+                $(".content_list").append(
+                  `<p  class="gray3 mid text_14 center no_data">
+                    보도자료가 없습니다.
+                  </p>`
+                );
+              }
+
               apiPressList.map((item, index) => {
                 $(".content_list").append(
                   `<a class="content_item ${
