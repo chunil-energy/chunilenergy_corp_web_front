@@ -100,6 +100,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Link Jquery -->
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- version -->
+    <script type="text/javascript" src="/scripts/common.js?v=1.0"></script>
   </head>
 
   <body>
@@ -308,11 +310,11 @@
               if (!(listLength % moCountOfRow === 0)) {
                 var emptyElCount = moCountOfRow - (listLength % moCountOfRow);
                 for (var i = 0; i < emptyElCount; i++) {
-                  renderList.push({ date: "", title: "", link: "" });
+                  moRenderList.push({ date: "", title: "", link: "" });
                 }
               }
 
-            if (listLength === 0) {
+              if (listLength === 0) {
                 $(".pc_content_list").append(
                   `<p  class="gray3 mid text_14 center no_data">
                     광고영상이 없습니다.
@@ -328,15 +330,22 @@
               renderList.map((item, index) => {
                 var isEmbed = item.video_embed_url;
                 if (isEmbed) {
-                  $(".pc_content_list").append(
-                    `<div class="content_item ${
-                      item?.date === "" ? "empty_item" : ""
-                    }">
-                    <div class="img_wrap flex justify_center align_center" style="margin: 0 auto">
+                  if (item.date === "") {
+                    $(".pc_content_list").append(
+                      `<div class="content_item empty_item">
+                        <img
+                            class="block_drag"
+                            alt="empty"
+                            width="380"
+                            height="220" />
+                      </div>`
+                    );
+                  } else {
+                    $(".pc_content_list").append(
+                      `<div class="content_item">
+                        <div class="img_wrap flex justify_center align_center" style="margin: 0 auto">
                         <iframe 
-                            src="${
-                              item.video_embed_url
-                            }"                            
+                            src="${item.video_embed_url}"                            
                             width="100%" 
                             height="220"                                 
                             frameborder="0" 
@@ -344,11 +353,12 @@
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
                         />
-                    </div>
-                    <p class="tilte left">${item.title}</p>
-                    <p class="date_text left">${item.posted_datetime}</p>
-                </div>`
-                  );
+                        </div>
+                        <p class="tilte left">${item.title}</p>
+                        <p class="date_text left">${item.posted_datetime}</p>
+                      </div>`
+                    );
+                  }
                 } else {
                   $(".pc_content_list").append(
                     `<a class="content_item video_item ${
@@ -358,7 +368,7 @@
                         <img 
                             class="block_drag" 
                             src="${item.thumbnail_file?.file}" 
-                            alt="${index + 1}" width="380" height="220" 
+                            alt="${index + 1}" width="100%" height="220" 
                         />                      
                     </div>
                     <p class="tilte left">${item.title}</p>
