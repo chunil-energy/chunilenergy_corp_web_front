@@ -102,7 +102,7 @@
     <!-- Link Jquery -->
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <!-- version -->
-    <script type="text/javascript" src="/scripts/common.js?v=1.0"></script>
+    <script type="text/javascript" src="/scripts/common.js?v=1.1"></script>
   </head>
 
   <body>
@@ -111,6 +111,13 @@
 
     <!-- sitemap (사이트맵) -->
     <div id="sitemap"></div>
+
+    <!-- loading indicator -->
+    <div id="overlay">
+      <div class="cv-spinner">
+        <span class="spinner"></span>
+      </div>
+    </div>
 
     <div class="body">
       <div class="page_container container">
@@ -242,6 +249,9 @@
       });
 
       function requestNoticeList(searchText) {
+        $("#overlay").fadeIn(300);
+        $("#more_info").hide();
+
         const searchQuery = searchText == null ? "" : `&search=${search}`;
         $.ajax({
           url:
@@ -304,9 +314,12 @@
                 );
               }
             });
+
+            $("#overlay").fadeOut(300);
           },
           error: function (error) {
             console.log(error);
+            $("#overlay").fadeOut(300);
           },
         });
       }
