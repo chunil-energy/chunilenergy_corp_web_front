@@ -199,73 +199,78 @@
         $("#go_to_list").on("click", function (e) {
           window.location.href = "../notice";
         });
+
+        if (id) {
+          requestNoticeDetail();
+        }
       });
 
-      $("#overlay").fadeIn(300);
+      function requestNoticeDetail() {
+        $("#overlay").fadeIn(300);
 
-      $.ajax({
-        url: `http://192.168.12.22:8000/api/homepage/promotion/notice/detail/${id}`,
-        type: "GET",
-        contentType: "application/json; charset=utf-8",
-        datatype: "json",
-        success: function (data) {
-          console.log(data);
+        $.ajax({
+          url: `http://192.168.12.22:8000/api/homepage/promotion/notice/detail/${id}`,
+          type: "GET",
+          contentType: "application/json; charset=utf-8",
+          datatype: "json",
+          success: function (data) {
+            console.log(data);
 
-          $(document).ready(function () {
-            console.log($("#notice_title"));
-            // 2024.10.31 이상하, 공지사항 상세 데이터가 일단 없고
-            // html 에디터가 아직 나오지 않아 임시처리만 함.
-            if (data.title) {
-              $("#notice_title").text(data.title);
-            } else {
-              $("#notice_title").hide();
-            }
+            $(document).ready(function () {
+              console.log($("#notice_title"));
+              // 2024.10.31 이상하, 공지사항 상세 데이터가 일단 없고
+              // html 에디터가 아직 나오지 않아 임시처리만 함.
+              if (data.title) {
+                $("#notice_title").text(data.title);
+              } else {
+                $("#notice_title").hide();
+              }
 
-            // $("#notice_image").attr("src", data.image_path);
-            $("#notice_content").attr("src", data.content_html);
-            // $("#notice_date").text(data.registered_at);
+              // $("#notice_image").attr("src", data.image_path);
+              $("#notice_content").attr("src", data.content_html);
+              // $("#notice_date").text(data.registered_at);
 
-            var nextPage = data.next_id;
-            var prevPage = data.prev_id;
+              var nextPage = data.next_id;
+              var prevPage = data.prev_id;
 
-            // todo 이전 글 / 다음 글 구현하기
+              // todo 이전 글 / 다음 글 구현하기
 
-            if (prevPage == null) {
-              $("#notice_prev_sequence").hide();
-            } else {
-              $("#notice_prev_sequence")
-                .children(".notice_title")
-                .text(data.prev_title);
+              if (prevPage == null) {
+                $("#notice_prev_sequence").hide();
+              } else {
+                $("#notice_prev_sequence")
+                  .children(".notice_title")
+                  .text(data.prev_title);
 
-              $("#notice_prev_sequence").on("click", function () {
-                console.log("prevClick");
-                window.location.href = `.?id=${prevPage}`;
-              });
-            }
+                $("#notice_prev_sequence").on("click", function () {
+                  console.log("prevClick");
+                  window.location.href = `.?id=${prevPage}`;
+                });
+              }
 
-            if (nextPage == null) {
-              $("#notice_next_sequence").hide();
-            } else {
-              $("#notice_next_sequence")
-                .children(".notice_title")
-                .text(data.next_title);
+              if (nextPage == null) {
+                $("#notice_next_sequence").hide();
+              } else {
+                $("#notice_next_sequence")
+                  .children(".notice_title")
+                  .text(data.next_title);
 
-              $("#notice_next_sequence").on("click", function () {
-                console.log("nextClick");
-                window.location.href = `.?id=${nextPage}`;
-              });
-            }
+                $("#notice_next_sequence").on("click", function () {
+                  console.log("nextClick");
+                  window.location.href = `.?id=${nextPage}`;
+                });
+              }
 
+              $("#overlay").fadeOut(300);
+            });
+          },
+          error: function (error) {
+            console.log(error);
             $("#overlay").fadeOut(300);
-          });
-        },
-        error: function (error) {
-          console.log(error);
-          $("#overlay").fadeOut(300);
-          alert("오류가 발생했습니다.");
-          //   window.location.href = "../notice/";
-        },
-      });
+            alert("오류가 발생했습니다.");
+          },
+        });
+      }
     </script>
   </body>
 </html>
