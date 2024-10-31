@@ -562,6 +562,11 @@ input[type="checkbox"]:checked + label:before {
     pointer-events: none;
 }
 
+.no_data {
+    margin: auto;
+    padding-top: 44px;
+}
+
 /* 미니 PC 이하 */
 @media screen and (max-width: 1080px) {
     .page_title_wrap {
