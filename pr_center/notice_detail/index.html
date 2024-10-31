@@ -136,12 +136,10 @@
             <!-- <div class="image_wrap">
               <img id="notice_image" src="" alt="본문 이미지" />
             </div> -->
-            <!-- <div
+            <div
               id="notice_content"
               class="desc_wrap"
-              style="white-space: pre-line"></div> -->
-
-            <iframe id="notice_content" class="desc_wrap"> </iframe>
+              style="white-space: pre-line"></div>
 
             <div class="notice_sequence">
               <div
@@ -227,7 +225,7 @@
               }
 
               // $("#notice_image").attr("src", data.image_path);
-              $("#notice_content").attr("src", data.content_html);
+              $("#notice_content").append(data.content_html);
               // $("#notice_date").text(data.registered_at);
 
               var nextPage = data.next_id;
