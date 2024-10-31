@@ -183,7 +183,8 @@
           <button
             type="button"
             id="more_info"
-            class="more_info flex justify_center align_center text_16 mid hover">
+            class="more_info flex justify_center align_center text_16 mid hover"
+            style="display: none">
             더보기
             <img src="../assets/ico_down.svg" alt="더보기 아이콘" />
           </button>
@@ -249,6 +250,7 @@
       // list 호출
       function requestPressList(searchText) {
         $("#overlay").fadeIn(300);
+        $("#more_info").hide();
         const searchQuery = searchText != null ? `&search=${searchText}` : "";
         $.ajax({
           url:
