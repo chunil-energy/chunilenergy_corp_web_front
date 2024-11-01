@@ -63,7 +63,7 @@
 }
 .content_list .content_item {
   flex: 1 1 30%;
-  cursor: default;
+  cursor: pointer;
 }
 .content_list .content_item:hover {
   opacity: 0.8;
@@ -76,12 +76,19 @@
   background-color: #ededef;
   margin: 0 auto;
 }
-.content_list .content_item img {
+.content_item .img_wrap img {
   /* max-width: 380px; */
   /* height: auto; */
   /* height: 220px; */
   /* background-color: #ededef; */
   object-fit: cover;
+}
+.content_list .video_item img {
+  /* max-width: 380px; */
+  /* height: auto; */
+  /* height: 220px; */
+  background-color: black;
+  object-fit: contain;
 }
 .content_list .content_item .tilte {
   font-size: 22px;
@@ -93,6 +100,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
+  word-break: break-word;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
@@ -104,6 +112,8 @@
   margin-top: 16px;
 }
 .empty_item {
+  height: 220px;
+  width: 100%;
   visibility: hidden;
 }
 
@@ -123,6 +133,73 @@ button.more_info img {
   width: 14px;
   height: 14px;
   margin-left: 8px;
+}
+
+.skeleton_img {
+  background-color: #e0e0e0 !important;
+}
+
+/* .skeleton_img {
+  width: 380px;
+  height: 220px;
+
+  background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.5) 40%,
+      rgba(255, 255, 255, 0) 70%
+    ),
+    linear-gradient(lightgrey 15px, transparent 0),
+    linear-gradient(lightgrey 15px, transparent 0),
+    linear-gradient(lightgrey 15px, transparent 0);
+
+  background-repeat: repeat-y;
+
+  background-position: 5px 10px, 5px 10px, 5px 30px, 5px 50px;
+
+  background-size: 100px 100px, 100px 100px, 150px 100px, 150px 100px;
+  animation: shine 1s infinite;
+} */
+
+.skeleton_img img {
+  display: none;
+}
+
+/* loading */
+#overlay {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  background: rgba(0, 0, 0, 0.6);
+  overflow-y: hidden;
+}
+.cv-spinner {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px #ddd solid;
+  border-top: 4px #2e93e6 solid;
+  border-radius: 50%;
+  animation: sp-anime 0.8s infinite linear;
+}
+@keyframes sp-anime {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shine {
+  to {
+    background-position: 100% 10px, 5px 10px, 5px 30px, 5px 50px;
+  }
 }
 
 /* 미니 PC */
