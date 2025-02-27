@@ -1,7 +1,13 @@
 .page_title_image_wrap {
   background-image: url("./assets/jiguhada_main_compressed.png");
   background-size: cover;
-  background-position: center 60%;
+  background-position: center 50%;
+}
+
+.page_title_image_wrap {
+  background-image: url("./assets/jiguhada_main_compressed.png");
+  background-size: cover;
+  background-position: center 50%;
 }
 
 .jiguhada_wrap {
@@ -150,6 +156,8 @@
 @media screen and (max-width: 870px) {
   .page_title_image_wrap {
     background-image: url("./assets/jiguhada_main_mo_compressed.jpg");
+    background-size: cover;
+    background-position: center 60%;
   }
 
   .jiguhada_wrap {
