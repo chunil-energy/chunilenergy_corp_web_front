@@ -185,6 +185,11 @@
     </script>
 
     <script>
+      const isProd = location.host === "chunilenergy.com";
+      const apiBaseUrl = isProd
+        ? "https://backend.soogobot.com"
+        : "https://backend-dev.soogobot.com";
+
       const queryParams = new URLSearchParams(window.location.search);
       const id = queryParams.get("id");
 
@@ -207,7 +212,7 @@
         $("#overlay").fadeIn(300);
 
         $.ajax({
-          url: `http://192.168.12.22:8000/api/homepage/promotion/notice/detail/${id}`,
+          url: `${apiBaseUrl}/api/homepage/promotion/notice/detail/${id}/`,
           type: "GET",
           contentType: "application/json; charset=utf-8",
           datatype: "json",
