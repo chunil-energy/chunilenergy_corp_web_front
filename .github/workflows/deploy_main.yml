@@ -1,12 +1,12 @@
 name: Deploy Main Branch To S3 and Invalidate CloundFront Cache
-on: [ push, pull_request ]
+on: [push, pull_request]
 jobs:
   run:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     strategy:
       matrix:
-        node-version: [ 18.x ]
+        node-version: [18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.S3_ACCESS_KEY }}
@@ -34,9 +34,9 @@ jobs:
         run: |
           response=$(curl -X GET  "https://cataas.com/cat?type=small&json=true")
           echo "Response: $response"
-          cat_id=$(echo $response | jq -r '._id')
-          echo "cat_id: $cat_id"
-          echo "CAT_URL=https://cataas.com/cat/$cat_id" >> $GITHUB_ENV
+          cat_url=$(echo $response | jq -r '.[0].url')
+          echo "cat_url: $cat_url"
+          echo "CAT_URL=$cat_url" >> $GITHUB_ENV
       - name: Send custom JSON data to Slack workflow
         id: slack
         uses: slackapi/slack-github-action@v1.27.0
