@@ -1,6 +1,7 @@
 .page_title_image_wrap {
-  background-image: url("./assets/jiguhada_main_compressed.jpg");
-  background-position: top center;
+  background-image: url("./assets/jiguhada_main_compressed.png");
+  background-size: cover;
+  background-position: center 60%;
 }
 
 .jiguhada_wrap {
